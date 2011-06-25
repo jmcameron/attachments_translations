@@ -1,0 +1,509 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; utf-8">
+<title>Attachments Documentation</title>
+<link href="../../css/admin.css" type="text/css" rel="stylesheet">
+<link href="help.css" type="text/css" rel="stylesheet">
+</head>
+<body><a name="top" id="top"></a>
+<h1>Attachments Documentation</h1>
+<h3>Version 1.3.4 - August 2008</h3>
+
+<ol>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#uploads">Uploading Restrictions</a></li>
+<li><a href="#options">Settings</a></li>
+<li><a href="#display_filename">Display Filenames</a></li>
+<li><a href="#styling">CSS Styling of Attachment Lists</a></li>
+<li><a href="#icons">File Type Icons</a></li>
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#upgrading">Upgrading</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ol>
+
+<h2><a name="intro"></a>Introduction</h2>
+The &#039;Attachments&#039; extension for Joomla! allows files to be uploaded
+and attached to content articles. &#039;Attachments&#039; includes a
+plugin to display the attachments and a component for uploading and managing
+attachments. There are options to control who can see the attachments and
+who can upload them, along with several other options to increase its
+flexibility and usefulness. Note: all options are controlled through
+the component manager. This extension only works for Joomla! 1.5 or later.
+<br>&nbsp;<br>
+
+If you wish to subsribe to an email list for announcements about
+this extension, please subscribe using this web page:
+<ul class="url">
+   <li><a title="Email list subscription page"
+          href="http:/jmcameron.net/attachments/email-list.html"
+          >http:/jmcameron.net/attachments/email-list.html</a>
+   </li>
+</ul>
+
+This extension provides translation capabilities and supports the following
+languages (besides English):
+<ul>
+    <li><b>Bulgarian:</b> This translation was done by Stefan Ilivanov. (Thanks Stefan!)</li>
+    <li><b>Chinese:</b> Traditional and simplified Chinese translations by baijianpeng
+        (http://www.joomlagate.com).  (Thanks baijaing!)</li>
+    <li><b>Dutch:</b> This translation was done by Parvus. (Thanks Parvus!)</li>
+    <li><b>Finnish:</b> This translation was done by Tapani Lehtonen. (Thanks Tapani!) </li>
+    <li><b>French:</b> This translation was done by Pascal Adalian. (Thanks Pascal!) </li>
+    <li><b>German:</b> This translation was done by Michael Scherer. (Thanks Michael!) </li>
+    <li><b>Greek:</b> This translation was done by Harry Nakos. (Thanks Harry!) </li>
+    <li><b>Italian:</b> This translation was done by Lemminkainen. (Thanks Lemminkainen!) </li>
+    <li><b>Norwegian:</b> This translation was done by Espen Gjelsvik. (Thanks Espen!) </li>
+    <li><b>Persian:</b> This translation was done by Hossein Moradgholi of the Parsjoomla project. (Thanks Hossein!) </li>
+    <li><b>Polish:</b> This translation was done by Piotr W�jcik. (Thanks Piotr!) </li>
+    <li><b>Portuguese/Brazilian:</b> This translation was done by Arnaldo Giacomitti
+        (www.giacomitti.eng.br) and Cauan Cabral (www.cauancabral.net). </li>
+    <li><b>Spanish:</b> This translation was done by Carlos Alfaro. (Thanks Carlos!) </li>
+</ul>
+Many thanks to the translators!  If you would like to help translate the
+extension to any other language, please contact the author (see end).
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="uploads"></a>Uploading Restrictions</h2>
+Not all types of attachment files can be uploaded.  The &#039;Attachments&#039; extension
+will not allow uploading of files that are not permitted by the Joomla! Media Manager.
+To see (or change) what file types are allowed, go to the <b>Global Configuration</b>
+page and click on the <b>System</b> tab.  In the <i>Media Settings</i> area, there are
+options for controlling what types of file extensions and mime types are permitted
+for uploads. The &#039;Attachments&#039; respects these limitations.  However, the
+restriction on &#039;Legal Image Extensions (File Types)&#039; is ignored.
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="options"></a>Attachments Settings</h2>
+All of the settings for &#039;Attachments&#039; are controlled via the
+ component manager. To access these settings, go to the administrative
+back end and select "Article Attachments" under the "Component" menu.  Click
+on the "Parameters" button on the right end of the tool bar and you will see
+a series of parameters for this extension. These parameters include
+the following:<br>
+<ul>
+
+<li><strong>Who can see attachments:</strong> This setting controls
+who will be able to see the links for the attachments. There are
+currently two options:
+<ol>
+<li>&#039;<i>anyone</i>&#039; - If this option is selected, the links to the
+attachments will be visible to anyone visiting the website, whether
+they are logged in or not.</li>
+<li>&#039;<i>any logged-in user</i>&#039;. - If this option is selected, only
+users who are logged into the website will be able to see the links
+to the attachments.</li>
+</ol>
+</li>
+
+<li><strong>Who can add attachments:</strong> This setting controls
+who is able to add attachments to articles. There are two
+options:
+<ol>
+<li>&#039;<i>Article author only</i>&#039; - The links to upload articles will only
+be visible to the author of the article (as well as other users with higher
+permissions such as Editors and administrators).</li>
+<li>&#039;<i>Any logged-in user</i>&#039; - The links to upload articles will be
+visible to any user who is logged in.</li>
+</ol>
+</li>
+
+<li><strong>Attachments published by default:</strong> This &#039;auto
+publish&#039; feature controls whether new attachments are published by
+default when they are added. If &#039;Yes&#039; is selected, when articles
+are added, they will published immediately and will be visible to users. If
+&#039;No&#039; is selected, new articles will not be published by default.
+An administrator will need to publish them from the administrative back end
+before the articles will be available.</li>
+
+<li><strong>Auto Publish Warning:</strong> If the auto-publish option is
+disabled (see previous option), you may wish to inform those adding
+attachments how they can get their attachment published. You can insert an
+appropriate message here.  If this field is empty, a general system message
+will be added suggesting that they contact their system administrator to
+any newly uploaded attachments published. </li>
+
+<li><strong>Show titles:</strong> If set to &#039;Yes&#039;, a row of titles will be
+added above the list of attachments describing what is in each column.</li>
+
+<li><strong>Show attachment description:</strong> This setting controls
+whether the attachment description is shown in the list of attachments.</li>
+
+<li><strong>Show file size:</strong> This setting controls
+whether the attachment file size is shown in the list of attachments.</li>
+
+<li><strong>Show number of downloads:</strong> This setting controls
+whether the number of downloads is shown in the list of attachments.
+<strong>WARNING:</strong> This option only works in secure mode!
+In non-secure mode, files are maintained as static files and accessed
+directly, without going through Joomla! code.  Therefore it is impossible
+to update the number of downloads for a file when it is accessed this way.
+So the display of the number of downloads will only work in secure mode
+when this option is set to &#039;Yes&#039;.</li>
+
+<li><strong>Show file modification date:</strong> If this setting
+is &#039;Yes&#039;, the modification date for the file will be added to the
+attachment list for articles that have attachments. If &#039;No&#039; is
+selected, no date will be added to the attachment list.</li>
+
+<li><strong>Format string for modification date:</strong> You may
+select the format for the modification date by using the format
+used by the PHP strftime() function.  Search the web with
+&#039;PHP strftime&#039; for for examples.  The default format (%x&nbsp;%H:%M)
+gives dates with 24-hour time like 4/28/2008&nbsp;14:21.  To
+remove the time of day part, leave out the "%H:%M" part.  Note
+that MS Windows and Linux PHP implementations may differ in
+some of the codes that they support.</li>
+
+<li><strong>Name for user-defined field 1-3:</strong> If you have some additional information about each attachment that you wish to add, the Attachments extension allows you to defined up to three optional user-defined fields.  To create a new field, insert the name for it in one of the three entries.  Clear the name to disable the display and editing of this field.  The user-defined fields will be shown in the order listed here.  The maximum length of each user-defined field name is 40 characters.  The data in these fields may be up to 100 characters long. </li>
+
+<li><strong>Attachments list order:</strong> This option allows you to specify the order in which attachments will be listed in the attachments lists.  Most of the options are self-explanatory:
+<ol>
+<li>&#039;<i>Filename</i>&#039; - If this option is selected, the attachments will be sorted alphabetically by the filname.</li>
+<li>&#039;<i>File size(smallest first)</i>&#039; </li>
+<li>&#039;<i>File size(largest first)</i>&#039; </li>
+
+<li>&#039;<i>Description</i>&#039; </li>
+<li>&#039;<i>Creation date (oldest first)</i>&#039; </li>
+<li>&#039;<i>Creation date (newest first)</i>&#039; </li>
+<li>&#039;<i>Modification date (oldest first)</i>&#039; </li>
+<li>&#039;<i>Modification date (newest first)</i>&#039; </li>
+<li>&#039;<i>Attachment ID</i>&#039; - If this option is selected, the attachments will be sorted by the attachment ID.  This has the effect of ordering the attachments in the order they were created.</li>
+<li>&#039;<i>User-defined field 1</i>&#039; </li>
+<li>&#039;<i>User-defined field 2</i>&#039; </li>
+<li>&#039;<i>User-defined field 3</i>&#039; </li>
+</ol>
+ </li>
+
+<li><strong>Maximum filename length:</strong>
+The maximum filename length for attachments list.  Filenames longer than
+this will be truncated and put into the display filename (for display purposes
+only, the actual filename will not be changed).  A value of 0 means the
+filename length is unlimited by this option (the filename field in the attachments
+database table is limited to 80 characters).   Note: If display filenames are truncated
+by this option, the truncated filename will be inserted into the "display filename"
+field.
+</li>
+
+<li><strong>CSS style for attachments tables:</strong> To override the CSS
+styling of attachments lists, specify your own style name here.  The default
+style name is &#039;attachmentsList&#039;.  See the <a href="#styling">[Styling
+Attachment Lists]</a> section for more information.
+</li>
+
+<li><strong>File link open mode:</strong>
+This mode how the links to attachment files will be opened.  &#039;In same window&#039;
+means the file will be opened in the same browser window.  &#039;In new window&#039;
+means the file will be opened in a new window.  In some browsers, using the
+&#039;In new window&#039; option will actually open the attachment in a new tab.
+</li>
+
+<li><strong>Prepend to system filename:</strong> This setting
+controls whether a numeric prefix should be added to the start
+the image filename as it is stored on the server.  There are three options:
+<ol>
+<li>&#039;<i>Article ID</i>&#039; - If this option is selected, the filename
+will be prefixed with the article&#039;s id number.  This choice will
+reduce chances of filename collisions and will ensure that the
+attachment files for a particular article will sort together in
+directory listings.  Also note that this option will allow different
+files with the same filenames to be attached to different articles, but
+not to the same article.</li>
+<li>&#039;<i>Attachment ID</i>&#039; - If this option is selected, the filename
+will be prefixed with the attachment&#039;s id number.  This choice will
+eliminates the possibility of filename collision since each attachment will
+always have a unique ID number.  The attachment files will sort by the
+order of attachment in directory listings.</li>
+<li>&#039;<i>Nothing</i>&#039; - If this option is selected, the filename
+will be saved as given and will not be prefixed with anything.  This
+option increases the chance of filename collisions since
+every uploaded file will need to have a unique filename.</li>
+</ol>
+</li>
+
+<li><strong>Subdirectory for uploads:</strong> The &#039;Attachments&#039;
+extension code will put files into this subdirectory under the top
+of the Joomla site.  The default is &#039;attachments&#039;.
+Note that if this subdirectory is changed, it will only affect future
+uploads.  Previously uploaded files will stay in the old subdirectory
+and records in the attachments database will still point to those files.
+If you wish to move the files from the old subdirectory to the new
+subdirectory, you will need move the files and then update their
+entries in the attachments database table manually.
+</li>
+
+<li><strong>Custom titles for attachments lists:</strong> By
+default, the &#039;Attachments&#039; extension inserts the title
+"Attachments:" above the list of attachments for an article (if it has
+attachments). In some cases, you may prefer using some other term for
+specific articles.  You may specify the exact term you would like to
+use on an article-by-article basis. For example, if you would like article
+211 to use the custom title "Downloads:", then add this to this setting:
+&#039;211&nbsp;Downloads&#039; (without the quotes). Use one entry per line.
+<br>&nbsp;<br>
+Note: If you wish to change the titles used for attachments lists globally,
+you may edit the translations file entry &#039;ATTACHMENTS TITLE&#039; in the translation
+files:
+<pre>
+    administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+</pre>
+where qq-QQ refers to the language designator code such as en-GB for English.
+(If you are not familiar with Joomla! translation files, find the line that
+has &#039;ATTACHMENTS TITLE&#039; on left side of the &#039;=&#039; sign.  Edit anything to the
+right of the &#039;=&#039; sign.  Do not change anything to the left of the &#039;=&#039; sign.)
+</li>
+
+<li><strong>Hide Attachments for:</strong>
+Comma-separated list of keywords or Sections/Categories of articles for which
+the attachments list should be hidden.  Two special keywords can be used:
+&#039;frontpage&#039; to suppress displays of attachments on the front page and
+&#039;all_but_article_views&#039; to allow displays of attachments only in article views.
+(Omit quotes when entering the keyword options.)  The Section/Category IDs
+should be entered as numeric section and category IDs separated with a slash(/):
+Section#/Category#, Section#/Category#.  Specify just &#039;Section#&#039; to cover all
+Categories within the Section.  Examples: 23/10, 23/11, 24
+</li>
+
+<li><strong>Secure attachment downloads:</strong> By default, the &#039;Attachments&#039;
+extension saves attachment files in a publically accessible subdirectory.   If you choose
+the <i>secure</i> option, the directory in which the attachments are saved will be made
+publically  inaccessible.  The download links for the attachments in the front end will
+download the attachment files but will not be direct links.  This will prevent access
+unless users have appropriate permissions.  If <i>secure</i> downloads are not selected,
+the links to the attachments will be shown as the options above indicate, but the files
+will still be accessible to anyone if they know the full URL, since the subdirectory is
+public.  The <i>secure</i> option prevents access to users without appropriate
+permissions even if they know the full URL, since this option prevents public access
+to the attachments subdirectory.
+
+<li><strong>Download mode for secure downloads:</strong>
+This option controls whether files should be downloaded as separate files or displayed
+in the browser (if the browser can handle that type of file).  There are two options:
+<ul>
+    <li><i>&#039;inline&#039;</i>: In this mode, files that can be displayed by the browser will be
+    displayed in the browser (such as text files and images). </li>
+    <li><i>&#039;attachment&#039;</i>: With the &#039;attachment&#039; mode, files will always be downloaded
+    as separate files. </li>
+</ul><br>
+In either case, files that can&#039;t be displayed in the browser will be
+downloaded as external files.
+</li>
+
+</ul>
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="display_filename"></a>Display Filename</h2>
+Normally, when files are uploaded and listed in a list of attachments, the full
+filename is shown as a link to download the attachment.   In some cases, the
+filenames may be too long for this to work nicely.  In the upload form, there is
+another field called "Display Filename" in which the person uploading the file
+can insert an alternative filename or label to display instead of the full filename.
+For instance, some abbreviation of the filename could be added in this field.  The
+field may be edited in the administrative back end when attachments are edited.
+Note: There is an option called "Maximum Filename Length" in the plugin options.
+It can be set to automatically truncate uploaded displayed filenames; the
+resulting truncated filename will be inserted into the "Display Filename" field.
+
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="styling"></a>CSS Styling of Attachment Lists</h2>
+The lists of attachments on the front end are done using a special
+&#039;div&#039; that contains a table for the attachments. The table has
+several different CSS classes associated with it to allow the website
+developer the flexibility to customize the appearance of the table. Look in
+the attachments plugin file CSS file (in plugins/content/attachments.css) for
+examples. If you wish to change the style, consider copying the original
+styles into the end of the same file and renaming &#039;attachmentsList&#039; in the
+copied section to something of your choice.  Edit the Attachments parameter
+(in the  component manager) and change the parameter <i>attachments table style</i>
+to the new class name. Then modify the class definitions in your copied section
+appropriately. This approach will allow you to quickly revert to the original
+style by changing the plugin parameter <i>attachments table style</i> back to
+its default, &#039;attachmentList&#039;. This also has the advantage that the
+section of modified styles can be copied to a file and easily brought back in
+when the version of Attachments is upgraded. This could also be done via a
+CSS @import command.
+
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="icons"></a>File Type Icons</h2>
+The &#039;Attachments&#039; extension adds an icon in front of each attachment in the
+list of attachments. If you wish to add a new icon type, follow these steps:
+(1) Add an appropriate icon in the directory &#039;media/attachments/icons&#039;, if an
+appropriate icon is not already there; (2) Edit the file
+&#039;components/com_attachments/file_types.php&#039; and add an appropriate line to the
+static array $attachments_icon_from_file_extension which maps a file extension to an icon
+name (all in the media/attachments/icons directory). If this does not work,
+you may need to add an appropriate line to the array $attachments_icon_from_mime_type. (3)
+Don&#039;t forget to make copies of the icon file and the updated file_types.php to
+some directory outside of the website directories before upgrading the version
+of Attachments in the future.
+
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="warnings"></a>Warnings</h2>
+<ul>
+<li><strong>If you have attachment files that are sensitive or private, use the
+<i>Secure attachment downloads</i> option!</strong><br> If you do not use the
+secure option, the attachment files are saved in a public subdirectory
+and are accessible to anyone that knows the full URL.  The <i>secure</i> option
+prevents access by anyone that does not have appropriate permissions (as determined
+by the options above).  See the discussion of the <i>Secure attachment downloads</i>
+option above for more detail.
+</li>
+
+<li>Every time a file is uploaded, the existence of the upload subdirectory
+is checked and it will be created if if it does not exist.  By default the
+subdirectory for uploaded files is &#039;attachments&#039; in the root directory of
+your web site files.  The name of the subdirectory can be changed using the
+&#039;Subdirectory for uploads&#039; option. If the
+&#039;Attachments&#039; extension is unable to create the subdirectory
+for uploads, you must create it yourself (and you may have problems uploading
+files).  Make sure to give the subdirectory suitable permissions for uploading
+files.  In the Unix/Linux world, that is probably something like 775.  Note
+the process of creating the upload subdirectory may fail if the top level
+directory of your website has permissions that prevent the webserver (and PHP)
+from creating subdirectories.   You may need to loosen the permissions
+temporarily to allow the subdirectory to be created by uploading attachments.
+</li>
+
+<li>If this extension does not permit you to upload specific types of files
+(such as zip files), be aware that the extension respects the restrictions
+placed by the Media Manager on types of files permitted to be uploaded. This
+is to prevent uploading of potentially harmful types of files such as html or
+php files. The administrator can update the Media Manager settings to add
+specific file types by going to the "Global Settings" item under the "Site"
+menu, selecting the "System" tab, and added the appropriate file extension and
+Mime type to the lists under the "Media Manager" section.
+</li>
+
+<li>The second plugin, &#039;add_attachment_btn_plugin&#039; (called &#039;Button - AddAttachment&#039;
+in the plugin manager) allows attachments to be added to articles while they
+are being edited in the article editor.   This plugin adds a button just below
+the article editing area labeled "Add Attachment".  If you have installed this
+plugin but do not see the button, the add attachment button plugin probably needs to
+be enabled in the plugin editor.   Note: Although the button displays when an
+article is being created (before it is saved once), it is not usable and will
+display a warning.  Articles must exist (have an article ID) before files can
+be attached to them.
+</li>
+
+<li>If you cannot see the attachments in the front end, there are several possible reasons:
+  <ul>
+     <li>The &#039;Content - Attachments&#039; plugin is not enabled.  Use the plugin manager
+         to enable it. </li>
+     <li>The option &#039;Who can see attachments&#039; is set to &#039;logged-in&#039; and you are
+         not logged in.  This can be changed via the Parameter editor in the
+         component manager. </li>
+     <li>In the &#039;Content - Attachments&#039; (via the plugin manager), the access
+         level is not set to &#039;Public&#039;. </li>
+  </ul>
+</li>
+
+<li>If you encounter limits on the sizes of files that you attempt to upload,
+try adding the following lines to the .htaccess file in the root of
+your Joomla! website:
+<pre>
+  php_value upload_max_filesize 32M
+  php_value post_max_size 32M
+</pre>
+where you may change the 32M (megabytes) value to whatever you wish as the maximum
+upload file size.
+</li>
+
+<li>There is help forum and a Frequently Asked Questions forum for the Attachments
+extension that is hosted on the Joomlacode website.  If you encounter a problem that
+is not covered in this help page, please consult the forums:
+<ul class="url">
+  <li><a title="Attachments forums at Joomlacode.org"
+         href="http://joomlacode.org/gf/project/attachments/forum/"
+         >Attachments Forums at Joomlacode.org</a></li>
+</ul>
+</li>
+
+</ul>
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<h2><a name="upgrading"></a>Upgrading</h2>
+If you have previously added attachments that you wish to preserve
+through an upgrade, use these steps:
+<ol>
+<li><i>[This step is optional but encouraged, to make sure you have
+a backup of the attachments database in case something goes wrong.]</i><br>
+Use <a href="http://www.phpmyadmin.net/home_page/index.php">phpMyAdmin</a>
+(or other SQL editing tool) to save the contents
+of the jos_attachments table (Use the &#039;Export&#039; option with
+&#039;Complete&#039; inserts for data (not &#039;Extended&#039; inserts).  You should also
+back up the uploaded attachments files (usually in the &#039;attachments&#039;
+directory )
+</li>
+
+<li>Go to the Attachments manager in the administrative back end and
+click on the item labelled &#039;Admin&#039; on the right end of the toolbar.
+Click on the command &#039;Disable uninstallation of MySQL Attachments Table&#039;.
+This disables the deletion of the attachments database table during
+uninstallation of the attachments component.
+</li>
+
+<li>Uninstall the &#039;Attachments&#039; component. </li>
+
+<li>Uninstall all of the &#039;Attachments&#039; plugins</li>
+
+<li>Now install the new release by unziping the release file and
+installing all of the new plugins and then the component.
+During the installation of the component, the attachments database
+table will be updated automatically.
+</li>
+
+<li>Reenable all of the &#039;Attachments&#039; plugins. </li>
+
+<li>Your attachments should be available again.  Go to the Attachments
+manager in the administrative back end to verify that your attachments
+are okay.</li>
+
+</ol>
+<p>Note that uninstalling the &#039;Attachments&#039; extension does not
+delete the previously uploaded files, but it does remove the attachments
+table in the database. So after reinstalling a new version of
+&#039;Attachments&#039;, it is only necessary to restore the attachments
+table to restore all the old attachments.</p>
+
+<p>
+If you decide not to restore the attachments database, do not forget to delete any
+obsolete uploaded files in the attachments subdirectory to avoid filename conflicts
+in the future.  <span class="atop"><a href="#top">[Back to top]</a></span></p>
+
+<h2><a name="acknowledgements"></a>Acknowledgements</h2>
+Many thanks for the following contributors or resources:
+<ul>
+    <li>The book <i>Learning Joomla! 1.5 Extension Development: Creating Modules,
+    Components, and Plugins with PHP</i> by Joseph L. LeBlanc was very helpful
+    in creating the &#039;Attachments&#039; extension.
+    </li>
+    <li>Many thanks to Paul McDermott for generously donating the search plugin!
+    This is a very helpful addition!
+    </li>
+    <li>The icons for the file types were derived from several sources, including:
+        <ul>
+           <li><a href="http://www.famfamfam.com/lab/icons/silk/">The Silk
+           icons by Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+           <li><a href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type
+           Icons 1.2 by John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+           <li><a href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype
+           Icons 2 by Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+           <li><a href="http://www.catnip.co.uk/opendocument/icons/">OpenDocument icons proposed by
+           Pete Harlow (http://www.catnip.co.uk/opendocument/icons/)</a></li>
+           <li><a href="http://sweetie.sublink.ca">Sweeties Base Pack by Joseph North (http://sweetie.sublink.ca)</a></li>
+       </ul>
+       <br>
+       Note that most of the &#039;Attachments&#039; icons were modified from the original
+       icon images from these websites.  If you would like the original versions,
+       please download them from these websites.
+    </li>
+</ul>
+<span class="atop"><a href="#top">[Back to top]</a></span>
+
+<p>Please report bugs and suggestions to <a href="mailto:jmcameron@jmcameron.net">jmcameron@jmcameron.net</a>.</p>
+</body>
+</html>

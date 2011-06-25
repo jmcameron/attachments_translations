@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Attachments 说明文档（Translated by baijianpeng http://www.joomlagate.com）</title>
+    <link href="../../css/admin.css" type="text/css" rel="stylesheet">
+    <link href="help.css" type="text/css" rel="stylesheet">
+</head>
+<body><a name="top"></a>
+<h1>Attachments 说明文档</h1>
+<h3>版本 1.3 - 2008年6月01日</h3>
+
+<ol>
+<li><a href="#intro">简介</a></li>
+<li><a href="#uploads">上传限制</a></li>
+<li><a href="#options">设定</a></li>
+<li><a href="#styling">自定义附件列表样式</a></li>
+<li><a href="#icons">文件类型图标</a></li>
+<li><a href="#warnings">警告</a></li>
+<li><a href="#upgrading">升级</a></li>
+<li><a href="#acknowledgements">致谢</a></li>
+</ol>
+
+<h2><a name="intro"></a>简介</h2>
+Attachments 是一款针对 Joomla! 1.5 开发的扩展套件，它可以让你上传文件并以附件形式附加到文章中。Attachments 扩展套件包括一个插件，用于在文章中显示附件；一个组件，用于上传及管理附件；一个按钮插件，用于在文章编辑窗口添加一个“插入附件”的按钮。设置选项包括谁能看到附件以及谁能上传附件，还有一些其它选项来提升其灵活性及可用性。注意: 本扩展套件只能工作在 Joomla! 1.5 及更高版本。
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="uploads"></a>上传限制</h2>
+并非任何类型的文件都可以作为附件来上传。Attachments 不会允许上传 Joomla! 的媒体管理器禁止上传的文件。要想知道（或者更改）哪些文件被允许上传，请进入 <b>全局设置</b>　页面，点击 <b>系统</b> 标签。在 <b>媒体设定</b> 部分，那里有关于允许上传哪些文件类型及媒体类型的选项。Attachments 组件完全遵守这些限制。不过，“允许的图片类型（文件类型）”部分的设定不予参考。
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="options"></a>附件设定</h2>
+Attachments 组件的所有设定都是通过其插件的参数页面完成的。要更改这些设定，请登入后台管理界面，点击“扩展套件”菜单上的“插件管理”，找到名为“Content-Attachments”的项目并打开，您就可以在页面右侧看到一系列参数。这些参数包括:<br>
+<ul>
+
+<li><strong>谁能看到附件:</strong> 本参数决定谁能看到附件连结，目前有两个选项：
+<ol>
+<li>&rsquo;<b>任何人</b>&rsquo; - 如果选择此项，任何访问网站的人都能看到附件连结，不管他们是否登入。</li>
+<li>&rsquo;<b>任何已登入的会员</b>&rsquo;. - 如果选择此项，只有登入到网站的注册会员才能看到附件连结。</li>
+</ol>
+</li>
+
+<li><strong>谁能添加附件:</strong> 本参数决定谁能给文章添加附件。有两个选项：
+<ol>
+<li>&rsquo;<b>仅限文章作者</b>&rsquo; - 只有文章作者才能看到“上传附件”的连结。</li>
+<li>&rsquo;<b>任何已登入的会员</b>&rsquo; - 任何已登入的会员都能看到“上传附件”的连结。</li>
+</ol>
+</li>
+
+<li><strong>默认发布附件:</strong> 本参数决定是否默认在附件一被添加就立即发布。如果设为“是”，一旦添加了附件，就会被立即发布，会员就能看到它。如果设为“否”，新附件不会默认被发布。必须由管理员从后台来审核、发布，这些附件才能在前台显示。</li>
+
+<li><strong>自动发布警告:</strong> 如果自动发布选项被禁用 (见上一个参数)，您可能就希望能够告诉上传附件的人，如何才能发布他们的附件。您可以在此输入一段通告文字。如果此字段没有填写，则会显示一个预设的系统提示，告诉他们与网站管理员联系以便发布他们刚刚上传的附件。</li>
+
+<li><strong>显示表头标题:</strong> 如果设为“是”，将在附件文件列表的顶部显示一行表头标题，说明每一列都是什么内容。</li>
+
+<li><strong>显示附件文件的描述:</strong> 本参数决定是否在附件列表中显示附件的描述。</li>
+
+<li><strong>显示附件文件的大小:</strong> 本参数决定是否在附件列表中显示附件的文件大小。</li>
+
+<li><strong>显示文件修改日期:</strong> 如果设为“是”，文章的附件列表上会显示附件文件的修改日期。如果设为“否”，附件列表中不显示日期。</li>
+
+<li><strong>修改日期的格式串：:</strong> 您可以使用 PHP 语言中 date 函数的格式串来自定义您的修改日期格式。此参数的默认值是 "M-j-Y&nbsp;g:ia"
+其结果类似： "Sep-29-2007 5:05pm". 如果您只希望显示日期，那么删除 "g:ia" 这部分即可。</li>
+
+<li><strong>附件列表的 CSS 样式:</strong> 如果要忽略默认的附件列表 CSS 样式, 您可以在此指定您自己的样式名称。默认的样式名称是 'attachmentsList'。 更多资讯请参看 <a href="#styling">[自定义附件列表的样式]</a> 一节。
+</li>
+
+<li><strong>文件连结打开模式:</strong>
+这个参数决定了附件文件连结的打开方式。  '在当前窗口' 就是指在当前浏览器窗口中打开文件。  '在新窗口'指在新窗口中打开文件。在某些浏览器，使用 '在新窗口' 模式实际上是在新的标签页中打开附件。
+</li>
+
+<li><strong>附加到档名之前:</strong> 本参数决定当保存附件文件到伺服器端时是否要在档名之前附加一个数字前缀。共有3种选项：<ol>
+<li>&rsquo;<b>文章 ID</b>&rsquo; - 如果选择此项，档名前面将附加该文章的 ID 号码。此项可以减少档名“撞车”（collisions）的机会，而且能确保在目录列表上文章的附件文件与文章排列在一起。请注意：此项可以允许将不同的文件以相同的档名附加给不同的文章，但不能附加给同一篇文章。</li>
+<li>&rsquo;<b>附件 ID</b>&rsquo; - 如果选择此项，档名前面将附加该附件的 ID 号码。此项将消除档名“撞车” 的可能性，因为每一个附件都有唯一的 ID 号码。在目录列表上，附件将按照次序排序。</li>
+<li>&rsquo;<b>不附加</b>&rsquo; - 如果选择此项，档名将以用户所给名称保存，不会附加任何前缀。此项增加了档名“撞车”的机会，因为每一个上传的附件都必须拥有唯一的档名。</li>
+</ol>
+</li>
+
+<li><strong>上传到子目录:</strong> Attachments 组件将把附件文件存放在这个位于 Joomla 根目录下的子目录中。<b>警告：如果此项被更改，您必须首先手动创建一个新的子目录才能上传附件。</b>
+注意：如果此子目录改动，只影响后面上传的文件。以前上传的文件仍将保存在旧目录中，同时附件资料库中的记录仍然指向那些文件。</li>
+
+<li><strong>自定义附件列表的标题:</strong> 默认情况下，&rsquo;Attachments&rsquo; 组件在某篇文章的附件列表上方(如果该文章有附件的话)显示的标题是“附件:”。在某些情况下，您可能希望为某些特定文章使用其它某个词语。您可以给每一篇文章指定具体的标题词。例如：如果您希望 ID 号为 211 的文章使用自定义标题“下载”，您就可以在本参数中这样填写:
+&rsquo;211&nbsp;下载&rsquo; (不要引号)。注意：每一行只能定义一个。</li>
+
+<li><strong>要隐藏附件的类别:</strong>
+这些类别中的文章的附件列表将被隐藏。请以数字列表的方式输入单元及类别 ID:
+Section#/Category#, Section#/Category#. 如果只输入 'Section#' ，则意味着包含该单元中的所有类别。 例如: 23/10, 23/11, 24.
+</li>
+
+<li><strong>安全附件下载:</strong> 默认情况下,  &rsquo;Attachments&rsquo; 将附件文件保存在一个任何人都能访问的目录中。如果您选择了 “<b>安全</b>” 方式，则保存附件的目录将被设为公众可以访问，网站前台该附件的下载连结也可以下载文件，但不是直接连结。这就限制了只有拥有适当权限的会员才能访问该目录。如果没有选择 <b>安全</b> 下载模式，附件的连结将按照上面的参数定义的那样显示，但是其他任何人只要知道这个连结 URL 就能直接访问附件文件，因为存放的子目录已经是公开的了。 <b>安全</b> 下载模式防止了没有适当权限的用户访问附件，即使他们知道完整的 URL 也不行。因为此模式阻止了公众对附件存放目录的访问。
+<li><strong>“安全下载”的下载方式:</strong>
+此项决定附件文件是作为独立文件下载，还是直接在浏览器窗口中显示(如果浏览器可以处理该种文件类型的话)。有两种方式:
+<ul>
+	<li><b>inline</b>: 在此模式下，凡是可以在浏览器中显示的文件都将直接在浏览器中显示出来(例如文本文件及图像)。</li>
+	<li><b>attachment</b>: 在此模式下，附件文件总是被当作独立文件来下载。</li>
+</ul><br>
+在任何一种模式下，凡是无法在浏览器中显示的文件都同样被视作外部文件而下载。
+</li>
+
+</ul>
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="styling"></a>自定义附件列表的样式</h2>
+网站前台的附件列表是通过特殊的含有表格的 &rsquo;div&rsquo; 来实现的。该表格拥有几个不同的 CSS 类，以便给网站开发人员提供自定义表格外观的灵活性。请打开插件的 CSS 文件( plugins/content/attachments.css) 查看实例。如果您希望更改样式，先复制原始的样式代码到该文件的末尾，然后将新复制部分的 'attachmentsList' 名称修改为您自己想要的名称。然后在本组件的参数(组件 - 文章附件)中， 将 <b>附件表格样式</b> 一项填写为新修改的名称。接下来在您复制的代码部分修改 CSS 类定义，以适应您的需要。这个方法可以让您在需要时迅速还原到初始的样式，只需要将组件参数中的 <b> 附件表格样式</b> 名称改回默认的“attachmentList”即可。此法还有一个优势就是，已修改的样式代码部分可以被复制到某个文件中保存下来，然后在 Attachments 组件升级之后轻松地复原回去。这个操作也可以通过 CSS @import 命令来完成。
+
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="icons"></a>文件类型图标</h2>
+ 'Attachments' 组件在附件列表上的每一个附件前面都会显示一个图标。如果您想要增加一种新的图标类型，这样操作:
+(1) 上传图标文件到 'media/attachments/icons' 目录（如果你没有在该目录中找到合适的图标文件的话）; (2) 修改 'components/com_attachments/file_types.php' 这个文件，在静态序列 $attachments_icon_from_file_extension 中添加一行代码，该序列是文件扩展名与图标名称(都在 media/attachments/icons 目录中)的映射关系。如果还不能生效，您或许还需要在序列 $attachments_icon_from_mime_type 中添加一行代码。(3) 以后升级 Attachments 组件时，一定要首先复制该图标文件及修改过的 file_types.php 文件到网站之外的某个目录中。
+
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="warnings"></a>警告</h2>
+<ul>
+<li><strong>如果您的附件是敏感文件或机密文件，请使用 <b>附件安全下载</b> 模式!</strong><br> 如果您不使用安全模式，附件文件将被保存在公众可访问的目录中，任何人只要知道完整 URL 就能下载。 <b>安全</b> 模式防止了没有适当权限(由上面的参数决定)的用户访问附件，请参看上面关于 <b>附件安全下载</b> 的讨论获取更多资讯。
+</li>
+
+<li>每当上传一个文件时，都会检查上传目录是否存在，如果不存在则自动创建。如果 &rsquo;Attachments&rsquo; 组件无法创建上传目录，您就必须自己创建一个(否则您就无法上传文件)。请确保该目录有合适的权限来允许上传文件。在 Unix/Linux 伺服器上，很可能是 744 权限。</li>
+
+<li>如果本组件不允许您上传特定类型的文件(例如 zip 格式文件), 那是因为本组件完全遵照“媒体管理器”中限定的允许上传的文件类型。这是为了防止上传存在潜在危害的文件类型，如 html 或 php 文件。 网站管理员可以更改“媒体管理器”的设定来添加允许的文件类型，方法是：进入网站后台菜单上的“网站”下的“全局设置”，选择“系统”标签，在“媒体管理器”部分的列表中添加对应的文件扩展名及 Mime 类型。
+</li>
+
+<li>本组件可以被翻译成您的本地语言，目前已带有下列语种(除英语之外)的翻译：
+<ul>
+	<li><b>中文:</b> 简体中文及正体中文翻译：
+	    baijianpeng (http://www.joomlagate.com).  <br></li>
+</ul><br>
+非常感谢翻译人员!  如果您也愿意将本组件翻译为其它语言，请与作者联系（见本页末尾）.
+</li>
+
+<li>第二个插件，'add_attachment_plugin' (在后台插件管理页面的初始名称是 'Button-AddAttachment') 可以让您在撰写/修改文章时，直接从编辑器窗口给文章添加附件。此插件会在文章编辑区域的下方增加一个按钮，名为“添加附件”。如果您已经安装了此插件却没有看到这个按钮，很可能是因为在“插件管理”中没有启用 add_attachment 插件。
+</li>
+
+<li>这个版本已经可以在 Joomla! 1.5 启用 SEF 的情况下正常工作。建议您使用最新版本的 Joomla! 1.5.x 核心。
+</li>
+
+</ul>
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="upgrading"></a>升级</h2>
+如果您之前已经上传了附件，现在希望在升级时继续保留，请按照下列步骤操作:
+<ol>
+<li>通过 phpMyAdmin (或其它 SQL 备份工具) 保存 jos_attachments 资料表的内容(使用“导出”功能)。</li>
+<li>卸载“Attachments”组件。如果 Joomla 提示说无法删除媒体文件，您就必须手动删除 /media/attachments 目录。</li>
+<li>卸载“Attachments”插件。</li>
+<li>安装新版本组件和插件。</li>
+<li>启用“Attachments”插件。</li>
+<li>最后通过 phpMyAdmin 导入前面保存的附件资料到新创建的 jos_attachments 资料表中。</li>
+<li>如果您是从低于 1.0 的某个版本升级到高于 1.0 的版本，并且您有以前的附件文件, 您还需要在新的“icon_filename”字段中添加适当的值。方法是以管理员身份登入网站后台，然后在浏览器中打开下面这个 URL: <br>
+<b>/administrator/index.php?option=com_attachments&amp;task=add_icon_filenames</b>
+</li>
+</ol>
+<p>注意：卸载“Attachments”组件不会删除以前上传的文件，但是会删除资料库中的附件资料表。因此在重新安装新版本之后，只需导入附件资料表即可恢复所有以前的附件。</p>
+
+<p>
+如果您不需要恢复附件资料库，请别忘记删除附件目录中以前上传的附件文件，以免后面发生档名冲突。</p>
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<h2><a name="acknowledgements"></a>致谢</h2>
+对以下资料及人员表示衷心感谢:
+<ul>
+    <li>书籍：<b>Learning Joomla! 1.5 Extension Development: Creating Modules,
+    Components, and Plugins with PHP</b> 作者： Joseph L. LeBlanc 这本书在开发 Attachments 组件过程中帮了大忙！
+    </li>
+    <li>各种文件类型的图标提取自多个来源,包括:
+        <ul>
+           <li><a href="http://www.famfamfam.com/lab/icons/silk/">The Silk
+           icons 作者： Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+           <li><a href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type
+           Icons 1.2 作者： John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+           <li><a href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype
+           Icons 2 作者： Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+           <li><a href="http://www.catnip.co.uk/opendocument/icons/">OpenDocument icons proposed 作者：
+           Pete Harlow (http://www.catnip.co.uk/opendocument/icons/)</a></li>
+       </ul>
+       注意:大多数用于 Attachments 组件的图标与这些网站的原始图标相比，已经作了一些修改。如果您更喜欢原始版本，请从上述网站下载它们。
+    </li>
+</ul>
+
+
+<span class="atop"><a href="#top">【回到页顶】</a></span>
+
+<br>&nbsp;<br>
+如果您发现了 bug 或者有什么宝贵意见,请发邮件到 <a href="mailto:jmcameron@jmcameron.net">jmcameron@jmcameron.net</a>.
+
+</body>
+</html>

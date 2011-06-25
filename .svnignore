@@ -1,0 +1,6 @@
+*.zip
+archive
+.git*
+lib
+*.py
+*.ppr

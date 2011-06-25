@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.5: http://docutils.sourceforge.net/" />
+<title>Documentația pentru Atașamente</title>
+<link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<h1 class="title">Documentația pentru Atașamente</h1>
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<p class="version"><strong>Versiunea 2.2 - 3 Decembrie 2010</strong></p>
+<div class="contents topic" id="con-inut">
+<p class="topic-title first">Conţinut</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introducere" id="id1">Introducere</a></li>
+<li><a class="reference internal" href="#facilit-i-noi-n-versiunea-2-0" id="id2">Facilități noi în Versiunea 2.0</a></li>
+<li><a class="reference internal" href="#restric-ii-de-upload" id="id3">Restricții de Upload</a></li>
+<li><a class="reference internal" href="#set-ri-ata-amente" id="id4">Setări Atașamente</a></li>
+<li><a class="reference internal" href="#numele-afi-at-al-fi-ierului-sau-url-ului" id="id5">Numele afișat al fișierului sau URL-ului</a></li>
+<li><a class="reference internal" href="#ata-area-url-urilor" id="id6">Atașarea URL-urilor</a></li>
+<li><a class="reference internal" href="#la-ce-pot-fi-ata-ate-fi-iere" id="id7">La ce pot fi atașate fișiere?</a></li>
+<li><a class="reference internal" href="#stilul-css-al-listelor-de-ata-amente" id="id8">Stilul CSS al Listelor de Atașamente</a></li>
+<li><a class="reference internal" href="#icon-uri-ale-tipurilor-de-fi-ier" id="id9">Icon-uri ale tipurilor de fișier</a></li>
+<li><a class="reference internal" href="#traduceri" id="id10">Traduceri</a></li>
+<li><a class="reference internal" href="#avertiz-ri" id="id11">Avertizări</a></li>
+<li><a class="reference internal" href="#actualizare" id="id12">Actualizare</a></li>
+<li><a class="reference internal" href="#mul-umiri" id="id13">Mulțumiri</a></li>
+<li><a class="reference internal" href="#contact" id="id14">Contact</a></li>
+</ul>
+</div>
+<div class="section" id="introducere">
+<h1><a class="toc-backref" href="#id1">Introducere</a></h1>
+<p>Extensia 'Atașamente' pentru Joomla! permite upload-ul și atașarea de fișiere la articole și alte
+tipuri de conținut. 'Atașamente' include un plugin pentru afișarea atașamentelor și o componentă
+pentru upload-ul și managementul lor. Există opțiuni pentru controlul cui poate vedea atașamentele
+și cui le poate upload-a, precum și alte opțiune pentru a-i spori flexibilitatea și gradul de
+folosire. Notă: toate opțiunile sunt controlate cu ajutorul managerului componentei. <strong>Această
+extensie funcționează doar cu Joomla! 1.5.  Nu a fost testată cu versiunea 1.6.</strong></p>
+<p>Extensia 'Atașamente' a fost tradusă în diferite limbi. Vezi secțiunea <a class="reference internal" href="#traduceri">Traduceri</a> pentru o listă
+a traducerilor disponibile. Majoritatea pachetelor de traduceri sunt în proces de a fi actualizate
+pentru 'Atașamente' versiunea 2.0.</p>
+<p>Dacă dorești să te abonezi la o listă de email pentru anunțurile referitoare la această extensie,
+te rog abonează-te folosind această pagină web:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Lista de Email pentru Atașamente ( http://jmcameron.net/attachments/email-list.html )</a></li>
+</ul>
+</div>
+<div class="section" id="facilit-i-noi-n-versiunea-2-0">
+<h1><a class="toc-backref" href="#id2">Facilități noi în Versiunea 2.0</a></h1>
+<ul>
+<li><p class="first">Acum ai posibilitatea de a &quot;atașa&quot; URL-uri precum și fișiere la elemente de conținut.</p>
+</li>
+<li><p class="first">Acum ai posibilitatea de a afișa lista de atașamente oricunde în cadrul unui articol (sau element
+de conținut).</p>
+</li>
+<li><p class="first">Un câmp opțional nou în lista de atașamente pentru afișarea numelui celui ce a upload-at
+atașamentul</p>
+</li>
+<li><p class="first">A fost implementat un multi-instalator astfel încât instalarea tuturor părților extensiei
+'Atașamente' necesită doar o instalare (și activează plugin-urile automat). Aceasta face extrem
+de facilă instalarea acestei extensii, chiar dacă acum are o componentă și șapte plugin-uri.
+Metoda de 'actualizare' Joomla! este acum metoda implicită pentru toate părțile extensiei
+'Atașamente'. Aceasta înseamnă că nu trebuie să dezinstalezi versiuni vechi de 'Atașamente'
+înainte de a instala această versiune.</p>
+</li>
+<li><p class="first">Stocarea fișierelor atașament a fost modificată pentru a folosi căi de forma:</p>
+<pre class="literal-block">
+attachments/article/23/file.txt
+</pre>
+<p>Aceasta elimină toate prefixele de fișiere folosite în versiunile anterioare. Înseamnă că orice
+element de conținut nu poate avea nume de fișiere duplicate. Aceasta nu este o mare limitare în
+practică.</p>
+</li>
+<li><p class="first">A fost rescris codul cu scopul de a adăuga &quot;Plugin-urile Atașamente&quot;. Aceste plugin-uri permit
+atașarea de fișiere la orice element de conținut care invocă plugin-ul <tt class="docutils literal"><span class="pre">onPrepareContent</span></tt>.
+De exemplu, acum poți atașa fișiere la descrierile de Secțiuni și Categorii. Cu puțin efort, un
+dezvoltator de extensii poate crea un plugin 'Atașamente' pentru a suporta adăugarea de
+atașamente la elemente precum Afișări de informații personale CB, Descriere de produs Virtuemart,
+etc.  Vezi secțiunea <a class="reference internal" href="#la-ce-pot-fi-ata-ate-fi-iere">La Ce Pot Fi Atașate Fișiere?</a> pentru mai multe detalii.</p>
+</li>
+<li><dl class="first docutils">
+<dt>În aria administrativ:</dt>
+<dd><ul class="first last simple">
+<li>Acum este posibil să adaugi atașamente la articole în timpul creerii lor!</li>
+<li>Există o opțiune pentru a suprima afișarea atașamentelor la articole sau elemente de conținut
+nepublicate sau șterse (cu toate că există o modalitate usoară de a le vedea dacă se
+dorește).</li>
+<li>A fost adăugat filtrul la listele de articole</li>
+<li>A fost refăcută afișarea tabulară în aria administrativă pentru a permite sortarea după
+diverse coloane</li>
+<li>Câteva comenzi utile administrative noi</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">A fost îmbunătățită manipularea Unicode în numele de fișiere.</p>
+</li>
+<li><p class="first">A fost adăugată mai multă flexibilitatea la opțiunile &quot;Cine poate vedea&quot; și &quot;Cine poate
+actualiza&quot;.</p>
+</li>
+<li><p class="first">Au fost rezolvate problemele CSS atunci când instalarea Joomla! folosește caching-ul.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="restric-ii-de-upload">
+<h1><a class="toc-backref" href="#id3">Restricții de Upload</a></h1>
+<p>Nu toate tipurile de fișiere pot fi upload-ate. Extensia 'Atașamente' nu permite upload-ul de
+fișiere ce nu sunt permise de către Managerul Media Joomla!. Pentru a vedea (sau a modifica)
+tipurile de fișiere permise, du-te la pagina de <strong>Configurare Globală</strong> și click pe tab-ul
+<strong>Sistem</strong>. în aria de <em>Setări Media</em>, există opțiuni pentru a controla ce tipuri de extensii de
+fișier și tipuri mime sunt permise pentru upload. Extensia 'Atașamente' respectă aceste restricții.
+Cu toate acestea, restricția de 'Extensii (Tipuri de fișier) de Imagini Permise' este ignorată.</p>
+</div>
+<div class="section" id="set-ri-ata-amente">
+<h1><a class="toc-backref" href="#id4">Setări Atașamente</a></h1>
+<p>Toate setările pentru 'Atașamente' sunt controlate cu ajutorul managerului componentei. Pentru a le
+accesa, du-te în aria administrativă și selectează &quot;Atașamente&quot; din meniul &quot;Componente&quot;. Click pe
+butonul &quot;Parametri&quot; din partea dreaptă a barei de unelte și vei vedea o serie de parametri pentru
+această extensie. Acesti parametri includ următoarele:</p>
+<ul>
+<li><p class="first"><strong>Cine poate vedea atașamentele:</strong> Această setare controlează cine va putea vedea link-urile
+pentru atașamente. Există trei opțiuni:</p>
+<ol class="arabic simple">
+<li>'<em>Nimeni</em>' - Dacă această opțiune este selectată, lista de atașamente și link-urile pentru
+descărcarea atașamentelor NU vor fi vizible vizitatorilor normali pe website (în aria
+publică), indiferent dacă sunt autentificați sau nu. În modul securizat, aceasta previne
+descărcarea atașamentelor în aria publică. Cu toate acestea, administratorii vor putea vedea
+lista de atașamente și pot descărca fișierele chiar dacă opțiunea 'nimeni' este selectată.</li>
+<li>'<em>Orice utilizator autentificat</em>' - Dacă această opțiune este selectată, doar utilizatorii
+autentificați pe website vor putea vedea link-urile la atașamente.</li>
+<li>'<em>Oricine</em>' - Dacă această opțiune este selectată, link-urile la atașamente vor fi vizibile
+oricărui vizitator pe website, indiferent dacă este autentificat sau nu.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Cine poate adăuga atașamente:</strong> Această setare controlează cine poate adăuga atașamente la
+articole sau alte elemente de conținut. Există patru opțiuni:</p>
+<ol class="arabic simple">
+<li>'<em>Nimeni</em>' - Dacă această opțiune este selectată, link-ul &quot;Adaugă Atașamente&quot; pentru a
+upload-a atașamentelor NU va fi vizibil vizitatorilor normali pe website (în aria publică),
+indiferent dacă sunt autentificați sau nu. În modul securizat, aceasta previne upload-ul de
+atașamente din aria publică. Cu toate acestea, administratorii vor putea vedea link-ul &quot;Adaugă
+atașamente&quot; și vor putea upload-a fișiere chiar dacă opțiunea 'nimeni' este selectată.</li>
+<li>'<em>Doar autorul articolului</em>' - Link-urile de upload și modificare a atașamentelor vor fi
+vizibile doar autorului articolului / elementului de conținut părinte (precum și altor
+utilizatori cu permisii mai mari precum editori / publiciști / administratori.</li>
+<li>'<em>Orice utilizator autentificat</em>' - Link-urile de upload a atașamentelor vor fi vizibile
+oricărui utilizator autentificat.</li>
+<li>'<em>Editor și mai sus</em>' - Link-urile de upload a atașamentelor vor fi vizibile doar
+utilizatorilor cu permisii de Editor și mai sus.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Atașamente publicate implicit:</strong> Această facilitate de 'auto publicare' controlează dacă
+atașamentele noi sunt publicate implicit atunci când sunt adăugate. Dacă este selectat 'Da',
+atașamentele vor fi publicate și vizibile utilizatorilor imediat ce sunt adăugate. Dacă este
+selectat 'Nu', atașamentele noi nu vor fi publicate implicit. Un administrator va trebui să le
+publice din aria administrativă pentru a le face accesibile.</p>
+</li>
+<li><p class="first"><strong>Atenționare pentru auto-publicare:</strong> Dacă opțiunea de auto-publicare este dezactivată (vezi
+opțiunea anterioară), poți să-i informezi pe cei ce adăugă atașamente despre modul în care le
+pot publica. Poți introduce un mesaj relevant aici. Dacă câmpul este gol, un mesaj generic de
+sistem va fi adăugat, sugerându-le să contacteze administratorul de sistem pentru a publica orice
+atașament nou upload-at.</p>
+</li>
+<li><p class="first"><strong>Afișează titluri:</strong> Dacă este setată la 'Da', un rând cu titluri va fi adăugat deasupra listei
+de atașamente, descriind ce este în fiecare coloană.</p>
+</li>
+<li><p class="first"><strong>Afișează descrierea atașamentului:</strong> Această setare controlează dacă descrierea atașamentului
+este afișată în lista de atașamente.</p>
+</li>
+<li><p class="first"><strong>Afişează utilizatorul care a upload-at ataşamentul:</strong> Afișează numele de utilizator al celui ce
+a upload-at atașamentul.</p>
+</li>
+<li><p class="first"><strong>Afişează dimensiunea fişierului ataşat:</strong> Această setare controlează dacă dimensiunea fișierului
+atașat este afișată în lista de atașamente.</p>
+</li>
+<li><p class="first"><strong>Afişează numărul de descărcări:</strong> Această setare controlează dacă numărul de descărcări este
+afișat în lista de atașamente.</p>
+<div class="warning">
+<p class="first admonition-title">Atenție</p>
+<p class="last">Această opțiunea funcționează doar în modul securizat!
+În modul nesecurizat, fișierele sunt păstrate ca fișiere statice și accesate direct, fără a se
+trece prin codul Joomla!. De aceea este imposibil să se actualizeze numărul de descărcări
+pentru un fișier când se accesează în acest mod. Deci afișarea numărului de descărcări va
+funcționa doar în modul securizat când această opțiune este setată la 'Da'.</p>
+</div>
+</li>
+<li><p class="first"><strong>Afișează data modificării fișierului:</strong> Dacă această setare este 'Da', data de modificare
+a fișierului va fi adăugată la lista de atașamente pentru articolele ce au atașamente. Daca este
+selectat 'Nu', data nu va fi adăugată la lista de atașamente.</p>
+</li>
+<li><p class="first"><strong>String-ul de formatare pentru data modificării:</strong> Poți selecta formatul folosit pentru data
+modificării cu ajutorul funcției PHP strftime().  Caută pe Internet după 'PHP strftime' pentru
+exemple.  Formatul implicit (%x %H:%M) produce date în formatul 24-ore,
+precum 4/28/2008 14:21.  Pentru a renunța la timpul din zi, elimină partea &quot;%H:%M&quot;. Implementările
+PHP pentru MS Windows și Linux pot diferi cu privire codurile suportate.</p>
+</li>
+<li><p class="first"><strong>Ordinea de afişare a ataşamentelor:</strong> Această opțiune permite specificarea ordinei în care
+atașamentele vor fi afișate în listele de atașamente. Majoritatea opțiunilor sunt explicite:</p>
+<ol class="arabic simple">
+<li>'<em>Nume fișier</em>' - Dacă această opțiune este selectată, atașamentele vor fi ordonate
+după numele fișierului.</li>
+<li>'<em>Dimensiune fișier(cel mai mic primul)</em>'</li>
+<li>'<em>Dimensiune fișier(cel mai mare primul)</em>'</li>
+<li>'<em>Descriere</em>'</li>
+<li>'<em>Nume afișat al fișierului sau URL-ului</em>' - Toate atașamentele care au numele afișat de
+fișier gol vor fi afișate înainte celor cu nume afișat de fișier și vor fi ordonate după
+numele fișierului.</li>
+<li>'<em>Utilizatorul care a upload-at</em>' - Ordonate după numele utilizatorului care a upload-at
+atașamentul.</li>
+<li>'<em>Data creeri (cel mai vechi primul)</em>'</li>
+<li>'<em>Data creeri (cel mai nou primul)</em>'</li>
+<li>'<em>Data modificării (cel mai vechi primul)</em>'</li>
+<li>'<em>Data modificării (cel mai nou primul)</em>'</li>
+<li>'<em>ID-ul Atașamentului</em>' - Dacă această opțiune este selectată, atașamentele vor fi ordonate
+după ID-ul atașamentului.  Aceasta va ordona atașamentele în ordinea în care au fost create.</li>
+<li>'<em>Câmp 1 definit de utilizator</em>'</li>
+<li>'<em>Câmp 2 definit de utilizator</em>'</li>
+<li>'<em>Câmp 3 definit de utilizator</em>'</li>
+</ol>
+</li>
+<li><p class="first"><strong>Numele pentru câmpul 1-3 definit de utilizator:</strong> Dacă ai informații adiționale pentru fiecare
+atașament pe care dorești să o adaugi, extensia 'Atașamente' îți permite să definești până la
+trei câmpuri opționale.  Pentru a crea un câmp nou, introdu numele lui în una din una din cele
+trei intrări. Șterge numele pentru a dezactiva afișarea și modificarea acestui câmp.
+Câmpurile definite de utilizator vor fi afișate în ordinea afișată aici. Lungimea maximă pentru
+numele fiecărui câmp este de 40 de caractere. Datele din aceste câmpuri pot avea o lungime de
+până la 100 de caractere.</p>
+<div class="hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Dacă adaugi un asterisc la sfârșitul numelui unui câmp definit de
+utilizator, acesta nu va fi afișat în aria publică a site-ului. Va fi
+vizibil când un atașament este editat în aria publică și întotdeauna
+vizibil în aria administrativă. Acest câmp ascuns definit de utilizator
+poate fi folosit pentru ordonarea atașamentelor într-o ordine arbitrară,
+dacă se pun valori numerice întregi în acest câmp.</p>
+</div>
+</li>
+<li><p class="first"><strong>Lungimea maximă a numelui fișierului:</strong>
+Lungimea maximă a numelui fișierului pentru lista de atașamente.  Numele de fișiere mai lungi
+decât această limită vor fi trunchiate și puse în câmpul numele afișat al fișierului (doar
+în scopul afișării, numele actual al fișierului nu va fi modificat). O valoare de 0 înseamnă că
+lungimea numelui fișierului este nelimitată de această opțiune (cu toate acestea câmpul nume
+fișier din tabela de atașamente din baza de date este limitat la 80 de caractere). Notă: Dacă
+numele afișate de fișiere sunt trunchiate de această opțiune, numele trunchiat al fișierului va fi
+introdus în câmpul 'numele afișat al fișierului'. Acesată opțiune afectează doar atașamentele
+adăugate după ce această opțiune a fost setată.</p>
+</li>
+<li><p class="first"><strong>Unde să se poziționeze atașamentele?</strong> Această opțiune controlează locația în cadrul articolului
+(sau elementului de conținut) unde va fi afișată lista de atașamente.
+Această opțiune se aplică la toate listele de atașamente:</p>
+<blockquote>
+<ul>
+<li><p class="first">'<em>La început</em>'</p>
+</li>
+<li><p class="first">'<em>La sfârșit</em>'</p>
+</li>
+<li><p class="first">'<em>Poziționare personalizată</em>' - Cu această opțiune, lista de atașamente va fi afișată în
+cadrul articolului (sau elementului de conținut) acolo unde apare tag-ul special:
+{attachments}.</p>
+<div class="warning">
+<p class="first admonition-title">Atenție</p>
+<p class="last">În modul de poziționare personalizată, orice articol (sau
+element de conținut) care nu include acest tag va afișa lista sa de
+atașamente la sfârșit.</p>
+</div>
+<p>În acest mod, când editezi un articol, o secțiune sau o categorie în aria
+administrativă, un buton adițional va fi afișat: [Introdu semnul
+{attachments}]. Poziționează cursorul acolo unde vrei să apară semnul de
+poziționare personalizată și folosește acest buton pentru a introduce
+semnul. Acest buton va adăuga tag-uri HTML necesare pentru a ascunde
+semnul când acesta nu este înlocuit (de exemplu atunci când lista de
+atașamente nu trebuie să fie vizibilă). În HTML, semnul arată în felul
+următor, cu tag-urile necesare pentru a-l ascunde:</p>
+<pre class="literal-block">
+&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+</pre>
+<p>În editorii din aria administrativă, vei vedea tag-ul {attachments}, dar
+nu și tag-urile HTML 'span', decât dacă schimbi la modul HTML. În aria
+publică nu vei vedea niciodată tag-ul {attachments}, decât dacă plugin-ul
+insert_attachments_tag este dezactivat. Dacă dorești să elimini semnul
+{attachments}, va trebui să folosești modul &quot;HTML&quot; al editorului pentru a
+fi sigur că ștergi de asemenea și tag-urile span din jur.</p>
+</li>
+<li><p class="first">'<em>Dezactivat (filtru)</em>' - Acestă opțiune va dezactiva afișarea listelor de atașament și va
+suprima afișarea oricărui tag {attachments} în articole sau elemente de conținut.</p>
+</li>
+<li><p class="first">'<em>Dezactivat (fără filtru)</em>' - Acestă opțiune va dezactiva afișarea listelor de atașament și
+nu va suprima afișarea oricărui tag {attachments} în articole (sau elemente de conținut).</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>Stilul CSS pentru tabelele de atașamente:</strong> Pentru a suprascrie stilul CSS al listelor de
+atașamente, specifică numele stilului tău aici.  Numele stilului implicit este 'attachmentsList'.
+Vezi secțiunea <a class="reference internal" href="#stilul-css-al-listelor-de-ata-amente">Stilul CSS al Listelor de Atașamente</a>.</p>
+</li>
+<li><p class="first"><strong>URL pentru înregistrare:</strong> Dacă este necesar un URL special pentru a înregistra utilizatori noi,
+introdu-l aici.  Această opțiune poate fi folositoare dacă a fost creată o pagină specială de
+autentificare.</p>
+</li>
+<li><p class="first"><strong>Modul de deschidere al link-ului fișier:</strong>
+Este modul în care se deschid link-urile la fișierele atașate.  'În aceeași fereastră'
+înseamnă că fișierul va fi deschid în aceeași fereastră a browserului.  'În fereastră nouă'
+înseamnă că fișierul va fi deschid într-o fereastră nouă.  În unele browsere, folosind opțiunea
+'În fereastră nouă' va deschide de fapt atașamentul într-un tab nou.</p>
+</li>
+<li><p class="first"><strong>Subdirector pentru upload:</strong> Extensia 'Atașamente' va stoca fișierele în acest subdirector sub
+directorul rădăcină al site-ului Joomla.  Implicit este 'attachments'.
+Dacă subdirectorul este modificat, va afecta doar upload-uriile ulterioare.  Fișierele upload-ate
+anterior vor rămâne în subdirectorul vechi și înregistrările din baza de date vor trimite în
+continuare la acele fișiere. Dacă dorești să muți fișierele din subdirectorul vechi în cel nou,
+va trebui să muți fișierele și apoi să actualizezi manual intrările din table atașamente din baza
+de date.</p>
+</li>
+<li><p class="first"><strong>Titluri personalizate pentru listele de atașamente:</strong> Implicit, extensia 'Atașamente' introduce
+titlul &quot;Atașamente:&quot; deasupra listei de atașamente pentru fiecare articol sau element de conținut
+(dacă are atașamente). În anumite cazuri, s-ar putea să preferi folosirea unui alt titlu pentru
+anumite articole sau elemente de conținut. Poți specifica per item titlul pe care dorești să îl
+folosești. De exemplu, dacă dorești ca articolul 211 să folosească titlul &quot;Descărcări:&quot;, atunci
+adaugă această definiție la această setare: '211 Descărcări' (fără apostrof). Introdu o intrare pe
+linie. Pentru alte tipuri de elemente de conținut, folosește această formă:
+'category:23 Acesta este titlul pentru categoria 23' unde 'category' poate fi înlocuit cu numele
+entității elementului de conținut. Exemplu de mai sus pentru articole poate fi rescris astfel
+'article:211 Descărcări'.  O intrare fără un ID numeric la început va fi aplicată tuturor
+elementelor de conținut. De aceea este o practică bună punerea unor astfel de suprascrieri globale
+la începutul listei și apoi suprascrierea titlurilor personalizate element cu element.</p>
+<p>Notă: Dacă dorești să schimbi titlurile folosite global pentru listele de atașamente, poți
+modifica intrarea 'ATTACHMENTS TITLE' din fișierul de traduceri:</p>
+<pre class="literal-block">
+administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+</pre>
+<p>unde qq-QQ referă codul limbii, precum en-GB for engleză.
+(Dacă nu ești familiar cu fișierele de traduceri Joomla!, caută linia care are textul
+'ATTACHMENTS TITLE' la stânga semnului '='.  Modifică tot ce apare în partea dreaptă a semnului
+'='.  Nu modifica nimic la stânga semnului egal.)</p>
+</li>
+<li><p class="first"><strong>Ascunde ataşamentele pentru:</strong>
+Lista de cuvinte cheie separate prin virgulă sau Secţiunile / Categoriile de articole pentru care
+lista de ataşamente trebuie să fie ascunsă. Cinci cuvinte speciale pot fi folosite:</p>
+<ul class="simple">
+<li>'frontpage' pentru a suprima afişarea de ataşamente pe prima pagina a
+site-ului,</li>
+<li>'blog' pentru a suprima afișarea de atașamente pe orice pagină care
+folosește layout-ul 'blog',</li>
+<li>'all_but_article_views' pentru a permite afişarea de ataşamente doar în
+paginile de vizualizare completă a articolelor,</li>
+<li>'always_show_section_attachments' pentru a permite afișarea atașamentelor la
+secțiuni când opțiunea 'all_but_article_views' este activată, și</li>
+<li>'always_show_category_attachments' pentru a permite afișarea atașamentelor
+la categorii când opțiunea 'all_but_article_views' este activată.</li>
+</ul>
+<p>(Omite ghilimelele când introduci opţiunile de cuvinte cheie.)
+<strong>Opțiunea 'frontpage' trebuie să fie respectată de către toate tipurile de
+conținut, dar tipurile de conținut altele decât articole, secțiuni și
+categorii pot respecta sau nu opțiunea 'all_but_article_views' și restul
+opțiunilor.</strong> ID-urile de Secţiuni / Categorii trebuie introduse ca ID-uri
+numerice ale secţiunilor și categoriilor separate prin slash(/):
+Secţiune#/Categorie#, Secţiune#/Categorie#. Specifică doar 'Secţiune#' pentru
+a acoperi toate categoriile dintr-o secţiune.
+Exemplu: 23/10, 23/11, 24</p>
+</li>
+<li><p class="first"><strong>Timpul limită de răspuns pentru verificarea link-urilor:</strong>
+Timpul limită de răspuns pentru verificarea link-urilor (secunde).  Atunci când un link este
+adăugat ca atașament, el este verificat direct (se poate dezactiva această verificare în cadrul
+formei). Dacă link-ul poate fi accesat înaintea timpului limită, dimensiunea fișierului și alte
+informații despre link sunt citite. Dacă nu, vor fi folosite informații generice. Pentru a
+dezactiva verificarea, introdu 0.</p>
+</li>
+<li><p class="first"><strong>Impune icon-uri la link-uri URL:</strong>
+Impune icon-uri la link-uri URL peste icon-urile de fișier atașament la fiecare atașament, pentru
+a arăta că este un URL.   URL-urile valide sunt afișate cu săgeți și cele invalide cu o linie
+roșie de-a curmezișul icon-ului de tip fișier (din stânga jos în dreapta sus).</p>
+</li>
+<li><p class="first"><strong>Suprimă atașamentele invalide (în aria administrativă):</strong>
+Setează modul implicit pentru suprimarea atașamentelor <em>invalide</em> (atașamente ale părinților
+nepublicați) în aria administrativă. În acest context, atașamentele <em>invalide</em> sunt cele ce sunt
+atașate părinților nepublicați sau șterși. Poți suprascrie această opțiune folosind meniul
+drop-down 'Afișează atașamente pentru' de deasupra listei de atașamente, în partea dreaptă (pe
+aceeași linie cu filtrul). Când folosești meniul drop-down pentru a controla ce atașament este
+vizibil, sistem memorează setările până când te dez-autentifici ca administrator. Astfel încât
+modificarea acestui parametru poate părea că nu are efect. Setarea acestui parametru va deveni
+efectivă data viitoare când te autentifici ca administrator.</p>
+</li>
+<li><p class="first"><strong>Modul de descărcare securizat pentru descărcări:</strong> Implicit, extensia 'Atașamente' salvează
+fișierele atașate într-un subdirector accesibil public. Dacă alegi opțiunea <em>securizat</em>,
+directorul în care sunt salvate atașamentele va deveni inaccesibil public. Link-uri de descărcare
+pentru atașamente în aria publică vor descărca fișierele atașament dar nu vor fi link-uri directe.
+Aceasta permite accesul doar utilizatorilor cu permisii corespunzătoare. Dacă module <em>securizat</em>
+nu este selectat, link-urile la atașamente vor fi afișate așa cum sunt indicate de opțiunile de
+mai sus, dar fișierele vor fi accesibile cuiva care cunoaste URL-ul complet, deoarece
+subdirectorul este public. Opțiunea <em>securizat</em> previne accesul utilizatorilor fără drepturi
+corespunzătoare chiar dacă ei cunosc URL-ul complet, deoarece această opțiune previne accesul
+public la subdirectorul de atașamente.</p>
+</li>
+<li><p class="first"><strong>Afișează atașamentele în mod securizat:</strong>
+Afișează atașamentele în modul securizat, chiar dacă utilizatorii nu sunt autentificați, exceptând
+cazul în care 'Cine poate vedea atașamentele' este setat la 'Nimeni'.  Opțiunea 'Cine poate vedea
+atașamentele' controlează dacă atașamentele pot fi descărcate, chiar și în modul securizat.
+Această opțiune se aplică doar în modul securizat.</p>
+</li>
+<li><p class="first"><strong>Modul de descărcare pentru descărcări securizate:</strong>
+Controlează dacă fișierele trebuie descărcate ca fișiere separate sau afișate în browser. Există
+două opțiuni:</p>
+<blockquote>
+<ul class="simple">
+<li><em>'inline'</em> - În acest mod, fişierele ce pot fi afișate de către browser vor fi afișate în
+browser (cum ar fi fişierele text şi imaginile).</li>
+<li><em>'attachment'</em> - Cu modul 'attachment', fişierele vor fi descărcate întotdeauna ca fişiere
+separate.</li>
+</ul>
+</blockquote>
+<p>În ambele cazuri, fişierele care nu vor putea fi afişate în browser vor fi descărcate ca fişiere
+externe.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="numele-afi-at-al-fi-ierului-sau-url-ului">
+<h1><a class="toc-backref" href="#id5">Numele afișat al fișierului sau URL-ului</a></h1>
+<p>În mod normal, când fișiere sunt upload-ate (sau URL-uri sunt adăugate) și afișate în lista de
+atașamente, numele complet al fișierului (sau URL-ul) este folosit ca link de descărcare pentru
+atașament. În anumite cazuri, numele fișierului (sau URL-ul) poate fi prea lung pentru ca acest
+mecanism să funcționeze bine. În forma de upload, există un câmp numit &quot;Numele afișat al fișierului
+sau URL-ului&quot; în care persoana care upload-ează fișierul poate introduce un nume alternativ pentru
+fișier (sau URL) sau o etichetă de folosit la afișare în locul numelui complet al fișierului (sau
+URL-ului). De exemplu, abreviere ale numelui fișierului pot fi adăugate în acest câmp. Câmpul poate
+fi modificat în aria administrativă când atașamentul este modificat. Notă: Există o opțiune numită
+&quot;Lungimea maximă a numelui fișierului sau URL-ului&quot; în lista de opțiuni ale extensiei 'Atașamente'.
+Ea poate fi folosită pentru trunchierea automată a numelor afișate ale fișierelor upload-ate;
+numele trunchiat rezultat va fi folosit în câmpul &quot;Numele afișat al fișierului sau URL-ului&quot;.</p>
+</div>
+<div class="section" id="ata-area-url-urilor">
+<h1><a class="toc-backref" href="#id6">Atașarea URL-urilor</a></h1>
+<p>O facilitate nouă în 'Atașamente' versiunea 2.0 este abilitatea de &quot;atașare&quot; a URL-urilor la
+elemente de conținut. Când se deschide una dintre ferestrele de dialog &quot;Adaugă atașament&quot;, vei vedea
+un câmp pentru introducerea URL-ului și două opțiuni:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Verifică existența URL-ului?</strong> - Pentru a se determina tipul de fișier al URL-ului (pentru a se</dt>
+<dd><p class="first last">selecta un icon corespunzător), codul extensiei verifică serverul pentru informații de bază
+referitoare la fișier, inclusiv tipul și dimensiunea. În anumite cazuri, serverul nu răspunde
+la aceste cereri chiar dacă URL-ul este valid. În mod implicit, extensia 'Atașamente' nu acceptă
+URL-uri ce nu sunt validate de server. Dar totuși, dacă știi că URL-ul este valid, poți debifa
+această opțiune și forța extensia să accepte URL-ul - în acest caz nu există garanții că tipul
+fișierului și dimensiunea lui sunt corecte. Notă: serverul va fi verificat chiar dacă opțiunea
+este debifată.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>URL relativ?</strong> - În mod normal URL-urile se introduc prefixate cu 'http...' pentru a indica</dt>
+<dd><p class="first last">un URL coplet.  Dacă dorești să faci legătura la fișiere / comenzi relative la instalarea ta
+Joomla!, folosește opțiunea 'relativ'.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>URL-urile sunt afișate cu un icon corespunzător tipului de fișier și acoperite cu o săgeată (
+indicând că URL-ul este valid) sau o linie roșie pe diagonală (indicând că nu a putut fi validat).
+Când modifici un URL ai opțiunea de a modifica dacă link-ul este valid sau nu, cu scopul de a obține
+efectul dorit. Acoperirea URL-ului poate fi dezactivată complet folosit parametrul <strong>Impune icon-uri
+la link-uri URL</strong>. În secțiunea &quot;Comenzi utile&quot; din aria administrativă există cateva comenzi
+folositoare referitoare la URL-uri (și fișiere).</p>
+</div>
+<div class="section" id="la-ce-pot-fi-ata-ate-fi-iere">
+<h1><a class="toc-backref" href="#id7">La ce pot fi atașate fișiere?</a></h1>
+<p>Pe lângă a atașa fișiere sau URL-uri la articole, acum este posibil să atașezi fișiere sau URL-uri
+la alte tipuri de element de conținut precum Secțiuni sau Categorii (vezi mai jos). Dacă
+plugin-urile 'Atașamente' corespunzătoare sunt instalate, poate fi posibilă atașarea fișierelor sau
+URL-urilor la o mare varietate de elemente de conținut precum profile utilizator, descrieri de
+produse în coșul de cumpărături, etc. Teoretic orice element de conținut care este afișat în aria
+publică și care folosește evenimentul <tt class="docutils literal"><span class="pre">'onPrepareContent'</span></tt> poate avea atașamente (dacă un plugin
+'Atașamente' corespunzător este instalat). Elementele de conținut care invocă evenimentele de
+conținut sunt în mod tipic elemente care au conținut de afișat (precum articolele) sau au descriere
+ce va fi afișată.</p>
+<div class="section" id="ata-area-fi-ierelor-sau-url-urilor-la-descrierile-sec-iunilor-sau-categoriilor">
+<h2>Atașarea Fișierelor sau URL-urilor la Descrierile Secțiunilor sau Categoriilor</h2>
+<p>Cu această versiune de atașamente, utilizatorii pot atașa fișiere la descrierile Secțiunilor și
+Categoriilor. Aceste descrieri sunt în mod general vizibile doar în paginile Blog ale Secțiunilor
+sau Categoriilor, dacă parametrul de bază 'descriere' este setat la <em>Afișează</em> (în Editorul Meniu).
+Atașamentele pot fi adăugate la descrierile de Secțiuni sau Categorii în editorul acestora (al
+Secțiunilor sau Categoriilor).</p>
+<p>Dacă dorești să afli mai multe despre cum să dezvolți un plugin Atașamente, există un manual
+disponibil ca parte a instalării 'Atașamente' curente:</p>
+<ul class="simple">
+<li><a class="reference external" href="../en-GB/plugin_manual/html/index.html">Manual pentru crearea de plugin-uri Atașamente</a> (în engleză)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="stilul-css-al-listelor-de-ata-amente">
+<h1><a class="toc-backref" href="#id8">Stilul CSS al Listelor de Atașamente</a></h1>
+<p>Listele de atașamente în aria publică sunt create folosind un 'div' special care conține o tabelă
+pentru atașamente. Tabela are diverse clase CSS asociate pentru a-i oferi dezvoltatorului sitului
+web flexibilitatea de a personaliza aspectul tabelei. Vezi fișierul CSS din plugin-ul de atașamente
+(în plugins/content/attachments.css) pentru exemple. Dacă dorești să schimbi stilul, îți sugerez să
+copii stilurile originale la sfârșitul aceluiași fișier și să redenumești 'attachmentsList' din
+secțiunea copiată cu alt nume dorit de tine. Modifică parametrul 'Atașamente'  (din managerul
+componentei) și schimbă parametrul <em>stilul tabelei atașamente</em> cu noul nume al clasei. Apoi modifică
+corespunzător definiția clasei în secțiunea copiată. Această modalitate îți permite să revii ușor la
+stilul original, schimbând parametrul plugin-ului <em>stilul tabelei atașamente</em> înapoi la valoarea
+originală, 'attachmentsList'. Are de asemenea avantajul că secțiunea cu stilurile modificate poate
+fi copiată într-un fișier și apoi aplicată ușor la o nouă versiune de 'Atașamente'. Aceasta poate fi
+realizată cu ajutorul comenzii CSS &#64;import.</p>
+</div>
+<div class="section" id="icon-uri-ale-tipurilor-de-fi-ier">
+<h1><a class="toc-backref" href="#id9">Icon-uri ale tipurilor de fișier</a></h1>
+<p>Extensia 'Atașamente' adaugă un icon în fața fiecărui atașament din lista de atașamente. Dacă
+dorești să adaugi un nou tip de icon, urmează acesti pași:</p>
+<p>(1) Adaugă un icon corespunzător în directorul 'media/attachments/icons', dacă nu există deja acolo;
+; (2) Modifică fișierul 'components/com_attachments/file_types.php' și adaugă o nouă linie la
+array-ul static $attachments_icon_from_file_extension care mapează o extensie de fișier la un nume
+de icon (toate în directorul media/attachments/icons). Dacă aceasta nu funcționează, s-ar putea să
+fie nevoie să adaugi o nouă linie la array-ul $attachments_icon_from_mime_type. (3) Nu uita să faci
+copii ale fișierului icon și fișierului modificat file_types.php într-un director din afara sitului
+web înainte să actualizezi versiunea de 'Atașamente' pe viitor.</p>
+</div>
+<div class="section" id="traduceri">
+<h1><a class="toc-backref" href="#id10">Traduceri</a></h1>
+<p>Această extensie oferă capabilități de traducere și suportă următoarele limbi (pe lângă engleză).
+Unele dintre aceste pachete de traducere sunt în proces de a fi actualizate la 'Atașamente' versiunea
+2.0 și nu sunt încă disponibile pentru 'Atașamente' versiunea 2.0. Dacă ai nevoie de un pachet de
+traducere pentru versiunea 1.3.4, contactează-l pe autor în mod direct.</p>
+<p>Mulțumiri următorilor traducători (versiunea disponibilă este afișată în paranteze):</p>
+<ul class="simple">
+<li><strong>Bulgară:</strong> de Stefan Ilivanov (în curs de actualizare la 2.0)</li>
+<li><strong>Catalană:</strong> de Jaume Jorba (2.0)</li>
+<li><strong>Cehă:</strong> de Tomas Udrzal (1.3.4)</li>
+<li><strong>Chineză:</strong> Traduceri în chineză tradițională și simplificată de baijianpeng (白建鹏) (în curs de actualizare la 2.0)</li>
+<li><strong>Croată:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Finlandeză:</strong> de Tapani Lehtonen (2.0)</li>
+<li><strong>Franceză:</strong> de Marc-André Ladouceur (2.0) și Pascal Adalian (1.3.4)</li>
+<li><strong>Germană:</strong> de Bernhard Alois Gassner (2.0) și Michael Scherer (1.3.4)</li>
+<li><strong>Greacă:</strong> de Harry Nakos  (în curs de actualizare la 2.0)</li>
+<li><strong>Italiană:</strong> de Piero Mattirolo (2.0) și Lemminkainen și Alessandro Bianchi (1.3.4)</li>
+<li><strong>Norvegiană:</strong> de Roar Jystad (2.0) și Espen Gjelsvik (1.3.4)</li>
+<li><strong>Olandeză:</strong> de Parvus (2.0)</li>
+<li><strong>Persană:</strong> de Hossein Moradgholi și Mahmood Amintoosi (2.0)</li>
+<li><strong>Poloneză:</strong> de Sebastian Konieczny (2.0) și Piotr Wójcik (1.3.4)</li>
+<li><strong>Portugheză (Brazilia):</strong> de Arnaldo Giacomitti și Cauan Cabral (în curs de actualizare la 2.0)</li>
+<li><strong>Portugheză (Portugalia):</strong> de José Paulo Tavares (2.0) și Bruno Moreira (1.3.4)</li>
+<li><strong>Română:</strong> de Alex Cojocaru (2.0)</li>
+<li><strong>Rusă:</strong> de Sergey Litvintsev (2.0) și евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Sârbă:</strong> de Vlada Jerkovic (în curs de actualizare la 2.0)</li>
+<li><strong>Slovacă:</strong> de Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Slovenă:</strong> de Matej Badalič (2.0)</li>
+<li><strong>Spaniolă:</strong> de Manuel María Pérez Ayala (2.0) și Carlos Alfaro (1.3.4)</li>
+<li><strong>Suedeză:</strong> de Linda Maltanski (2.0) și Mats Elfström (1.3.4)</li>
+<li><strong>Ungară:</strong> Traducere formală și informală de Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Turcă:</strong> de Kaya Zeren (2.0)</li>
+</ul>
+<p>De asemenea, este în curs de traducere pentru arabă și turcă.</p>
+<p>Multe mulțumiri acestor traducățori! Dacă dorești să ajuți la traducerea extensiei în orice altă
+limbă, te rog contactează-l pe autor (vezi secțiunea <a class="reference internal" href="#contact">Contact</a> de la sfârșit).</p>
+</div>
+<div class="section" id="avertiz-ri">
+<h1><a class="toc-backref" href="#id11">Avertizări</a></h1>
+<ul>
+<li><p class="first"><strong>Dacă ai fișiere atașate cu conținut sensibil sau private, folosește opțiunea *Modul de
+descărcare securizat pentru descărcări*!</strong> Dacă nu folosești opțiunea de securitate, fișierele
+atașate sunt salvate într-un subdirector public și sunt accesibile oricui cunoaște URL-ul complet.
+Opțiunea <em>securizat</em> previne accesul persoanelor care nu permisiile corespunzătoare (după cum este
+determinat de către opțiunilr anterioare). Pentru mai multe detalii vezi descrierea de mai sus a
+opțiunii <em>Modul de descărcare securizat pentru descărcări</em>.</p>
+</li>
+<li><p class="first">De fiecare dată când un fișier este upload-at, se verifică existența subdirectorul de upload și
+acesta este creat dacă nu există deja. În mod implicit subdirectorul pentru fișiere upload-ate
+este 'attachments' din directorul rădăcină al sitului web. Numele subdirectorului poate fi
+modificat folosind opțiunea 'Subdirector pentru upload'. Dacă extensia 'Atașamente' nu poate crea
+subdirectorul pentru upload-uri, trebuie să-l creezi manual (și s-ar putea să ai probleme la
+upload-ul fișierelor). Asigură-te că subdirectorul are permisiile necesare pentru upload-ul de
+fișiere. În sistemul Unix/Linux, aceasta este probabil ceva de genul 775. Procesul de creare al
+subdirectorului de upload poate eșua dacă directorul rădăcină al sitului tău web are permisii
+ce previn serverul web (și PHP) să creeze subdirectoare. Ar trebui să lărgești temporar permisiile
+pentru a permite crearea subdirectorului de către upload-ul de atașamente.</p>
+</li>
+<li><p class="first">Dacă această extensie nu îți permite să upload-ezi tipuri specifice de fișiere (precum fișiere
+zip), ar trebui să știi că extensia respectă restricțiile stabilite de către Managerul Media cu
+privire la tipurile de fișiere permise la upload. Aceasta pentru a preveni upload-ul tipurilor de
+fișiere cu potențial dăunător precum fișierele html sau php. Administratorul poate să actualizeze
+setările din Managerul Media cu scopul de a adăuga anumite tipuri de fișiere; aceasta se face din
+secțiunea &quot;Setări Globale&quot; din meniul &quot;Site&quot;, selectând tab-ul &quot;System&quot;, și adăugând extensiile de
+fișier și tipuri Mime corespunzătoare to listele din secțiunea &quot;Manager Media&quot;.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Dacă nu poți vedea atașamentele în aria publică, există câteva cauze posibile:</dt>
+<dd><ul class="first last simple">
+<li>Atașamentul nu este publicat. Poți modifica aceasta în pagina managerului Atașamente din aria
+administrativă.</li>
+<li>Articolul sau elementul de conținut părinte nu este publicat.</li>
+<li>Opțiunea 'Cine poate vedea atașamentele' este setată la 'autentificați' și nu ești
+autentificat. Sau opțiunea 'Cine poate vedea atașamentele' este setată la 'nimeni'. Aceasta
+poate fi modificată cu ajutorul editorului Parametri din managerul componentei.</li>
+<li>Plugin-ul 'Conținut - Atașamente' nu este activat.  Folosește managerul de plugin-uri pentru
+a-l activa.</li>
+<li>În 'Conținut - Atașamente' (în managerul de plugin-uri), nivelul de acces nu este setat la
+'Public'.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Dacă ești limitat la dimensiunea fișierelor pe care încerci să le upload-ezi,
+încearcă să adaugi următoarele linii în fișierul .htaccess din rădăcina sitului tău web Joomla!:</p>
+<pre class="literal-block">
+php_value upload_max_filesize 32M
+php_value post_max_size 32M
+</pre>
+<p>unde poți modifica valoarea de 32M (megabytes) la orice altă valoare pe care o dorești pentru
+maximul dimensiunii fișierelor upload-ate.</p>
+</li>
+<li><p class="first">'Atașamente' suportă acum &quot;atașarea&quot; de URL-uri la elemente de conținut.  Dacă serverul tău este
+Windows Vista și ai probleme la atașarea URL-urilor care au legătură cu <tt class="docutils literal"><span class="pre">localhost</span></tt>, acesta este
+o problemă cunoscută legată de conflictele IPv4 și IPv6.
+Pentru a o rezolva, modifică fișierul:</p>
+<pre class="literal-block">
+C:\Windows\System32\drivers\etc\hosts
+</pre>
+<p>Comentează linia care conține <tt class="docutils literal"><span class="pre">::1</span></tt>.  <tt class="docutils literal"><span class="pre">hosts</span></tt> este un fișier de sistem ascuns și s-ar putea să
+fie nevoie să modifici opțiunile de directoare pentru a afișa fișierele ascunse și a-l modifica.</p>
+</li>
+<li><p class="first">Când atașezi un fișier la un articol în editorul articolului, nu există confirmare că fișierul a
+fost atașat. Dar funcționează! Vezi vedea atașamentele în momentul în care salvezi articolul.</p>
+</li>
+<li><p class="first">'Atașamente' suportă acum atașarea de fișiere la articole în tipul creeri acestora în editorul de
+articole. Există totuși o limitare. Atașamentele noi sunt într-o stare de &quot;rătăcire&quot; din momentul
+în care sunt upload-ate și până când articolul este salvat pentru prima oară. În timpul acestei
+perioade de &quot;rătăcire&quot; (de sperat scurtă), noile atașamente sunt identificate doar după id-ul
+utilizatorului. Astfel încât dacă mai mult de o persoană folosesc același cont și crează articole
+în același timp și adaugă atașamente în același timp, nu există nici o garanție că fișierele
+atașate vor ajunge la articolul corect.</p>
+</li>
+<li><p class="first">În aria administrativă, câteodată când execuți una dintre comenzile utile
+browser-ul te poate atenționa că trebuie să retrimită cererea. Aceasta nu
+este o problemă, click pe butonul [Ok] și comanda va fi executată.</p>
+</li>
+<li><p class="first">Comanda utilă &quot;Regenerează numele de fişiere ataşate în sistem&quot; funcționează
+pentru migrarea de un server windows pe unul Linux. Funcționează de asemenea
+pentru migrarea de pe un server Linux pe unul Windows cu câteva probleme
+posibile:</p>
+<blockquote>
+<ul class="simple">
+<li>Când copiezi fișierele pe un server Windows, trebuie să verifici că
+directorul de atașamente (de obicei 'attachments') și toate fișierele din
+el sunt modificabile de către serverul web Joomla.</li>
+<li>S-ar putea să ai probleme la migrarea fișierelor care au caractere
+Unicode în nume deoarece aplicația de arhivare / dezarhivare are probleme
+cu numele de fișiere ce includ caractere Unicode (pe partea Windows).
+S-ar putea să fie nevoie să salvezi acele fișiere, să ștergi atașamentele
+corespunzătoare, și apoi să le re-atașezi.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Extensia 'Atașamente' are un forum de ajutor și un forum 'Întrebări frecvente' care este găzduit
+pe situl web joomlacode.org.  Dacă ai probleme care nu sunt descrise în această pagină de ajutor,
+te rog consultă forumul:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments/forum/">Forumul Atașamente la
+http://joomlacode.org/gf/project/attachments/forum/</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="actualizare">
+<h1><a class="toc-backref" href="#id12">Actualizare</a></h1>
+<p>Actualizarea este mult mai ușoară acum. Trebuie doar să instalezi noua versiune de 'Atașamente'.</p>
+<ul class="simple">
+<li><em>[Acest pas este opțional dar foarte recomandat pentru a te asigura că ai o copie de siguranță
+a bazei de date atașamente în caz că ceva nu decurge bine.]</em>
+Folosește <a class="reference external" href="http://www.phpmyadmin.net/home_page/index.php">phpMyAdmin</a>
+(sau altă unealtă de editare SQL) pentru a salva conținutul tabelei jos_attachments (Folosește
+opțiunea 'Exportă' cu inserări 'Complete' de date (și nu inserări 'Extinse'). Ar trebui de
+asemenea să faci o copie de siguranță a fișierelor atașate upload-ate (de obicei în directorul
+'attachments')</li>
+<li><strong>Nu este necesară dezinstalarea versiunii anterioare de Atașamente.</strong> Aceasta a fost testată
+cu 2.0 și 1.3.4 (dar nu cu versiunile anterioare).</li>
+<li>Dacă dorești să păstrezi orice atașament existent, nu trebuie să faci nimic deosebit. Doar
+instalează versiunea nouă și ea va actualiza totul în mod corespunzător.</li>
+<li>Dacă nu dorești să păstrezi atașamentele existente, șterge-le pe toate înainte (din aria
+administrativă).</li>
+<li>Multi-installer-ul va instala toate componentele și plugin-urile necesare și va activa toate
+plugin-urile. Dacă nu dorești ca unul dintre aceste plugin-uri să fie activat, instalează-l întâi
+și apoi îl poți dezactiva. Dacă există o problemă cu instalarea, poți încerca să faci o
+instalare manuală pas cu pas. Vezi fișierul INSTALL inclus în fișierul principal de instalare zip
+pentru instrucțiuni.</li>
+</ul>
+</div>
+<div class="section" id="mul-umiri">
+<h1><a class="toc-backref" href="#id13">Mulțumiri</a></h1>
+<p>Multe mulțumiri următorilor contribuitori sau resurse:</p>
+<ul>
+<li><p class="first">Cartea <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
+Components, and Plugins with PHP</em> de Joseph L. LeBlanc a fost foarte folositoare
+în crearea extensii 'Atașamente'.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Icon-urile pentru tipurile de fișiere au fost derivate din diverse surse, incluzând:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons de Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 de John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 de Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons de Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack de Joseph North (http://sweetie.sublink.ca)</a></li>
+</ul>
+</dd>
+</dl>
+<p>Multe dintre icon-urile 'Atașamente' au fost modificate față de imaginile originale icon de pe
+aceste situri web.  Dacă dorești versiunile originale, le poți descărca de pe siturile web
+enumerate anterior.</p>
+</li>
+<li><p class="first">Multe mulțumiri lui Paul McDermott pentru donarea generoasă a plugin-ului de căutare!</p>
+</li>
+<li><p class="first">Mulțumiri lui Mohammad Samini pentru donarea de cod PHP și fișiere CSS pentru îmbunătățirea
+aspectului 'Atașamente' în limbile cu orientare de la dreapta la stânga.</p>
+</li>
+<li><p class="first">Mulțumiri lui Florian Tobias Huber pentru donarea de corectări pentru îmbunătățirea afișării
+atașamentelor atunci când cache-ing este activat.</p>
+</li>
+<li><p class="first">Mulțumiri lui Manuel María Pérez Ayala pentru sugerarea modului de creere a multi-installer-ului
+integrat.  Multi-installer-ul folosește API-ul pentru instalare Joomla pentru a instala automat
+componenta și toate plugin-urile într-un singur pas. Din cunoștiințele mele această tehnică a fost
+dezvoltată inițial de către JFusion.</p>
+</li>
+<li><p class="first">Mulțumiri lui Ewout Weirda pentru discuțiile și sugestiile ajutătoare în legătură cu dezvoltarea
+extensiei 'Atașamente'.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="contact">
+<h1><a class="toc-backref" href="#id14">Contact</a></h1>
+<p>Te rog să raportezi bug-uri și sugestii la <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: 09 December 2010 la 05:37 UTC.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt_pt" lang="pt_pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.5: http://docutils.sourceforge.net/" />
+<title>Documentação de Anexos</title>
+<link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<h1 class="title">Documentação de Anexos</h1>
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<p class="version"><strong>Versão 2.2 - Dezembro de 2010</strong></p>
+<div class="contents topic" id="ndice">
+<p class="topic-title first">Índice</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introdu-o" id="id1">Introdução</a></li>
+<li><a class="reference internal" href="#novas-funcionalidades-da-vers-o-2-0" id="id2">Novas funcionalidades da versão 2.0</a></li>
+<li><a class="reference internal" href="#restri-es-de-envio" id="id3">Restrições de envio</a></li>
+<li><a class="reference internal" href="#configura-o-do-anexos" id="id4">Configuração do Anexos</a></li>
+<li><a class="reference internal" href="#mostrar-nome-do-ficheiro-ou-url" id="id5">Mostrar nome do ficheiro ou URL</a></li>
+<li><a class="reference internal" href="#anexar-urls" id="id6">Anexar URLs</a></li>
+<li><a class="reference internal" href="#a-que-podem-os-ficheiros-ser-anexados" id="id7">A que podem os ficheiros ser anexados?</a></li>
+<li><a class="reference internal" href="#estilo-css-para-as-listas-de-anexos" id="id8">Estilo CSS para as listas de anexos</a></li>
+<li><a class="reference internal" href="#cones-de-tipos-de-ficheiro" id="id9">Ícones de tipos de ficheiro</a></li>
+<li><a class="reference internal" href="#tradu-es" id="id10">Traduções</a></li>
+<li><a class="reference internal" href="#avisos" id="id11">Avisos</a></li>
+<li><a class="reference internal" href="#actualiza-o" id="id12">Actualização</a></li>
+<li><a class="reference internal" href="#agradecimentos" id="id13">Agradecimentos</a></li>
+<li><a class="reference internal" href="#contactos" id="id14">Contactos</a></li>
+</ul>
+</div>
+<div class="section" id="introdu-o">
+<h1><a class="toc-backref" href="#id1">Introdução</a></h1>
+<p>A extensão 'Anexos' para Joomla! permite o envio e anexação de ficheiros
+a artigos e outros tipos de conteúdos. O 'Anexos' inclui um plugin
+para exibição dos anexos e um componente para o envio e gestão dos mesmos.
+Existem opções para controlar quem pode ver os anexos e quem pode
+enviá-los, assim como várias outras opções para aumentar a sua
+flexibilidade e utilidade. Nota: todas as opções são controladas através
+do gestor do componente. <strong>Esta extensão funciona apenas em Joomla! 1.5.
+Não foi testada na versão 1.6.</strong></p>
+<p>A extensão 'Anexos' foi traduzida para muitas línguas
+diferentes.  Ver a secção <a class="reference internal" href="#tradu-es">Traduções</a>
+para a lista das traduções disponíveis. A maior parte das traduções
+encontram-se em actualização para a versão 2.0 do 'Anexos'.</p>
+<p>Se desejar subscrever uma lista de email com novidades sobre
+esta extensão, por favor subscreva usando esta página web:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Lista de email do Anexos ( http://jmcameron.net/attachments/email-list.html</a></li>
+</ul>
+</div>
+<div class="section" id="novas-funcionalidades-da-vers-o-2-0">
+<h1><a class="toc-backref" href="#id2">Novas funcionalidades da versão 2.0</a></h1>
+<ul>
+<li><p class="first">Permite &quot;anexar&quot; URLs, bem como ficheiros, a itens de conteúdo.</p>
+</li>
+<li><p class="first">Permite a exibição da lista de anexos em qualquer ponto do artigo
+(ou outro tipo de conteúdo).</p>
+</li>
+<li><p class="first">Novo campo opcional na lista de anexos para exibir quem enviou</p>
+</li>
+<li><p class="first">Implementado um multi-instalador que permite a instalação de todas as
+partes da extensão Anexos de uma só vez (e activa os plugins
+de forma automática).  Torna a instalação desta extensão muito fácil,
+embora agora seja composta por um componente e sete plugins.  Note que o
+método 'actualizar' do Joomla! é agora o pré-definido para todas as partes
+da extensão Anexos.  Isto significa que não é necessário desinstalar
+versões anteriores do Anexos antes de instalar esta versão.</p>
+</li>
+<li><p class="first">Armazenamento de ficheiros anexos reconfigurado para usar caminhos como:</p>
+<pre class="literal-block">
+attachments/article/23/file.txt
+</pre>
+<p>Isto elimina todos os prefixos de ficheiros usados em versões anteriores.
+Significa que nenhum item de conteúdo pode ter nomes de ficheiros.
+duplicados. Não constitui grande limitação, na prática.</p>
+</li>
+<li><p class="first">Refeito o código para adicionar &quot;plugins do Anexos&quot;.  Estes plugins
+permitem anexar ficheiros a qualquer item de conteúdo que invoque o plugin
+onPrepareContent.  Por exemplo, é agora possível anexar ficheiros a
+descrições de Secções ou Categorias.  Com pouco trabalho, um desenvolvedor
+de extensões pode criar um novo plugin do Anexos que permita anexar
+ficheiros a conteúdos como a informação pessoal do CB, descrições de
+produtos do Virtuemart, etc.  Ver a secção <a class="reference internal" href="#a-que-podem-os-ficheiros-ser-anexados">A que podem os ficheiros ser
+anexados?</a> para mais pormenores.</p>
+</li>
+<li><dl class="first docutils">
+<dt>No interface de administração:</dt>
+<dd><ul class="first last simple">
+<li>É agora possível juntar anexos aos ficheiros enquanto estão a ser
+criados!</li>
+<li>Existe uma opção para suprimir a lista de anexos de artigos ou
+outros tipos de conteúdo não publicados ou enviados para o lixo
+(embora exista uma forma fácil de os ver, se desejar).</li>
+<li>Adicionada filtragem a lista dos artigos</li>
+<li>Refeita a listagem em tabela na administração para permitir a
+exibição em várias colunas</li>
+<li>Vários novos comandos utilitários para administração</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Melhorada a utilização de unicode nos nomes dos ficheiros</p>
+</li>
+<li><p class="first">Maior flexibilidade nas opções &quot;Quem pode ver&quot; e &quot;Quem pode actualizar&quot;.</p>
+</li>
+<li><p class="first">Adicionado código para resolver problemas de CSS quando a instalação
+Joomla! utiliza a cache.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="restri-es-de-envio">
+<h1><a class="toc-backref" href="#id3">Restrições de envio</a></h1>
+<p>Nem todos os tipos de ficheiros podem ser enviados.  A extensão 'Anexos' não
+permite o envio de ficheiros não permitidos pelo Gestor de Media do Joomla!.
+Para ver (ou alterar) os tipos de ficheiros permitidos, vá a <strong>Configurações gerais</strong>
+e clique no separador <strong>Sistema</strong>.  Na área <em>Definições de Media</em>, existem
+opções para controlar as extensões de ficheiros e tipos de mime permitidos
+para envio. O 'Anexos' respeita estas definições.  No entanto, a
+restrição sobre 'Extensões de imagem permitidas (tipos de ficheiros)' é ignorada.</p>
+</div>
+<div class="section" id="configura-o-do-anexos">
+<h1><a class="toc-backref" href="#id4">Configuração do Anexos</a></h1>
+<p>Todas as configurações do 'Anexos' são controlados através do
+gestor do componente. Para aceder às configurações, na página de administração,
+Escolha &quot;Anexos&quot; no menu &quot;Componentes&quot;.  Clique no botão &quot;Parâmetros&quot;,
+na barra de tarefas, à direita, e surgirá uma série de parâmetros para esta
+extensão. Estes parâmetros incluem:</p>
+<ul>
+<li><p class="first"><strong>Quem pode ver anexos:</strong> Controla quem poderá ver as hiperligações
+para os anexos. Existem três opções:</p>
+<ol class="arabic simple">
+<li>'<em>Ninguém</em>' - Se esta opção for seleccionada, as listas de anexos
+e hiperligações para fazer download dos anexos NÃO estarão visíveis para
+os visitantes do sítio, estejam ou não autenticados.  Em modo seguro,
+impede o download de anexos no front end.  Os administradores, no
+entanto, continuarão a ver a lista de anexos e poderão fazer download
+dos ficheiros, mesmo com a opção 'Ninguém' seleccionada.</li>
+<li>'<em>Utilizadores autenticados</em>'. - Se esta opção for seleccionada, apenas
+os utilizadores autenticados poderão ver as hiperligações para os anexos.</li>
+<li>'<em>Todos</em>' - Se esta opção for seleccionada, as hiperligações para os
+anexos estarão visíveis para qualquer visitante, autenticado ou não.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Quem pode juntar anexos:</strong> Esta opção controla quem pode
+juntar anexos aos conteúdos. Existem quatro opções:</p>
+<ol class="arabic simple">
+<li>'<em>Ninguém</em>' - Se esta opção for seleccionada, a hiperligação &quot;Juntar
+anexos&quot; NÃO estará visível para os visitantes do site, estejam autenticados
+ou não.  Em modo seguro, impede o envio de anexos a partir do front end.
+Os administradores, no entanto, poderão ver a hiperligação &quot;Juntar anexos&quot;
+e enviar ficheiros, mesmo com a opção 'Ninguém' seleccionada.</li>
+<li>'<em>Apenas o autor do artigo</em>' - A hiperligação para enviar anexos estará
+visível apenas para o autor do artigo (bem como para utilizadores com
+permissões superiores, como editores e administradores).</li>
+<li>'<em>Utilizadores autenticados</em>' - A hiperligação para enviar anexos estará
+visível apenas para os utilizadores autenticados.</li>
+<li>'<em>Editor e superior</em>' - A hiperligação para enviar anexos estará
+visível apenas para utilizadores com permissões de editor e superior.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Anexos publicados por pré-definição:</strong> Esta função de auto
+publicação controla se os novos anexos são publicados por
+pré-definição quando adicionados. Se 'Sim', quando os anexos
+forem adicionados serão imediatamente publicados e visíveis para os utilizadores.
+Se 'Não', os novos anexos não serão publicados por pré-definição.
+Um administrador deverá publicá-los a partir da página de administração para
+os anexos ficarem disponíveis.</p>
+</li>
+<li><p class="first"><strong>Aviso de publicação automática:</strong> Se a opção de publicação automática
+estiver desactivada (ver opção anterior), pode informar quem envia anexos
+de como podem ver os seus anexos publicados. Insira aqui a mensagem
+adequada.  Se este campo não for preenchido, será exibida uma mensagem
+geral de sistema sugerindo o contacto com o administrador do sistema
+para a publicação de novos ficheiros.</p>
+</li>
+<li><p class="first"><strong>Mostrar títulos:</strong> Se 'Sim', uma linha de títulos será exibida acima
+da lista de anexos descrevendo cada coluna.</p>
+</li>
+<li><p class="first"><strong>Mostrar descrição do anexo:</strong> Esta opção define
+se a descrição do anexo é exibida na lista de anexos.</p>
+</li>
+<li><p class="first"><strong>Mostrar quem enviou anexo:</strong> Mostrar o nome de utilizador que
+enviou o anexo.</p>
+</li>
+<li><p class="first"><strong>Mostrar tamanho do ficheiro:</strong> Esta opção define
+se o tamanho do ficheiro anexo é exibido na lista de anexos.</p>
+</li>
+<li><p class="first"><strong>Mostrar número de downloads:</strong> Esta opção define
+se o número de downloads é exibido na lista de anexos.</p>
+<div class="warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">Esta opção funciona apenas em modo seguro!
+Em modo não seguro, os ficheiros são tratados como estáticos e acedidos
+directamente, sem passar pelo código do Joomla!.  Torna-se pois impossível
+actualizar o número de downloads de um ficheiro, desta forma.
+Assim, a exibição do número de downloads só funciona em modo seguro
+se esta opção estiver definida para 'Sim'.</p>
+</div>
+</li>
+<li><p class="first"><strong>Mostrar data de modificação:</strong> Se definido para 'Sim',
+a data de modificação do ficheiro será adicionada à lista de anexos
+para os conteúdos que têm anexos. Se definido para 'Não',
+nenhuma data será adicionada à lista de anexos.</p>
+</li>
+<li><p class="first"><strong>Formato da data de modificação:</strong> Pode
+escolher o formato da data de modificação usando o formato
+usado pela função PHP strftime().  Procurar na internet
+'PHP strftime' para exemplos.  O formato pré-definido (%x %H:%M)
+devolve datas no formato 24-horas, como 4/28/2008 14:21.  Para
+remover a hora ou o dia, exclua &quot;%H:%M&quot;.  Note
+que as implementações MS Windows e Linux do PHP podem diferir em
+alguns dos códigos suportados.</p>
+</li>
+<li><p class="first"><strong>Ordem da lista de anexos:</strong> Esta opção permite especificar a ordem segundo a
+qual os anexos serão listados.  A maior parte das opções é evidente:</p>
+<ol class="arabic simple">
+<li>'<em>Nome do ficheiro</em>' - Se esta opção for seleccionada, os anexos serão listados
+alfabeticamente a partir do nome do ficheiro.</li>
+<li>'<em>Tamanho do ficheiro (menores primeiro)</em>'</li>
+<li>'<em>Tamanho do ficheiro (maiores primeiro)</em>'</li>
+<li>'<em>Descrição</em>'</li>
+<li>'<em>Mostrar nome do ficheiro ou URL</em>' - Todos os anexos que não têm nomes
+de exibição serão exibidos antes dos que os têm e serão organizados
+pelos respectivos nomes de ficheiros.</li>
+<li>'<em>Quem enviou</em>' - Ordenados pelo nome do utilizador que enviou o anexo.</li>
+<li>'<em>Data de criação (mais antigos primeiro)</em>'</li>
+<li>'<em>Data de criação (mais recentes primeiro)</em>'</li>
+<li>'<em>Data de modificação (mais antigos primeiro)</em>'</li>
+<li>'<em>Data de modificação (mais recentes primeiro)</em>'</li>
+<li>'<em>ID do anexo</em>' - Se esta opção for seleccionada, os
+anexos serão ordenados a partir do ID do anexo.  O efeito
+é a ordenação dos anexos segundo a sua data de criação.</li>
+<li>'<em>Campo 1 definido pelo utilizador</em>'</li>
+<li>'<em>Campo 2 definido pelo utilizador</em>'</li>
+<li>'<em>Campo 3 definido pelo utilizador</em>'</li>
+</ol>
+</li>
+<li><p class="first"><strong>Nome dos campos 1-3 definidos pelo utilizador:</strong> Se tiver informação
+adicional acerca de cada anexo que queira acrescentar, a extensão
+Anexos permite definir até três campos adicionais definidos pelo utilizados.
+para criar um novo campo, inserir o nome numa das três entradas.
+Apagar o nome para anular a exibição e edição do campo.
+Os campos definidos pelo utilizador serão exibidos pela ordem aqui usada.  O tamanho
+máximo de cada campo definido pelo utilizador é de 40 caracteres.  A informação incluída
+nestes campos pode ter até 100 caracteres.</p>
+<div class="hint">
+<p class="first admonition-title">Sugestão</p>
+<p class="last">Se acrescentar um asterisco no final do nome de um campo definido pelo utilizador,
+não será exibido no interface de utilizador.  Será exibido quando
+um anexo for editado no interface de utilizador e sempre no interface de administração.
+Este campo escondido pode ser usado para ordenar os anexos
+de forma arbitrária, colocando valores inteiros no campo.</p>
+</div>
+</li>
+<li><p class="first"><strong>Tamanho máximo do nome de ficheiro:</strong>
+Tamanho máximo do nome de ficheiro na lista de anexos.  Nomes de ficheiros mais extensos
+serão truncados na exibição em lista de anexos (apenas na exibição:
+os nomes verdadeiros não serão alterados).  O valor 0 significa
+que o tamanho do nome de ficheiro é ilimitado nesta opção (o campo de nome de ficheiro na tabela
+de base de dados dos anexos está limitado a 80 caracteres).   Nota: Se os nomes de ficheiro para
+exibição forem truncados por esta opção, o nome de ficheiro truncado será inserido no campo
+&quot;Mostrar nome de ficheiro&quot;.  Esta opção afecta apenas os anexos adicionados após a activação da sua activação.</p>
+</li>
+<li><p class="first"><em>Onde devem os anexos ser colocados?*</em> Esta opção controla
+a localização no artigo (ou outro tipo de conteúdo) em que a lista de anexos será colocada.
+Esta opção aplica-se a todas as listas de anexos:</p>
+<blockquote>
+<ul>
+<li><p class="first">'<em>No início</em>'</p>
+</li>
+<li><p class="first">'<em>No final</em>'</p>
+</li>
+<li><p class="first">'<em>Localização personalizada</em>' - Com esta opção, a lista de anexos
+surgirá no artigo no local onde a etiqueta especial  {attachments} for utilizada.</p>
+<div class="warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">usando a localização personalizada, qualquer artigo
+que não inclua a etiqueta {attachments} exibirá a lista de anexos
+no final.</p>
+</div>
+<p>Neste modo, ao editar um artigo, secção ou categoria no interface de
+administração, será exibido um botão extra: [Inserir etiqueta {attachments}].
+Coloque o cursor no local onde desejar que sejam exibidos os anexos e use
+este botão para inserir a etiqueta. Este botão adicionará algumas etiquetas
+HTML para esconder a etiqueta não não existir conteúdo para a substituir (eg,
+quando a lista de anexos não deve estar visível).  Em HTML, a etiqueta
+tem este aspecto:</p>
+<pre class="literal-block">
+&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+</pre>
+<p>Nos editores do interface de administração, será visível a etiqueta {attachments},
+mas não a etiqueta HTML 'span', a menos que altere para modo HTML.  No interface
+de utilizador nunca estará visível a etiqueta {attachments}, a menos que o plugin
+insert_attachments_tag esteja desactivado.  Para remover a etiqueta {attachments},
+pode usar-se o modo &quot;HTML&quot; no editor ter a certeza de que que as etiquetas
+span também são apagadas.</p>
+</li>
+<li><p class="first">'<em>Desactivado (filtro)</em>' - Esta opção desactiva a exibição da lista de
+anexos e suprime a exibição de qualquer etiqueta {attachments} nos artigos ou outros
+tipos de conteúdo.</p>
+</li>
+<li><p class="first">'<em>Desactivado (sem filtro)</em>' - Esta opção desactiva a exibição da lista de
+anexos e não suprime a exibição de qualquer etiqueta {attachments} nos artigos
+ou outros tipos de conteúdo.</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>Estilo CSS para as tabelas de anexos:</strong> Para alterar o estilo CSS
+da lista de anexos, especifique o seu nome de estilo aqui.  O estilo pré-definido
+é 'attachmentsList'.  Ver a secção <a class="reference internal" href="#estilo-css-para-as-listas-de-anexos">Estilo CSS para as listas de anexos</a>.</p>
+</li>
+<li><p class="first"><strong>URL para registo:</strong> Se for necessário um URL especial para registo de novos utilizadores,
+inserir esse URL aqui.  Esta opção pode ser útil se for criada uma página especial de autenticação.</p>
+</li>
+<li><p class="first"><strong>Modo de abertura da hiperligação de ficheiro:</strong>
+Controla a forma como as hiperligações de ficheiros anexos serão abertas.  'Mesma janela'
+significa que o ficheiro será aberto na mesma janela do navegador.  'Nova janela'
+significa que o ficheiro será aberto numa nova janela.  Em alguns navegadores, a opção
+'Nova janela' abre o anexo num novo separador.</p>
+</li>
+<li><p class="first"><strong>Pasta para uploads:</strong> O código da extensão 'Anexos'
+colocará os ficheiros nesta pasta, localizada na pasta de instalação do site Joomla.
+Por pré-definição, é 'anexos' ('attachments').
+Note que, se a pasta for alterada, isso afecta apenas os uploads posteriores.
+Os ficheiros enviados anteriormente continuarão na pasta antiga
+e os registos na base de dados continuarão a apontar para esses ficheiros.
+Se desejar mover os ficheiros da pasta antiga para a nova pasta,
+precisa de o fazer manualmente, não esquecendo de actualizar manualmente as
+respectivas entradas na base de dados dos anexos.</p>
+</li>
+<li><p class="first"><strong>Personalizar títulos das listas de anexos:</strong> Por pré-definição, a extensão 'Anexos'
+insere o título &quot;Anexoss:&quot; acima da lista de anexos de cada artigo ou
+outro tipo de conteúdo (desde que contenham anexos). Em alguns casos, talvez preferira
+usar outra designação para artigos ou conteúdos específicos.  Pode especificar o termo
+desejado caso a caso. Por exemplo, se desejar que o artigo 211 use o título &quot;Downloads:&quot;,
+acrescente-o nesta opção: '211 Downloads' (sem as aspas). Use uma
+entrada por linha.  Para outros tipes de conteúdos, use a sintaxe:
+'category:23 Este é o título para a categoria 23' em que 'category' pode ser
+substituído pelo nome do tipo de conteúdo.  O exemplo para os artigos
+acima pode ser substituído por 'article:211 Downloads'.  Note que uma entrada sem ID
+numérica no início será aplicada a todos os itens de conteúdo.
+É aconselhável definir as configurações gerais na primeira linha e definir
+configurações específicas de cada conteúdo depois.</p>
+<p>Nota: se desejar alterar os títulos usados globalmente para as listas de anexos,
+pode editar a entrada do ficheiro de tradução 'ATTACHMENTS TITLE' no ficheiro
+de tradução:</p>
+<pre class="literal-block">
+administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+</pre>
+<p>em que qq-QQ se refere ao código da língua, como em en-GB para Inglês.
+(Se não estiver familiarizado com os ficheiros de tradução do Joomla!, localize
+a linha que começa com 'ATTACHMENTS TITLE' seguida pelo sinal '='.  Edite o que desejar
+à direita do sinal '='.  Não altere nada à esquerda do sinal '='.)</p>
+</li>
+<li><p class="first"><strong>Esconder anexos de:</strong>
+Lista de palavras-chaves separadas por vírgula ou Secções/Categorias de artigos para
+os quais a lista de anexos deve ser escondida. Podem ser usadas cinco palavras-chaves
+especiais:</p>
+<ul class="simple">
+<li>'frontpage' para suprimir a exibição de anexos da página principal,</li>
+<li>'blog' para suprimir a exibição de anexos em páginas que usam o modo de exibição 'blog',</li>
+<li>'all_but_article_views' para permitir a exibição de anexos apenas na vista de artigos,
+'always_show_section_attachments' para activar a exibição de anexos de secção
+se estiver definida a opção 'all_but_article_views', e</li>
+<li>'always_show_category_attachments' para activar a exibição de anexos de categorias
+se estiver definida a opção 'all_but_article_views'.</li>
+</ul>
+<p>Omitir as aspas ao introduzir as opções de palavras-chaves.
+<strong>A opção 'frontpage' deve ser respeitada por todos
+os tipos de conteúdo, mas outros tipos de conteúdo que não artigos, secções e categorias
+talvez não respeitem a opção 'all_but_article_views' e outras opções.</strong>
+As ID de artigos, secções e categorias devem ser inseridos em formato numérico e separadas
+com uma barra (/): Section#/CategoryNum, SectionNum/CategoryNum.  Especifique apenas 'SectionNum'
+para incluir todas as categorias da secção.  Exemplo: 23/10, 23/11, 24</p>
+</li>
+<li><p class="first"><strong>Limite de tempo para verificação de hiperligações:</strong>
+Limite de tempo para verificação de hiperligações (em segundos).  Sempre que uma hiperligação
+é adicionada como anexo, é directamente verificada (esta opção pode ser desactivada).
+Se a hiperligação puder ser acedida no limite de tempo definido, o tamanho do ficheiro e
+outra informação acerca da hiperligação é recuperada.  Se não, é usada informação genérica
+Para desactivar a verificação, inserir 0.</p>
+</li>
+<li><p class="first"><strong>Impor ícones de hiperligação:</strong>
+Impor ícones de hiperligação ao ícone do ficheiro anexo para indicar que se trata de um URL.
+URLs válidos são exibidos com setas e os não válidos serão exibidos com um traço vermelho
+(do canto inferior esquerdo ao canto superior direito).</p>
+</li>
+<li><p class="first"><strong>Eliminar anexos obsoletos (no back end):</strong>
+Define a eliminação de anexos <em>obsoletos</em> na página de administração.
+Neste contexto, os anexos <em>obsoletos</em> são os relacionados com conteúdos não publicados
+ou eliminados. Pode sobrepor-se a esta definição usando o menu pendente 'Mostrar
+anexos a', à direita, logo acima da lista de anexos (na mesma linha do filtro).
+Ao usar o menu pendente para controlar que anexos estarão visíveis, o sistema
+recorda essa definição até fazer o logout como administrador. Assim, alterar este parâmetro
+pode não parecer ter qualquer efeito.  A configuração deste parâmetro fará efeito da próxima
+vez que se autenticar como administrador.</p>
+</li>
+<li><p class="first"><strong>Download seguro de anexos:</strong> Por pré-definição, a extenção 'Anexos'
+guarda os ficheiros anexos puma pasta de acesso público.   Se escolher a opção
+<em>seguro</em>, a pasta em que os anexos são guardados deixará de ser de acesso público.
+A hiperligação de download no site permitirá o download do anexo, mas não será
+uma hiperligação directa.  Esta opção impede o acesso a utilizadores que não tenham
+as permissões adequadas.  Se o download <em>seguro</em> não estiver activado,
+as hiperligações para os anexos serão exibidas conforme as opções acima indicam, mas os ficheiros
+estarão acessíveis a todos os que saibam o endereço completo, uma vez que a pasta é de acesso público.
+A opção <em>seguro</em> impede o acessoa utilizadores sem as permissões adequadas, mesmo que saibam o
+endereço completo, uma vez que esta opção impede o acesso público à pasta de anexos.</p>
+</li>
+<li><p class="first"><strong>Listar anexos em modo seguro:</strong>
+Lista os anexos em modo seguro, mesmo que os utilizadores não estejam autenticados, a menos que
+a opção 'Quem pode ver anexos' esteja definida para 'Ninguém'.  A opção 'Quem pode ver anexos'
+continua a controlar se os anexos podem ser descarregados, mesmo em modo seguro.
+Esta opção só é aplicada em modo seguro.</p>
+</li>
+<li><p class="first"><strong>Modo de download para downloads seguros:</strong>
+Esta opção controla se os ficheiros devem ser descarregados como ficheiros separados ou exibidos
+no navegador (se este suportar o tipo de ficheiro em questão).  Existem duas opções:</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt><em>'em linha'</em> - Neste modo, os ficheiros que podem ser exibidos no navegador serão aí</dt>
+<dd><p class="first last">exibidos (por exemplo ficheiros de texto ou imagem).</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><em>'anexo'</em> - Neste modo, os ficheiros serão sempre descarregados como anexos.</p>
+</li>
+</ul>
+</blockquote>
+<p>Em qualquer caso, os ficheiros não suportados pelo navegador serão sempre descarregados como anexos.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="mostrar-nome-do-ficheiro-ou-url">
+<h1><a class="toc-backref" href="#id5">Mostrar nome do ficheiro ou URL</a></h1>
+<p>Normalmente, quando os ficheiros são enviados (oo os URLS instalados) e inseridos
+numa lista de anexos, o nome completo do ficheiro (ou URL) é exibido como uma
+hiperligação para descarregar o anexo.  Por vezes, o nome do ficheiro (ou URL) pode
+ser demasiado longp para ser funcional.  No formulário de envio existe o campo &quot;Mostrar
+nome do ficheiro ou URL&quot; no qual se pode inserir um nome de ficheiro (ou URL) ou uma
+etiqueta para mostrar em vez do nome completo do ficheiro (ou URL).  Por exemplo,
+algumas abreviaturas relativas ao nome do ficheiro podem ser adicionadas neste
+campo.  O campo pode ser editado na página de administração ou quando os anexos
+são editados.  Nota: Existe uma opção chamada &quot;Tamanho máximo do nome do ficheiro
+ou URL&quot; nas opções de Anexos.  Pode ser definida para truncar de forma automática
+os nomes dos ficheiros enviados para exibição; o nome de ficheiro truncado será
+inserido no campo &quot;Mostrar nome de ficheiro ou URL&quot;.</p>
+</div>
+<div class="section" id="anexar-urls">
+<h1><a class="toc-backref" href="#id6">Anexar URLs</a></h1>
+<p>Uma nova funcionalidade da versão 2.0 do Anexos é a possibilidade de &quot;anexar&quot; URLs
+aos conteúdos.  quando uma janela de &quot;Juntar anexo&quot; é invocada,
+Pode ver-se um botão com a etiqueta &quot;Inserir URL&quot;.  Se clicar nele, será mostrado
+um campo para escrever o URL e exibidas duas opções:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Verificar existência do URL?</strong> - Para determinar o tipo de ficheiro ou do URL</dt>
+<dd><p class="first last">(para escolher o ícone adequado), o código procura no servidor informação
+básica acerca do ficheiro, nomeadamente o tipo e tamanho do ficheiro.  Em
+alguns casos, o servidor talvez não responda aos pedidos, mesmo que o URL
+seja válido.  Por pré-definição, o Anexos não aceita URLs que não tenham sido
+validados pelo servidor.  Mas se souber que o URL é válido, pode
+desactivar a opção e forçar o Anexos a aceitar o URL--sem garantias
+de que o tipo e tamanho do ficheiro estejam correctos.  Note que o procura no
+servidor será feita quer esta opção esteja activada quer não.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>URL relativo?</strong> - Normalmente insere-se o URL com o prefixo 'http...' para</dt>
+<dd><p class="first last">indicar um endereço absoluto.  Se desejar uma hiperligação para ficheiros
+ou comandos na sua instalação Joomla, use a opção 'relativo'.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Os URLs são exibidos com o ícone identificador do tipo de ficheiro com uma seta
+sobreposta (indicando que se trata de uma fiperligação validada) ou uma barra na
+diagonal (indicando que não pôde ser validada).  Ao editar um URL, pode definir se
+a hiperligação é válida ou não, para obter a sobreposição desejada.  Note ainda que URL
+estas sobreposições podem ser desactivadas usando o parâmetro <strong>Impor ícones de URL</strong>
+Existem vários comandos úteis relacionados com URLs (e ficheiros) no comando
+&quot;Utilitários&quot;, na página de administração.</p>
+</div>
+<div class="section" id="a-que-podem-os-ficheiros-ser-anexados">
+<h1><a class="toc-backref" href="#id7">A que podem os ficheiros ser anexados?</a></h1>
+<p>Além de anexar ficheiros ou URLS a artigos, é agora possível
+anexar ficheiros ou URLS a outros tipos de conteúdo, como Secções
+e Categorias (ver abaixo).  Se estiverem instalados plugins adequados
+do Anexos, pode ser possível anexar ficheiros ou URLS a grande variedade
+de conteúdos, como perfis de utilizador, descrições de produtos, etc.
+Basicamente, qualquer tipo de conteúdo exibido no site público e
+que use <tt class="docutils literal"><span class="pre">'onPrepareContent'</span></tt> pode ter anexos (desde que esteja
+instalado um plugin do Anexos adequado).  Itens de conteúdo
+que invoquem eventos de conteúdo são itens que contenham conteúdo para
+ser exibido (como os artigos) ou contêm descrições para serem exibidas.</p>
+<div class="section" id="anexar-ficheiros-ou-urls-a-descri-es-de-sec-es-ou-categorias">
+<h2>Anexar ficheiros ou URLS a descrições de Secções ou Categorias</h2>
+<p>Com esta versão do Anexos, os utilizadores podem anexar ficheiros a descrições
+de Secções e Categorias.  Estas descrições são geralmente visíveis apenas no modo
+blog para Secções ou Categorias, se o parâmetro básico 'descrição' estiver definido
+para <em>Mostrar</em>.   Note-se também que não é possível anexar ficheiros ou URLs a
+descrições de Secções ou Categorias no editor de Secções ou Categorias.
+Devem ser anexados usando a página de administração ('Anexos', no menu 'Componentes')
+ou a partir do site público.</p>
+<p>Se quiser saber mais acerca do desenvolvimento de novos plugins para o Anexos,
+existe um manual disponível como parte integrante desta instalação do Anexos:</p>
+<ul class="simple">
+<li><a class="reference external" href="../en-GB/plugin_manual/html/index.html">manual de criação de plugins para o Anexos</a> (em Inglês)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="estilo-css-para-as-listas-de-anexos">
+<h1><a class="toc-backref" href="#id8">Estilo CSS para as listas de anexos</a></h1>
+<p>As listas de anexos no site público são organizadas usando um
+'div' especial que contém uma tabela para os anexos. A tabela tem várias
+classes diferentes de CSS associadas, para permitir ao desenvolvedor do site
+a flexibilidade de personalizar a aparência da tabela. Procura o ficheiro
+CSS do plugin anexos (em plugins/content/attachments.css) para ver
+exemplos. Se desejar alterar o estilo, considere copiar os estilos originais
+para o final do mesmo ficheiro e renomear 'attachmentsList' na secção
+copiada para algo da sua preferência.  Editar o parâmetro Anexos
+(no gestor do componente) e alterar o parâmetro <em>estilo da tabela de anexos</em>
+para o novo nome da classe. Depois, modificar as definições da classe
+copiada. Esta abordagem permite voltar rapidamente ao estilo original
+alterando o parâmetro do plugin <em>estilo da tabela de anexos</em> para o valor
+pré-definido, 'attachmentList'. Tem também a vantagem de a secção dos estilos
+modificados poder ser copiada para um ficheiro e facilmente recuperada quando
+a versão do Anexos é actualizada. Pode também ser feito através do comando
+CSS &#64;import.</p>
+</div>
+<div class="section" id="cones-de-tipos-de-ficheiro">
+<h1><a class="toc-backref" href="#id9">Ícones de tipos de ficheiro</a></h1>
+<p>A extensão 'Anexos'adiciona um ícone à frente de cada anexo da lista.
+Se desejar adicionar um novo tipo de ícone, siga estes passos:
+(1) Adicionar o ícone apropriado na pasta 'media/attachments/icons', se o ícone
+apropriado ainda não se encontrar lá; (2) Editar o ficheiro
+'components/com_attachments/file_types.php' e adicionar uma linha adequada no
+grupo estático $attachments_icon_from_file_extension, que relaciona cada extensão ao
+nome do ícone (todos na pasta media/attachments/icons). Se isto não funcionar,
+pode ser prciso adicionar uma linha ao grupo $attachments_icon_from_mime_type. (3)
+Não esquecer de fazer do ficheiro do ícone e actualizar file_types.php para uma
+pasta fora das pastas do site antes de actualizar a versão do Anexos, no futuro.</p>
+</div>
+<div class="section" id="tradu-es">
+<h1><a class="toc-backref" href="#id10">Traduções</a></h1>
+<p>Esta extensão fornece funcionalidades de tradução e apoio nas seguintes línguas
+(além do Português).  Note que algumas destas línguas ainda não dispõem de
+traduções para a versão 2.0 do 'Anexos', encontrando-se em actualização.
+Quem precisar dos pacotes linguísticos para a versão 1.3.4 deve contactar
+o autor directamente.</p>
+<p>Um agradecimento aos tradutores (versões disponíveis entre parênteses):</p>
+<ul class="simple">
+<li><strong>Búlgaro:</strong> por Stefan Ilivanov (em actualização para 2.0)</li>
+<li><strong>Catalão:</strong> por Jaume Jorba (2.0)</li>
+<li><strong>Chinês:</strong> Traduções em Chinês tradicional e simplificado por baijianpeng (白建鹏)  (em actualização para 2.0)</li>
+<li><strong>Croata:</strong> por Tanja Dragisic (1.3.4)</li>
+<li><strong>Checo:</strong> por Tomas Udrzal (1.3.4)</li>
+<li><strong>Holandês:</strong> por Parvus (2.0)</li>
+<li><strong>Finlandês:</strong> por Tapani Lehtonen (2.0)</li>
+<li><strong>Francês:</strong> por Marc-André Ladouceur (2.0) e Pascal Adalian  (1.3.4)</li>
+<li><strong>Alemão:</strong> por Bernhard Alois Gassner (2.0) e Michael Scherer (1.3.4)</li>
+<li><strong>Grego:</strong> por Harry Nakos  (em actualização para 2.0)</li>
+<li><strong>Magiar:</strong> Traduções formal e informal por Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Italiano:</strong> por Piero Mattirolo (2.0) e Lemminkainen e Alessandro Bianchi (1.3.4)</li>
+<li><strong>Norueguês:</strong> por  Roar Jystad (2.0) e Espen Gjelsvik (1.3.4)</li>
+<li><strong>Persa:</strong> por  Hossein Moradgholi and Mahmood Amintoosi (2.0)</li>
+<li><strong>Polaco:</strong> por  Sebastian Konieczny (2.0) e Piotr Wójcik (1.3.4)</li>
+<li><strong>Português do Brasil:</strong> por Arnaldo Giacomitti e Cauan Cabral (em actualização para 2.0)</li>
+<li><strong>Portuguese (Portugal):</strong> por José Paulo Tavares (2.0) e Bruno Moreira (1.3.4)</li>
+<li><strong>Romeno:</strong> por Alex Cojocaru (2.0)</li>
+<li><strong>Russo:</strong> por Sergey Litvintsev (2.0) e евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Sérvio:</strong> por Vlada Jerkovic (em actualização para 2.0)</li>
+<li><strong>Eslovaco:</strong> por Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Espanhol:</strong> por Manuel María Pérez Ayala (2.0) e Carlos Alfaro (1.3.4)</li>
+<li><strong>Sueco:</strong> por Linda Maltanski (2.0) e Mats Elfström (1.3.4)</li>
+<li><strong>Turkish:</strong> por Kaya Zeren (2.0)</li>
+</ul>
+<p>Muito obrigado a estes tradutores!  Se desejar ajudar traduzindo
+a extensão para outra língua, contacte o autor (ver a secção
+<a class="reference internal" href="#contactos">Contactos</a>, no final ).</p>
+</div>
+<div class="section" id="avisos">
+<h1><a class="toc-backref" href="#id11">Avisos</a></h1>
+<ul>
+<li><p class="first"><strong>Se tiver anexos reservados ou privados, use a opção *Download seguro de
+anexos*!</strong> Se não usar a opção de download seguro, os ficheiros anexos
+são guardados numa pasta pública e estarão acessíveis a todos os que saibam
+o endereço completo.  A opção <em>segura</em> impede o acesso a quem não tenha
+permissões adequadas (como definido nas opções acima).
+Ver o texto sobre a opção <em>Download seguro de anexos</em>, acima, para mais
+pormenores.</p>
+</li>
+<li><p class="first">Sempre que um ficheiro é enviado, a existência da pasta é verificada e será
+criada no caso de não existir.  Por pré-definição, a pasta para os ficheiros enviados
+é 'attachments', na pasta de raiz do site.  O nome da pasta pode ser alterado usando
+a opção 'Pasta para envios'. Se a extensão 'Anexos' não puder criar a pasta de
+envios, tem de ser criada manualmente (e talvez tenha problemas ao enviar ficheiros).
+Assegure-se de que atribui à pasta permissões adequadas para enviar ficheiros.
+No mundo Unix/Linux, isso corresponde a algo como 775.  Note que
+o processo de criação da pasta de envio pode falhar se a pasta de raiz do seu site
+tiver permissões que impeçam o servidor (e o PHP) de criar pastas.
+Pode ser necessário atribuir mais permissões temporariamente, de forma a
+permitir a criação da pasta ao enviar anexos.</p>
+</li>
+<li><p class="first">Se a extensão não permitir o envio de tipos específicos de ficheiros
+(como ficheirod zip), verifique se a extensão respeita as restrições
+definidas no Gestor de Media sobre tipos de ficheiros permitidos. Esta definição
+destina-se a prevenir o envio de tipos de ficheiros potencialmente prejudiciais como
+html ou php. O administrador pode actualizar as definições do Gestor de Media e
+acrescentar tipos de ficheiros em &quot;Configurações Gerais&quot;, no menu &quot;Site&quot;,
+escolhendo o separador &quot;Sistema&quot;, acrescentando a extensão de ficheiro desejada e
+o tipo de Mime à lista na secção &quot;Gestor de Media&quot;.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Se os anexos não surgirem no site público, as causas podem ser várias:</dt>
+<dd><ul class="first last simple">
+<li>O anexo não está publicado.  Pode alterar esta situação no interface de
+administração, no gestor de Anexos.</li>
+<li>O artigo ou conteúdo a que o ficheiro está anexado não está publicado.</li>
+<li>O plugin 'Content - Attachments' não se encontra activado. Usar o gestor de plugins
+para o activar.</li>
+<li>A opção 'Quem pode ver anexos' está definida para 'autenticados' e não se
+encontra autenticado.  Pode modificar esta definição no editor de parâmetros
+do gestor de componentes.</li>
+<li>Em 'Content - Attachments' (no gestor de plugins), o nível de acesso
+não está definido para 'Público'.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Se deparar com limites de tamanho de ficheiros ao tentar anexar, experimente
+adicionar estas linhas ao ficheiro .htaccess na pasta de instalação do seu
+site Joomla!:</p>
+<pre class="literal-block">
+php_value upload_max_filesize 32M
+php_value post_max_size 32M
+</pre>
+<p>nas quais pode substituir o valor 32M (megabytes) para o tamanho que desejar como
+máximo para os ficheiros.</p>
+</li>
+<li><p class="first">O Anexos agora permite 'anexar' URLS aos itens de conteúdo.  Se o seu servidor
+for o Windows Vista e deparar com problemas ao anexar URLS envolvendo o
+<tt class="docutils literal"><span class="pre">localhost</span></tt>, isso deve-se a um problema conhecido relacionado com conflitos entre IPv4 e IPv6.
+Para o resolver, edite o ficheiro:</p>
+<pre class="literal-block">
+C:\Windows\System32\drivers\etc\hosts
+</pre>
+<p>Retire a marca de comentário à linha com <tt class="docutils literal"><span class="pre">::1</span></tt>.  Note que o <tt class="docutils literal"><span class="pre">hosts</span></tt> é um
+ficheiro oculto de sistema e pode ser necessário alterar as opções da pasta
+para ver e editar ficheiros ocultos.</p>
+</li>
+<li><p class="first">Ao anexar um ficheiro a um artigo no editor de artigos, não existe feedback
+de que o ficheiro tenha sido anexado.  Mas funciona!  Poderão ver-se os
+anexos depois de guardar o artigo.</p>
+</li>
+<li><p class="first">O Anexos agora permite anexar ficheiros a artigos enquanto estão a ser criados
+no editor de artigos.  Não existem limitações nesta funcionalidade.  Os novos
+anexos ficam pendentes depois de os ficheiros serem enviados e antes de o
+artigo ser guardado pela primeira vez.  Durante este período (de preferência
+breve) de pendência, os novos anexos são identificados apenas pela id do utilizador.
+Se mais do que uma pessoa estiver a usar a mesma conta de utilizador e ambas criarem
+artigos ao mesmo tempo e adicionarem artigos ao mesmo tempo, nãoé garantido
+que os ficheiros anexados sejam inseridos no artigo correcto.</p>
+</li>
+<li><p class="first">No interface de administração, por vezes, ao executar um dos comandos Utilitários,
+obtém-se um aviso de que o browser precisa de reenviar o pedido.  Isto é
+inofensivo, pode clicar [Ok] e o comendo será executado.</p>
+</li>
+<li><p class="first">O comando dos utilitários &quot;Regenerar sistema de nomes de ficheiros&quot; funciona na
+migração de servidores windows para Linux.  Funciona também na migração de Linux para
+Windows, embora potencialmente com alguns problemas:</p>
+<blockquote>
+<ul class="simple">
+<li>Ao copiar os seus ficheiros para o servidor Windows, é necessário verificar
+se a pasta de anexos (normalmente 'attachments') e os ficheiros contidos
+têm permissão de escrita pelo servidor web Joomla.</li>
+<li>Pode ter problemas com ficheiros que usem caracteres unicode
+no seu nome, pois o software de arquivo do windows tem problemas com unicode.
+Pode ser necessário guardar esses ficheiros, apagar os anexos correspondentes
+e voltar a anexá-los.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Existe um fórum de ajuda e um fórum 'FAQ' para a extensão Anexos
+alojados no site Joomlacode.  Se tiver algum problema não tratado nestas
+páginas de ajuda, consulte os fóruns:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments/forum/">Fóruns do Anexos em
+http://joomlacode.org/gf/project/attachments/forum/</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="actualiza-o">
+<h1><a class="toc-backref" href="#id12">Actualização</a></h1>
+<p>A actualização é agora é muito mais fácil.  Simplesmente instale a nova versão do Anexos.</p>
+<ul class="simple">
+<li><em>[Este passo é opcional, mas altamente recomendável para ter uma cópia de segurança
+da base de dados dos anexos no caso de algo correr mal.]</em>
+Use o <a class="reference external" href="http://www.phpmyadmin.net/home_page/index.php">phpMyAdmin</a>
+(ou outra ferramenta de edição SQL) para guardar o conteúdo
+da tabela jos_attachments (Use a opção 'Exportar' com 'Complete' (não 'Extended').
+É aconselhável também dazer cópia de segurança dos anexos enviados
+(normalmente na pasta 'attachments').</li>
+<li><strong>Não é necessário desinstalar a versão anterior do Anexos.</strong> Foi
+testado com as versões 2.0 e 1.3.4 (mas não com versões prévias).</li>
+<li>Se desejar manter os anexos existentes, não é preciso fazer nada.
+Simplesmente instale a nova versão e esta actualizará tudo.</li>
+<li>Se não quiser manter os anexos existentes, apague-os todos primeiro (na
+página de administração).</li>
+<li>O multi-instalador instala todos os componentes e plugins necessários e
+activa todos os plugins.  Se não quiser todos os plugins activados, instale
+primeiro e desactive depois os plugins. Se tiver algum problema com a instalação,
+pode ser necessário efectuar uma instalação manual passo a passo.
+Veja como no ficheiro INSTALL incluído no ficheiro de instalação zip.</li>
+</ul>
+</div>
+<div class="section" id="agradecimentos">
+<h1><a class="toc-backref" href="#id13">Agradecimentos</a></h1>
+<p>Muito obrigado aos seguintes contribuidores e recursos:</p>
+<ul>
+<li><p class="first">O livro <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
+Components, and Plugins with PHP</em> de Joseph L. LeBlanc foi muito útil
+para a criação da extensão 'Anexos'.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Os ícones para os tipos de ficheiros derivam de várias fontes, incluindo:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons by Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 by John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 by Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons by Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack by Joseph North (http://sweetie.sublink.ca)</a></li>
+</ul>
+</dd>
+</dl>
+<p>Note que muitos dos ícones do 'Anexos' foram modificados a partir das imagens
+originais dos sites referidos.  Se desejar as versões originais,
+faça o download deles a partir dos sites acima listados.</p>
+</li>
+<li><p class="first">Muito obrigado a Paul McDermott pela generosidade de doar o plugin de pesquisa!</p>
+</li>
+<li><p class="first">Obrigado a Mohammad Samini por ter doado algum código PHP e ficheiros CSS para
+melhorar a exibição do Anexos em línguas de leitura da direita para a esquerda.</p>
+</li>
+<li><p class="first">Obrigado a Florian Tobias Huber por ter doado correcções para melhorar a exibição
+de anexos com a cache activada.</p>
+</li>
+<li><p class="first">Obrigado a Manuel María Pérez Ayala por ter sugerido como criar o multi-instalador
+integrado. O multi-instalador usa o API instalador do Joomla para instalar
+automaticamente o componente e todos os plugins num único passo. Ao que sei,
+esta técnica foi originalmente desenvolvida pela JFusion.</p>
+</li>
+<li><p class="first">Obrigado a Ewout Weirda pelas muitas e úteis discussões e sugestões para o
+desenvolvimento da extensão Anexos.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="contactos">
+<h1><a class="toc-backref" href="#id14">Contactos</a></h1>
+<p>Envie informações sobre bugs e sugestões para <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: December 11, 2010 at 01:44 UTC.
+
+</div>
+</body>
+</html>

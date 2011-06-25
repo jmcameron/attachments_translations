@@ -1,0 +1,55 @@
+Serbian (srpski) Prevod (translation) (sr-YU) za (for)
+Attachments extension for Joomla 1.5
+(http://joomlacode.org/gf/project/attachments/)
+
+Translation by: Vlada Jerkovic
+
+Za Attachments verziju (for Attachments version): 1.3.3 and 1.3.4
+Poslednje izmene (last updated): (October 16, 2009)
+
+Status: Kompletan prevod (complete translation)
+
+Prevod baziran na Hrvatskom prevodu
+
+INSTALACIJA (INSTALLATION):
+  - Raspakujte ovu datoteku u glavnom direktoriju vašeg sajta.
+    To će smestiti datoteke prevoda na ispravno mjesto.	
+	
+  - Unzip this file in the root directory of your website.
+    This will place all of the translation files in the
+    correct places.
+	
+	- U slucaju da srpski jezik vase Joomle ne pocinje sa sr-YU
+          promenite sva imena fajlova u odgovarajuci npr. 
+          sr-RS.com_attachments.ini i tako redom...  Kada prebacite 
+          jezik Admin-a na srpski pojavice se i za frontend prevod... 
+	
+	- In case your Joomla! Serbian language folders do not start 
+          with the sr-YU prefix, please rename all file and folder
+          names to match your prefix.  
+          Example: sr-RS.com_attachments.ini
+	  
+Ako imate pitanja o ovom prevodu ili želite pomoći s prevodima,
+kontaktirajte Jonathana Camerona (jmcameron@jmcameron.net).
+
+If you have questions about this translation or want to 
+assist with translation, please contact the extension author, 
+Jonathan Cameron (jmcameron@jmcameron.net).
+
+Copyright (c) 2007, 2008 Jonathan M. Cameron, 
+Sva prava pridržana (All Rights Reserved)
+
+Licenca (license): GNU/GPL2, http://www.gnu.org/licenses/gpl-2.0.html 
+
+INSTALIRANE DATOTEKE (INSTALLED FILES):
+
+administrator/components/com_attachments/help/sr-YU/help.css
+    administrator/components/com_attachments/help/sr-YU/help.html
+    administrator/components/com_attachments/help/sr-YU/index.html
+    administrator/language/sr-YU/sr-YU.com_attachments.ini
+    administrator/language/sr-YU/sr-YU.com_attachments.menu.ini
+    administrator/language/sr-YU/sr-YU.plg_content_attachments.ini
+    administrator/language/sr-YU/sr-YU.plg_editors-xtd_add_attachment.ini
+    administrator/language/sr-YU/sr-YU.plg_frontend_attachments.ini
+    administrator/language/sr-YU/sr-YU.plg_search_attachments.ini
+    language/sr-YU/sr-YU.com_attachments.ini

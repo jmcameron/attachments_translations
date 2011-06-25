@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sl" lang="sl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.5: http://docutils.sourceforge.net/" />
+<title>Attachments dokumentacija</title>
+<link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<h1 class="title">Dokumentacija za Attachments</h1>
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<p class="version"><strong>Različica 2.2-RC1 - 3. December 2010</strong></p>
+<div class="contents topic" id="vsebina">
+<p class="topic-title first">Vsebina</p>
+<ul class="simple">
+<li><a class="reference internal" href="#uvod" id="id1">Uvod</a></li>
+<li><a class="reference internal" href="#novosti-v-razli-ici-2-0" id="id2">Novosti v različici 2.0</a></li>
+<li><a class="reference internal" href="#omejitve-nalaganja" id="id3">Omejitve nalaganja</a></li>
+<li><a class="reference internal" href="#nastavitve-komponente-attachments" id="id4">Nastavitve komponente Attachments</a></li>
+<li><a class="reference internal" href="#prika-i-ime-datoteke-ali-url" id="id5">Prikaži ime datoteke ali URL</a></li>
+<li><a class="reference internal" href="#pripenjanje-urljev" id="id6">Pripenjanje URLjev</a></li>
+<li><a class="reference internal" href="#na-kaj-vse-so-lahko-pripete-datoteke" id="id7">Na kaj vse so lahko pripete datoteke?</a></li>
+<li><a class="reference internal" href="#izdelava-css-slogov-za-sezname-priponk" id="id8">Izdelava CSS slogov za sezname priponk</a></li>
+<li><a class="reference internal" href="#ikone-datote-nih-tipov" id="id9">Ikone datotečnih tipov</a></li>
+<li><a class="reference internal" href="#prevodi" id="id10">Prevodi</a></li>
+<li><a class="reference internal" href="#opozorila" id="id11">Opozorila</a></li>
+<li><a class="reference internal" href="#nadgradnja" id="id12">Nadgradnja</a></li>
+<li><a class="reference internal" href="#zahvale" id="id13">Zahvale</a></li>
+<li><a class="reference internal" href="#kontakti" id="id14">Kontakti</a></li>
+</ul>
+</div>
+<div class="section" id="uvod">
+<h1><a class="toc-backref" href="#id1">Uvod</a></h1>
+<p>Razširitev 'Attachments' za Joomla! omogoča nalaganje datotek in pripenjanje
+k prispevkom ali drugim tipom vsebine. 'Attachments' vključuje vtičnik za
+prikazovanje priponk in komponento za nalaganje in upravljanje priponk.
+Na voljo so možnosti za nadzor kdo lahko priponke vidi in kdo jih lahko
+nalaga, poleg vseh ostalih možnosti, ki povečajo fleksibilnost in
+uporabnost. Opomba: vse možnosti so nadzorovane preko urejevalnika
+komponente. <strong>Ta razširitev deluje samo za Joomla! 1.5.  Ni bila
+preskušena z različico 1.6.</strong></p>
+<p>Razširitev 'Attachments' je bila prevedena v številne jezike.
+Prosimo glejete razdelek <cite>Prevodi</cite> za seznam prevodov, ki so na voljo.
+Večina teh jezikovnih paketov je v procesu posodabljanja za
+'Attachments' različico 2.0.</p>
+<p>Če se želite prijaviti na epoštni seznam obvestil o tej
+razširitvi, se prijavite preko te spletne strani:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Attachments Email List ( http://jmcameron.net/attachments/email-list.html )</a></li>
+</ul>
+</div>
+<div class="section" id="novosti-v-razli-ici-2-0">
+<h1><a class="toc-backref" href="#id2">Novosti v različici 2.0</a></h1>
+<ul>
+<li><p class="first">K vsebinskim elementom lahko sedaj &quot;pripnete&quot; URLje kot tudi datoteke.</p>
+</li>
+<li><p class="first">Seznam priponk lahko sedaj prikažete kjerkoli v prispevku (ali vsebinskem elementu).</p>
+</li>
+<li><p class="first">Nova je možnost prikaza polja v seznamu priponk, ki prikazuje ime nalagalca</p>
+</li>
+<li><p class="first">Uveden je multi-installer tako, da namestitev vseh delov razširitve
+'Attachments' zahteva eno nameščanje (in samodejno omogoči
+vtičnike).  To naredi to razširitev zelo enstavno za namestitev
+kljub temu da ima sedaj eno komponento in sedem vtičnikov.  Vedite, da je sedaj
+metoda Joomla! 'nadgradi' privzeta za vse sestavne dele razširitve
+'Attachments'.  To pomeni, da vam ni potrebo odstraniti starih
+različic 'Attachments' preden namestite to različico.</p>
+</li>
+<li><p class="first">Pretvorjeno je shranjevane datotek priponk, da uporablja poti kot je:</p>
+<pre class="literal-block">
+attachments/prispevek/23/datoteka.txt
+</pre>
+<p>To izloči vse predpone datotek, ki so bile uporabljene v starejših različicah.
+To pomeni, da vsak vsebinski element ne more imeti podvojenih imen datotek.
+V praksi to ni velika omejitev.</p>
+</li>
+<li><p class="first">Ponovo spisana koda za dodajanje &quot;Attachments vtičnikov&quot;.  Ti vtičniki omogočajo
+pripenjanje datotek v vsak vsebinski element, ki kliče vtičnik <tt class="docutils literal"><span class="pre">onPrepareContent</span></tt>.
+Na primer sedaj lahko pripnete datoteke v opis Področja ali Kategorije.
+Z malo dela lahko razvijalec razširitve ustvari nov vtičnik
+'Attachments', da bo podpiral dodajanje priponk stvarem kot so CB
+prikazovanje osebnih informacij, itd.  Glejte razdelek
+<a class="reference internal" href="#na-kaj-vse-so-lahko-pripete-datoteke">Na kaj vse so lahko pripete datoteke?</a> za več informacij v zvezi s tem.</p>
+</li>
+<li><dl class="first docutils">
+<dt>V skrbniškem ozadju:</dt>
+<dd><ul class="first last simple">
+<li>Sedaj je mogoče dodajati priponke k prispevkom medtem se
+ustvarjajo!</li>
+<li>Na voljo je možnost za skrivanje prikazovanja priponk za neobjavljene
+ali izbrisane  prispevke oziroma vsebinske elmente (čeprav obstaja lahek
+način za jih prikazati, če jih želite videti).</li>
+<li>Dodano filtriranje za seznam prispevkov</li>
+<li>Predrugačeno pregledno izpisovanje seznama v ozadju, ki omogoča sortiranje
+po različnih stolpcih</li>
+<li>Precej novih ukazov skrbniških pripomočkov</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Izboljšano rokovanje z Unicode datotečnimi imeni</p>
+</li>
+<li><p class="first">Dodana večja fleksibilnost k možnostima &quot;Kdo lahko vidi&quot; in &quot;Kdo lahko posodobi&quot;.</p>
+</li>
+<li><p class="first">Dodana koda, da popravi CSS težave ko Joomla! namestitev uporablja predpomnjenje.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="omejitve-nalaganja">
+<h1><a class="toc-backref" href="#id3">Omejitve nalaganja</a></h1>
+<p>Vsi tipi datotek se ne morejo nalagati.  Razširitev 'Attachments' ne bo dovolila
+nalaganja datotek, ki niso dovoljena s strani Joomla! Upravitelja medijev.
+Da vidite (ali spremenite) kateri tipi datotek so dovoljeni, pojdite na stran <strong>Globalne nastavitve</strong>
+in kliknite zavihek <strong>Sistem</strong>.  V področju <em>Nastavitve za medijske datoteke</em> obstajajo
+možnosti za nadzorovanje kateri tipi končnic datotek in tipi mime so dovoljeni za
+nalaganje. Razširitev 'Attachments' spoštuje te omejitve.  Kljub vsemu je
+omejitev za 'Dovoljene datotečne pripone za slike' ignorirana.</p>
+</div>
+<div class="section" id="nastavitve-komponente-attachments">
+<h1><a class="toc-backref" href="#id4">Nastavitve komponente Attachments</a></h1>
+<p>Vse nastavitve za 'Attachments' se nadzorujejo preko
+upravitelja komponente. Da dostopate do teh nastavitev pojdite v skrbniško
+ozadje in v menuju &quot;Komponente&quot; izberite &quot;Attachments&quot;.  Kliknite na gumb
+&quot;Parameteri&quot; na desni strani orodne vrstice in prikazal se vam bo
+niz parametrov za to razširitev. Ti parametri vključujejo
+naslednje:</p>
+<ul>
+<li><p class="first"><strong>Kdo lahko vidi priponke:</strong> Te nastavitve nadzorujejo
+kdo bo lahko videl povezave za priponke. Na voljo so
+tri možnosti:</p>
+<ol class="arabic simple">
+<li>'<em>Nobeden</em>' - Če je izbrana ta možnost seznam priponk in povezave
+za prenos priponk NE bodo vidne običajnim obiskovalcem spletne strani
+(v ospredju), četudi so prijavljeni ali pa neprijavljeni.  V varnem
+načinu to onemogoča prenos priponk iz ospredja.  Skrbniki bodo kljub
+vsemu še vedno videli seznam priponk in bodo lahko prenesli priponke
+čeprav bo izbrana možnost 'Nobeden'.</li>
+<li>'<em>Vsak prijavljen uporabnik</em>'. - Če je izbrana ta možnost bodo lahko samo
+prijavljeni uporabniki videli povezave do priponk.</li>
+<li>'<em>Vsakdo</em>' - Če je izbrana ta možnost bodo povezave do priponk vidne vsakemu
+obiskovalcu spletne strani, če je prijavljen ali pa ne.</li>
+</ol>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Kdo lahko doda priponke:</strong> Te nastavitve nadzorujejo kdo lahko dodaja</dt>
+<dd><p class="first last">priponke k prispevkom ali drugim vsebinskim elementom. Na voljo so štiri možnosti:</p>
+</dd>
+</dl>
+<ol class="arabic simple">
+<li>'<em>Nobeden</em>' - Če je izbrana ta možnost, povezava &quot;Dodaj priponko&quot;
+za nalaganje priponk NE bo vidna običajnim obiskovalcem spletne strani
+(v ospredju), četudi so prijavljeni ali pa neprijavljeni.
+V varnem načinu to preprečuje nalaganje priponk iz ospredja. Skrbniki
+bodo kjub vsemu lahko videli povezavo &quot;Dodaj priponko&quot; in bodo lahko
+nalagali datoteke čeprav bo izbrana možnost 'Nobeden'.</li>
+<li>'<em>Samo avtor prispevka</em>' - Povezave za nalaganje in urejanje priponk bodo
+vidne samo avtorju izvornega prispevka/vsebinskega elementa (kot tudi
+drugim uporabnikom z višjimi dovoljenji kot so urejevalniki/uredniki/skrbniki).</li>
+<li>'<em>Vsak prijavljen uporabnik</em>' - Povezave za nalaganje priponk bodo vidne
+vsem uporabnikom, ki so prijavljeni.</li>
+<li>'<em>Urejevalnik in več</em>' - Povezave za nalaganje priponk bodo vidne
+samo uporabnikom z dovoljenji Urejevalnika in več.</li>
+</ol>
+</li>
+<li><p class="first"><strong>Priponke privzeto objavljene:</strong> Ta lastnost 'samodejne
+objave' nadzoruje ali naj se nove priponke privzeto objavijo, ko so
+dodane. Če je izbrano 'Da' bodo priponke objavljene takoj ko bodo dodane
+in bodo vidne uporabnikom. Če je izbrano 'Ne' nove priponke ne bodo privzeto
+objavljene. V tem primeru jih bo moral skrbnik iz skrbniškega ozadja objaviti
+preden bodo priponke na voljo.</p>
+</li>
+<li><p class="first"><strong>Opozorilo za samodejno objavljanje:</strong> Če je možnost samodejnega objavljanja
+onemogočena (glej prejšnjo možnost), boste morda želeli opozoriti tiste, ki
+dodajajo priponke kako lahko dosežejo objavo priponk. Tukaj lahko vstavite ustrezno
+sporočilo.  Če je to polje prazno se bo izpisalo splošno sistemsko obvestilo,
+ki bo predlagalo, naj uporabnik kontaktira sistemskega skrbnika, da bo objavil vsako
+na novo naloženo priponko.</p>
+</li>
+<li><p class="first"><strong>Prikaži naslove:</strong> Če je izbrano 'Da', bo nad seznam priponk dodana
+vrstica z opisom kaj je v vsakem stolpcu.</p>
+</li>
+<li><p class="first"><strong>Prikaži opis priponke:</strong> Ta nastavitev nadzoruje
+ali naj bo opis priponke prikazan v seznamu priponk.</p>
+</li>
+<li><p class="first"><strong>Prikaži nalagalca priponke:</strong> Prikaže uporabniško ime od uporabnika,
+ki je naložil priponko.</p>
+</li>
+<li><p class="first"><strong>Prikaži velikost datoteke priponke:</strong> Ta nastavitev nadzoruje
+ali naj bo velikost datoteke priponke prikazana v seznamu priponk.</p>
+</li>
+<li><p class="first"><strong>Prikaži število prenosov:</strong> Ta nastavitev nadzoruje
+ali naj bo število prenosov priponke prikazano v seznamu priponk.</p>
+<div class="warning">
+<p class="first admonition-title">Opozorilo</p>
+<p class="last">Ta možnost deluje samo v varnem načinu!
+V ne-varnem načinu, se datoteke vzdržujejo kot statične datoteke in se dostopajo
+neposredno, brez da bi šle skozi Joomla! kodo.  Zato je nemogoče
+posodabljati števeč prenosov za datoteko, ki je dostopana na ta način.
+Potemtakem bo prikazovanje števila prenosov delovalo samo v varnem načinu,
+ko bo ta možnost postavljena na 'Da'.</p>
+</div>
+</li>
+<li><p class="first"><strong>Prikaži datum spreminjanja datoteke:</strong> Če je izbrano 'Da' bo datum
+spremembe datoteke dodan seznamu priponk za prispevke, ki imajo
+priponke. Če je izbrano 'Ne', ne bo dodan datum spremembe na seznam priponk.</p>
+</li>
+<li><p class="first"><strong>Oblikuj niz za modificiran datum:</strong> Tukaj lahko izberete
+obliko za datum spreminjanja datoteke z uporabo oblike, ki jo uporablja PHP funkcija strftime().  Za primere preiščite splet s ključnimi besedami 'PHP strftime'.  Privzeta oblika (%x %H:%M) poda datume v 24-urni časovni obliki, kot je na primer 4/28/2008 14:21.  Da odstranite časovno komponento izpustite &quot;%H:%M&quot;.  Vedite, da se lahko MS Windows in Linux PHP implementacije razlikujejo v nekaterih kodah, ki jih podpirajo.</p>
+</li>
+<li><p class="first"><strong>Vrstni red v seznamu priponk:</strong> Ta možnost vam omogoča, da določite vrstni red po
+katerem bodo izpisane priponke v seznamu priponk.  Večina možnosti je samoumevnih:</p>
+<ol class="arabic simple">
+<li>'<em>Ime datoteke</em>' - Če je izbrana ta možnost bodo priponke
+sortirane po abecednem vrstnem redu imen datotek.</li>
+<li>'<em>Velikost datoteke(najprej najmanjša)</em>'</li>
+<li>'<em>Velikost datoteke(najprej največja)</em>'</li>
+<li>'<em>Opis</em>'</li>
+<li>'<em>Prikazano ime datoteke ali URL</em>' - Vse priponke, ki imajo prazen
+prikaz imena datoteke se bodo pojavile pred tistimi z vnešenim prikazom imena
+datoteke in bodo sortirana po njihovih imenih datotek.</li>
+<li>'<em>Nalagalec</em>' - Sortiranje po imenu uporabnika, ki je naložil datoteko.</li>
+<li>'<em>Datum ustvarjenja (najprej starejše)</em>'</li>
+<li>'<em>Datum ustvarjenja (najprej novejše)</em>'</li>
+<li>'<em>Datum spremembe (najprej starejše)</em>'</li>
+<li>'<em>Datum spremembe (najprej novejše)</em>'</li>
+<li>'<em>ID priponke</em>' - Če je izbrana ta možnost, bodo
+priponke sortirane po ID številki priponke.  To razvrsti priponke
+po takem vrstnem redu kot so bile ustvarjene.</li>
+<li>'<em>Uporabniško določeno polje 1</em>'</li>
+<li>'<em>Uporabniško določeno polje 2</em>'</li>
+<li>'<em>Uporabniško določeno polje 3</em>'</li>
+</ol>
+</li>
+<li><p class="first"><strong>Ime za uporabniško določeno polje 1-3:</strong> Če imate kakšno dodatno informacijo
+o vsaki priponki, ki jo želite dodati, vam razširitev 'Attachments'
+omogoča, da določite do tri dodatna uporabniško-določena polja.
+Da ustvarite novo polje, vnesite ime zanj v enega od teh treh vnosnih polj.
+Počistite ime, da onemogočite prikazovanje in urejanje tega polja.
+Uporabniško določena polja bodo prikazana v vrstnem redu, ki je naveden tukaj.
+Maksimalna dolžina uporabniško določenega polja je 40 znakov.  Podatki v teh poljih
+pa so lahko dolgi do 100 znakov.</p>
+<div class="hint">
+<p class="first admonition-title">Namig</p>
+<p class="last">Če dodate zvezdico na konec uporabniško-določenaga imena polja, to ne bo prikazano v ospredju. Vidno bo, ko se bo urejalo priponko v ospredju in vedno bo vidno v ozadju. To skrito uporabniško-določeno polje se lahko uporabi za razvrščanje priponk v poljubnem vrstnem redu z vnosom celih števil v polje.</p>
+</div>
+</li>
+<li><p class="first"><strong>Maksimalna dolžina imena datoteke ali dolžina URLja:</strong>
+Maksimalna dolžina imena datoteke ali dolžina URLja za seznam priponk.  Imena datotek,
+ki so daljša od te vrednosti bodo skrajšana in postavljena v Prikazano ime datoteke
+(samo za namen prikazovanja, dejansko ime datoteke ne bo spremenjeno).  Vrednost 0
+pomeni, da je dolžina imena datoteke neomejena s strani te možnosti (polje imen datotek
+v tabeli podatkovne baze priponk je omejeno na 80 znakov).  Vedite, da če so prikazana
+imena datotek odrezana s strani te možnosti, bodo odrezana imena datotek postavljena v
+polje &quot;Prikazano ime datoteke&quot;. Ta možnost učinkuje samo za priponke, ki so dodane po
+vključitvi te možnosti.</p>
+</li>
+<li><p class="first"><strong>Kam naj bodo priponke postavljene?</strong> Ta možnost nadzoruje
+lokacijo v prispevku (ali vsebinskem elementu) kamor bo postavljen seznam priponk.
+Ta možnost se uveljavi za vse sezname priponk:</p>
+<blockquote>
+<ul>
+<li><p class="first">'<em>Na začetek</em>'</p>
+</li>
+<li><p class="first">'<em>Na konec</em>'</p>
+</li>
+<li><p class="first">'<em>Poljubna postavitev</em>' - S to možnostjo se bo seznam priponk
+pojavil v prispevku (ali vsebinskem elementu) kjerkoli se bo pojavila
+posebna značka: {attachments}.</p>
+<div class="warning">
+<p class="first admonition-title">Opozorilo</p>
+<p class="last">V načinu Poljubna postavitev za vsak prispevek (ali vsebinski
+element), ki ne vključuje te značke, se bo seznam priponk
+pojavil na koncu prispevka (ali vsebinskega elementa).</p>
+</div>
+<p>V tem načinu, med urejanjem prispevka, razdelka ali kategorije v ozadju, se bo
+pojavil dodaten gumb: [Vstavi {attachments} žeton].
+Postavite kurzor kamor želite poljubno postavitev žetona in uporabite ta gumb za
+vstavitev žetona. Ta gumb bo dodal obdajajoče HTML značke za skritje žetonov
+ko le ta ni zamenjan (npr. ko seznam priponk naj nebi bil viden). V HTML žeton
+izgleda kot tole z obdajajočimi značkami, ki ga skrijejo:</p>
+<pre class="literal-block">
+&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+</pre>
+<p>V urejevalnikih ozadja boste videli {attachments} značko vendar ne HTML
+'span' značk razen, če ne boste preklopili na način HTML. V ospredju ne
+boste nikoli videli {attachments} značke razen, če je vtičnik vstavi priponke
+onemogočen. Če želite odstraniti {attachments} žeton, boste morda želeli uporabiti
+&quot;HTML&quot; način ogleda v urejevalniku, da boste lahko izbrisali tudi obdajajoče span
+značke.</p>
+</li>
+<li><p class="first">'<em>Onemogočeno (filtrirano)</em>' - Ta možnost bo onemogočila prikaz
+seznama priponk in bo zatrla prikaz vseh {attachments}
+značk v prispevkih ali vsebinskih elementih.</p>
+</li>
+<li><p class="first">'<em>Onemogočeno (brez filtra)</em>' - Ta možnost bo onemogočila prikaz
+seznama priponk in ne bo zatrla prikaza nobenih
+{attachments} značk v prispevkih (ali vsebinskih elementih).</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>CSS slog za tabele priponk:</strong> Da povozite privzeti CSS
+slog seznama priponk določite tukaj vaš lasten slog.  Privzeto ime
+sloga je 'attachmentsList'.  Glejte razdelek <a class="reference internal" href="#izdelava-css-slogov-za-sezname-priponk">Izdelava CSS slogov za sezname priponk</a>.</p>
+</li>
+<li><p class="first"><strong>URL za registracijo:</strong> Če je za regoistracijo novih uporabnikov potreben poseben URL,
+ga vnesite tukaj.  Ta možnost je lahko uporabna, če je bila izdelana posebna stran za prijavo.</p>
+</li>
+<li><p class="first"><strong>Način odpiranja povezave do datoteke:</strong>
+Ta možnost nadzoruje kako bodo povezave do priponk odprte.  'V istem oknu'
+pomeni, da bo datoteka odprta v istem oknu brskalnika.  'V novem oknu'
+pomeni, da bo datoteka odprta v novem oknu.  V nekaterih brskalnikih bo uporaba možnosti
+'V novem oknu' dejansko odprla priponko v novem zavihku.</p>
+</li>
+<li><p class="first"><strong>Podimenik za nalaganje:</strong> Koda razširitve 'Attachments'
+bo postavila datoteke v ta podimenik pod vrhnji imenik
+Joomla strani.  Privzeto je 'attachments'.
+Če se ta podimenik spremeni se bo to uveljavilo samo za nova
+nalaganja.  Predhodno naložene datoteke bodo ostale v starem podimeniku
+in zapisi v attachments podatkovni bazi bodo še vedno kazali na tiste datoteke.
+Če boste želeli premakniti datoteke iz starega podimenika v nov
+podimenik, boste morali premakniti datoteke in nato ročno posodobiti njihove
+vnose v podatkovni bazi attachments.</p>
+</li>
+<li><p class="first"><strong>Poljubni naslovi za sezname priponk:</strong> Privzeto razširitev 'Attachments'
+vstavi naslov &quot;Priponke:&quot; nad seznam priponk za vsak
+prispevek ali vsebinski element (če ima priponke). V nekaterih primerih, bi lahko
+želeli uporabiti drugačen termin za specifične prispevke ali vsebinske elemente. Če želite
+lahko določite točen termin za uporabo na osnovi element-za-elementom. Na
+primer, če želite uporabiti za prispevek 211 prilagojeni naslov &quot;Prenosi:&quot;,
+potem dodajte to k tem nastavitvam: '211 Prenosi' (brez navednic). Uporabite en vnos na
+vrstico.  Za druge tipe vsebinskih elementov uporabite obliko:
+'category:23 To je naslov za category 23' kjer se 'category'
+lahko zamenja z imenom vsebinskega elementa vira.  Zgornji primer za prispevke
+bi se lahko naredil tudi z obliko 'article:211 Prenosi'.  Vedite da bo samo vnos
+brez numeričnega ID na začetku uveljavljen na vseh vsebinskih elementih.
+Dobra praksa je, da se postavi take globalne prikrojitve naslovov v seznamu na začetek
+in se jih nato naknadno prepiše z element-za-elementom prilagojenimi naslovi.</p>
+<p>Opomba: Če želite spremeniti naslove, ki se uporabijo za sezname priponk globalno,
+lahko uredite vnos 'ATTACHMENTS TITLE' v datotekah s prevodi:</p>
+<pre class="literal-block">
+administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+</pre>
+<p>kjer se qq-QQ nanaša na označevalno kodo jezika, kot je na primer en-GB za angleščino.
+(Če niste domači z Joomla! datotekami s prevodi, najdite vrstico, ki ima
+'ATTACHMENTS TITLE' na levi strani znaka '='.  Spremenite karkoli na
+desni strani od znaka '='.  Ne spremeniti ničesar na levi strani od znaka '='.)</p>
+</li>
+<li><p class="first"><strong>Skrij Priponke za:</strong>
+Z vejico ločen seznam ključnih besed ali Področij/Kategorij prispevkov za
+katere naj bo seznam priponk skrit. Lahko se uporabi pet ključnih besed:</p>
+<ul class="simple">
+<li>'frontpage', da zatrete prikazovanje priponk na naslovni strani,</li>
+<li>'blog', da zatrete prikazovanje priponk za vsako stran, ki uporablja 'blog' postavitev strani,</li>
+<li>'all but article views', da omogočite prikazovanje priponk samo v pogledih prispevkov, 'always show section attachments' da omogočite prikazovanje priponk v področjih, kjer je podano 'all but article views' ter</li>
+<li>'always show category attachments', da omogočite prikazovanje priponk v kategorijah, kjer je podano 'all but article views'.</li>
+</ul>
+<p>Odstranite navednice, ko vstavljate možnosti ključne besede.
+<strong>Možnost 'frontpage' bi morala biti upoštevana s strani vseh vsebinskih
+tipov, vendar vsebinski tipi, ki niso prispevki, področja ali kategorije lahko ali pa tudi ne
+upoštevajo možnosti 'all but article views' in druge možnosti.</strong>  Prispevkovi id-ji
+Področje/Kategorija bi morali biti vneseni kot numerični ID-ji področja in kategorije ločeni s
+poševnico(/): Področje#/KategorijaNum, PodročjeNum/KategorijaNum.  Navedite samo 'PodročjeNum', da
+pokrijete vse Kategorije znotraj Področja.
+Na primer: 23/10, 23/11, 24</p>
+</li>
+<li><p class="first"><strong>Časovna omejitev za preverjanje povezav:</strong>
+Časovna omejitev za preverjanje povezav (sekunde).  Vsakič, ko se doda priponka kot povezava,
+se povezava preveri neposredno. Če je povezava dostopna preden poteče časovna omejitev, se
+pridobijo velikost datoteke in druge informacije o povezavi.  Če ni, se uporabijo generične
+informacije.  Da onemogočite preverjanje vnesite 0.</p>
+</li>
+<li><p class="first"><strong>Prelepi ikone URL povezav:</strong>
+Prelepi ikono URL povezave nad ikono priponke za vsako priponko, da s tem označi, da je URL.
+Veljavni URLji so prikazani s puščicami, neveljavni URLji pa so prikazani z rdečo črto čez
+ikono datotečnega tipa (v smeri od spodaj levo proti zgoraj desno).</p>
+</li>
+<li><p class="first"><strong>Zatri zastarele priponke (v ozadju):</strong>
+Nastavi privzeto za zatiranje <em>zastarelih</em> priponk v skrbniškem
+ozadju.  V tem kontekstu so <em>zastarele</em> priponke tiste, ki so pripete v
+neobjavljene vire ali vire, ki so v košu za smeti. To nastavitev lahko povozite z uporabo
+spustnega menuja 'Prikaži priponke za' na desni strani tik nad seznamom
+priponk (v isti vrstici kot filter).  Ko uporabljate spustni menu
+za nadziranje katere priponke bodo vidne, si sistem zapomni te nastavitve
+dokler se ne odjavite kot administrator.  Zato spreminjanje tega parametra
+izpade kot, da nima učinka. Nastavitve tega parametra bodo zopet učinkovale
+naslednjič, ko se boste prijavili kot administrator.</p>
+</li>
+<li><p class="first"><strong>Varni prenos priponk:</strong> Privzeto razširitev 'Attachments'
+shrani pripete datoteke v podimenik, ki je dostopen širši javnosti.  Če izberete
+<em>varno</em> možnost bo imenik, v katerem bodo shranjene priponke, postal širši javnosti
+nedostopen.  Povezave za prenos priponk v ospredju bodo še vedno
+prenesle datoteke priponk, vendar ne bodo izpisane kot neposredne povezave.  To bo preprečevalo
+dostop razen, če bodo uporabniki imeli ustrezne pravice.  Če <em>varne</em> povezave niso izbrane,
+bodo povezave do priponk prikazene kot kažejo zgornje možnosti, vendar bodo datoteke
+še vedno dostopne vsakomur, ki bo poznal poln URL, ker je podimenik
+javno dostopen.  <em>Varna</em> možnost preprečuje dostop uporabnikom brez ustreznih
+pravic tudi, če poznajo poln URL, ker ta možnost prepreči javno dostopanje
+do podimenika s priponkami.</p>
+</li>
+<li><p class="first"><strong>Izpisuj priponke v varnem načinu:</strong>
+Izpiše priponke v varnem načinu tudi, če uporabniki niso prijavljeni, razen če je
+'Kdo lahko vidi priponke' nastavljeno na 'Nobeden'.  Možnost 'Kdo lahko vidi
+priponke' še vedno nadzoruje ali se priponke lahko prenesejo
+tudi v varnem načinu.  Ta možnost ima učinek samo v varnem načinu.</p>
+</li>
+<li><p class="first"><strong>Način prenosa za varne prenose:</strong>
+Ta možnost nadzoruje ali naj se datoteke prenesejo kot ločene datoteke ali naj se prikažejo
+v brskalniku (če brskalnik lahko ustrezno ravna s tistim tipom datoteke).  Na voljo sta dve možnosti:</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt><em>'Znotraj'</em> - V tem načinu bodo datoteke, ki se lahko prikažejo v brskalniku, prikazane</dt>
+<dd><p class="first last">v brskalniku samem (kot so na primer tekstovne datoteke ali slike).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>'Priponka'</em> - Z načinom 'Priponka' bodo datoteke vedno prenešene</dt>
+<dd><p class="first last">kot ločene datoteke.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>V vsakem primeru bodo datoteke, ki ne morejo biti prikazane v brskalniku,
+prenešene kot zunanje datoteke.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="prika-i-ime-datoteke-ali-url">
+<h1><a class="toc-backref" href="#id5">Prikaži ime datoteke ali URL</a></h1>
+<p>Običajno, ko so datoteke naložene (ali so URLji nameščeni) in izpisane v seznamu
+priponk, je prikazano polno ime datoteke (ali URLja) kot povezava za prenos
+priponke.  V nekaterih primerih je lahko ime datoteke (ali URLja) predolgo, da to lepo
+deluje.  V obrazcu za nalaganje obstaja dodatno polje imanovano &quot;Prikazano ime
+datoteke&quot; v katerem lahko oseba, ki nalaga datoteko, vstavi alternativno
+ime datoteke (ali URL) kot oznako za prikazovanje namesto polnega imena datoteke
+(ali URLja).  Na primer, če želite skrajšati prikazano ime datoteke, lahko izpolnite to
+polje.  To polje se lahko ureja v skrbniškem ozadju kjer se ureja nastavitve posamezne
+priponke.  Opomba: Obstaja možnost imenovana &quot;Maksimalno ime datoteke ali
+dolžina URLja&quot; v možnostih razširitve 'Attachments'.  Lahko se nastavi, da samodejno
+skrajša prikazana imena naloženih datotek; ostanek skrajšanega imena naložene datoteke
+bo vstavljen v polje &quot;Prikazano ime datoteke&quot;.</p>
+</div>
+<div class="section" id="pripenjanje-urljev">
+<h1><a class="toc-backref" href="#id6">Pripenjanje URLjev</a></h1>
+<p>Novost v 'Attachments' različica 2.0 je možnost &quot;pripenjanja&quot; URLjev v
+vsebinske elemente.  Ko odprete eno izmed pogovornih oken &quot;Dodaj priponko&quot;,
+boste videli gumb z oznako &quot;Vnesite URL namesto tega&quot;.  Če kliknete nanj,
+boste dobili vnosno polje za URL in videli boste dve možnosti:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Preverim obstoj URLja?</strong> - Z namenom določitve tipa datoteke v</dt>
+<dd><p class="first last">URLju (da se izbere ustrezna ikona), programska koda povpraša strežnik
+za osnovne informacije o datoteki, vključno s tipom datoteke in velikostjo.
+V določenih primerih strežnik ne bo odgovoril na te zahtevke, čeprav je
+URL veljaven.  Attachments privzeto ne bodo sprejele URLje, ki niso
+bili preverjeni s strani strežnika.  Vendar, če veste, da je URL veljaven,
+lahko to možnost izključite in prisilite razširitev 'Attachments'
+naj sprejme ta URL-- ampak tukaj ni nobenih zagotovil, da bosta tip datoteke
+ali velikost datoteke pravilna.  Vedite, da bo strežnik v vsakem primeru povprašan,
+tudi če ne boste izbrali te možnosti.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Relativen URL?</strong> - Običajno boste vnesli URLje s predpono 'http...' da boste</dt>
+<dd><p class="first last">označili poln URL spletne strani. Če želite kazati na datoteke/ukaze
+relativno na vašo Joomla namestitev, uporabite možnost 'relativen'.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>URLji so prikazani z ikono datotečnega tipa, ki je prelepljena s puščico
+(ki označuje, da je s povezavo vse v redu) ali z rdečo poševno diagonalo (ki
+označuje, da URL ni bil uspešno preverjen). Ko uredite URL, lahko spremenite ali naj
+bo povezava veljavna ali ne, da dobite željeni prelepljeni simbol.  Vedite, da je lahko plast za
+prelepljenje URLjev popolnoma onemogočena z uporabo globanega parametra <strong>Prelepi
+ikone URL povezav</strong>.  Na voljo je več uporabnih ukazov povezanih z URLji (in datotekami) pod
+ukazi &quot;Pripomočki&quot; v skrbniškem ozadju.</p>
+</div>
+<div class="section" id="na-kaj-vse-so-lahko-pripete-datoteke">
+<h1><a class="toc-backref" href="#id7">Na kaj vse so lahko pripete datoteke?</a></h1>
+<p>Poleg pripenjanja datotek ali URLjev v prispevke, je sedaj mogoče
+pripeti datoteke ali URLje tudi drugim tipom vsebinskih elementov kot so Področja
+in Kategorije (glejte spodaj).  Če so nameščeni ustrezni vtičniki za
+'Attachments'je možno pripeti datoteke ali URLje širokemu spektru
+vsebinskih elementov, kot so uporabniški profili, izdelki nakupovalnih košaric,
+opisi, itd.  V principu vsak vsebinski element, ki je prikazan v
+ospredju in uporablja vsebinski dogodek <tt class="docutils literal"><span class="pre">'onPrepareContent'</span></tt> lahko gosti
+priponke (če je nameščen ustrezen vtičnik za 'Attachments').  Vsebinski
+elementi, ki kličejo vsebinske dogodke so tipično elementi, katerih namen je prikazovanje
+vsebine (kot so prispevki) ali pa imajo opise, ki bodo prikazani.</p>
+<div class="section" id="pripenjanje-datotek-ali-urljev-v-opise-podro-ij-ali-kategorij">
+<h2>Pripenjanje datotek ali URLjev v opise Področij ali Kategorij</h2>
+<p>S to različico priponk lahko uporabniki pripenjajo datoteke v opise Področij in
+Kategorij.  Ti opisi so v splošnem globalno vidni samo na Blog
+straneh Področij ali Kategorij, če je globalni parameter 'opis' nastavljen na
+<em>Prikaži</em> (preko Urejevalnika Menujev). Priponke se lahko dodajo opisom Področij ali
+Kategorij v urejevalnikih Področij ali Kategorij.</p>
+<p>Če se želite naučiti več o tem kako razvijati nov vtičnik za Attachments, vam je
+na voljo priročnik, ki je dostopen kot del namestitve 'Attachments':</p>
+<ul class="simple">
+<li><a class="reference external" href="../en-GB/plugin_manual/html/index.html">Attachments Plugin Creation Manual</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="izdelava-css-slogov-za-sezname-priponk">
+<h1><a class="toc-backref" href="#id8">Izdelava CSS slogov za sezname priponk</a></h1>
+<p>Seznami priponk v ospredju so izoblikovani z uporabo posebnega
+'div', ki vsebuje tabelo za priponke. Tabela ima nekaj
+različnih CSS razredov, ki so z njim povezani, kar omogoča razvijalcem spletnih
+strani fleksibilnost pri prikrojevanju izgleda tabele. Poglejte v CSS
+vtičnikovo datoteko za priponke (v plugins/content/attachments.css) za
+primere. Če želite spremeniti slog, premislite o kopiranju originalnih
+slogov na konec iste datoteke in preimenujte 'attachmentsList' prekopiranega
+področja v nekaj po vaši izbiri.  Uredite parameter 'Attachments'
+(v urejevalniku komponent) in spremenite paramter <em>CSS slog za tabele priponk</em>
+v novo ime razreda. Potem ustrezno spremenite definicije razreda v vašem prekopiranem
+področju. Ta postopek vam omogoča, da se hitro povrnete na originalen slog
+s spremembo parametra vtičnika <em>CSS slog za tabele priponk</em> nazaj na
+privzeto 'attachmentsList'. To ima tudi prednost, da se
+področje spremenjenih slogov kopira v datoteko in se jih enostavno povrne nazaj,
+ko se nadgradi nova različica 'Priponk (Attachments)'. To se lahko naredi tudi preko
+ukaza CSS &#64;import.</p>
+</div>
+<div class="section" id="ikone-datote-nih-tipov">
+<h1><a class="toc-backref" href="#id9">Ikone datotečnih tipov</a></h1>
+<p>Razširitev 'Attachments' doda ikono pred vsako priponko v seznamu
+priponk. Če želite dodati nov tip ikone, sledite tem navodilom:
+(1) Dodajte ustrezno ikono v imenik 'media/attachments/icons',
+če tam še ni ustrezne; (2) Uredite datoteko
+'components/com_attachments/file_types.php' in dodajte ustrezno vrstico v statično
+polje $attachments_icon_from_file_extension, ki mapira datotečno razširitev na ime
+ikone (vse v imeniku media/attachments/icons). Če to ne deluje,
+boste morda morali dodati ustrezno vrstico k polju $attachments_icon_from_mime_type. (3)
+Ne pozabite narediti kopij od datoteke ikone in posodobljene file_types.php v nek
+imenik izven imenikov spletnih strani preden v prihodnosti posodobite na novejšo
+različico 'Priponk (Attachments)'.</p>
+</div>
+<div class="section" id="prevodi">
+<h1><a class="toc-backref" href="#id10">Prevodi</a></h1>
+<p>Ta razširitev prinaša zmožnost za prevajanje in podpira
+naslednje jezike (poleg Angleščine).  Vedite, da je večina teh jezikovnih
+paketov v procesu posodabljanja za 'Attachments' različico 2.0 in
+še niso na voljo za Attachments 2.0. Vsakdo, ki potrebuje jezikovne pakete za
+1.3.4 naj kontaktira avtorja neposredno.</p>
+<p>Hvala naslednjim prevajalcem (različice, ki so na voljo, so v oklepajih):</p>
+<ul class="simple">
+<li><strong>Bolgarščina:</strong> Stefan Ilivanov (v posodabljanju za 2.0)</li>
+<li><strong>Češčina:</strong> Tomas Udrzal (1.3.4)</li>
+<li><strong>Finščina:</strong> Tapani Lehtonen (2.0)</li>
+<li><strong>Francoščina:</strong> Marc-André Ladouceur (2.0) in Pascal Adalian (1.3.4)</li>
+<li><strong>Grščina:</strong> Harry Nakos (v posodabljanju za 2.0)</li>
+<li><strong>Hrvaščina:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Italijanščina:</strong> Piero Mattirolo (2.0) in Lemminkainen in Alessandro Bianchi (1.3.4)</li>
+<li><strong>Katalonščina:</strong> Jaume Jorba (2.0)</li>
+<li><strong>Kitajščina:</strong> Tradicionalna in poenostavljena Kitajščina - baijianpeng (白建鹏) (v posodabljanju za 2.0)</li>
+<li><strong>Madžarščina:</strong> Formalni in neformalni prevodi - Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Nemščina:</strong> Bernhard Alois Gassner (2.0) in Michael Scherer (1.3.4)</li>
+<li><strong>Nizozemščina:</strong> Parvus (2.0)</li>
+<li><strong>Norveščina:</strong> Roar Jystad (2.0) in Espen Gjelsvik (1.3.4)</li>
+<li><strong>Perzijščina:</strong> Hossein Moradgholi in Mahmood Amintoosi (2.0)</li>
+<li><strong>Poljščina:</strong> Sebastian Konieczny (2.0) in Piotr Wójcik (1.3.4)</li>
+<li><strong>Portugalščina (Brazilska):</strong> Arnaldo Giacomitti in Cauan Cabral (v posodabljanju za 2.0)</li>
+<li><strong>Portugalščina (Portugalska):</strong> José Paulo Tavares (2.0) in Bruno Moreira (1.3.4)</li>
+<li><strong>Romunščina:</strong> Alex Cojocaru (2.0)</li>
+<li><strong>Ruščina:</strong> Sergey Litvintsev (2.0) in евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Srbščina:</strong> Vlada Jerkovic (v posodabljanju za 2.0)</li>
+<li><strong>Slovaščina:</strong> Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Slovenščina:</strong> Matej Badalič (2.0)</li>
+<li><strong>Španščina:</strong> Manuel María Pérez Ayala (2.0) in Carlos Alfaro (1.3.4)</li>
+<li><strong>Švedščina:</strong> Linda Maltanski (2.0) in Mats Elfström (1.3.4)</li>
+<li><strong>Turkščina:</strong> Kaya Zeren (2.0)</li>
+</ul>
+<p>Izjemna zahvala tem prevejalcem!  Če želite pomagati pri prevajanju
+razširitve v katerikoli drug jezik, prosim kontaktirajte avtorja (glejte razdelek
+<a class="reference internal" href="#kontakti">Kontakti</a> na koncu).</p>
+</div>
+<div class="section" id="opozorila">
+<h1><a class="toc-backref" href="#id11">Opozorila</a></h1>
+<ul>
+<li><p class="first"><strong>Če imate pripete datoteke, ki so občutljive ali zasebne narave, uporabite možnost
+*Varni prenos priponk*!</strong> Če ne uporabljate
+varne možnosti, se datoteke priponk shranijo v javni podimenik
+in so dostopne vsakomur, ki pozna poln URL naslov.  <em>Varna</em> možnost
+preprečuje dostop vsakomur, ki nima ustreznih dovoljenj (kot je določeno
+z zgornjimi možnostimi). Za več podrobnosti glejte gornjo diskusijo o možnosti
+<em>Varni prenos priponk</em>.</p>
+</li>
+<li><p class="first">Vsakič, ko se nalaga datoteka, se preveri obstoj podimenika za nalaganje
+in če ta ne obstaja se podimenik ustvari na novo.  Privzeto je podimenik
+za nalaganje datotek določen kot 'attachments' v korenskem imeniku
+vaše spletne strani.  Ime podimenika se lahko spremeni z uporabo možnosti
+'Podimenik za nalaganje'. Če je razširitev
+'Attachments' nesposobna ustvariti podimenika za nalaganje,
+ga morate ustvariti sami (tako imate lahko tudi težave pri nalaganju
+datotek). Preverite, da nastavite podimeniku strezna dovoljenja za nalaganje
+datotek.  V svetu Unix/Linux, je to po vsej verjetnosti nekaj podobnega 775.  Vedite,
+da lahko proces ustvarjanja podimenika za nalaganje spodleti, če ima imenik višje
+stopnje na vaši spletni strani dovoljenja, ki preprečujejo spletnemu strežniku (in PHP)
+ustvarjanje podimenikov. Lahko da boste morali začasno  sprostiti dovoljenja,
+da bo omogočeno ustvarjanje podimenikov, ki se ustvarjajo pri nalaganju priponk.</p>
+</li>
+<li><p class="first">Če vam ta razširitev ne dovoljuje nalaganja specifičnih tipov datotek
+(kot so na primer datoteke zip), morate vedeti, da razširitev spoštuje omejitve
+postavljene s strani Urejevalnika Medijev glede tipov datotek, ki se lahko nalagajo. To
+preprečuje nalaganje potencialno nevarnih tipov datotek, kot so html ali
+php datoteke. Skrbnik lahko spremeni te nastavitve Urejevalnika Medijev, s tem da gre
+preko menuja &quot;Spletna stran&quot;, v podmenu &quot;Nastavitve&quot;, na zavihek &quot;Sistem&quot;, kjer lahko doda ustrezne
+pripone datotek in Mime tipe na seznam v razdelku &quot;Nastavitve za medijske datoteke&quot;.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Če ne morete videti priponk v ospreju, je to lahko posledica več možnih vzrokov:</dt>
+<dd><ul class="first last simple">
+<li>Priponka ni objavljena. To lahko spremenite na strani urejevalnika Priponk (Attachments)
+v skrbniškem ozadju.</li>
+<li>Izvorni prispevek ali vsebinski element ni objavljen.</li>
+<li>Možnost 'Kdo lahko vidi priponke' je nastavljena na 'Vsak prijavljen uporabnik' in vi
+niste prijavljeni. Ali pa je možnost 'Kdo lahko vidi priponke' nastavljena na 'Nobeden'.
+To se lahko spremeni preko urejevalnika Parametrov na strani za urejanje komponente.</li>
+<li>Vtičnik 'Content - Attachments' ni omogočen.  Uporabite Upravitelja vtičnikov, da ga
+omogočite.</li>
+<li>V 'Content - Attachments' (preko Upravitelja vtičnikov), ni nivo
+dostopa nastavljen na 'Javno'.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Če srečate omejitve v velikosti datotek, ki jih želite naložiti,
+poskusite dodati naslednji vrstici v datoteko .htaccess v korenski imenik
+vaše Joomla! spletne strani:</p>
+<pre class="literal-block">
+php_value upload_max_filesize 32M
+php_value post_max_size 32M
+</pre>
+<p>kjer lahko spremenite vrednost 32M (megabajtov) na tisto vrednost, ki naj bi pomenila maksimalno
+velikost datoteke za nalaganje.</p>
+</li>
+<li><p class="first">'Attachments' sedaj podpira &quot;pripenjanje&quot; URLjev v vsebinske elemente.  Če je vaš strežnik
+Windows Vista in srečujete težave pri dodajanju URLjev, ki vključujejo
+<tt class="docutils literal"><span class="pre">localhost</span></tt>, je to poznana težava povezana v zvezi s spori iz IPv4 in IPv6.
+Da odpravite to težavo, spremenite datoteko:</p>
+<pre class="literal-block">
+C:\Windows\System32\drivers\etc\hosts
+</pre>
+<p>Zakomentirajte vrstico, ki vsebuje <tt class="docutils literal"><span class="pre">::1</span></tt>.  Vedite, da je <tt class="docutils literal"><span class="pre">hosts</span></tt> skrita
+sistemska datoteka in boste morda morali spremeniti možnosti za prikazovanje map,
+da bodo skrite datotek prikazane, da jih boste lahko videli in jih spremenili.</p>
+</li>
+<li><p class="first">Ko pripnete datoteke v prispevek v Urejevalniku prispevkov, ni na voljo nobene
+povratne informacije, da je bila datoteka pripeta.  Vendar to deluje!  Priponke boste
+videli takoj, ko bo prispevek shranjen.</p>
+</li>
+<li><p class="first">'Attachments' sedaj podpira pripenanje datotek prispevkom, med samim postopkom
+urejanja v Urejevalniku prispevkov.  Za to obstaja samo ena omejitev.  Nove
+priponke so v statusu &quot;ječa&quot; po tem, ko je datoteka naložena in preden je
+prispevek dejansko prvič shranjen.  Med tem časom (upajmo da je
+kratek) ječe se nove priponke lahko identificirajo samo po id številki uporabnika.  Zato
+če več kot ena oseba uporablja en uporabniški račun in te osebe ustvarjajo
+prispevke istočasno in istočasno dodajajo priponke, ni zagotovila,
+da bodo pripete datoteke končale v pravem prispevku.</p>
+</li>
+<li><p class="first">V ozadju, včasih ko izvršite kakšnega izmed ukazov iz skupine Pripomočki, lahko
+dobite opozorilo, da mora brskalnik ponovno poslati zahtevek. To je neškodljivo,
+zato kliknite [V redu] in ukaz se bo izvršil.</p>
+</li>
+<li><p class="first">Ukaz iz Pripomočkov &quot;Regeneriraj sistemska imena datotek&quot; deluje pri migraciji iz
+Windows na Linux strežnike. Deluje tudi pri migraciji iz Linux na Windows strežnike
+s par potencialnimi problemi:</p>
+<blockquote>
+<ul class="simple">
+<li>Ko kopirate vaše datoteke na vaš Windows strežnik, morate preveriti,
+da so imenik s priponkami (ponavati 'attachments') in vse datoteke znotraj
+njega zapisljive s strani Joomla spletnega strežnika.</li>
+<li>Lahko boste imeli težave pri prenosu datotek, ki imajo unicode znake v
+njihovih imenih datotek ker programska oprema za arhiviranje/odarhiviranje
+ima težave z unicode datotečnimi imeni (na Windows strani). Lahko boste morali
+te datoteke shraniti, izbrisati ustrezne priponke in jih potem ponovno
+pripeti.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Na voljo je forum s pomočjo (v Angleščini) in forum s 'Pogosto zastvaljenimi vprašanji'
+(V Angleščini) za razširitev 'Attachments', ki se nahaja na spletni strani
+joomlacode.org.  Če naletite na težavo, ki ni obdelana na tej strani s pomočjo, prosim
+preglejte forume:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments/forum/">Attachments forumi na
+http://joomlacode.org/gf/project/attachments/forum/</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="nadgradnja">
+<h1><a class="toc-backref" href="#id12">Nadgradnja</a></h1>
+<p>Nadgradnja je sedaj veliko bolj preprosta.  Preprosto namestite novo različico 'Priponk (Attachments)'.</p>
+<ul class="simple">
+<li><em>[Ta korak je kot opcija, saj je zelo priporočljivo, da imate
+varnostno kopijo podatkovne baze priponk, v primeru, da gre kaj narobe.]</em>
+Uporabite <a class="reference external" href="http://www.phpmyadmin.net/home_page/index.php">phpMyAdmin</a>
+(ali drugo SQL orodje za urejanje podatkov), da shranite vsebino
+tabele jos_attachments (Uporabite možnost 'Export' s
+'Complete' insercijami za podatke (ne 'Extended' insercije).  Morali bi tudi
+varnostno shraniti naložene datoteke priponk (ponavadi v imeniku 'attachments')</li>
+<li><strong>Ni vam potrebno odstraniti prejšnje različice Priponk (Attachments).</strong> To
+je bilo preverjeno z različico 2.0 in 1.3.4 (vendar ne z zgodnejšimi različicami).</li>
+<li>Če želite obdržati obstoječe priponke vam ni potrebno narediti
+ničesar.  Preprosto namestite novo različico in vse se bo ustrezno
+posodobilo.</li>
+<li>Če ne želite ohraniti obstoječih priponk, jih predhodno vse izbrišite (v
+skrbniškem ozadju).</li>
+<li>Multi-installer bo namestil vse potrebne komponente in vtičnike ter
+omogočil vse vtičnike.  Če ne želite imeti katerega od vtičnikov omogočenih, najprej
+izvedite namestitev in nato onemogočite vtičnike po želji. Če je težava z namestitvijo,
+boste morda morali izvesti ročno kos-za-kosom namestitev. Glejte datoteko INSTALL v glavni
+namestitveni zip datoteki za napotke.</li>
+</ul>
+</div>
+<div class="section" id="zahvale">
+<h1><a class="toc-backref" href="#id13">Zahvale</a></h1>
+<p>Zahvale za naslednje prispevke ali sredstva:</p>
+<ul>
+<li><p class="first">Knjiga <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
+Components, and Plugins with PHP</em> od Josepha L. LeBlanca je bila zelo v pomoč
+pri izdelavi razširitev za 'Attachments'.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Ikone za tipe datotek so bile pridobljene iz več virov, vključno z:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons od Marka Jamesa (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 od Johna Zaitseffa (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 od Timothya Grovesa (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument ikone od Kena Barona (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack od Josepha Northa (http://sweetie.sublink.ca)</a></li>
+</ul>
+</dd>
+</dl>
+<p>Vedite, da je bilo veliko ikon za 'Attachments' spremenjenih iz originalnih
+ikonskih slik iz teh spletnih strani.  Če želite originalne različice,
+jih prosim prenesite iz zgoraj naštetih spletnih strani.</p>
+</li>
+<li><p class="first">Velika zahvala Paulu McDermottu za donacijo vtičnika za iskanje!</p>
+</li>
+<li><p class="first">Zahvala Mohammad Samini za doniranje nekaj PHP kode in CSS datoteke za izboljšano
+prikazovanje 'Attachments' v jezikih, ki uporabljajo smer pisanja od desne-proti-levi.</p>
+</li>
+<li><p class="first">Zahvala Florianu Tobias Huberju za doniranje popravkov za izbojšavo prikazovanja priponk,
+ko je omogočen predpomnilnik.</p>
+</li>
+<li><p class="first">Zahvala Manuelu María Pérez Ayala za svetovanje kako ustvariti
+integriran multi-installer.  Multi-installer uporablja Joomla
+installer API za samodejno namestitev komponente in vseh
+potrebnih vtičnikov v enem preprostem koraku.  Po mojem razumevanju je bila ta tehnika
+izvorno razvita s strani JFusion.</p>
+</li>
+<li><p class="first">Zahvala Ewout Weirdu za veliko koristnih diskusij in predlogov
+pri razvoju 'Attachments' razširitev.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="kontakti">
+<h1><a class="toc-backref" href="#id14">Kontakti</a></h1>
+<p>Hrošče in predloge sporočite na <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: 09 December 2010 ob 14:12 UTC.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+archive
+lib
+temp
+example-packs
+fixlang
+attachments-English-en-GB*
+*-134.html
+*.py
+*.zip
+*.gz
+
+
