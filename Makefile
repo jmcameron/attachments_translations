@@ -1,21 +1,5 @@
 
-NAMES = Chinese-zh-CN \
-        Chinese-zh-TW \
-        Dutch-nl-NL \
-        Finnish-fi-FI \
-        French-fr-FR \
-        German-de-DE \
-        Greek-el-GR \
-        Italian-it-IT \
-        Lithuanian-li-LT \
-        Norwegian-nb-NO \
-        Persian-pj-FA \
-        Portuguese-pt-BR \
-        Russian-ru-RU \
-        Spanish-es-ES \
-        Swedish-sv-SE \
-        Turkish-tr-TR \
-        Bulgarian-bg-BG
+NAMES = French-fr-FR 
 
 ZIPS = $(NAMES:=.zip)
 
