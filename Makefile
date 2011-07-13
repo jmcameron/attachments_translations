@@ -25,3 +25,4 @@ linktools:
          done;
 	@ln -s ${TOOLSDIR}/lib .
 	@ln -s ${TOOLSDIR}/fixlang .
+	@ln -s ${TOOLSDIR}/fixtokens .
