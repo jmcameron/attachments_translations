@@ -3,13 +3,21 @@ NAMES = French-fr-FR
 
 ZIPS = $(NAMES:=.zip)
 
+VERSION ?=
+ifdef VERSION
+	VNAME = -${VERSION}
+else
+	VNAME = ${VERSION}
+endif
+
+
 all: $(ZIPS)
 
 %.zip:
 	@echo "-------------------------------------------------------"
 	@echo attachments-$*
 	@rm -f attachments-$@
-	@(cd attachments-$*; zip -r ../attachments-$@ * -x "*.svn/*")
+	@(cd attachments-$*; zip -r ../attachments-$*${VNAME}.zip * -x "*.svn/*")
 
 
 purge:
