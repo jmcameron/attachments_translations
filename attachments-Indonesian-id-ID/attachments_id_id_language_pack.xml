@@ -90,5 +90,8 @@
 
   </fileset>
 
-</extension>
+  <updateservers>
+       <server type="extension" priority="1" name="Attachments Indonesian (id-ID) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/Indonesian-id-ID/updates.xml</server>
+  </updateservers>
 
+</extension>
