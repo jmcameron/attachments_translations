@@ -7,7 +7,7 @@
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
   <copyright>Copyright (C) 2011 Jonathan M. Cameron. All rights reserved.</copyright>
-  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
   <description>ATTACHMENTS_FR_FR_LANGUAGE_PACK</description>
   <fileset>
 
@@ -18,7 +18,7 @@
       <filename>fr-FR.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component zz language help folder -->
+    <!-- Admin component fr-FR language help folder -->
     <files folder="attachments_component/admin/help/fr-FR" target="administrator/components/com_attachments/help/fr-FR">
       <filename>help.css</filename>
       <filename>help.html</filename>
