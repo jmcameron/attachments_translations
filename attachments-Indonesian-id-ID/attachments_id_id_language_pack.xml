@@ -18,7 +18,7 @@
       <filename>id-ID.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component zz language help folder -->
+    <!-- Admin component id-ID language help folder -->
     <files folder="attachments_component/admin/help/id-ID" target="administrator/components/com_attachments/help/id-ID">
       <filename>help.css</filename>
       <filename>help.html</filename>
