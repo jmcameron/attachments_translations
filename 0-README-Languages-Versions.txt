@@ -23,5 +23,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - New language pack!
          - Status: Complete (help file in English)
          - Thanks to Moh. Arif for the new version!
+   * Added: attachments-Russian-ru-RU-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Sergey Litvintsev for the update!
 
 
