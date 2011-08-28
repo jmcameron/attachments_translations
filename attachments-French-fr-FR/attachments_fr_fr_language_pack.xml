@@ -2,7 +2,7 @@
 <extension version="1.7" type="file" method="upgrade">
   <name>attachments_fr_fr_language_pack</name>
   <version>3.0</version>
-  <creationDate>August 24, 2011</creationDate>
+  <creationDate>August 27, 2011</creationDate>
   <author>Jonathan M. Cameron, Marc-André Ladouceur (2.0, 3.0), Yann Kerviel (3.0), Pascal Adalian, and Sylvain Faivre</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
