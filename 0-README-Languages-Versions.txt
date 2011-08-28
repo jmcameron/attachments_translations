@@ -19,4 +19,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Pierre Corell for the update!
+   * Added: attachments-Indonesian-id-ID-3.0.zip
+         - New language pack!
+         - Status: Complete (help file in English)
+         - Thanks to Moh. Arif for the new version!
+
 
