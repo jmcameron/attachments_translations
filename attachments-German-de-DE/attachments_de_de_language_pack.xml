@@ -18,7 +18,7 @@
       <filename>de-DE.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component zz language help folder -->
+    <!-- Admin component de-DE language help folder -->
     <files folder="attachments_component/admin/help/de-DE" target="administrator/components/com_attachments/help/de-DE">
       <filename>help.css</filename>
       <filename>help.html</filename>
@@ -89,6 +89,10 @@
     </files>
 
   </fileset>
+
+  <updateservers>
+       <server type="extension" priority="1" name="Attachments German (de-DE) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/German-de-DE/updates.xml</server>
+  </updateservers>
 
 </extension>
 
