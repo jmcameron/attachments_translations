@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.7" type="file" method="upgrade">
   <name>attachments_de_de_language_pack</name>
-  <version>3.0 Draft</version>
-  <creationDate>August 1, 2011</creationDate>
+  <version>3.0</version>
+  <creationDate>August 27, 2011</creationDate>
   <author>Jonathan M. Cameron, Pierre Corell (2.0, 3.0) and Bernhard Alois Gassner (2.0) and Michael Scherer (1.3.4)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
