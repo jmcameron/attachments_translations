@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="file" method="upgrade">
+  <name>attachments_pt_br_language_pack</name>
+  <version>3.0 Draft</version>
+  <creationDate>August 29, 2011</creationDate>
+  <author>Jonathan M. Cameron, Cauan Cabral</author>
+  <authorEmail>jmcameron@jmcameron.net</authorEmail>
+  <authorUrl></authorUrl>
+  <copyright>Copyright (C) 2011 Jonathan M. Cameron. All rights reserved.</copyright>
+  <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <description>ATTACHMENTS_PT_BR_LANGUAGE_PACK</description>
+  <fileset>
+
+    <!-- Admin component language folder -->
+    <files folder="attachments_component/admin" target="administrator/components/com_attachments/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.com_attachments.ini</filename>
+      <filename>pt-BR.com_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Admin component pt-BR language help folder -->
+    <files folder="attachments_component/admin/help/pt-BR" target="administrator/components/com_attachments/help/pt-BR">
+      <filename>help.css</filename>
+      <filename>help.html</filename>
+      <filename>index.html</filename>
+    </files>
+
+    <!-- Site component language folder -->
+    <files folder="attachments_component/site" target="components/com_attachments/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.com_attachments.ini</filename>
+    </files>
+
+    <!-- Attachments plugin language files -->
+    <files folder="attachments_plugin" target="plugins/content/attachments/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_content_attachments.ini</filename>
+      <filename>pt-BR.plg_content_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments search plugin language files -->
+    <files folder="attachments_search" target="plugins/search/attachments/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_search_attachments.ini</filename>
+      <filename>pt-BR.plg_search_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments add attachment editor button language files -->
+    <files folder="add_attachment_btn_plugin" target="plugins/editors-xtd/add_attachment/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_editors-xtd_add_attachment.ini</filename>
+      <filename>pt-BR.plg_editors-xtd_add_attachment.sys.ini</filename>
+    </files>
+
+    <!-- Attachments insert attachment token editor button language files -->
+    <files folder="insert_attachments_token_btn_plugin" target="plugins/editors-xtd/insert_attachments_token/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_editors-xtd_insert_attachments_token.ini</filename>
+      <filename>pt-BR.plg_editors-xtd_insert_attachments_token.sys.ini</filename>
+   </files>
+
+    <!-- Attachments show attachment in editor plugin language files -->
+    <files folder="show_attachments_in_editor_plugin" target="plugins/system/show_attachments/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_system_show_attachments.ini</filename>
+      <filename>pt-BR.plg_system_show_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments attachments for content plugin language files -->
+    <files folder="attachments_for_content" target="plugins/attachments/attachments_for_content/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_attachments_attachments_for_content.ini</filename>
+      <filename>pt-BR.plg_attachments_attachments_for_content.sys.ini</filename>
+    </files>
+
+    <!-- Attachments attachments plugin framework language files -->
+    <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_attachments_attachments_plugin_framework.ini</filename>
+      <filename>pt-BR.plg_attachments_attachments_plugin_framework.sys.ini</filename>
+    </files>
+
+    <!-- Languages for this set of files -->
+    <files folder="language/en-GB" target="language/en-GB">
+      <filename>en-GB.files_attachments_pt_br_language_pack.sys.ini</filename>
+    </files>
+    <files folder="language/pt-BR" target="language/pt-BR">
+      <filename>pt-BR.files_attachments_pt_br_language_pack.sys.ini</filename>
+    </files>
+
+  </fileset>
+
+  <updateservers>
+       <server type="extension" priority="1" name="Attachments Portuguese (Brazilian, pt-BR) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/Portuguese-pt-BR/updates.xml</server>
+  </updateservers>
+
+</extension>
+
