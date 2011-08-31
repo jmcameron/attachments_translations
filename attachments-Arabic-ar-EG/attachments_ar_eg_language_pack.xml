@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="file" method="upgrade">
+  <name>attachments_ar_eg_language_pack</name>
+  <version>3.0 Draft</version>
+  <creationDate>August 31, 2011</creationDate>
+  <author>Jonathan M. Cameron, Mohammad Nassef (3.0), Ridwan Nizam (2.0)</author>
+  <authorEmail>jmcameron@jmcameron.net</authorEmail>
+  <authorUrl></authorUrl>
+  <copyright>Copyright (C) 2011 Jonathan M. Cameron. All rights reserved.</copyright>
+  <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <description>ATTACHMENTS_AR_EG_LANGUAGE_PACK</description>
+  <fileset>
+
+    <!-- Admin component language folder -->
+    <files folder="attachments_component/admin" target="administrator/components/com_attachments/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.com_attachments.ini</filename>
+      <filename>ar-EG.com_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Admin component ar-EG language help folder -->
+    <files folder="attachments_component/admin/help/ar-EG" target="administrator/components/com_attachments/help/ar-EG">
+      <filename>help.css</filename>
+      <filename>help.html</filename>
+      <filename>index.html</filename>
+    </files>
+
+    <!-- Site component language folder -->
+    <files folder="attachments_component/site" target="components/com_attachments/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.com_attachments.ini</filename>
+    </files>
+
+    <!-- Attachments plugin language files -->
+    <files folder="attachments_plugin" target="plugins/content/attachments/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_content_attachments.ini</filename>
+      <filename>ar-EG.plg_content_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments search plugin language files -->
+    <files folder="attachments_search" target="plugins/search/attachments/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_search_attachments.ini</filename>
+      <filename>ar-EG.plg_search_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments add attachment editor button language files -->
+    <files folder="add_attachment_btn_plugin" target="plugins/editors-xtd/add_attachment/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_editors-xtd_add_attachment.ini</filename>
+      <filename>ar-EG.plg_editors-xtd_add_attachment.sys.ini</filename>
+    </files>
+
+    <!-- Attachments insert attachment token editor button language files -->
+    <files folder="insert_attachments_token_btn_plugin" target="plugins/editors-xtd/insert_attachments_token/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_editors-xtd_insert_attachments_token.ini</filename>
+      <filename>ar-EG.plg_editors-xtd_insert_attachments_token.sys.ini</filename>
+   </files>
+
+    <!-- Attachments show attachment in editor plugin language files -->
+    <files folder="show_attachments_in_editor_plugin" target="plugins/system/show_attachments/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_system_show_attachments.ini</filename>
+      <filename>ar-EG.plg_system_show_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments attachments for content plugin language files -->
+    <files folder="attachments_for_content" target="plugins/attachments/attachments_for_content/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_attachments_attachments_for_content.ini</filename>
+      <filename>ar-EG.plg_attachments_attachments_for_content.sys.ini</filename>
+    </files>
+
+    <!-- Attachments attachments plugin framework language files -->
+    <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/ar-EG">
+      <filename>index.html</filename>
+      <filename>ar-EG.plg_attachments_attachments_plugin_framework.ini</filename>
+      <filename>ar-EG.plg_attachments_attachments_plugin_framework.sys.ini</filename>
+    </files>
+
+    <!-- Languages for this set of files -->
+    <files folder="language/en-GB" target="language/en-GB">
+      <filename>en-GB.files_attachments_ar_eg_language_pack.sys.ini</filename>
+    </files>
+    <files folder="language/ar-EG" target="language/ar-EG">
+      <filename>ar-EG.files_attachments_ar_eg_language_pack.sys.ini</filename>
+    </files>
+
+  </fileset>
+
+  <updateservers>
+       <server type="extension" priority="1" name="Attachments Arabic (Egypt) (ar-EG) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/Arabic-ar-EG/updates.xml</server>
+  </updateservers>
+
+</extension>
+
