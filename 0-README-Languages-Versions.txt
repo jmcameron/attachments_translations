@@ -33,3 +33,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Roar Rystad for the update!
+
+2011-09-01:
+   * Added: attachments-Italian-it-IT-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Piero Mattirolo for the update!
