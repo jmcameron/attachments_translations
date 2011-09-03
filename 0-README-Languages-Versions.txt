@@ -10,6 +10,24 @@ NOTE: These language files are for Attachments-3.0+ only!
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-02:
+   * Added: attachments-Polish-pl-PL-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Sebastian Konieczny and Stefan Wajda for the update!
+
+2011-09-01:
+   * Added: attachments-Italian-it-IT-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Piero Mattirolo for the update!
+
+2011-08-29:
+   * Added: attachments-Norwegian-nb-NO-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Roar Rystad for the update!
+
 2011-08-27:
    * Added: attachments-French-fr-FR-3.0.zip
          - Update from old 2.2 version to 3.0
@@ -27,15 +45,3 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Sergey Litvintsev for the update!
-
-2011-08-29:
-   * Added: attachments-Norwegian-nb-NO-3.0.zip
-         - Update from old 2.2 version to 3.0
-         - Status: Complete (help file in English)
-         - Thanks to Roar Rystad for the update!
-
-2011-09-01:
-   * Added: attachments-Italian-it-IT-3.0.zip
-         - Update from old 2.2 version to 3.0
-         - Status: Complete (help file in English)
-         - Thanks to Piero Mattirolo for the update!
