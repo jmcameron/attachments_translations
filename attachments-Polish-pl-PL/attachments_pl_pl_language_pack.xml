@@ -18,7 +18,7 @@
       <filename>pl-PL.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component zz language help folder -->
+    <!-- Admin component pl-PL language help folder -->
     <files folder="attachments_component/admin/help/pl-PL" target="administrator/components/com_attachments/help/pl-PL">
       <filename>help.css</filename>
       <filename>help.html</filename>
