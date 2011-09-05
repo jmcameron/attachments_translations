@@ -10,6 +10,12 @@ NOTE: These language files are for Attachments-3.0+ only!
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-05:
+   * Added: attachments-Portuguese-pt-PT-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to José Paulo Tavares for the update!
+
 2011-09-04:
    * Added: attachments-Slovenian-sl-SI-3.0.zip
          - Update from old 2.2 version to 3.0
