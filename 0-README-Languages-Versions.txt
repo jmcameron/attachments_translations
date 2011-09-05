@@ -10,6 +10,12 @@ NOTE: These language files are for Attachments-3.0+ only!
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-04:
+   * Added: attachments-Slovenian-sl-SI-3.0.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Matej Badalič for the update!
+
 2011-09-03:
    * Added: attachments-Catalan-ca-ES-3.0.zip
          - Update from old 2.2 version to 3.0
