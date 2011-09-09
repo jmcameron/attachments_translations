@@ -38,6 +38,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Russian-ru-RU-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+   * Updated: attachments-Slovenian-sl-SI-3.0.1.zip
+         - Fixed erroneous tokens for backend unpublish messages
+         - Status: Complete (help file in English)
 
 2011-09-05:
    * Added: attachments-Portuguese-pt-PT-3.0.zip
@@ -51,6 +54,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Matej Badalič for the update!
+         - ? Downloads
 
 2011-09-03:
    * Added: attachments-Catalan-ca-ES-3.0.zip
