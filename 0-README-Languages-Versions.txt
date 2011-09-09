@@ -54,7 +54,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Matej Badalič for the update!
-         - ? Downloads
+         - 15 Downloads
 
 2011-09-03:
    * Added: attachments-Catalan-ca-ES-3.0.zip
