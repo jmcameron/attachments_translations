@@ -10,6 +10,11 @@ NOTE: These language files are for Attachments-3.0+ only!
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-09:
+   * Updated: attachments-Catalan-ca-ES-3.0.1.zip
+         - Fixed erroneous token for backend unpublish messages
+         - Status: Complete (help file in English)
+
 2011-09-05:
    * Added: attachments-Portuguese-pt-PT-3.0.zip
          - Update from old 2.2 version to 3.0
@@ -27,6 +32,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Jaume Jorba for the update!
+         - 17 Downloads
 
 2011-09-02:
    * Added: attachments-Polish-pl-PL-3.0.zip
