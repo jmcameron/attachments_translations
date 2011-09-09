@@ -17,6 +17,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-French-fr-FR-3.0.1.zip
          - Fixed erroneous token for backend unpublish messages
          - Status: Complete (help file in English)
+   * Updated: attachments-German-de-DE-3.0.1.zip
+         - Fixed erroneous token for backend unpublish messages
+         - Status: Complete (help file in English)
 
 2011-09-05:
    * Added: attachments-Portuguese-pt-PT-3.0.zip
