@@ -100,4 +100,4 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Sergey Litvintsev for the update!
-         - ? Downloads
+         - 116 Downloads
