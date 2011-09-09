@@ -67,7 +67,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Roar Rystad for the update!
-         - ? Downloads
+         - 22 Downloads
 
 2011-08-27:
    * Added: attachments-French-fr-FR-3.0.zip
