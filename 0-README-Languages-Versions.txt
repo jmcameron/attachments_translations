@@ -29,6 +29,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Norwegian-nb-NO-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+   * Updated: attachments-Polish-pl-PL-3.0.1.zip
+         - Fixed erroneous tokens for backend unpublish messages
+         - Status: Complete (help file in English)
 
 2011-09-05:
    * Added: attachments-Portuguese-pt-PT-3.0.zip
@@ -54,13 +57,14 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Sebastian Konieczny and Stefan Wajda for the update!
-         - 102 Downloads
+         - 47 Downloads
 
 2011-09-01:
    * Added: attachments-Italian-it-IT-3.0.zip
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Piero Mattirolo for the update!
+         - 102 Downloads
 
 2011-08-29:
    * Added: attachments-Norwegian-nb-NO-3.0.zip
