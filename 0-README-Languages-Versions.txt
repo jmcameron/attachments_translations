@@ -12,13 +12,16 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 2011-09-09:
    * Updated: attachments-Catalan-ca-ES-3.0.1.zip
-         - Fixed erroneous token for backend unpublish messages
+         - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
    * Updated: attachments-French-fr-FR-3.0.1.zip
-         - Fixed erroneous token for backend unpublish messages
+         - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
    * Updated: attachments-German-de-DE-3.0.1.zip
-         - Fixed erroneous token for backend unpublish messages
+         - Fixed erroneous tokens for backend unpublish messages
+         - Status: Complete (help file in English)
+   * Updated: attachments-Indonesian-id-ID-3.0.1.zip
+         - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
 
 2011-09-05:
@@ -73,6 +76,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - New language pack!
          - Status: Complete (help file in English)
          - Thanks to Moh. Arif for the new version!
+         - 9 Downloads
    * Added: attachments-Russian-ru-RU-3.0.zip
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
