@@ -60,6 +60,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Marc-André Ladouceur and Yann Kerviel for the update!
+         - 115 Downloads
    * Added: attachments-German-de-DE-3.0.zip
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
