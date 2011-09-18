@@ -1,1136 +1,1186 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
-<title>Attachments Documentation</title>
+<meta name="generator" content="Docutils 0.7: http://docutils.sourceforge.net/" />
+<title>Documentación de Archivos adjuntos</title>
 <link rel="stylesheet" href="help.css" type="text/css" />
 </head>
 <body>
 <div class="header">
-<h1 class="title">Attachments Documentation</h1>
+<h1 class="title">Documentación de Archivos adjuntos</h1>
 <hr class="header"/>
 </div>
 <div class="document">
 
 
-<p class="version"><strong>Version 3.0 - August 28, 2011</strong></p>
-<p><strong>This version is for Joomla 1.6/1.7+</strong></p>
-<div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="version"><strong>Version 3.0 - 28 de agosto de 2011</strong></p>
+<p><strong>Esta versión es sólo para Joomla 1.6/1.7+</strong></p>
+<div class="contents topic" id="contenido">
+<p class="topic-title first">Contenido</p>
 <ul class="simple">
-<li><a class="reference internal" href="#introduction" id="id1">Introduction</a></li>
-<li><a class="reference internal" href="#new-features-in-version-3-0" id="id2">New features in Version 3.0</a></li>
-<li><a class="reference internal" href="#major-features-of-the-attachments-extension" id="id3">Major features of the Attachments Extension</a></li>
-<li><a class="reference internal" href="#uploading-restrictions" id="id4">Uploading Restrictions</a></li>
-<li><a class="reference internal" href="#attachments-settings" id="id5">Attachments Settings</a></li>
-<li><a class="reference internal" href="#attachments-permissions" id="id6">Attachments Permissions</a></li>
-<li><a class="reference internal" href="#access-levels-visibility-control" id="id7">Access Levels Visibility Control</a></li>
-<li><a class="reference internal" href="#display-filename-or-url" id="id8">Display Filename or URL</a></li>
-<li><a class="reference internal" href="#attaching-urls" id="id9">Attaching URLs</a></li>
-<li><a class="reference internal" href="#what-can-files-be-attached-to" id="id10">What Can Files Be Attached To?</a></li>
-<li><a class="reference internal" href="#css-styling-of-attachment-lists" id="id11">CSS Styling of Attachment Lists</a></li>
-<li><a class="reference internal" href="#file-type-icons" id="id12">File Type Icons</a></li>
-<li><a class="reference internal" href="#administrative-utility-commands" id="id13">Administrative Utility Commands</a></li>
-<li><a class="reference internal" href="#warnings" id="id14">Warnings</a></li>
-<li><a class="reference internal" href="#upgrading" id="id15">Upgrading</a></li>
-<li><a class="reference internal" href="#uninstalling" id="id16">Uninstalling</a></li>
-<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-6" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
-<li><a class="reference internal" href="#translations" id="id18">Translations</a></li>
-<li><a class="reference internal" href="#acknowledgments" id="id19">Acknowledgments</a></li>
-<li><a class="reference internal" href="#contact" id="id20">Contact</a></li>
+<li><a class="reference internal" href="#introduccion" id="id1">Introducción</a></li>
+<li><a class="reference internal" href="#nuevas-caracteristicas-de-la-version-3-0" id="id2">Nuevas características de la versión 3.0</a></li>
+<li><a class="reference internal" href="#caracteristicas-principales-de-la-extension-archivos-adjuntos" id="id3">Características principales de la extensión Archivos adjuntos</a></li>
+<li><a class="reference internal" href="#restricciones-de-carga" id="id4">Restricciones de carga</a></li>
+<li><a class="reference internal" href="#ajustes" id="id5">Ajustes</a></li>
+<li><a class="reference internal" href="#permisos-de-archivos-adjuntos" id="id6">Permisos de Archivos adjuntos</a></li>
+<li><a class="reference internal" href="#control-de-visibilidad-de-niveles-de-acceso" id="id7">Control de visibilidad de Niveles de acceso</a></li>
+<li><a class="reference internal" href="#nombre-o-url-mostrado" id="id8">Nombre o URL mostrado</a></li>
+<li><a class="reference internal" href="#adjuntado-de-urls" id="id9">Adjuntado de URLs</a></li>
+<li><a class="reference internal" href="#a-que-se-pueden-adjuntar-los-archivos" id="id10">¿A qué se pueden adjuntar los archivos?</a></li>
+<li><a class="reference internal" href="#estilo-css-de-la-lista-de-adjuntos" id="id11">Estilo CSS de la lista de adjuntos</a></li>
+<li><a class="reference internal" href="#iconos-de-tipos-de-archivos" id="id12">Iconos de tipos de archivos</a></li>
+<li><a class="reference internal" href="#comandos-de-utilidad-administrativa" id="id13">Comandos de utilidad administrativa</a></li>
+<li><a class="reference internal" href="#advertencias" id="id14">Advertencias</a></li>
+<li><a class="reference internal" href="#actualizacion" id="id15">Actualización</a></li>
+<li><a class="reference internal" href="#desinstalacion" id="id16">Desinstalación</a></li>
+<li><a class="reference internal" href="#migracion-de-archivos-adjuntos-de-joomla-1-5-a-joomla-1-6" id="id17">Migración de Archivos adjuntos de Joomla 1.5 a Joomla 1.6+</a></li>
+<li><a class="reference internal" href="#traducciones" id="id18">Traducciones</a></li>
+<li><a class="reference internal" href="#agradecimientos" id="id19">Agradecimientos</a></li>
+<li><a class="reference internal" href="#contacto" id="id20">Contacto</a></li>
 </ul>
 </div>
-<div class="section" id="introduction">
-<h1><a class="toc-backref" href="#id1">Introduction</a></h1>
-<p>The 'Attachments' extension for Joomla! allows files to be uploaded and
-attached to articles, categories, or other types of content. The 'Attachments'
-extension includes a plugin to display the attachments and a component for
-uploading and managing attachments, as well as other plugins. There are
-options to control who can see the attachments and who can upload them, along
-with several many options to increase its flexibility and usefulness. Note:
-all options are controlled through the component manager.</p>
+<div class="section" id="introduccion">
+<h1><a class="toc-backref" href="#id1">Introducción</a></h1>
+<p>La extensión 'Archivos adjuntos' para Joomla! permite cargar archivos
+y adjuntarlos a artículos y otros tipos de contenidos. 'Archivos adjuntos'
+incluye un complemento  para mostrar los adjuntos y un componente para cargarlos
+y gestionarlos así como otros complementos. Dispone de opciones para controlar
+quién puede ver los adjuntos y quién puede cargarlos junto con otras muchas para
+aumentar su flexibilidad y utilidad. Observación: todas las opciones se
+controlan mediante el gestor del componente.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This version of the <em>Attachments</em> extension only works for
-Joomla! 1.6, 1.7 or greater.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Esta versión de la extensión <em>Archivos adjuntos</em> sólo funciona con
+Joomla! 1.6, 1.7 o posteriores.</p>
 </div>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">In the rest of this document, the term <strong>content item</strong> is sometimes
-used.  Normally we think of attaching files to articles.  Attachments supports
-attaching files and URLs to articles or categories by default.  But it is
-possible to attach to other types of content types (this requires special
-'Attachments' plugins).  All of these are referred to as <strong>content items</strong>.</p>
+<p class="first admonition-title">Nota</p>
+<p class="last">En el resto de este documento se usa en ocasiones el término
+<strong>elemento de contenido</strong>. Habitualmente pensamos en adjuntar archivos a
+artículos. Archivos adjuntos permite por omisión adjuntar archivos y URLs a
+artículos o categorías, pero es posible adjuntar archivos a otros tipos de
+contenidos (para ello se precisan complementos especiales de 'Archivos
+adjuntos'. A todos ellos nos referiremos como <strong>elementos de contenido</strong>.</p>
 </div>
-<p>The 'Attachments' extension has been translated into many different
-languages.  Please see the <a class="reference internal" href="#translations">Translations</a> section for the list of
-available translations.  Most of these languages packs are in the process
-of being updated for 'Attachments' version 3.0.</p>
-<p>If you wish to subscribe to an email list for announcements about
-this extension, please subscribe using this web page:</p>
+<p>La extensión 'Archivos adjuntos' se ha traducido a múltiples idiomas distintos.
+Consulte el listado de traducciones disponibles en la sección <a class="reference internal" href="#traducciones">Traducciones</a>.
+Muchos de esos paquetes de idiomas están actualizándose a la versión 3.0.</p>
+<p>Si quisiera suscribirse a una lista de correo de anuncios sobre esta extensión,
+hágalo mediante esta página web:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Attachments Email List ( http://jmcameron.net/attachments/email-list.html )</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Lista de correo de Archivos adjuntos ( http://jmcameron.net/attachments/email-list.html )</a></li>
 </ul>
 </div>
-<div class="section" id="new-features-in-version-3-0">
-<h1><a class="toc-backref" href="#id2">New features in Version 3.0</a></h1>
+<div class="section" id="nuevas-caracteristicas-de-la-version-3-0">
+<h1><a class="toc-backref" href="#id2">Nuevas características de la versión 3.0</a></h1>
 <ul class="simple">
-<li>Full support for the new ACL/permissions system of Joomla 1.6/1.7+.  This
-gives you significant flexibility to control who can create, edit, or delete
-attachments.  See the <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section for more details.</li>
-<li>Full support for viewing access levels.  This means you can set some of your
-attachments to be visible by anyone, and some to be visible only to users
-in certain groups (as defined by the Access Levels).
-See the <a class="reference internal" href="#access-levels-visibility-control">Access Levels Visibility Control</a> section for more details.</li>
-<li>Simplified and improved options for hiding attachments in various contexts.</li>
+<li>Soporte completo del nuevo sistema de ACL/permisos de Joomla 1.6/1.7+. Ésto
+añade una enorme flexibilidad para controlar quién puede crear, modificar o
+eliminar los archivos adjuntos. Para más información consulte la sección
+<a class="reference internal" href="#permisos-de-archivos-adjuntos">Permisos de Archivos adjuntos</a>.</li>
+<li>Soporte completo para visualización por niveles de acceso. Ésto significa que
+se pueden definir algunos archivos adjuntos como visibles por cualquiera y
+otros visibles sólo para los usuarios de determinados grupos (según se haya
+definido mediante los niveles de acceso).
+Consulte la sección <a class="reference internal" href="#control-de-visibilidad-de-niveles-de-acceso">Control de visibilidad de niveles de acceso</a> para más
+información.</li>
+<li>Opciones simplificadas y mejoradas de ocultación de los adjuntos en diversos
+contextos.</li>
 </ul>
 </div>
-<div class="section" id="major-features-of-the-attachments-extension">
-<h1><a class="toc-backref" href="#id3">Major features of the Attachments Extension</a></h1>
+<div class="section" id="caracteristicas-principales-de-la-extension-archivos-adjuntos">
+<h1><a class="toc-backref" href="#id3">Características principales de la extensión Archivos adjuntos</a></h1>
 <ul>
-<li><p class="first">You can manage attachments from the article editor, including adding,
-editing, and deleting attachments.</p>
+<li><p class="first">Se pueden gestionar los adjuntos desde el editor de artículos, incluyendo la
+adición, modificación y eliminación de los mismos.</p>
 </li>
-<li><p class="first">You can create attachments while an article is being created.</p>
+<li><p class="first">Se pueden añadir los adjuntos al crear un nuevo artículo.</p>
 </li>
-<li><p class="first">All attachments lists on the front end are updated by Ajax and do not
-require full page reloads.</p>
+<li><p class="first">Todas las lista de adjuntos en la portada se actualizan mediante Ajax y no
+necesitan una recarga completa de la página.</p>
 </li>
-<li><p class="first">You can &quot;attach&quot; URLs as well as files to content items.</p>
+<li><p class="first">Se pueden &quot;adjuntar&quot; URLs así como archivos a los elementos de contenido.</p>
 </li>
-<li><p class="first">You can show the attachments list anywhere in an article (or content item).</p>
+<li><p class="first">Se pueden mostrar listas de adjuntos en cualquier parte de un artículo (o
+elemento de contenido).</p>
 </li>
 <li><dl class="first docutils">
-<dt>In the administrative back end:</dt>
+<dt>En el área administrativa:</dt>
 <dd><ul class="first last simple">
-<li>There are options to filter the listed attachments to unpublished
-or trashed articles or content items.</li>
-<li>Filtering of the list of articles</li>
-<li>Sorting the list of attachments by any of the column headers.</li>
-<li>Useful administrative utility commands</li>
+<li>Hay opciones para suprimir el listado de adjuntos de artículos o
+elementos de contenido sin publicar o eliminados.</li>
+<li>Filtrado de la lista de artículos</li>
+<li>Ordenación del listado de adjuntos por cualquiera de las cabeceras de
+columna.</li>
+<li>Prácticos comandos de utilidad administrativa</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">The Attachments extension supports &quot;Attachments plugins&quot;.  These plugins allow
-attaching files to any content item that invokes the <tt class="docutils literal">onPrepareContent</tt>
-plugin.  For example, you can attach files to Category descriptions.
-With a bit of work, an extension developer can create a new 'Attachments'
-plugin to support adding attachments to things like CB personal info
-displays, Virtuemart product descriptions, etc.  See section
-<a class="reference internal" href="#what-can-files-be-attached-to">What Can Files Be Attached To?</a> for more details.</p>
+<li><p class="first">La extensión permite añadir &quot;Complementos de Archivos adjuntos&quot;. Estos
+complementos permiten adjuntar archivos a cualquier elemento de contenido  que
+invoque el complemento <tt class="docutils literal">onPrepareContent</tt>. Por ejemplo, se pueden adjuntar
+archivos a las descripciones de Secciones y Categorías. Con un poco de trabajo
+adicional, el desarrollador de una extensión puede crear un complemento de
+'Archivos adjuntos' nuevo que soporte la adición de adjuntos a cosas como las
+pantallas de información personal de CB, las descripciones de productos de
+Virtuemart, etc. Para más información consulte la sección <a class="reference internal" href="#a-que-se-pueden-adjuntar-los-archivos">¿A qué se pueden
+adjuntar los  archivos?</a>.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="uploading-restrictions">
-<h1><a class="toc-backref" href="#id4">Uploading Restrictions</a></h1>
-<p>Not all types of attachment files can be uploaded.  The 'Attachments'
-extension will not allow uploading of files that are not permitted by the
-Joomla! Media Manager.  To see (or change) what file types are allowed, go to
-the <strong>Media manager</strong> item under the <strong>Content</strong> menu.  Click on the
-<strong>Options</strong> button on the toolbar and select the <em>Component</em> tab.  There you
-will see the options for controlling what types of file extensions and mime
-types are permitted for uploads. The 'Attachments' extension respects these
-limitations.  However, the restriction on 'Legal Extensions (File
-Types)' is ignored.  Add extensions for any file type that you require in the
-&quot;Legal Extensions (File Types)&quot; field.  You may also add appropriate MIME
-types in the &quot;Legal MIME Types&quot; field.</p>
+<div class="section" id="restricciones-de-carga">
+<h1><a class="toc-backref" href="#id4">Restricciones de carga</a></h1>
+<p>No todos los tipos de archivos adjuntos se pueden cargar. La extensión 'Archivos
+adjuntos' no permitirá cargar archivos que no estén permitidos por el Gestor de
+medios de joomla!. Para ver (o cambiar) los tipos de archivos permitidos, vaya
+al submenú <strong>Gestor multimedia</strong> del menú <strong>Contenido</strong>. Pulse el botón
+<strong>Opciones</strong> de la barra de herramientas y seleccione la pestaña <strong>Componente</strong>.
+Verá las opciones de control de los tipos de extensiones de archivos y tipos
+mime que se pueden cargar. 'Archivos adjuntos' respeta esas limitaciones. No
+obstante la restricción de 'Extensiones de imagen permitidas' se ignora. Añada
+al campo &quot;Extensiones permitidas&quot; la extensión de cualquier tipo de archivo que
+necesite. También puede añadir los tipos MIME adecuados en el campos &quot;Tipos MIME
+permitidos&quot;.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">If you add items to the &quot;Legal Extensions&quot; or &quot;Legal MIME Types&quot;
-fields, do not add any spaces!</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Si añade elementos a los campos &quot;Extensiones permitidas&quot; o &quot;Tipos
+MIME permitidos&quot;, ¡no añada ningún espacio!</p>
 </div>
 </div>
-<div class="section" id="attachments-settings">
-<h1><a class="toc-backref" href="#id5">Attachments Settings</a></h1>
-<p>All of the settings for 'Attachments' are controlled via the
-component manager. To access these settings, go to the administrative
-back end and select &quot;Attachments&quot; under the &quot;Component&quot; menu.  Click
-on the &quot;Options&quot; button on the right end of the tool bar and you will see
-options grouped under several tabs.</p>
-<div class="section" id="basic-options">
-<h2>Basic Options</h2>
-<img alt="Basic Options" class="float-right" src="images/options-basic.png" />
+<div class="section" id="ajustes">
+<h1><a class="toc-backref" href="#id5">Ajustes</a></h1>
+<p>Todas las opciones de 'Archivos adjuntos' se controlan mediante el gestor del
+componente. Para acceder a ellas, inicie sesión en el área administrativa y
+seleccione &quot;Archivos adjuntos&quot; en el menú &quot;Componentes&quot;. Pulse sobre el botón
+&quot;Opciones&quot; del extremo derecho de la barra de herramientas y verá un conjunto de
+parámetros organizados en varias pestañas.</p>
+<div class="section" id="opciones-basicas">
+<h2>Opciones básicas</h2>
+<img alt="Opciones básicas" class="float-right" src="images/options-basic.png" />
 <ul>
-<li><p class="first"><strong>Attachments published by default:</strong> This 'auto publish' feature controls
-whether new attachments are published by default when they are added. If
-'Yes' is selected, when attachments are added, they will published
-immediately and will be visible to users. If 'No' is selected, new
-attachments will not be published by default.  An administrator or someone
-with appropriate permissions will need to publish them from the
-administrative back end before the attachments will be available.</p>
+<li><p class="first"><strong>¿Publicar adjuntos por omisión?:</strong>
+Esta característica de 'publicación automática' controla si los nuevos
+adjuntos se publican por omisión cuando se añaden. Si se selecciona 'Sí', al
+añadir adjuntos se publicarán de forma inmediata y serán visibles para los
+usuarios. Si se elije 'No', los adjuntos nuevos no se publicarán por omisión.
+Un Administrador o alguien con los permisos apropiados tendrá que publicarlos
+desde el área administrativa para que los adjuntos estén disponibles.</p>
 </li>
-<li><p class="first"><strong>Auto Publish Warning:</strong> If the auto-publish option is
-disabled (see previous option), you may wish to inform those adding
-attachments how they can get their attachment published. You can insert an
-appropriate message here.  If this field is empty, a general system message
-will be added suggesting that they contact their system administrator to
-any newly uploaded attachments published.</p>
+<li><p class="first"><strong>Advertencia de auto publicación:</strong>
+Si se desactiva la opción de publicación automática (consulte la opción
+anterior), puede que quiera informar a los usuarios que añadan adjuntos cómo
+conseguir que éstos se publiquen. Aquí puede añadir un mensaje apropiado. Si
+el campo se deja en blanco, se mostrará un mensaje del sistema genérico
+sugiriendo que se pongan en contacto con el administrador del sistema para
+publicar cualquier adjunto nuevo cargado.</p>
 </li>
-<li><p class="first"><strong>Default Access Level:</strong> The default access level for new attachments.
-Each attachment has an 'access level' which controls who can see or
-download that attachment.  When an attachment is created, its access level
-is set to this default value initially (if the attachment creator is in
-appropriate groups).  A site administrator or someone with appropriate
-permissions may change the attachment's access level to control who can
-see that specific attachments.</p>
+<li><p class="first"><strong>Nivel de acceso por omisión:</strong>
+El nivel de acceso por omisión de cada nuevo archivo adjunto. Cada adjunto
+tiene un 'nivel de acceso' que controla quién puede verlo o descargarlo. Al
+crear un adjunto su nivel de acceso se define con este valor por omisión de
+forma inicial (si el creador del adjunto pertenece a un grupo apropiado). Un
+administrador del sitio o alguien con los permisos adecuados puede cambiar el
+nivel de acceso del adjunto para controlar quién puede ver este adjunto
+concreto.</p>
 </li>
-<li><p class="first"><strong>Name for user-defined field 1-3:</strong> If you have some
-additional information about each attachment that you wish to add, the
-'Attachments' extension allows you to defined up to three optional user-defined
-fields.  To create a new field, insert the name for it in one of the three
-entries.  Clear the name to disable the display and editing of this field.
-The user-defined fields will be shown in the order listed here.  The maximum
-length of each user-defined field name is 40 characters.  The data in these
-fields may be up to 100 characters long.</p>
+<li><p class="first"><strong>Nombre del campo personalizado 1-3:</strong>
+Si dispone de información adicional que desearía añadir sobre cada adjunto, la
+extensión le permite definir hasta 3 campos personalizados opcionales. Para
+crear un nuevo campo, inserte un nombre en una de las tres entradas. Elimine
+el nombre para desactivar la visualización y edición de dicho campo. Los
+campos personalizados se mostrarán en el orden mostrado aquí. La longitud
+máxima del nombre es de 40 caracteres. Los datos que se pueden almacenar
+pueden alcanzar los 100 caracteres de longitud.</p>
 <div class="hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you add an asterisk to the end of a user-defined field name, it
-will not be displayed on the front end.  It will be visible when an
-attachment is edited on the front end and always visible in the back
-end.  This hidden user-defined field can be used to order attachments in
-an arbitrary order by putting integer values in the field.</p>
+<p class="first admonition-title">Sugerencia</p>
+<p class="last">Si añade un asterisco al final del nombre de un campo personalizado,
+éste no se mostrará en el área pública. Sólo será visible aquí al editar un
+adjunto y será visible siempre en el área administrativa. Este campo
+personalizado oculto se puede usar para ordenar los adjuntos en un orden
+arbitrario incluyendo valores enteros en el campo.</p>
 </div>
 </li>
-<li><p class="first"><strong>Maximum filename or URL length:</strong>
-The maximum filename or URL length for attachments list.  Filenames or URLs
-longer than this will be truncated and put into the display name (for
-display purposes only, the actual filename or URL will not be changed).  A
-value of 0 means the filename length is unlimited by this option (the
-display_name field in the attachments database table is limited to 80
-characters).  Note: If display filenames or URLs are truncated by this option,
-the truncated name will be inserted into the &quot;Display Filename / URL&quot; field.
-This option only affects attachments added after this option is set.</p>
+<li><p class="first"><strong>Longitud máxima de nombre de archivo o URL:</strong>
+Longitud máxima de nombres de archivos o URLs en el listado de adjuntos. Los
+nombres de archivos o URLs mayores se recortarán a esta longitud (sólo a
+efectos  de visualización, el nombre real no se cambiará). El valor 0
+significa que el tamaño no está limitado por esta opción (en cualquier caso el
+campo de nombre en la base de datos está limitado a 80  caracteres).
+Observación: Si esta opción está activa,  el nombre recortado se insertará en
+el campo &quot;Nombre mostrado&quot;. Esta opción sólo afecta a los adjuntos añadidos
+tras haberla establecido.</p>
 </li>
-<li><p class="first"><strong>Where should attachments be placed?</strong> This option controls
-the location in the article (or content item) the list of attachments will be placed.
-This option applies to all attachments lists:</p>
+<li><p class="first"><strong>¿Dónde se deberían situar los adjuntos?</strong>
+Esta opción controla la posición en la que se situará la lista de adjuntos en
+el artículo (o elemento de contenido). Esta opción afecta a todas las listas
+de adjuntos:</p>
 <blockquote>
 <ul>
-<li><p class="first">'<em>At the beginning</em>'</p>
+<li><p class="first">'<em>Al principio</em>'</p>
 </li>
-<li><p class="first">'<em>At the end</em>'</p>
+<li><p class="first">'<em>Al final</em>'</p>
 </li>
-<li><p class="first">'<em>Custom placement</em>' - With this option, the attachments list will
-appear in the article (or content item) where ever the special tag:
-{attachments} occurs.</p>
+<li><p class="first">'<em>Posición personalizada</em>' - Con esta opción la lista de adjuntos
+aparecerá en el artículo (o elemento de contenido) en la posición en la
+que se haya incluido la etiqueta especial: {attachments}.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">In custom placement mode, any article (or content item)
-that does not include this tag will display its the attachments list
-at its end.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">En modo de 'Posición personalizada', en cualquier artículo
+(o elemento de contenido) que no incluya la etiqueta la lista se
+mostrará al final.</p>
 </div>
-<p>In this mode, when editing an article in the back
-end, an extra button will be displayed: [Insert {attachments} token].
-Position the cursor where you want the custom placement token and use
-this button to insert the token.  This button will add surrounding HTML
-tags to hide the token when it is not replaced (for example when the
-attachments list is not supposed to be visible).  In HTML, the token
-looks like this with the surrounding tags to hide it:</p>
+<p>En este modo al editar un artículo en el área administrativa se mostrará
+un botón adicional: [Insertar etiqueta {attachments}]. Sitúe el cursor
+donde desee colocar la etiqueta de posición personalizada y utilice este
+botón para insertarla. Este botón añadirá etiquetas HTML alrededor para
+ocultar la etiqueta cuando no se sustituya (p.e. cuando se supone que la
+lista de adjuntos no es visible). En HTML la etiqueta se muestra de esta
+forma con las etiquetas adicionales a su alrededor para ocultarla:</p>
 <pre class="literal-block">
-&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+&lt;span class=hide&gt;{attachments}&lt;/span&gt;
 </pre>
-<p>In the back end editors, you will see the {attachments} tag but not the
-HTML 'span' tags unless you switch to HTML mode.  In the front end, you
-will never see the {attachments} tag unless the insert_attachments_tag
-plugin is disabled.  If you wish to remove the {attachments} token, you
-may want to use the &quot;HTML&quot; view mode in the editor to make sure that
-you also delete the surrounding span tags.</p>
+<p>En los editores del área administrativa verá la etiqueta {attachments}
+pero no las etiquetas 'span' de HTML a menos que conmute a modo HTML.
+En la portada no verá nunca la etiqueta {attachments} a menos que esté
+desactivado el complemento insert_attachments_tag. Si quisiera eliminar
+la etiqueta {attachments} es recomendable usar el modo de vista &quot;HTML&quot;
+para asegurarse que se eliminan las etiquetas span.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The custom placement mode does not work for attachments on
-Category descriptions.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">El modo de posición personalizada no funciona con adjuntos
+en descripciones de categorías.</p>
 </div>
 </li>
-<li><p class="first">'<em>Disabled (filter)</em>' - This option will disable the display of
-attachments lists and suppress the display of any {attachments}
-tags in articles or content items.</p>
+<li><p class="first">'<em>Desactivada (filtrar)</em>' - Esta opción desactivará la visualización de
+listas de adjuntos y suprimirá la visualización de cualquier etiqueta
+{attachments} en artículos o elementos de contenido.</p>
 </li>
-<li><p class="first">'<em>Disabled (no filter)</em>' - This option will disable the display of
-attachments lists and will not suppress the display of any
-{attachments} tags in articles (or content items).</p>
+<li><p class="first">'<em>Desactivada (sin filtrar)</em>' - Esta opción desactivará la visualización
+de listas de adjuntos y no suprimirá la visualización de cualquier
+etiqueta {attachments} en artículos (o elementos de contenido).</p>
 </li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Allow frontend editing of the access level:</strong>
-Allow setting the access level for an attachment from the front end when
-editing an attachment or creating a new attachment.  The 'access level'
-controls which groups may view (or access) the attachment. Note that the no
-one editing an attachment will ever be able to set the access level for it
-to a level for which they are not authorized.</p>
+<li><p class="first"><strong>¿Permitir edición de nivel de acceso en la portada?:</strong>
+Permite definir el nivel de acceso de un adjunto desde el área pública
+mientras de modifica o crea un adjunto. El 'nivel de acceso' controla qué
+grupos pueden ver el adjunto (o acceder a él). Observe que nadie que modifique
+un adjunto podrá definir un nivel de acceso para el que no disponga de
+permisos.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="formatting-options">
-<h2>Formatting Options</h2>
-<img alt="Formatting Options" class="float-right" src="images/options-formatting.png" />
+<div class="section" id="opciones-de-formato">
+<h2>Opciones de formato</h2>
+<img alt="Opciones de formato" class="float-right" src="images/options-formatting.png" />
 <ul>
-<li><p class="first"><strong>Show titles:</strong> If set to 'Yes', a row of titles will be
-added above the list of attachments describing what is in each column.</p>
+<li><p class="first"><strong>Mostrar títulos:</strong>
+Si se elije 'Sí', se añadirá una fila de títulos sobre la lista de adjuntos
+describiendo el contenido de cada columna.</p>
 </li>
-<li><p class="first"><strong>Show attachment description:</strong> This setting controls
-whether the attachment description is shown in the list of attachments.</p>
+<li><p class="first"><strong>¿Mostrar descripción del adjunto?:</strong>
+Esta opción controla si se muestra la descripción de cada adjunto en la lista
+de adjuntos.</p>
 </li>
-<li><p class="first"><strong>Show attachment creator:</strong> Show the username of the
-one who created (uploaded) the attachment.</p>
+<li><p class="first"><strong>¿Mostrar creador del adjunto?:</strong>
+Muestra el nombre del usuario que creó (cargó) el adjunto.</p>
 </li>
-<li><p class="first"><strong>Show file size:</strong> This setting controls
-whether the attachment file size is shown in the list of attachments.</p>
+<li><p class="first"><strong>¿Mostrar tamaño del adjunto?:</strong>
+Esta opción controla si se muestra el tamaño del adjunto en el listado de
+adjuntos.</p>
 </li>
-<li><p class="first"><strong>Show number of downloads:</strong> This setting controls
-whether the number of downloads is shown in the list of attachments.</p>
+<li><p class="first"><strong>Mostrar el número de descargas:</strong>
+Esta opción controla si se muestra el número de descargas en la lista de
+adjuntos.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This option only works for file attachments in secure mode!
-In non-secure mode, files are maintained as static files and accessed
-directly, without going through Joomla! code.  Therefore it is impossible
-to update the number of downloads for a file when it is accessed this way.
-So the display of the number of file downloads will only work in secure mode
-when this option is set to 'Yes'.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">¡Esta opción sólo funciona en modo seguro! En modo no-seguro se
+accede a los archivos mantenidos directamente como archivos estáticos, sin
+pasar por el código de Joomla! Por lo tanto es imposible actualizar el
+número de descargas de un archivo si se accede de este modo. Por ello la
+visualización del número de descargas sólo funcionará en modo seguro cuando
+la opción se defina como 'Sí'.</p>
 </div>
 </li>
-<li><p class="first"><strong>Show file modification date:</strong> If this setting
-is 'Yes', the modification date for the file will be added to the
-attachment list for articles that have attachments. If 'No' is
-selected, no date will be added to the attachment list.</p>
+<li><p class="first"><strong>¿Mostrar fecha de modificación del adjunto?:</strong>
+Si se elije 'Sí', la fecha de modificación del adjunto se añadirá a la lista
+de adjuntos en los artículos que tengan adjuntos. Si se elije 'No', no se
+añadirá ninguna fecha a la lista de adjuntos.</p>
 </li>
-<li><p class="first"><strong>Format string for modification date:</strong> You may
-select the format for the modification date by using the format
-used by the PHP strftime() function.  Search the web with
-'PHP strftime' for examples.  The default format (%x %H:%M)
-gives dates with 24-hour time like 4/28/2008 14:21.  To
-remove the time of day part, leave out the &quot;%H:%M&quot; part.  Note
-that MS Windows and Linux PHP implementations may differ in
-some of the codes that they support.</p>
+<li><p class="first"><strong>Cadena de formato de la fecha de modificación:</strong>
+Puede seleccionar el formato de la fecha de modificación mediante una cadena
+de formato de la función PHP strftime(). Busque en la web los términos 'PHP
+strftime' para consultar algún ejemplo. El formato por omisión (%x %H:%M) le
+ofrece fechas con horas en formato de 24 horas como 4/28/2008 14:21. Para
+eliminar la hora, suprima la parte &quot;%H:%M&quot;. Tenga en cuenta que algunos de los
+códigos soportados pueden cambiar entre la implementación PHP de MS Windows y
+Linux.</p>
 </li>
-<li><p class="first"><strong>Attachments list order:</strong> This option allows you to specify the order in
-which attachments will be listed in the attachments lists.  Most of the
-options are self-explanatory:</p>
+<li><p class="first"><strong>Orden del listado de adjuntos:</strong>
+Esta opción le permite indicar el orden en que se mostrarán los adjuntos en la
+lista. La mayoría de las opciones son autoexplicativas:</p>
 <ol class="arabic simple">
-<li>'<em>Filename</em>' - If this option is selected, the attachments will be
-sorted alphabetically by the filename.</li>
-<li>'<em>File size(smallest first)</em>'</li>
-<li>'<em>File size(largest first)</em>'</li>
-<li>'<em>Description</em>'</li>
-<li>'<em>Display filename or URL</em>' - All attachments that have blank
-display filenames will appear before the ones with display filenames and
-will be sorted by their filenames.</li>
-<li>'<em>Creator</em>' - Sort by the name of the user who uploaded the attachment.</li>
-<li>'<em>Creation date (oldest first)</em>'</li>
-<li>'<em>Creation date (newest first)</em>'</li>
-<li>'<em>Modification date (oldest first)</em>'</li>
-<li>'<em>Modification date (newest first)</em>'</li>
-<li>'<em>Attachment ID</em>' - If this option is selected, the
-attachments will be sorted by the attachment ID.  This has the effect of
-ordering the attachments in the order they were created.</li>
-<li>'<em>User-defined field 1</em>'</li>
-<li>'<em>User-defined field 2</em>'</li>
-<li>'<em>User-defined field 3</em>'</li>
+<li>'<em>Nombre de archivo</em>' - Si se elije esta opción, los adjuntos se ordenarán
+alfabéticamente por su nombre.</li>
+<li>'<em>Tamaño de archivo (el más pequeño primero)</em>'</li>
+<li>'<em>Tamaño de archivo (el más grande primero)</em>'</li>
+<li>'<em>Descripción</em>'</li>
+<li>'<em>Mostrar nombre o URL</em>' - Todos los adjuntos que tengan nombres en blanco
+aparecerán antes de los que lo tengan relleno y se ordenarán por los
+nombres de los archivos.</li>
+<li>'<em>Propietario</em>' - Ordenar por el nombre del usuario que cargó el adjunto.</li>
+<li>'<em>Fecha de creación (la más antigua primero)</em>'</li>
+<li>'<em>Fecha de creación (la más reciente primero)</em>'</li>
+<li>'<em>Fecha de modificación (la más antigua primero)</em>'</li>
+<li>'<em>Fecha de modificación (la más reciente primero)</em>'</li>
+<li>'<em>Id de adjunto</em>' - Si se elije esta opción. los
+adjuntos se ordenarán por los Id's de adjuntos. El resultado es que se
+ordenan según se fueron añadiendo.</li>
+<li>'<em>Campo personalizado 1</em>'</li>
+<li>'<em>Campo personalizado 2</em>'</li>
+<li>'<em>Campo personalizado 3</em>'</li>
 </ol>
 </li>
 </ul>
 </div>
-<div class="section" id="visibility-options">
-<h2>Visibility Options</h2>
-<p>These options control when attachments will be visible on the front page,
-assuming the user is in the appropriate groups to see the attachments.</p>
-<img alt="Visibility Options" class="float-right" src="images/options-visibility.png" />
+<div class="section" id="opciones-de-visibilidad">
+<h2>Opciones de visibilidad</h2>
+<p>Estas opciones controlan si los adjuntos se verán en la página frontal,
+suponiendo que el usuario pertenezca a un grupo con permisos para ver los
+adjuntos.</p>
+<img alt="Opciones de visibilidad" class="float-right" src="images/options-visibility.png" />
 <ul class="simple">
-<li><strong>Hide attachments on the front page:</strong> Select this option to prevent any
-attachments from being shown on the front page of your website.</li>
-<li><strong>Hide attachments before 'Read More' breaks:</strong> Select this option to
-prevent attachments from being displayed on the the front end if they are
-before 'Read More' breaks in articles.  If you click on the link to read the
-full article, the attachments will be shown.</li>
-<li><strong>Hide attachments on blog pages:</strong> Select this option to prevent
-attachments from being shown on any page with 'blog' layouts.</li>
-<li><strong>Hide attachments except on article views:</strong> Select this option to prevent
-attachments from being shown on any page on the front page except for
-views for single specific articles.</li>
-<li><strong>Always show attachments on category views:</strong> Select this option to always
-show attachments on category views -- regardless of other options.</li>
-<li><strong>Hide attachments for categories:</strong> Hide attachments on any category views
-for the selected categories.  Note that attachments will be displayed for
-children categories unless they are explicitly selected.</li>
+<li><strong>Ocultar adjuntos en la página frontal:</strong>
+Elija esta opción para evitar la visualización de cualquier adjunto en la
+página frontal del sitio web.</li>
+<li><strong>Ocultar adjuntos antes de saltos 'Leer más':</strong>
+Seleccione esta opción para evitar mostrar en el área pública los adjuntos si
+están antes de salto 'Leer más' en los artículos. Si pulsa el vínculo para
+leer el artículo completo, se mostrarán los adjuntos.</li>
+<li><strong>Ocultar adjuntos en páginas blog:</strong>
+Seleccione esta opción para evitar mostrar los adjuntos en cualquier página
+con una distribución de tipo 'blog'.</li>
+<li><strong>Ocultar adjuntos excepto en vistas de artículos:</strong>
+Seleccione esta opción para impedir mostrar los adjuntos en cualquier página
+del área pública a excepción de las vistas simples de artículos específicos.</li>
+<li><strong>Mostrar siempre los adjuntos en las vistas de categorías:</strong>
+Elija esta opción para mostrar siempre los adjuntos en las vistas de
+categorías -- con independencia de cualquier otra opción.</li>
+<li><strong>Ocultar adjuntos en categorías:</strong>
+Ocultar los adjuntos en cualquier vista de categoría de las categorías
+seleccionadas. Observe que los adjuntos sí se mostrarán en las categorías
+hijas a menos que se seleccionen aquí de forma explícita.</li>
 </ul>
 <div class="small-figure figure">
-<img alt="Hide Categories Selection" src="images/options-hide-categories.png" />
-<p class="caption">To select or deselect categories without affecting other categories, hold
-the Control-key when mouse-clicking on the category.  In the figure, only
-one category is selected.</p>
+<img alt="Selección de categorías a ocultar" src="images/options-hide-categories.png" />
+<p class="caption">Para seleccionar o deseleccionar categorías sin afectar a las otras, mantenga
+pulsada la tecla Control al pulsar con el ratón en la categoría. En la imagen
+sólo hay una categoría seleccionada.</p>
 </div>
 <ul class="simple">
-<li><strong>Hide 'Add Attachments' link:</strong> Always hide the 'Add Attachments' link on
-the front page.  This requires attachments to be added to articles, etc,
-by editing them in the front page (where an 'Add Attachments' button will
-be available under the editing area).</li>
+<li><strong>Ocultar vínculo 'Añadir adjuntos':</strong>
+Ocultar siempre el vínculo 'Añadir adjuntos' en la portada. Ésto obliga a
+añadir los adjuntos a los artículos, etc., modificándolos en el área pública
+(donde se dispondrá de un botón 'Añadir adjuntos' bajo el área de edición).</li>
 </ul>
 </div>
-<div class="section" id="advanced-options">
-<h2>Advanced Options</h2>
-<img alt="Advanced Options" class="float-right" src="images/options-advanced.png" />
+<div class="section" id="opciones-avanzadas">
+<h2>Opciones avanzadas</h2>
+<img alt="Opciones avanzadas" class="float-right" src="images/options-advanced.png" />
 <ul>
-<li><p class="first"><strong>Characters forbidden in uploaded filenames:</strong> Filenames containing these
-characters will not be allowed to be uploaded.  These characters are
-problematic in the URL presented to the user for file attachments in
-'non-secure' mode so they are forbidden.  These characters are generally not
-an issue when using 'secure' mode since the filename is not used as part of
-the URL presented to the user.</p>
+<li><p class="first"><strong>Caracteres prohibidos en archivos cargados:</strong>
+Los nombres de archivo que contengan estos caracteres no se podrán cargar.
+Estos caracteres plantean problemas en la URL mostrada al usuario en modo
+'no-seguro' por lo que están prohibidos. Estos caracteres no suelen ser un
+problema si se usa el modo 'seguro' ya que el nombre del archivo no se utiliza
+como parte de la URL presentada al usuario.</p>
 </li>
-<li><p class="first"><strong>CSS style for attachments tables:</strong> To override the CSS
-styling of attachments lists, specify your own style name here.  The default
-style name is 'attachmentsList'.  See  the section <a class="reference internal" href="#css-styling-of-attachment-lists">CSS Styling of Attachment Lists</a>.</p>
+<li><p class="first"><strong>Estilo CSS de la lista de adjuntos:</strong>
+Para personalizar el estilo CSS de la lista de adjuntos (tablas), indique su
+propio nombre de estilo. El nombre del estilo es 'attachmentsList' por
+omisión. Consulte la sección de la ayuda <a class="reference internal" href="#estilo-css-de-la-lista-de-adjuntos">Estilo CSS de la lista de
+adjuntos</a>.</p>
 </li>
-<li><p class="first"><strong>File link open mode:</strong>
-This mode how the links to attachment files will be opened.  'In same window'
-means the file will be opened in the same browser window.  'In new window'
-means the file will be opened in a new window.  In some browsers, using the
-'In new window' option will actually open the attachment in a new tab.</p>
+<li><p class="first"><strong>Modo de apertura del archivo:</strong>
+Determina cómo se abrirán los vínculos a los adjuntos. 'En la misma ventana'
+significa que el archivo se abrirá en la misma ventana del navegador. 'En una
+nueva ventana' significa que los archivos se mostrarán en una nueva ventana.
+En algunos navegadores, al usar la opción 'En una nueva ventana' se abren en
+una nueva pestaña.</p>
 </li>
-<li><p class="first"><strong>Custom titles for attachments lists:</strong> By default, the 'Attachments'
-extension inserts the title &quot;Attachments:&quot; above the list of attachments for
-each article or content item (if it has attachments). In some cases, you may
-prefer using some other term for specific articles or content items.  You may
-specify the exact term you would like to use on an item-by-item basis. For
-example, if you would like article 211 to use the custom title &quot;Downloads:&quot;,
-then add this to this setting: '211 Downloads' (without the quotes). Use one
-entry per line.  For other types of content items, use the form:
-'category:23 This is the title for category 23' where 'category' can be
-replaced by the name of the content item entity.  The example for articles
-above could have been done with 'article:211 Downloads'.  Note that an entry
-without a numeric ID at the beginning will be applied to all content items.
-So it is good practice to put such global overrides first in the list and
-then override the item-by-item custom titles afterward.</p>
-<p>Note: If you wish to change the titles used for attachments lists globally,
-you may edit the translations file entry 'ATTACHMENTS TITLE' in the translation
-files:</p>
+<li><p class="first"><strong>Títulos personalizados de las listas de adjuntos:</strong>
+Por omisión la extensión 'Archivos adjuntos' inserta el título &quot;Adjuntos:&quot;
+sobre la lista de adjuntos de un artículo o elemento de contenido (si dispone
+de adjuntos). En ocasiones puede preferir usar otro término en artículos o
+elementos de contenido concretos. Puede especificar el término exacto que
+quiere utilizar artículo por artículo. Por ejemplo, si quisiera que el
+artículo 211 usara el título personalizado &quot;Descargas:&quot;, añada lo siguiente a
+este ajuste: '211 Descargas' (sin las comillas). Ponga cada entrada en una
+línea nueva. Para otros tipos de elementos de contenido, utilice el formato:
+'category:23 Este es el título de la categoría 23' donde 'category' puede ser
+el nombre de la entidad del elemento de contenido. El ejemplo anterior del
+artículo podía haberse escrito como 'article:211 Descargas'. Observe que una
+entrada sin un ID numérico al principio se aplicará a todos los elementos de
+contenido. Por ello es una buena costumbre situar ese tipo de excepciones en
+primer lugar en la lista y añadir a continuación las excepciones de títulos
+personalizados elemento a elemento.</p>
+<p>Observación: Si quisiera cambiar los títulos de las listas adjuntos de forma
+global, puede modificar en los archivos de idiomas la entrada del archivo de
+traducción 'ATTACHMENTS_TITLE':</p>
 <pre class="literal-block">
-administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+plugins/content/attachments/language//qq-QQ/qq-QQ.plg_content_attachments.ini
 </pre>
-<p>where qq-QQ refers to the language designator code such as en-GB for English.
-(If you are not familiar with Joomla! translation files, find the line that
-has 'ATTACHMENTS TITLE' on left side of the '=' sign.  Edit anything to the
-right of the '=' sign.  Do not change anything to the left of the '=' sign.)</p>
+<p>Donde qq-QQ es el código de idioma correspondiente como en-GB para el Inglés.
+(Si no está familiarizado con los archivos de idioma de Joomla!, localice la
+línea que tiene 'ATTACHMENTS_TITLE' en el lado izquierdo del signo '='.
+Modifique todo lo que se encuentre a la derecha del mismo. No cambie nada la
+izquierda del signo '=')</p>
 </li>
-<li><p class="first"><strong>Timeout for checking links:</strong>
-Timeout for checking links (seconds).  Whenever a link is added as an
-attachment, the link is checked directly (you can disable this check in the
-form).  If the link can be accessed before the timeout, the file size and
-other information about the link is retrieved.  If not, generic information
-is used.  To disable the check, enter 0.</p>
+<li><p class="first"><strong>Tiempo de espera de comprobación de vínculos:</strong>
+Tiempo de espera de comprobación de vínculos (en segundos). Siempre que se
+añada un vínculo como adjunto, se comprueba directamente (se puede desactivar
+esta comprobación en el formulario. Si el vínculo es accesible antes de agotar
+el tiempo de espera, se recupera el tamaño del archivo y otra información del
+vínculo. En caso contrario se utilizará información genérica. Para desactivar
+la comprobación, introduzca 0.</p>
 </li>
-<li><p class="first"><strong>Superimpose URL link icons:</strong>
-Superimpose URL link icons over the file attachment icon for each
-attachment to indicate it is a URL.  Valid URLs are shown with arrows and
-invalid URLs are shown with a red line across the file type icon (bottom
-left to top right).</p>
+<li><p class="first"><strong>Superponer iconos de URL vinculada:</strong>
+Superponer en cada adjunto iconos de URL vinculada sobre el icono del adjunto
+para indicar que es una URL. Las URLs válidas se muestran con flechas y las
+inválidas con una línea roja sobre el icono de tipo de archivo (desde la
+esquina inferior izquierda hasta la superior derecha).</p>
 </li>
-<li><p class="first"><strong>Suppress obsolete attachments (in back end):</strong>
-Set the default for suppressing <em>obsolete</em> attachments in the administrative
-back end.  In this context, <em>obsolete</em> attachments are ones attached to
-unpublished or trashed parents. You can override this using the 'Show
-attachments for' drop-down menu on the right just above the list of
-attachments (on the same line as the filter).  When you use the drop-down
-menu to control which attachments are visible, the system remembers that
-setting until you log out as administrator.  So changing this parameter may
-not seem to have an effect.  This parameter setting will come into effect
-the next time you log in as administrator.</p>
+<li><p class="first"><strong>Suprimir adjuntos obsoletos (en área administrativa):</strong>
+Define la opción por omisión de eliminación de adjuntos <em>obsoletos</em> en el área
+administrativa. En este contexto los adjuntos <em>obsoletos</em> son aquéllos
+adjuntados a padres sin publicar o eliminados. Puede anular ésto usando el
+menú desplegable 'Listar adjuntos de' encima y a la derecha de la lista de
+adjuntos (en la misma línea que el filtrado). Al usar el menú desplegable para
+controlar qué adjuntos son visibles, el sistema recuerda este ajuste hasta que
+se desconecta como administrador. En cuyo caso el cambio de este parámetro
+puede parecer que no tiene efectos. El ajuste de este parámetro entrará en
+funcionamiento la próxima vez que inicie sesión como administrador.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="security-options">
-<h2>Security Options</h2>
-<img alt="Security Options" class="float-right" src="images/options-security.png" />
+<div class="section" id="opciones-de-seguridad">
+<h2>Opciones de seguridad</h2>
+<img alt="Opciones de seguridad" class="float-right" src="images/options-security.png" />
 <ul>
-<li><p class="first"><strong>Secure attachment downloads:</strong>
-By default, the 'Attachments' extension saves attachment files in a publicly
-accessible sub-directory.  If you choose the <em>secure</em> option, the directory
-in which the attachments are saved will be made publicly inaccessible.  The
-download links for the attachments in the front end will download the
-attachment files but will not be direct links.  This will prevent access
-unless users have appropriate permissions.  If <em>secure</em> downloads are not
-selected, the links to the attachments will be shown as the options above
-indicate, but the files will still be accessible to anyone if they know the
-full URL, since the sub-directory is public.  The <em>secure</em> option prevents
-access to users without appropriate permissions even if they know the full
-URL, since this option prevents public access to the attachments
-sub-directory.  In <em>secure</em> mode, the option &quot;Who can see&quot; can set to
-'Anyone' and anyone will be able to see and download the attachments.</p>
+<li><p class="first"><strong>Descarga segura de adjuntos:</strong>
+Por omisión la extensión 'Archivos adjuntos' almacena los archivos en un
+directorio de acceso público. Si elije la opción <em>segura</em>, se suprimirá el
+acceso público al directorio en que se almacenan los adjuntos. Los vínculos de
+descarga de los adjuntos en el web descargarán los archivos pero no serán
+vínculos directos. Ésto impedirá el acceso a menos que los usuarios dispongan
+de los permisos adecuados. Si no se selecciona la descarga <em>segura</em>, los
+vínculos a los adjuntos se mostrarán según las opciones anteriores, pero los
+archivos serán accesibles a todo el mundo si conocen la URL completa ya que el
+subdirectorio será público. La opción <em>segura</em> impide el acceso a los usuarios
+sin permisos adecuados incluso aunque conozcan la URL completa ya que esta
+opción impide el acceso público al subdirectorio de adjuntos. En modo <em>seguro</em>
+la opción &quot;Nivel de acceso por omisión&quot; de cada adjunto definida como
+'Público' permitirá que cualquiera pueda ver y descargar los adjuntos.</p>
 <div class="hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you have problems with filenames with Unicode characters, you should
-enable the <strong>Secure attachment downloads</strong> option (especially on Windows
-servers).</p>
+<p class="first admonition-title">Sugerencia</p>
+<p class="last">Si tiene problemas con nombres de archivos con caracteres Unicode, debería
+actuvar la opción <strong>Descarga segura de adjuntos:</strong> (sobre todo en
+servidores Windows).</p>
 </div>
 </li>
-<li><p class="first"><strong>Download mode for secure downloads:</strong>
-This option controls whether files should be downloaded as separate files or
-displayed in the browser (if the browser can handle that type of file).
-There are two options:</p>
+<li><p class="first"><strong>Modo de descarga segura:</strong>
+Esta opción controla si los archivos se descargarán como archivos separados o
+si se mostrarán en el navegador (Si el navegador es capaz de manejar ese tipo
+de archivo). Existen dos opciones:</p>
 <blockquote>
 <ul>
 <li><dl class="first docutils">
-<dt><em>'inline'</em> - In this mode, files that can be displayed by the browser</dt>
-<dd><p class="first last">will be displayed in the browser (such as text files and images).</p>
+<dt><em>'En línea'</em> - En este modo, los archivos que se puedan mostrar en el</dt>
+<dd><p class="first last">navegador se visualizarán en el mismo (como los archivos de texto o las
+imágenes).</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><em>'attachment'</em> - With the 'attachment' mode, files will always be</dt>
-<dd><p class="first last">downloaded as separate files.</p>
+<dt><em>'Archivo adjunto'</em> - En el modo 'Archivo adjunto', los archivos se</dt>
+<dd><p class="first last">descargarán siempre como archivos separados.</p>
 </dd>
 </dl>
 </li>
 </ul>
 </blockquote>
-<p>In either case, files that can't be displayed in the browser will be
-downloaded as external files.</p>
+<p>En cualquiera de los casos, los archivos que no se puedan mostrar en el
+navegador se descargarán como archivos separados.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="permissions-options">
-<h2>Permissions Options</h2>
-<p>The permissions options are explained in the following <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section.</p>
+<div class="section" id="opciones-de-permisos">
+<h2>Opciones de permisos</h2>
+<p>Las opciones de permisos se explican en la sección <a class="reference internal" href="#permisos-de-archivos-adjuntos">Permisos de Archivos adjuntos</a>
+siguiente.</p>
 </div>
 </div>
-<div class="section" id="attachments-permissions">
-<h1><a class="toc-backref" href="#id6">Attachments Permissions</a></h1>
-<p>The attachments extension takes full advantage of the new Joomla!
-ACL/permissions system introduced in Joomla! 1.6.  This gives websites that
-use Attachments much more flexibility to control who can create, edit, delete
-and manage attachments.</p>
-<p>Before describing the ACL permissions related to Attachments, it is important
-to understand a key underlying principle:</p>
+<div class="section" id="permisos-de-archivos-adjuntos">
+<h1><a class="toc-backref" href="#id6">Permisos de Archivos adjuntos</a></h1>
+<p>La extensión Archivos adjuntos aprovecha íntegramente el nuevo sistema de
+de ACL/permisos que se introdujo a partir de la versión 1.6 de Joomla! Ésto
+proporciona mayor flexibilidad a los sitios web que usen Archivos adjuntos para
+controlar quién puede crear, modificar, eliminar y gestionar los adjuntos.</p>
+<p>Antes de describir los permisos ACL relacionados con Archivos adjuntos, es
+fundamental entender un principio clave subyacente:</p>
 <div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">All attachments are attached to a parent article, category, or other
-content item.  Creating, editing, deleting, or changing the state of an
-attachment is considered to be a form of editing the parent content
-item. So the user must first have permission to edit the parent content item
-before any Attachments-specific permissions are checked.</p>
+<p class="first admonition-title">Importante</p>
+<p class="last">Todos los adjuntos se adjuntan a un artículo, categoría u otro tipo de
+contenido padre. La creación, modificación, eliminación o cambio de estado de
+un adjunto se considera una forma de modificación del elemento de contenido
+padre. Por ello el usuario primero tiene que disponer de permisos para
+modificar el elemento de contenido padre para que los permisos específicos de
+Archivos adjuntos se tengan en cuenta.</p>
 </div>
-<p>To change the permissions for various user groups, go to the administrative
-back end and select &quot;Attachments&quot; under the &quot;Component&quot; menu.  Click
-on the &quot;Options&quot; button on the right end of the tool bar and then select the
-permissions tab. You will see this:</p>
+<p>Para cambiar los permisos de varios grupos de usuarios, vaya al área
+administrativa y seleccione &quot;Archivos adjuntos&quot; en el menú &quot;Componentes&quot;. Pulse
+el botón &quot;Opciones&quot; en el extremo derecho de la barra de herramientas y
+seleccione la pestaña Permisos. Verá lo siguiente:</p>
 <div class="figure">
-<img alt="Permission Options" src="images/options-permissions.png" />
-<p class="caption">The attachments permissions options.  The permissions for the Public group
-are shown.</p>
+<img alt="Opciones de permisos" src="images/options-permissions.png" />
+<p class="caption">Las opciones de permisos de Archivos adjuntos. Se muestran los permisos del
+grupo Público.</p>
 </div>
-<p>Here is a brief description of permissions related to Attachments that are available:</p>
+<p>Aquí tiene una breve descripción de los permisos disponibles relacionados con
+Archivos adjuntos:</p>
 <table border="1" class="permissions docutils">
 <colgroup>
-<col width="26%" />
-<col width="57%" />
-<col width="17%" />
+<col width="27%" />
+<col width="58%" />
+<col width="16%" />
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head">Permission</th>
-<th class="head">Description / Notes</th>
-<th class="head">ACL Action</th>
+<tr><th class="head">Permiso</th>
+<th class="head">Descripción / Observaciones</th>
+<th class="head">Acción ACL</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td>Configure Attachments</td>
-<td>Allows users to edit the Attachments options.</td>
+<tr><td>Configurar opciones de Archivos adjuntos</td>
+<td>Permite a los usuarios modificar las opciones de Archivos adjuntos.</td>
 <td>core.admin</td>
 </tr>
-<tr><td>Access Attachments</td>
-<td>Allows users to access the Attachments extension in the administrative back end</td>
+<tr><td>Acceso al componente Archivos adjuntos</td>
+<td>Permite a los usuarios acceder al componente Archivos adjuntos en el área administrativa.</td>
 <td>core.manage</td>
 </tr>
-<tr><td>Create Attachments</td>
-<td>Allows users to create attachments (if they may edit the parent).</td>
+<tr><td>Crear adjuntos</td>
+<td>Permite a los usuarios crear adjuntos (si es que pueden modificar el padre).</td>
 <td>core.create</td>
 </tr>
-<tr><td>Delete Attachments</td>
-<td>Allows users to delete attachments (if they may edit the parent).</td>
+<tr><td>Eliminar adjuntos</td>
+<td>Permite a los usuarios eliminar adjuntos (si es que pueden modificar el padre).</td>
 <td>core.delete</td>
 </tr>
-<tr><td>Edit Attachments</td>
-<td>Allows users to edit attachments (if they may edit the parent).</td>
+<tr><td>Modificar adjuntos</td>
+<td>Permite a los usuarios modificar adjuntos (si pueden modificar el padre).</td>
 <td>core.edit</td>
 </tr>
-<tr><td>Edit Attachment State</td>
-<td>Allows users to change the state of any attachment (if they may edit the parent).</td>
+<tr><td>Modificar estado del adjunto</td>
+<td>Permite a los usuarios modificar el estado de cualquier adjunto (si pueden modificar el padre).</td>
 <td>core.edit.state</td>
 </tr>
-<tr><td>Edit Own Attachments</td>
-<td>Allows users to edit attachments they created (if they may edit the parent).</td>
+<tr><td>Modificar adjuntos propios</td>
+<td>Permite a los usuarios modificar los adjuntos que hayan creado (si pueden modificar el padre).</td>
 <td>core.edit.own</td>
 </tr>
-<tr><td>Edit State Of Own Attachments</td>
-<td>Allows users to change the state of any attachment they created (if they may edit the parent).</td>
+<tr><td>Modificar estado de adjuntos propios</td>
+<td>Permite a los usuarios modificar el estado de cualquier adjunto que hayan creado (si pueden modificar el padre).</td>
 <td>attachments.edit.state.own</td>
 </tr>
-<tr><td>Delete Own Attachments</td>
-<td>Allows users to delete their own attachments (if they may edit the parent).</td>
+<tr><td>Eliminar adjuntos propios</td>
+<td>Permite a los usuarios eliminar sus propios adjuntos (si es que pueden modificar el padre).</td>
 <td>attachments.delete.own</td>
 </tr>
-<tr><td>Edit Attachments For Owned Article/Parent</td>
-<td>Allows users to edit any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Modificar adjuntos de Artículos/Padres propios</td>
+<td>Permite a los usuarios modificar cualquier adjunto de artículos/padres de su propiedad (y que puedan modificar).</td>
 <td>attachments.edit.ownparent</td>
 </tr>
-<tr><td>Edit State Of Attachments For Owned Article/Parent</td>
-<td>Allows users to edit the state of any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Modificar estado de adjuntos de Artículos/Padres propios</td>
+<td>Permite a los usuarios modificar el estado de cualquier adjunto de artículos/padres de su propiedad (y que puedan modificar).</td>
 <td>attachments.edit.state.ownparent</td>
 </tr>
-<tr><td>Delete Attachments For Owned Article/Parent</td>
-<td>Allows users to delete any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Eliminar adjuntos de Artículos/Padres propios.</td>
+<td>Permite a los usuarios eliminar cualquier adjunto de artículos/padres propios (y que puedan modificar).</td>
 <td>attachments.delete.ownparent</td>
 </tr>
 </tbody>
 </table>
-<div class="section" id="default-permissions">
-<h2>Default Permissions</h2>
-<p>When the attachments extension is installed, it installs these basic permissions:</p>
+<div class="section" id="permisos-por-omision">
+<h2>Permisos por omisión</h2>
+<p>Cuando se instala la extensión Archivos adjuntos se instalan estos permisos
+básicos:</p>
 <div class="hide-title important">
-<p class="first admonition-title">Important</p>
-<p><strong>Basic Behavior Of Default Permissions</strong></p>
+<p class="first admonition-title">Importante</p>
+<p><strong>Comportamiento fundamental de los permisos por omisión</strong></p>
 <ul class="last simple">
-<li>Authors (and Managers) or above can add attachments to any article/parent they can edit</li>
-<li>Authors (and Managers) or above can edit or delete any attachments on any
-article/parent they can edit</li>
-<li>Editors (and Managers) or above can publish/unpublish attachments from the
-front end.</li>
-<li>Authors cannot publish their own attachments.</li>
+<li>Autores (y Encargados) o superiores pueden añadir adjuntos a cualquier
+artículo/padre que puedan modificar</li>
+<li>Autores (y Encargados) o superiores pueden modificar o eliminar cualquier
+adjunto de cualquier artículo/padre que puedan modificar</li>
+<li>Redactores (y Encargados) o superiores pueden publicar/despublicar
+adjuntos desde el área pública.</li>
+<li>Los autores no pueden publicar sus propios adjuntos.</li>
 </ul>
 </div>
-<p>If you want different defaults, you will need to edit the permissions using
-the &quot;Permissions&quot; tab on the Attachments options.</p>
+<p>Si desea distintas opciones por omisión, tendrá que modificar los permisos
+mediante la pestaña &quot;Permisos&quot; de las opciones de Archivos adjuntos.</p>
 </div>
-<div class="section" id="permissions-settings-for-common-scenarios">
-<h2>Permissions Settings for Common Scenarios</h2>
-<p>Here are some suggestions about how to set the permissions to achieve the
-desired behaviors:</p>
+<div class="section" id="ajustes-de-permisos-en-entornos-habituales">
+<h2>Ajustes de permisos en entornos habituales</h2>
+<p>Aquí hay algunas sugerencias sobre cómo definir permisos para alcanzar unos
+comportamientos concretos:</p>
 <blockquote>
 <ul>
-<li><p class="first"><strong>Scenario 1 - Authors can publish their own Attachments</strong></p>
+<li><p class="first"><strong>Escenario 1 - Los autores puedan publicar sus propios adjuntos</strong></p>
 <blockquote>
 <ul>
-<li><p class="first">In the permissions options, click on the 'Author' entry.  Locate the
-'Edit State of Own Attachments' line and set it to 'Allowed' and click on
-'Save' to verify the changes.</p>
+<li><p class="first">En las opciones de permisos, pulse en la entrada 'Autor'. Localice la
+línea 'Modificar estado de adjuntos propios', defínala como 'Permitido' y
+pulse en 'Guardar' para almacenar los cambios.</p>
 <div class="figure">
-<img alt="Permissions setting for scenario1" src="images/permissions-scenario1.png" />
+<img alt="Ajustes de permisos del escenario 1" src="images/permissions-scenario1.png" />
 </div>
 </li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Scenario 2 - Authors can edit/delete their own attachments but no one else's</strong></p>
+<li><p class="first"><strong>Escenario 2 - Los autores puedan modificar/eliminar sus propios adjuntos pero no los de nadie más</strong></p>
 <blockquote>
 <ul>
-<li><p class="first">In the permissions options, click on the 'Author' entry.  Locate the
-'Edit State Of Attachments For Owned Article/Parent' and
-'Delete Attachments For Owned Article/Parent' and set them both to 'Denied'.
-Click on 'Save' to verify the changes</p>
+<li><p class="first">En las opciones de permisos, pulse en la entrada 'Autor'. Localice las
+líneas 'Modificar estado de adjuntos de Artículos/Padres propios' y
+'Eliminar adjuntos de Artículos/Padres propios' y defina ambas como
+'Denegado'. Pulse 'Guardar' para almacenar los cambios.</p>
 <div class="figure">
-<img alt="Permissions setting for scenario2" src="images/permissions-scenario2.png" />
+<img alt="Ajustes de permisos del escenario 2" src="images/permissions-scenario2.png" />
 </div>
-<p>Since Author still has permissions to edit/delete their own attachments
-this effectively prevents them from editing/deleting attachments that
-they did not create, even if they can edit the article.</p>
-<p>Note that all user groups derived from Author (e.g., Editor, Publisher,
-etc) will also be denied from editing or deleting attachments for
-articles/parents that they did not create (from this permission).
-Fortunately, they generally have the higher level permissions 'Edit
-Attachments' and 'Delete Attachments' which means they can edit or
-delete any attachments on any article that they can edit (assuming
-their permissions have not been changed).</p>
+<p>Como los autores aún tienen permiso para modificar/eliminar sus propios
+adjuntos, ésto evita efectivamente que modifiquen/eliminen adjuntos que
+no hayan creado, incluso aunque puedan modificar el artículo.</p>
+<p>Observe que todos los grupos de usuarios derivados de Autor (p.e.
+Redactor, Editor, etc.) también tendrán prohibida la modificación o
+eliminación de adjuntos de artículos/padres que no hayan creado (a partir
+de estos permisos). Afortunadamente también tienen generalmente los
+niveles de permisos superiores 'Modificar adjuntos' y 'Eliminar adjuntos'
+lo que significa que pueden modificar o eliminar cualquier adjunto de
+cualquier artículo que puedan modificar (suponiendo que no se hayan
+modificado sus permisos).</p>
 </li>
 </ul>
 </blockquote>
 </li>
 </ul>
 </blockquote>
-<p>If you have other common scenarios that you feel should be documented, please
-feel free to contact me so I can update this documentation (see the end of
-this page for contact information).</p>
+<p>Si cuenta con otros escenarios comunes que piensa que deberían documentarse, no
+dude en contacta conmigo de forma que pueda actualizar esta documentación
+(consulte el final de esta página para obtener la información de contacto).</p>
 </div>
-<div class="section" id="other-notes-on-permissions">
-<h2>Other Notes on Permissions</h2>
+<div class="section" id="otras-observaciones-sobre-los-permisos">
+<h2>Otras observaciones sobre los permisos</h2>
 <blockquote>
 <ul class="simple">
-<li>If a user has permissions to edit the state of their attachments, they
-will see the 'Publish: Yes/No' options on forms to add or edit
-attachments.  If they select 'No' and save the attachment, the attachment
-will still be visible to them in the front end (while they are logged in).
-No one else will see the unpublished attachments on the front end.  If the
-user wants to change the Published state, they can edit the attachment
-(even though it is grayed out) and change the states.</li>
+<li>Si un usuario dispone de permisos para modificar el estado de sus adjuntos,
+podrá ver las opciones 'Publicar: Sí/No' en los formularios de adición o
+modificación de adjuntos. Si selecciona 'No' y guarda el adjunto, podrá
+seguir viéndolo en el área pública (mientras tenga la sesión abierta). Nadie
+más verá los adjuntos sin publicar en el área pública. Si el usuario quiere
+modificar el estado de Publicación, puede modificar el adjunto (incluso
+aunque esté atenuado) y cambiar su estado.</li>
 </ul>
 </blockquote>
 </div>
 </div>
-<div class="section" id="access-levels-visibility-control">
-<h1><a class="toc-backref" href="#id7">Access Levels Visibility Control</a></h1>
-<p>The Attachments extension now supports the Joomla 'Access Levels'.  Each
-attachment can be assigned to specific access levels such as 'Public',
-'Registered', and 'Special', as well as any other access levels created on
-your site.   The two basic levels are:</p>
+<div class="section" id="control-de-visibilidad-de-niveles-de-acceso">
+<h1><a class="toc-backref" href="#id7">Control de visibilidad de Niveles de acceso</a></h1>
+<p>La extensión Archivos adjuntos ahora soporta los 'Niveles de acceso' de Joomla.
+Cada adjunto puede asignarse a niveles de acceso específicos tales como
+'Público', 'Registrado' y 'Especial' así como a cualquier otro nivel de acceso
+creado en su sitio. Los dos niveles básicos son:</p>
 <blockquote>
 <ul class="simple">
-<li><strong>'Public'</strong> - Anyone visiting the website will be able to see and download
-attachments with 'access level' set to 'Public' if the article/parent is
-visible and no other Attachments visibility settings prevent the
-attachments from being shown.</li>
-<li><strong>'Registered'</strong> - Anyone that is logged into the website will be able to
-see and download attachments with 'access level' set to 'Registered' if the
-article/parent is visible and no other Attachments visibility settings
-prevent the attachments from being shown.</li>
+<li><strong>'Público'</strong> - Cualquiera que visite el sitio web podrá ver y descargar los
+adjuntos cuyo 'Nivel de acceso' se haya definido como 'Público' si el
+artículo/padre es visible y ningún otro ajuste de visibilidad de Archivos
+adjuntos impide que se muestren los adjuntos.</li>
+<li><strong>'Registrado'</strong> - Cualquier usuario con una sesión abierta en el sitio web
+podrá ver y descargar los adjuntos cuyo 'Nivel de acceso' se haya definido
+como 'Registrado' si el artículo/padre es visible y ningún otro ajuste de
+visibilidad de Archivos adjuntos impide que se muestren los adjuntos.</li>
 </ul>
 </blockquote>
-<p>The effect of other access levels depends on the groups associated with the
-access level.</p>
-<p>The ability to set the 'Access Level' for individual attachments gives
-extensive control on who is able to see and download attachments.</p>
+<p>El efecto de otros niveles de acceso dependerá de los grupos asociados el nivel
+de acceso.</p>
+<p>La capacidad de definir el 'Nivel de acceso' de adjuntos concretos ofrece un
+control preciso sobre quién puede ver y descargar adjuntos.</p>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">Suppose you create a new access level on your site.  Users that are not
-explicitly members of the groups associated with the new access level will
-not be able to set their attachments for that access level.  If you edit an
-attachment as the Super User, you might be surprised that the new access
-level does not show up in the access level options.  There are two
-potential issues.  (1) If you have just created the new access level, you
-may need to log out of the back end and log in again for the changes to be
-completely visible.  (2) The other reason is that the user (Super User, for
-instance) is not in the access level.  The fix is simple, make sure the
-user is in one of the groups associated with the new access level.</p>
+<p class="first admonition-title">Nota</p>
+<p class="last">Suponga que ha creado un nuevo nivel de acceso en el sitio. Los usuarios que
+no sean miembros explícitos de los grupos asociados al nuevo nivel de acceso
+no podrán definir dicho nivel de acceso en sus adjuntos. Si modifica como
+superusuario un adjunto, podrá sorprenderse por que los nuevos niveles de
+acceso no se muestren en las opciones de nivel de acceso. Existen dos razones
+potenciales. (1) Si acaba de crear el nuevo nivel de acceso, puede tener que
+cerrar la sesión del área administrativa y volver a abrirla para que los
+cambios sean completamente visibles. (2) La otra razón puede ser que el
+usuario (Super Usuario, por ejemplo) no pertenezca al nivel de acceso. La
+corrección es sencilla, asegúrese de que el usuario esté en uno de los grupos
+asociados con el nuevo nivel de acceso.</p>
 </div>
 </div>
-<div class="section" id="display-filename-or-url">
-<h1><a class="toc-backref" href="#id8">Display Filename or URL</a></h1>
-<p>Normally, when files are uploaded (or URLs are installed) and listed in a list
-of attachments, the full filename (or URL) is shown as a link to download the
-attachment.  In some cases, the filename (or URL) may be too long for this to
-work nicely.  In the upload form, there is another field called &quot;Display
-Filename or URL&quot; in which the person uploading the file can insert an
-alternative filename (or URL) or label to display instead of the full filename
-(or URL).  For instance, some abbreviation of the filename could be added in
-this field.  The field may be edited in the administrative back end when
-attachments are edited.  Note: There is an option called &quot;Maximum Filename or
-URL Length&quot; in the 'Attachments' extension options.  It can be set to automatically
-truncate uploaded displayed filenames; the resulting truncated filename will
-be inserted into the &quot;Display Filename or URL&quot; field.</p>
+<div class="section" id="nombre-o-url-mostrado">
+<h1><a class="toc-backref" href="#id8">Nombre o URL mostrado</a></h1>
+<p>Normalmente, cuando se cargan archivos (o se definen URLs) y se ven en la lista
+de adjuntos, se muestra el nombre de archivo (o la URL) completo como vínculo
+para descargar el adjunto. En algunos casos los nombres de archivo (o URLs)
+pueden resultar excesivamente largos para que ésto funcione con un aspecto
+adecuado. En el formulario de carga hay otro campo llamado &quot;Nombre o URL
+mostrado&quot; en el que quien cargue el archivo puede añadir un nombre (o URL) o
+etiqueta alternativos que se visualizarán en vez del nombre de archivo (o URL)
+completo. Por ejemplo en este campo se puede añadir una versión abreviada del
+nombre del archivo. El campo se puede modificar en el entorno administrativo al
+modificar los adjuntos. Observación: Existe en los parámetros de la extensión
+una opción llamada &quot;Longitud máxima de nombre de archivo o URL&quot;. Se puede
+definir para que los nombres visualizados de los adjuntos cargados se recorten
+de forma automática; el nombre recortado resultante se incluirá en el campo
+&quot;Nombre o URL mostrado&quot;.</p>
 </div>
-<div class="section" id="attaching-urls">
-<h1><a class="toc-backref" href="#id9">Attaching URLs</a></h1>
-<p>Besides files, 'Attachments' version 3.0 has is the ability to &quot;attach&quot; URLs
-to content items.  When you bring up one of the &quot;Add attachment&quot; dialog boxes,
-you will see a button labeled as &quot;Enter URL instead&quot;.  If you click on it you
-will get an entry field for the URL and see two options:</p>
+<div class="section" id="adjuntado-de-urls">
+<h1><a class="toc-backref" href="#id9">Adjuntado de URLs</a></h1>
+<p>Además de archivos la versión 3.0 de Archivos adjuntos tiene la capacidad
+de &quot;adjuntar&quot; URLs a los elementos de contenido. Cuando se despliega uno de los
+cuadros de diálogo &quot;Añadir adjunto&quot; verá un botón etiquetado &quot;Introduzca en su
+lugar una URL&quot;. Si lo pulsa obtendrá un campo de introducción para la URL y verá
+dos opciones:</p>
 <ul>
 <li><dl class="first docutils">
-<dt><strong>Verify URL existence?</strong> - In order to determine the file type of the</dt>
-<dd><p class="first last">URL (to pick a suitable icon), the code queries the server for basic
-information about the file including the file type and size.  In some
-cases, the server will not respond to these requests even though the
-URL is valid.  By default, Attachment will not accept URLs that have
-not been validated by the server.  But if you know the URL is valid,
-you can uncheck this option and force the 'Attachments' extension to
-take the URL--but there are no guarantees the file type or file size
-will be correct.  Note that the server will be queried whether or not
-this option is selected.</p>
+<dt><strong>¿Comprobar existencia de la URL?</strong> - Para determinar el tipo de archivo de</dt>
+<dd><p class="first last">la URL (para seleccionar un icono adecuado), el código consulta al servidor
+información básica sobre el archivo incluyendo el tipo y el tamaño. En
+algunos casos el servidor no responderá a estas peticiones incluso aunque la
+URL sea válida. Por omisión Archivos adjuntos no aceptará URLs que no se
+hayan comprobado en el servidor. Pero si sabe que la URL es válida, puede
+desactivar esta opción y obligar a que 'Archivos adjuntos' utilice la URL
+--pero no se garantiza que el tipo de archivo o el tamaño sean los
+correctos--. Observe que se consultará al servidor se seleccione esta opción
+o no.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><strong>Relative URL?</strong> - Normally you will enter URLs prefixed with 'http...' to</dt>
-<dd><p class="first last">indicate an full website URL.  If you wish to point to files/commands
-relative to your Joomla installation, use the 'relative' option.</p>
+<dt><strong>¿URL relativa?</strong> - Habitualmente se introducirán las URLs con el prefijo</dt>
+<dd><p class="first last">'http...' para indicar una URL completa de sitio web. Si quisiera apuntar a
+archivos o comandos relativos a su propia instalación de Joomla!, utilice la
+opción '¿URL relativa?</p>
 </dd>
 </dl>
 </li>
 </ul>
-<p>The URLs are shown with the file-type icon and overlaid with an arrow
-(indicating that it is a good link) or an red diagonal slash (indicating that
-it could not be validated).  When you edit a URL, you can change whether the
-link is valid or not to get the overlay you wish.  Also note that URL overlays
-can be disabled entirely using the main <strong>Superimpose URL link icons</strong>
-parameter.  There are several useful commands relating to URLs (and files) in
-the &quot;Utilities&quot; command in the back end.</p>
+<p>Las URLs se muestran con el icono del tipo de archivo y con una flecha
+superpuesta (indicando que se trata de un vínculo correcto) o una línea roja en
+diagonal (indicando que no se ha podido comprobar). Cuando modifica una URL
+puede cambiar si el vínculo es válido o no para obtener el icono superpuesto que
+desee. Observe también que los iconos superpuestos se pueden desactivar
+completamente mediante el parámetro general <strong>Superponer iconos de URL
+vinculada</strong>. Hay varios comandos de utilidad relacionados con las URLs (y los
+archivos) en la opción &quot;Utilidades&quot; en el área administrativa.</p>
 </div>
-<div class="section" id="what-can-files-be-attached-to">
-<h1><a class="toc-backref" href="#id10">What Can Files Be Attached To?</a></h1>
-<p>Besides attaching files or URLs to articles, it is possible to
-attach files or URLs to other types of content items such as
-Categories (see below).  If appropriate 'Attachments' plugins are
-installed, it may be possible to attach files or URLs to a wide variety
-of content items such as user profiles, shopping cart product
-descriptions, etc.  Basically any content item that is displayed on the
-front end and uses the content event <tt class="docutils literal">'onPrepareContent'</tt> can host
-attachments (if a suitable 'Attachments' plugin is installed).  Content
-items that invoke content events are typically items that have content
-to be displayed (such as articles) or have descriptions that will be
-displayed.</p>
-<div class="section" id="attaching-files-or-urls-to-category-descriptions">
-<h2>Attaching Files or URLs to Category Descriptions</h2>
-<p>With this version of attachments, users can attach files to Category
-descriptions.  These descriptions are generally only visible on Category Blog
-pages.  Attachments may be added to Category descriptions in the Category
-editor.</p>
+<div class="section" id="a-que-se-pueden-adjuntar-los-archivos">
+<h1><a class="toc-backref" href="#id10">¿A qué se pueden adjuntar los archivos?</a></h1>
+<p>Además de adjuntar archivos o URLs a los artículos, se puede adjuntar
+archivos o URLs a otros tipos de elementos de contenido tales como las
+Categorías (consulte a continuación). Si se instalan complementos adecuados de
+'Archivos adjuntos', se pueden adjuntar archivos o URLs a una amplia variedad de
+elementos de contenido tales como perfiles de usuario, descripciones de
+productos de fichas de venta, etc. Básicamente cualquier elemento de contenido
+que se muestre en el área pública y utilice el evento de contenido
+<tt class="docutils literal">'onPrepareContent'</tt> permite alojar adjuntos (si se ha instalado un
+complemento de 'Archivos adjuntos' adecuado). Los elementos de contenido que
+invoquen los eventos de contenido son habitualmente elementos que tienen
+contenido o descripciones visualizables (como los artículos).</p>
+<div class="section" id="adjuntado-de-archivos-o-urls-a-descripciones-de-categorias">
+<h2>Adjuntado de archivos o URLs a descripciones de Categorías</h2>
+<p>Con esta versión de Archivos adjuntos los usuarios puede adjuntar archivos a las
+descripciones de Categorías. Estas descripciones generalmente sólo
+son visibles en las páginas en formato blog de las Categorías. Se pueden
+adjuntar archivos a las descripciones de Categorías en el editor de Categorías.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Attachments for categories will only show the category basic
-parameter 'description' is set to <em>Show</em> (via the Menu Editor) AND the
-category description is not empty.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Los adjuntos de categorías sólo se mostrarán si en Las Opciones de
+la categoría se ha definido como <em>Mostrar</em> el parámetro básico 'Descripción
+de la categoría' (Mediante el editor de menús) Y la descripción de la
+categoría no está en blanco.</p>
 </div>
-<p>If you wish to learn more about how to develop a new Attachment plugin, there
-is a manual that is available as part of this 'Attachments' installation:</p>
+<p>Si quisiera saber más sobre cómo desarrollar un nuevo complemento de 'Archivos
+adjuntos' dispone de un manual en esta instalación de 'Archivos adjuntos':</p>
 <ul class="simple">
-<li><a class="reference external" href="plugin_manual/html/index.html">Attachments Plugin Creation Manual</a></li>
+<li><a class="reference external" href="plugin_manual/html/index.html">Manual de creación de complementos de Archivos adjuntos</a></li>
 </ul>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The Attachment Plugin Creation Manual has not been updated for Attachments
-3.0 yet.  There have been some architectural changes that means that
-Attachments plugins in Joomla 1.6/1.7+ will have some significant
-differences from those for Joomla 1.5.</p>
+<p class="first admonition-title">Advertencia</p>
+<p class="last">El Manuel ade creación de complementos de Archivos adjuntos no se ha
+actualizado todavía para la versión 3.0. Se han producido algunos cambios
+estructurales lo que significa que los complementos de Archivos adjuntos para
+Joomla! 1.6/1.7+ tendrán algunas diferencias significativas con los de la
+versión 1.5 de Joomla!</p>
 </div>
 </div>
 </div>
-<div class="section" id="css-styling-of-attachment-lists">
-<h1><a class="toc-backref" href="#id11">CSS Styling of Attachment Lists</a></h1>
-<p>The lists of attachments on the front end are done using a special
-'div' that contains a table for the attachments. The table has
-several different CSS classes associated with it to allow the website
-developer the flexibility to customize the appearance of the table. Look in
-the attachments plugin file CSS file (in plugins/content/attachments.css) for
-examples. If you wish to change the style, consider copying the original
-styles into the end of the same file and renaming 'attachmentsList' in the
-copied section to something of your choice.  Edit the 'Attachments' parameter
-(in the  component manager) and change the parameter <em>attachments table style</em>
-to the new class name. Then modify the class definitions in your copied section
-appropriately. This approach will allow you to quickly revert to the original
-style by changing the plugin parameter <em>attachments table style</em> back to
-its default, 'attachmentsList'. This also has the advantage that the
-section of modified styles can be copied to a file and easily brought back in
-when the version of 'Attachments' is upgraded. This could also be done via a
-CSS &#64;import command.</p>
+<div class="section" id="estilo-css-de-la-lista-de-adjuntos">
+<h1><a class="toc-backref" href="#id11">Estilo CSS de la lista de adjuntos</a></h1>
+<p>La lista de adjuntos del área pública se construye mediante un 'div' especial
+que contiene una tabla con los adjuntos. La tabla tiene asociadas varias clases
+CSS que permiten al desarrollador del sitio web la flexibilidad de
+personalización del aspecto de la tabla. Consulte los ejemplos en el archivo CSS
+del complemento de Archivos adjuntos (en plugins/content/attachments.css). Si
+quisiera cambiar el estilo copie los estilos originales al final del archivo y
+renombre 'attachmentsList' en la parte copiada a algo diferente de su elección.
+Modifique los parámetros de 'Archivos adjuntos' (en el Gestor del componente) y
+cambie el parámetro <em>Estilo CSS de la lista de adjuntos</em> al nuevo nombre de
+clase. Luego modifique a su gusto las definiciones de clases de la zona copiada.
+Este método le permitirá volver rápidamente al estilo original devolviendo al
+parámetro del complemento <em>Estilo CSS de la lista de adjuntos</em> el valor por
+omisión 'attachmentsList'. Ésto también tiene la ventaja de que la sección de
+estilos modificados se puede copiar a un archivo y se puede restaur fácilmente
+cuando se actualiza una nueva versión de 'Archivos adjuntos'. Ésto también se
+podría hacer mediante un comando CSS &#64;import.</p>
 </div>
-<div class="section" id="file-type-icons">
-<h1><a class="toc-backref" href="#id12">File Type Icons</a></h1>
-<p>The 'Attachments' extension adds an icon in front of each attachment in the
-list of attachments. If you wish to add a new icon type, follow these steps:</p>
+<div class="section" id="iconos-de-tipos-de-archivos">
+<h1><a class="toc-backref" href="#id12">Iconos de tipos de archivos</a></h1>
+<p>La extensión 'Archivos adjuntos' añade un icono delante del cada adjunto en la
+lista de adjuntos. Si quisiera añadir un tipo de icono nuevo, siga estos pasos:</p>
 <ol class="arabic simple">
-<li>Add an appropriate icon in the directory 'media/attachments/icons', if an
-appropriate icon is not already there;</li>
-<li>Edit the file 'components/com_attachments/file_types.php' and add an
-appropriate line to the static array $attachments_icon_from_file_extension
-which maps a file extension to an icon name (all in the
-media/attachments/icons directory). If this does not work, you may need to
-add an appropriate line to the array $attachments_icon_from_mime_type.</li>
-<li>Don't forget to make copies of the icon file and the updated file_types.php
-to some directory outside of the website directories before upgrading the
-version of 'Attachments' in the future.</li>
+<li>Añada un icono adecuado en el directorio 'media/attachments/icons', si
+todavía no lo hay;</li>
+<li>Modifique el archivo 'components/com_attachments/file_types.php' y añada una
+línea adecuada a la matriz estática $attachments_icon_from_file_extension que
+vincula cada extensión de archivo con un nombre de icono (en el interior del
+directorio media/attachments/icons). Si ésto no funciona, tendrá que añadir
+una línea adecuada a la matriz $attachments_icon_from_mime_type.</li>
+<li>No olvide guardar copias del archivo de icono y del archivo file_types.php
+actualizado en algún lugar fuera de los directorios del sitio web antes de
+actualizar la versión de 'Archivos adjuntos' en el futuro.</li>
 </ol>
 </div>
-<div class="section" id="administrative-utility-commands">
-<h1><a class="toc-backref" href="#id13">Administrative Utility Commands</a></h1>
-<p>There are several utility commands in the back end that are available for
-Administrators.   These include:</p>
+<div class="section" id="comandos-de-utilidad-administrativa">
+<h1><a class="toc-backref" href="#id13">Comandos de utilidad administrativa</a></h1>
+<p>En el área administrativa se dispone de varios comandos de utilidad para
+Administradores. Son los siguientes:</p>
 <ul>
-<li><p class="first"><strong>Disable uninstallation of MySQL Attachments Table:</strong> Normally, when the
-Attachments extension is uninstalled, the database table is deleted that
-contains information about the attachments.   If you wish to retain this
-data when uninstalling Attachments, execute this command.  After you
-uninstall Attachments the attachments table will remain.</p>
+<li><p class="first"><strong>Desactivar desinstalación de la tabla MySQL de Archivos adjuntos:</strong>
+Normalmente, cuando se desinstala la extensión Archivos adjuntos, se elimina
+también la tabla que contiene información sobre los adjuntos. Si quisiera
+mantener estos datos al desinstalar Archivos adjuntos, ejecute este comando.
+Tras desinstalar la extensión la tabla se adjuntos se mantendrá.</p>
 </li>
-<li><p class="first"><strong>Reinstall Default Asset Rules or Attachments Permissions:</strong> When the
-Attachments extension is installed, the installer adds several default asset
-rules so that the custom permissions added in the Attachments extension
-behave logically and similarly to the standard permissions.  If you
-reinstall or update Joomla, these asset rules may be lost.  You can restore
-them by executing this command.</p>
+<li><p class="first"><strong>Reinstalar Reglas por omisión o permisos de adjuntos:</strong> Cuando se instala la
+extensión Archivos adjuntos, el instalador añade varias reglas de permisos de
+adjuntos por omisión para que los permisos personalizados añadidos a la
+extensión funcionen de forma similar a los permisos habituales. Si reinstala o
+actualiza Joomla! se perderán estas reglas de permisos por omisión. Ejecutando
+este comando podrá regenerarlas.</p>
 </li>
-<li><p class="first"><strong>Regenerate attachment system filenames:</strong> This command is very useful when
-you move (migrate) your attachments from one computer to another.  The full
-path each file attachment is kept in the database and called the &quot;system
-filename&quot;.  If you move attachments from one system to another, it is very
-likely this path information will be incorrect.  You may execute this
-command to regenerate all of the system filenames for all file attachments.</p>
-<p>The Utility command to &quot;Regenerate system filenames&quot; works for migration
-from windows to Linux servers.  It also works for migration from Linux to
-Windows servers with a couple of potential problems:</p>
+<li><p class="first"><strong>Regenerar nombres de archivos adjuntos:</strong> Este comando es muy útil si
+traslada (migra) sus adjuntos de un ordenador a otro. La vía de acceso
+completa de cada adjunto se conserva en la base de datos y se denomina &quot;system
+filename&quot;. Si traslada los adjuntos de un sistema a otro, lo más probable es
+que esta información de ruta sea incorrecta. Puede ejecutar este comando para
+regenerar todos los nombres de archivo del sistema de todos los adjuntos.</p>
+<p>El comando de utilidad para &quot;Regenerar nombres de archivos adjuntos&quot; funciona
+en la migración de servidores Windows a Linux. También funciona en la
+migración de servidores Linux a Windows con la salvedad de algunos problemas
+potenciales:</p>
 <blockquote>
 <ul class="simple">
-<li>When you copy your files to your Windows server, you need to verify
-that the attachments directory (usually 'attachments') and all files
-within it are writable by the Joomla web server.</li>
-<li>You may have problems porting files that have Unicode characters in
-their filenames because the archiving/unarchiving software has problems
-with the Unicode filenames (on the Windows side).  You may need to save
-those files, delete the corresponding attachments, and then re-attach
-them.</li>
+<li>Cuando copie los archivos a su servidor Windows, tendrá que comprobar que
+el directorio de adjuntos (habitualmente 'attachments') y todos los
+archivos que contenga sean escribibles por le servidor web de Joomla!</li>
+<li>Puede encontrar problemas al trasladar archivos que contengan caracteres
+Unicode en el nombre de archivo ya que el software de archivado /
+desarchivado tiene problemas con los nombres de archivo Unicode (en el
+lado Windows). Puede que tenga que guardar individualmente esos archivos,
+eliminar los adjuntos correspondientes y volver a adjuntarlos.</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Remove spaces from filenames:</strong> You may execute this command to replace
-all spaces with underscores in the filename for all file attachments.  This
-may be necessary on some systems.  In 'Secure' mode, this should not be
-necessary.</p>
+<li><p class="first"><strong>Eliminar espacios de los nombres de archivos:</strong> Puede ejecutar este comando
+para sustituir todos los espacios del nombre de archivo por caracteres de
+subrayado en todos los archivos adjuntos. Ésto puede que sea necesario en
+algunos sistemas. Si trabaja en modo 'Seguro' ésto no debería hacer falta.</p>
 </li>
-<li><p class="first"><strong>Update attachment file sizes:</strong> This command will recompute the file
-sizes for all file attachments.</p>
+<li><p class="first"><strong>Actualizar tamaños de archivo:</strong> Este comando volverá a calcular los tamaños
+de archivo de los archivos adjuntos.</p>
 </li>
-<li><p class="first"><strong>Check existence of attachment files:</strong> This command may be used to verify
-that the file exists for all file attachments.  Missing files will be
-listed.</p>
+<li><p class="first"><strong>Comprobar la existencia de los archivos adjuntos:</strong> Este comando se puede
+usar para comprobar en todos los adjuntos que cada archivo exista. Se
+enumerarán los archivos no encontrados.</p>
 </li>
-<li><p class="first"><strong>Validate URLs:</strong> The URL attachments retain information about the validity
-of the URL given.  This command will check each URL attachment and check the
-validity of the URL and update the validity information for the attachment.</p>
+<li><p class="first"><strong>Validar URLs:</strong> Los adjuntos de URL conservan información sobre la validez
+de la URL indicada. Este comando comprobará cada adjunto de URL y su validez
+y actualizará la información de validez del adjunto.</p>
 </li>
 </ul>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">In the back end, sometimes when you execute one of the Utility commands, you
-may get a warning that the browser needs to resend the request.  This is
-harmless, so click [Ok] and the command will execute.</p>
+<p class="first admonition-title">Nota</p>
+<p class="last">A veces, al ejecutar uno de los comandos de utilidad En el área
+administrativa, obtendrá una advertencia sobre que el navegador tenga que
+reenviar la petición. Ésto es seguro así que pulse [Aceptar] y el comando se
+ejecutará.</p>
 </div>
 </div>
-<div class="section" id="warnings">
-<h1><a class="toc-backref" href="#id14">Warnings</a></h1>
+<div class="section" id="advertencias">
+<h1><a class="toc-backref" href="#id14">Advertencias</a></h1>
 <ul>
-<li><p class="first"><strong>If you have attachment files that are sensitive or private, use the
-*Secure attachment downloads* option!</strong> If you do not use the secure option,
-the attachment files are saved in a public sub-directory and are accessible
-to anyone that knows the full URL.  The <em>secure</em> option prevents access by
-anyone that does not have appropriate permissions (as determined by the
-options above).  See the discussion of the <em>Secure attachment downloads</em>
-option above for more detail.</p>
+<li><p class="first"><strong>Si tiene adjuntos sensibles o privados, ¡utilice la opción *Descarga segura
+de adjuntos*!</strong> Si no la utiliza, los adjuntos se almacenan en un
+subdirectorio público y son accesibles para cualquiera que conozca su URL
+completa. La opción <em>segura</em> impide el acceso a cualquiera que no disponga de
+los permisos adecuados (determinados por las opciones anteriores). Consulte
+las consideraciones sobre la opción <em>Descarga segura de adjuntos</em> para más
+detalles.</p>
 </li>
-<li><p class="first">Every time a file is uploaded, the existence of the upload sub-directory is
-checked and it will be created if if it does not exist.  By default the
-sub-directory for uploaded files is 'attachments' in the root directory of
-your web site files.  The name of the sub-directory can be changed using the
-'Sub-directory for uploads' option. If the 'Attachments' extension is unable
-to create the sub-directory for uploads, you must create it yourself (and you
-may have problems uploading files).  Make sure to give the sub-directory
-suitable permissions for uploading files.  In the Unix/Linux world, that is
-probably something like 775.  Note the process of creating the upload
-sub-directory may fail if the top level directory of your website has
-permissions that prevent the web server (and PHP) from creating
-sub-directories.  You may need to loosen the permissions temporarily to allow
-the sub-directory to be created by uploading attachments.</p>
+<li><p class="first">Cada vez que se carga un archivo se comprueba la existencia del subdirectorio
+de cargas y se crea si no existiera. Por omisión el subdirectorio de archivos
+cargados es 'attachments' en el directorio raíz de los archivos del sitio web.
+El nombre del subdirectorio se puede cambiar mediante la opción 'Subdirectorio
+de carga de archivos'. Si la extensión de adjuntos es incapaz de crear el
+subdirectorio de cargas, tendrá que crearlo de forma manual (y puede que
+encuentre problemas para cargar archivos). Asegúrese de definir los permisos
+adecuados en el subdirectorio para cargar los archivos. En el mundo
+Unix/Linux, será probablemente algo como 775. Observe que el proceso de crear
+el subdirectorio puede fallar si la raíz de los archivos de su sitio web tiene
+permisos que impidan que el servidor web (y PHP) creen directorios. Tendrá que
+flexibilizar los permisos de forma temporal para permitir la creación del
+subdirectorio al cargar adjuntos.</p>
 </li>
-<li><p class="first">If this extension does not permit you to upload specific types of files
-(such as zip files), be aware that the extension respects the restrictions
-placed by the Media Manager on types of files permitted to be uploaded. This
-is to prevent uploading of potentially harmful types of files such as html
-or php files. The administrator can update the Media Manager settings to add
-specific file types by going to the &quot;Global Settings&quot; item under the &quot;Site&quot;
-menu, selecting the &quot;System&quot; tab, and added the appropriate file extension
-in lower and upper case and Mime type to the lists under the &quot;Media Manager&quot;
-section.</p>
+<li><p class="first">Si esta extensión no le permite cargar tipos específicos de archivos (como
+archivos zip), tenga en cuenta que la extensión respeta las restricciones
+incluidas en el Gestor de medios con respecto a los archivos que se pueden
+cargar. Ésto es así para evitar la carga de tipos de archivos potencialmente
+nocivos como los archivos html o php. El administrador puede actualizar los
+ajustes del Gestor de medios para añadir tipos de archivos específicos
+acudiendo a las &quot;Opciones globales&quot; en el menú &quot;Sitio&quot;, seleccionando la
+pestaña &quot;Sistema&quot; y añadiendo las extensiones de archivo y tipos mime
+adecuados a las listas de la sección &quot;Gestor de medios&quot;.</p>
 </li>
-<li><p class="first">If you cannot see the attachments in the front end, there are several
-possible reasons:</p>
+<li><p class="first">Si no puede ver los adjuntos en el área pública, puede ser por diversas razones:</p>
 <blockquote>
 <ul class="simple">
-<li>The attachment is not published.  You can change this in Attachments
-manager page in the back end.</li>
-<li>The parent article or content item is not published.</li>
-<li>The option 'Who can see attachments' is set to 'logged-in' and you are
-not logged in on the front end.</li>
-<li>Or the option 'Who can see attachments' is set to 'no one'. This can be
-changed via the Parameter editor in the component manager.</li>
-<li>The 'Content - Attachments' plugin is not enabled.  Use the plugin manager
-to enable it.</li>
-<li>In the 'Content - Attachments' (via the plugin manager), the access
-level is not set to 'Public'.</li>
-<li>If your site uses caching, try clearing the caches and refreshing the
-page.</li>
+<li>El adjunto no está publicado. Puede cambiar su estado en la página de
+Gestión de Archivos adjuntos en el área administrativa.</li>
+<li>El artículo o elemento de contenido padre no está publicado.</li>
+<li>La opción 'Nivel de acceso por omisión' se ha definido como 'Registrado'
+y no está conectado al área pública.</li>
+<li>La opción 'Nivel de acceso por omisión' se ha definido como 'Especial'.
+Ésto se puede modificar con el editor de parámetros en el gestor del
+componente.</li>
+<li>No se ha activado el complemento 'Contenido - Adjuntos'. Utilice el
+Gestor de complementos para activarlo.</li>
+<li>En el complemento 'Contenido - Adjuntos' (en el Gestor de complementos),
+el nivel de acceso no es 'Público'.</li>
+<li>Si su sitio web usa caché, pruebe a eliminar las cachés y refrescar la
+página.</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">If you encounter limits on the sizes of files that you attempt to upload,
-try adding the following lines to the .htaccess file in the root of
-your Joomla! website:</p>
+<li><p class="first">Si se encuentra con limitaciones del tamaño de los archivos que intenta
+cargar, pruebe a incluir las líneas siguientes en el archivo .htaccess de la
+raíz de su instalación de Joomla!:</p>
 <pre class="literal-block">
 php_value upload_max_filesize 32M
 php_value post_max_size 32M
 </pre>
-<p>where you may change the 32M (megabytes) value to whatever you wish as the maximum
-upload file size.</p>
+<p>Donde puede cambiar el valor 32M (megabytes) por el que desee como tamaño
+máximo de archivo cargado.</p>
 </li>
-<li><p class="first">'Attachments' now supports &quot;attaching&quot; URLs to content items.  If your server
-is Windows Vista and you encounter problems attaching URLs that involve
-<tt class="docutils literal">localhost</tt>, this is a known problem related to IPv4 and IPv6 conflicts.
-To fix it, edit the file:</p>
+<li><p class="first">'Archivos adjuntos' ahora soporta el 'adjuntado' de URLs a elementos de
+contenido. Si su servidor es Windows Vista y encuentra problemas adjuntando
+URLs que incluyan <tt class="docutils literal">localhost</tt>, se trata de un problema conocido relacionado
+con conflictos entre IPv4 y IPv6. Para corregirlo modifique el archivo:</p>
 <pre class="literal-block">
 C:\Windows\System32\drivers\etc\hosts
 </pre>
-<p>Comment out the line that has <tt class="docutils literal">::1</tt> on it.  Note that <tt class="docutils literal">hosts</tt> is a
-hidden system file and you may need to modify your folder options to show
-hidden files to see and edit it.</p>
+<p>Comente la línea que tiene un <tt class="docutils literal">::1</tt>. Observe que <tt class="docutils literal">hosts</tt> es un archivo del
+oculto del sistema y quizás tenga que modificar sus opciones de carpetas
+para mostrar archivos ocultos y poder verlo y modificarlo.</p>
 </li>
-<li><p class="first">If you have difficulties attaching files that have Unicode characters (such
-as Russian/Cyrillic characters), set the <em>Secure Attachments Downloads</em>
-option to 'Yes'.  Filenames with Unicode characters should work properly on
-Linux servers in secure or non-secure modes, but do not always work
-correctly on Windows servers in non-secure mode.</p>
+<li><p class="first">Si encuentra dificultades para adjuntar archivos con caracteres Unicode (tales
+como los caracteres Rusos/Cirílicos), defina la opción <em>Descarga segura de
+adjuntos</em> como 'Sí'. Los nombres de archivos con caracteres Unicode deberían
+funcionar correctamente en servidores Linux tanto en modo seguro como en modo
+no seguro, pero no siempre funcionan adecuadamente en servidores Windows si se
+usa el modo no seguro.</p>
 </li>
-<li><p class="first">'Attachments' now supports attaching files to articles while they are being
-created in the Article editor.  There is one limitation to this.  New
-attachments are in a state of &quot;limbo&quot; after the file is uploaded and before
-the article is actually saved for the first time.  During this (hopefully
-brief) limbo period, the new attachments are identified by user id only.  So
-if more than one person is using the same user account and they create
-articles at the same time and add attachments at the same time, there is no
-guarantee that the attached files will end up with the correct article.</p>
+<li><p class="first">'Archivos adjuntos' ahora soporta el adjuntado de archivos a artículos
+mientras éstos se crean en el editor de artículos. Sólo hay una limitación al
+respecto. Los nuevos adjuntos están en un estado de &quot;limbo&quot; tras cargar el
+archivo y antes de que el artículo se haya guardado por primera vez. Durante
+este (deseablemente breve) periodo en el limbo, los adjuntos nuevos se
+identifican sólo por el id de usuario. Por ello si más de una persona usa la
+misma cuenta de usuario y crea artículos y añade adjuntos al mismo tiempo, no
+se puede garantizar que los archivos adjuntados acaben en el artículo
+correcto.</p>
 </li>
-<li><p class="first">There is a 'Help' forum and a 'Frequently Asked Questions' forum for the
-'Attachments' 3 extension that is hosted on the joomlacode.org website.  If
-you encounter a problem that is not covered in this help page, please
-consult the forums.  (Please post questions on the 'Help' form.  I will post
-commonly asked questions on the 'Frequently Asked Questions'):</p>
+<li><p class="first">La extensión 'Archivos adjuntos' dispone de unos foros de 'Ayuda' y de
+'Preguntas frecuentes' alojados en el sitio web joomlacode.org Si se encuentra
+con problemas no descritos en esta página de ayuda, consulte los foros. (Envíe
+las consultas mediante el formulario 'Ayuda'. Añadiré las preguntas frecuentes
+a la sección de 'Preguntas frecuentes'):</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments3/forum/">Attachments Forums at
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments3/forum/">Foros de Archivos adjuntos en
 http://joomlacode.org/gf/project/attachments3/forum/</a></li>
 </ul>
 </blockquote>
 </li>
 </ul>
 </div>
-<div class="section" id="upgrading">
-<h1><a class="toc-backref" href="#id15">Upgrading</a></h1>
-<p>Upgrading is very easy.  You have two choices:</p>
+<div class="section" id="actualizacion">
+<h1><a class="toc-backref" href="#id15">Actualización</a></h1>
+<p>La actualización es muy simple. Puede hacerlo de dos formas:</p>
 <ol class="arabic simple">
-<li>Simply install the new version of 'Attachments'. There is no need to
-uninstall the previous version.  You do not need to do anything to retain
-your old attachments.  Simply install the new version and it will update
-everything appropriately.</li>
-<li>PREFRERRED: One of the excellent new features in Joomla 1.6 and later is
-the extension updater.  Go to the Extension Manager in the back end and
-click on the 'Update' tab.  Click 'Purge Cache' and then 'Find Updates' on
-the toolbar.  If there is a new release of Attachments, it will be shown.
-You can select the release and then click on the 'Update' button on the
-toolbar to install the new release.  This makes keeping the Attachments
-extension updated very simple!</li>
+<li>Instale simplemente la nueva versión de 'Archivos adjuntos'. No hace falta
+desinstalar la versión anterior. No tiene que hacer nada para conservar los
+adjuntos antiguos. Simplemente instale la nueva versión y todo se actualizará
+apropiadamente.</li>
+<li>PREFERIDA: Una de las nuevas excelentes características de Joomal 1.6 y
+posteriores es el actualizador de extensiones. Vaya al Gestor de Extensiones
+en el área administrativa y pulse la pestaña 'Actualizar'. Pulse el botón
+'Purgar la caché' de la barra de herramientas y luego 'Buscar
+actualizaciones'. Si existe una nueva versión Archivos adjuntos, se mostrará.
+Podrá seleccionar la versión y pulsar el botón 'Actualizar' de la barra de
+herramientas para instalar la nueva versión. ¡Ésto permite mantener
+actualizada la extensión de forma muy simple!</li>
 </ol>
 </div>
-<div class="section" id="uninstalling">
-<h1><a class="toc-backref" href="#id16">Uninstalling</a></h1>
+<div class="section" id="desinstalacion">
+<h1><a class="toc-backref" href="#id16">Desinstalación</a></h1>
 <ul>
-<li><p class="first">To uninstall the Attachments extension, go to the 'Manage' tab on the
-Extension Manager page (under the 'Extensions' menu).  <strong>Select ONLY the item</strong>:</p>
+<li><p class="first">Para desinstalar la extensión Archivos adjuntos, vaya a la pestaña 'Gestionar'
+de la página del Gestor de extensiones (en el menú 'Extensiones').
+<strong>Seleccione SÓLO el elemento</strong>:</p>
 <pre class="literal-block">
 Package: Attachments for Joomla 1.6+
 </pre>
-<p>and click on the 'Uninstall' button on the toolbar.  This will install the
-attachments component and all the associated plugins.</p>
+<p>y pulse el botón 'Desinstalar' de la barra de herramientas. Ésto desinstalará
+el componente de Archivos adjuntos y todos los complementos asociados.</p>
 </li>
-<li><p class="first">If you wish to retain your attachments, make a copy of the 'attachments'
-directory at the top of the Joomla installation and copy the '_attachments'
-table in the database.  If you intend to reinstall soon, see the <strong>Disable
-uninstallation of MySQL Attachments Table</strong> command in the <a class="reference internal" href="#administrative-utility-commands">Administrative
-Utility Commands</a> to prevent the attachments database table from being
-deleted on uninstallation of the Attachments extension.</p>
+<li><p class="first">Si quisiera conservar sus adjuntos, haga una copia del directorio
+'attachments' en la raiz de la instalación de Joomla! y copie la tabla
+'_attachments' de la base de datos. Si pretende volver a realizar la
+instalación enseguida, consulte el comando <strong>Desactivar desinstalación de la
+tabla MySQL de Archivos adjuntos</strong> en la sección <a class="reference internal" href="#comandos-de-utilidad-administrativa">Comandos de utilidad
+administrativa</a> para evitar que se elimine la tabla de adjuntos de la base de
+datos al desinstalar la extensión.</p>
 </li>
-<li><p class="first">If you do not wish to keep existing attachments, delete them all first (in
-the administrative back end).  Once you have uninstalled the Attachments
-extension, delete the 'attachments' directory at the top of your Joomla
-installation.</p>
+<li><p class="first">Si no quisiera conservar los adjuntos existentes, elimínelos todos en primer
+lugar (en el área administrativa). Tras desinstalar la extensión Archivos
+adjuntos, elimine el directorio 'attachments' de la raiz de la instalación de
+Joomla!</p>
 </li>
 </ul>
 </div>
-<div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-6">
-<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></h1>
-<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.6 (or later)
-site, follow the procedure outlined here:</p>
+<div class="section" id="migracion-de-archivos-adjuntos-de-joomla-1-5-a-joomla-1-6">
+<h1><a class="toc-backref" href="#id17">Migración de Archivos adjuntos de Joomla 1.5 a Joomla 1.6+</a></h1>
+<p>Para migrar sus adjuntos de un sitio Joomla 1.5 a otro versión 1.6 (o
+posterior), siga el procedimiento indicado aquí:</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migración de Archivos adjuntos desde Joomla 1.5 a Joomla 1.6+</a></li>
 </ul>
 </blockquote>
 </div>
-<div class="section" id="translations">
-<h1><a class="toc-backref" href="#id18">Translations</a></h1>
-<p>This extension provides translation capabilities and supports the
-following languages (besides English).  Note that some of these languages
-packs are in the process of being updated for 'Attachments' version 3.0 and
-not available yet for Attachments 3.0.</p>
-<p>Thanks to these translators (available versions shown in parentheses):</p>
+<div class="section" id="traducciones">
+<h1><a class="toc-backref" href="#id18">Traducciones</a></h1>
+<p>Esta extensión permite el uso de múltiples idiomas y soporta los
+siguientes (además del inglés). Observe que alguno de estos paquetes de idiomas
+están todavía siendo actualizados a la versión 3.0 de 'Archivos adjuntos' y aún
+no se encuentran disponibles.</p>
+<p>Gracias a estos traductores (versiones disponibles mostradas entre paréntesis):</p>
 <ul class="simple">
-<li><strong>Bulgarian:</strong> by Stefan Ilivanov (1.3.4)</li>
-<li><strong>Catalan:</strong> by Jaume Jorba (2.2)</li>
-<li><strong>Chinese:</strong> Traditional and simplified Chinese translations by baijianpeng (白建鹏) (1.3.4)</li>
-<li><strong>Croatian:</strong> Tanja Dragisic (1.3.4)</li>
-<li><strong>Czech:</strong> by Tomas Udrzal (1.3.4)</li>
-<li><strong>Dutch:</strong> by Parvus (2.2)</li>
-<li><strong>Finnish:</strong> by Tapani Lehtonen (2.2)</li>
-<li><strong>French:</strong> by Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0), and Pascal Adalian (1.3.4)</li>
-<li><strong>German:</strong> by Pierre Corell (3.0), Bernhard Alois Gassner (2.2), and Michael Scherer (1.3.4)</li>
-<li><strong>Greek:</strong> by Harry Nakos (1.3.4)</li>
-<li><strong>Hungarian:</strong> Formal and informal translations by Szabolcs Gáspár (1.3.4)</li>
-<li><strong>Indonesian:</strong> by Moh. Arif (3.0)</li>
-<li><strong>Italian:</strong> by Piero Mattirolo (2.2) and Lemminkainen and Alessandro Bianchi (1.3.4)</li>
-<li><strong>Norwegian:</strong> by Roar Jystad (2.2) and Espen Gjelsvik (1.3.4)</li>
-<li><strong>Persian:</strong> by Hossein Moradgholi and Mahmood Amintoosi (2.2)</li>
-<li><strong>Polish:</strong> by Sebastian Konieczny (2.2) and Piotr Wójcik (1.3.4)</li>
-<li><strong>Portuguese (Brazilian):</strong> by Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
-<li><strong>Portuguese (Portugal):</strong> by José Paulo Tavares (2.2) and Bruno Moreira (1.3.4)</li>
-<li><strong>Romanian:</strong> by Alex Cojocaru (2.2)</li>
-<li><strong>Russian:</strong> by Sergey Litvintsev (2.2, 3.0) and евгений панчев (Yarik Sharoiko) (1.3.4)</li>
-<li><strong>Serbian:</strong> by Vlada Jerkovic (1.3.4)</li>
-<li><strong>Slovak:</strong> by Miroslav Bystriansky (1.3.4)</li>
-<li><strong>Slovenian:</strong> by Matej Badalič (2.2)</li>
-<li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2) and Carlos Alfaro (1.3.4)</li>
-<li><strong>Swedish:</strong> by Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
-<li><strong>Turkish:</strong> by Kaya Zeren (2.0)</li>
+<li><strong>Búlgaro:</strong> por Stefan Ilivanov (1.3.4)</li>
+<li><strong>Catalán:</strong> por Jaume Jorba (2.2)</li>
+<li><strong>Chino:</strong> Traducciones al Chino tradicional y simplificado de baijianpeng (白建鹏) (1.3.4)</li>
+<li><strong>Croata:</strong> por Tanja Dragisic (1.3.4)</li>
+<li><strong>Checo:</strong> por Tomas Udrzal (1.3.4)</li>
+<li><strong>Holandés:</strong> por Parvus (2.2)</li>
+<li><strong>Finés:</strong> por Tapani Lehtonen (2.2)</li>
+<li><strong>Francés:</strong> por Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0) y Pascal Adalian (1.3.4)</li>
+<li><strong>Alemán:</strong> por Pierre Corell (3.0), Bernhard Alois Gassner (2.2) y Michael Scherer (1.3.4)</li>
+<li><strong>Griego:</strong> por Harry Nakos (1.3.4)</li>
+<li><strong>Húngaro:</strong> Traducciones formal e informal de Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Indonesio:</strong> by Moh. Arif (3.0)</li>
+<li><strong>Italiano:</strong> por Piero Mattirolo (2.2, 3.0) y Lemminkainen and Alessandro Bianchi (1.3.4)</li>
+<li><strong>Noruego:</strong> por Roar Jystad (2.2, 3.0) y Espen Gjelsvik (1.3.4)</li>
+<li><strong>Persa:</strong> por Hossein Moradgholi y Mahmood Amintoosi (2.2)</li>
+<li><strong>Polaco:</strong> por Sebastian Konieczny (2.2) y Piotr Wójcik (1.3.4)</li>
+<li><strong>Portugués (Brasileño):</strong> por Arnaldo Giacomitti y Cauan Cabral (1.3.4)</li>
+<li><strong>Portugués (Portugal):</strong> por José Paulo Tavares (2.2) y Bruno Moreira (1.3.4)</li>
+<li><strong>Rumano:</strong> por Alex Cojocaru (2.2)</li>
+<li><strong>Ruso:</strong> por Sergey Litvintsev (2.2, 3.0) y евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Serbio:</strong> por Vlada Jerkovic (1.3.4)</li>
+<li><strong>Eslovaco:</strong> por Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Esloveno:</strong> por Matej Badalič (2.2)</li>
+<li><strong>Español:</strong> por Manuel María Pérez Ayala (2.2, 3.0) y Carlos Alfaro (1.3.4)</li>
+<li><strong>Sueco:</strong> por Linda Maltanski (2.0) y Mats Elfström (1.3.4)</li>
+<li><strong>Turco:</strong> por Kaya Zeren (2.0)</li>
 </ul>
-<p>Many thanks to these translators!  If you would like to help translate
-the extension to any other language, please contact the author (see the
-<a class="reference internal" href="#contact">Contact</a> section at the end).</p>
+<p>¡Muchísimas gracias a los traductores! Si quiere ayudar a traducir la extensión
+a otro idioma, póngase en contacto con el autor (vea la sección <a class="reference internal" href="#contacto">Contacto</a> al
+final).</p>
 </div>
-<div class="section" id="acknowledgments">
-<h1><a class="toc-backref" href="#id19">Acknowledgments</a></h1>
-<p>Many thanks for the following contributors or resources:</p>
+<div class="section" id="agradecimientos">
+<h1><a class="toc-backref" href="#id19">Agradecimientos</a></h1>
+<p>Muchas gracias a los siguientes contribuyentes o recursos:</p>
 <ul>
-<li><p class="first">The book <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
-Components, and Plugins with PHP</em> by Joseph L. LeBlanc was very helpful
-in creating the 'Attachments' extension.</p>
+<li><p class="first">El libro <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
+Components, and Plugins with PHP</em> de Joseph L. LeBlanc fue de gran utilidad
+para crear la extensión 'Archivos adjuntos'.</p>
 </li>
 <li><dl class="first docutils">
-<dt>The icons for the file types were derived from several sources, including:</dt>
+<dt>Los iconos de los tipos de archivos se obtuvieron de distintas fuentes, entre otras:</dt>
 <dd><ul class="first last simple">
-<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons by Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
-<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 by John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
-<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 by Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
-<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons by Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
-<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack by Joseph North (http://sweetie.sublink.ca)</a></li>
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">Los iconos Silk de Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 de John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 de Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">Iconos OpenDocument de Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack de Joseph North (http://sweetie.sublink.ca)</a></li>
 </ul>
 </dd>
 </dl>
-<p>Note that many of the 'Attachments' icons were modified from the original
-icon images from these websites.  If you would like the original versions,
-please download them from the websites listed above.</p>
+<p>Observe que la mayoría de los iconos de 'Archivos adjuntos' se modificaron con
+respecto a los imágenes originales de esos sitios web. Si quisiera las
+versiones originales, descárguelas de esos sitios web.</p>
 </li>
-<li><p class="first">Many thanks to Paul McDermott for generously donating the search plugin!</p>
+<li><p class="first">¡Muchas gracias a Paul McDermott por su generosa donación del complemento de
+búsqueda!</p>
 </li>
-<li><p class="first">Thanks to Mohammad Samini for donating some PHP code and CSS files to
-improve 'Attachments' displays in right-to-left languages.</p>
+<li><p class="first">Gracias a Mohammad Samini por donar código PHP y archivos CSS para mejorar la
+visualización de 'Archivos adjuntos' en idiomas de-derecha-a-izquierda.</p>
 </li>
-<li><p class="first">Thanks to Ewout Weirda for many helpful discussions and suggestions in
-the development of the 'Attachments' extension.</p>
+<li><p class="first">Gracias a Ewout Weirda por múltiples debates y sugerencias de gran ayuda
+en el desarrollo de la extensión 'Archivos adjuntos'.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="contact">
-<h1><a class="toc-backref" href="#id20">Contact</a></h1>
-<p>Please report bugs and suggestions to <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+<div class="section" id="contacto">
+<h1><a class="toc-backref" href="#id20">Contacto</a></h1>
+<p>Envíe informes de fallos y sugerencias a <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-Generated on: August 28, 2011 at 22:42 UTC.
+Generated on: 17 septiembre 2011 a las 06:26 UTC.
 
 </div>
 </body>
