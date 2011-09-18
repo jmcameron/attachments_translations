@@ -3,12 +3,22 @@ Versions of Language Packs for Attachments-3 for Joomla 1.6+
 
 INSTALL these files using the regular Joomla installer (no need to unzip manually).
 
-NOTE: These language files are for Attachments-3.0+ only!  
+NOTES: 
 
-      If you need a language file for Attachments 2.2, please visit the other
-      attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
+   * These language files are for Attachments-3.0+ only!  
+
+   * Language packs versions 3.0.1 and 3.0.1.* will work fine on 
+     Attachments release 3.0.2.
+
+   * If you need a language file for Attachments 2.2, please visit the other
+     attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
+
+2011-09-09:
+   * Updated: attachments-Norwegian-nb-NO-3.0.1.1.zip
+         - Added help file! Thanks to Roar Jystad.
+         - Status: Complete including help file. 
 
 2011-09-09:
    * Updated: attachments-Catalan-ca-ES-3.0.1.zip
@@ -29,6 +39,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Norwegian-nb-NO-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+         - 19 Downloads
    * Updated: attachments-Polish-pl-PL-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
