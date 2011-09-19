@@ -151,7 +151,7 @@ p.topic-title {
 }
 
 
-div#contents {
+div#contents, div#contenido {
     margin: 0 0 20px 40px;
     background-color: #BBBBFF;
     border: 1px solid #003366;
