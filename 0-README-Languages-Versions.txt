@@ -17,6 +17,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-19:
+   * Added: attachments-Romanian-ro-RO-3.0.1.zip
+         - Update from old 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Alex Cojocaru for the update!
+
 2011-09-18:
    * Added: attachments-Spanish-es-ES-3.0.1.zip
          - Added help file! Thanks to Manuel María Pérez Ayala!
