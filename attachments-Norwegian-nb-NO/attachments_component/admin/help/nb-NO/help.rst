@@ -6,7 +6,7 @@
 
 .. class:: version
 
-**Version 3.0.1 - 9. september 2011**
+**Version 3.0.1.2 - 20. september 2011**
 
 **Denne versjonen er for Joomla 1.6/1.7 +**
 
