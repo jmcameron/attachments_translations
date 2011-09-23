@@ -18,7 +18,7 @@
       <filename>nl-NL.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component zz language help folder -->
+    <!-- Admin component nl-NL language help folder -->
     <files folder="attachments_component/admin/help/nl-NL" target="administrator/components/com_attachments/help/nl-NL">
       <filename>help.css</filename>
       <filename>help.html</filename>
