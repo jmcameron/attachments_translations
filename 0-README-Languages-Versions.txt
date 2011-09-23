@@ -17,6 +17,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-09-17:
+   * Updated: attachments-Norwegian-nb-NO-3.0.1.2.zip
+         - Translation improvements from Roar Jystad.
+         - Status: Complete including help file. 
+
 2011-09-19:
    * Added: attachments-Romanian-ro-RO-3.0.1.zip
          - Update from old 2.2 version to 3.0
@@ -32,6 +37,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Norwegian-nb-NO-3.0.1.1.zip
          - Added help file! Thanks to Roar Jystad.
          - Status: Complete including help file. 
+	 - 10 Downloads
 
 2011-09-09:
    * Updated: attachments-Catalan-ca-ES-3.0.1.zip
