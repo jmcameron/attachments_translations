@@ -6,7 +6,7 @@ INSTALL these files using the regular Joomla installer (no need to unzip manuall
 COMPATIBLITY:
 
    * Language packs with versions 3.0.1 and 3.0.1.* are compatible
-     with Attachments 3.0, 3.0.1, and 3.0.2 on Joomla 1.6 through 1.7+
+     with Attachments 3.0, 3.0.1, and 3.0.2 on Joomla 1.6, 1.7, and 1.7.1.
 
 NOTES: 
 
