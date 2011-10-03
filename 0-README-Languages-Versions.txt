@@ -17,6 +17,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-10-02:
+   * Updated: attachments-Indonesian-id-ID-3.0.1.1.zip
+         - Added new Indonesian translation of 3.0 help file.
+         - Status: Complete including help file. 
+
 2011-09-23:
    * Added: attachments-Dutch-nl-NL-3.0.1.zip
          - Update from old 2.2 version to 3.0
@@ -58,6 +63,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Indonesian-id-ID-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+         - 28 Downloads
    * Updated: attachments-Italian-it-IT-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
