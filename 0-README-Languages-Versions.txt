@@ -17,6 +17,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-10-08:
+   * Updated: attachments-Catalan-ca-ES-3.0.1.1.zip
+         - Added new Catalan translation of 3.0 help file.
+         - Status: Complete including help file. 
+	 - Thanks to Jaume Jorba for the new help file translation!
+
 2011-10-02:
    * Updated: attachments-Indonesian-id-ID-3.0.1.1.zip
          - Added new Indonesian translation of 3.0 help file.
@@ -54,6 +60,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Catalan-ca-ES-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 41 Downloads
    * Updated: attachments-French-fr-FR-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
