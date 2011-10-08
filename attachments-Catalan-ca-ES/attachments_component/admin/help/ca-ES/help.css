@@ -151,18 +151,18 @@ p.topic-title {
 }
 
 
-div#contents {
+div#contents, div#contingut {
     margin: 0 0 20px 40px;
     background-color: #BBBBFF;
     border: 1px solid #003366;
     width: 60%;
 }
 
-div#contents ul {
+div#contents ul, div#contingut ul {
     margin: 6px 0 0 0;
 }
 
-div#contents p.topic-title {
+div#contents p.topic-title, div#contingut p.topic-title {
     margin: 0;
 }
 
