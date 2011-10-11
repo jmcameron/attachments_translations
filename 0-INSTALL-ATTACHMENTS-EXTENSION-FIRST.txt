@@ -1,0 +1,2 @@
+You must install the Attachements 3.x extension BEFORE installing any
+Attachments language packs!
