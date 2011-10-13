@@ -17,7 +17,7 @@ all: $(ZIPS)
 	@echo "-------------------------------------------------------"
 	@echo attachments-$*
 	@rm -f attachments-$@
-	@(cd attachments-$*; zip -r ../attachments-$*${VNAME}.zip * -x "*.svn/*")
+	@(cd attachments-$*; zip -r ../attachments-$*-language-pack${VNAME}.zip * -x "*.svn/*")
 
 
 purge:
