@@ -17,38 +17,65 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2011-10-12:
+
+   NOTE: Renamed all language packs to include 'language-pack' to prevent
+         users from assuming that it was Attachments + the language and
+         installing it before Attachments (which then fails to install
+         correctly).
+
+   * Renamed: attachments-Catalan-ca-ES-language-pack-3.0.1.1.zip
+   * Renamed: attachments-Dutch-nl-NL-language-pack-3.0.1.zip
+   * Renamed: attachments-French-fr-FR-language-pack-3.0.1.zip
+   * Renamed: attachments-German-de-DE-language-pack-3.0.1.zip
+   * Renamed: attachments-Indonesian-id-ID-language-pack-3.0.1.1.zip
+   * Renamed: attachments-Italian-it-IT-language-pack-3.0.1.zip
+   * Renamed: attachments-Norwegian-nb-NO-language-pack-3.0.1.2.zip
+   * Renamed: attachments-Polish-pl-PL-language-pack-3.0.1.zip
+   * Renamed: attachments-Portuguese-pt-PT-language-pack-3.0.1.zip
+   * Renamed: attachments-Romanian-ro-RO-language-pack-3.0.1.zip
+   * Renamed: attachments-Russian-ru-RU-language-pack-3.0.1.zip
+   * Renamed: attachments-Slovenian-sl-SI-language-pack-3.0.1.zip
+   * Renamed: attachments-Spanish-es-ES-language-pack-3.0.1.zip.zip
+
 2011-10-08:
    * Updated: attachments-Catalan-ca-ES-3.0.1.1.zip
          - Added new Catalan translation of 3.0 help file.
          - Status: Complete including help file. 
 	 - Thanks to Jaume Jorba for the new help file translation!
+	 - 10 Downloads
 
 2011-10-02:
    * Updated: attachments-Indonesian-id-ID-3.0.1.1.zip
          - Added new Indonesian translation of 3.0 help file.
          - Status: Complete including help file. 
+	 - ? Downloads
 
 2011-09-23:
    * Added: attachments-Dutch-nl-NL-3.0.1.zip
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Parvus for the update!
+	 - 97 Downloads
 
 2011-09-17:
    * Updated: attachments-Norwegian-nb-NO-3.0.1.2.zip
          - Translation improvements from Roar Jystad.
          - Status: Complete including help file. 
+	 - 48 Downloads
 
 2011-09-19:
    * Added: attachments-Romanian-ro-RO-3.0.1.zip
          - Update from old 2.2 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Alex Cojocaru for the update!
+	 - ? Downloads
 
 2011-09-18:
    * Added: attachments-Spanish-es-ES-3.0.1.zip
          - Added help file! Thanks to Manuel María Pérez Ayala!
          - Status: Complete including help file. 
+	 - 249 Downloads
 
 2011-09-17:
    * Updated: attachments-Norwegian-nb-NO-3.0.1.1.zip
@@ -60,20 +87,23 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Catalan-ca-ES-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
-	 - 41 Downloads
+	 - ? Downloads
    * Updated: attachments-French-fr-FR-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 249 Downloads
    * Updated: attachments-German-de-DE-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 380 Downloads
    * Updated: attachments-Indonesian-id-ID-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
-         - 28 Downloads
+         - 30 Downloads
    * Updated: attachments-Italian-it-IT-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 485 Downloads
    * Updated: attachments-Norwegian-nb-NO-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
@@ -81,15 +111,19 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Polish-pl-PL-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 134 Downloads
    * Updated: attachments-Portuguese-pt-PT-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 168 Downloads
    * Updated: attachments-Russian-ru-RU-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 276 Downloads
    * Updated: attachments-Slovenian-sl-SI-3.0.1.zip
          - Fixed erroneous tokens for backend unpublish messages
          - Status: Complete (help file in English)
+	 - 28 Downloads
 
 2011-09-05:
    * Added: attachments-Portuguese-pt-PT-3.0.zip
