@@ -17,6 +17,13 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+
+2011-09-23:
+   * Added: attachments-Greek-el-GR-language-pack-3.0.1.zip
+         - Update from old 2.0 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Antonis Mylonopoulos for the translation!
+
 2011-10-12:
 
    NOTE: Renamed all language packs to include 'language-pack' to prevent
