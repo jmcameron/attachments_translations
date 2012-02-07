@@ -1,527 +1,506 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
-<title>Attachments Documentation</title>
+<title>Документация расширения ВЛОЖЕНИЯ (Attachments)</title>
 <link rel="stylesheet" href="help.css" type="text/css" />
 </head>
 <body>
 <div class="header">
-<h1 class="title">Attachments Documentation</h1>
+<h1 class="title">Документация расширения ВЛОЖЕНИЯ (Attachments)</h1>
 <hr class="header"/>
 </div>
 <div class="document">
 
 
-<p class="version"><strong>Version 3.0-RC2 - August 18, 2011</strong></p>
-<p><strong>This version is for Joomla 1.6/1.7+</strong></p>
+<p class="version"><strong>Версия 3.0.1 - Сентябрь 2011</strong></p>
+<p><strong>Данная версия совместима с Joomla 1.6/1.7+</strong></p>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title first">Содержание</p>
 <ul class="simple">
-<li><a class="reference internal" href="#introduction" id="id1">Introduction</a></li>
-<li><a class="reference internal" href="#new-features-in-version-3-0" id="id2">New features in Version 3.0</a></li>
-<li><a class="reference internal" href="#major-features-of-the-attachments-extension" id="id3">Major features of the Attachments Extension</a></li>
-<li><a class="reference internal" href="#uploading-restrictions" id="id4">Uploading Restrictions</a></li>
-<li><a class="reference internal" href="#attachments-settings" id="id5">Attachments Settings</a></li>
-<li><a class="reference internal" href="#attachments-permissions" id="id6">Attachments Permissions</a></li>
-<li><a class="reference internal" href="#access-levels-visibility-control" id="id7">Access Levels Visibility Control</a></li>
-<li><a class="reference internal" href="#display-filename-or-url" id="id8">Display Filename or URL</a></li>
-<li><a class="reference internal" href="#attaching-urls" id="id9">Attaching URLs</a></li>
-<li><a class="reference internal" href="#what-can-files-be-attached-to" id="id10">What Can Files Be Attached To?</a></li>
-<li><a class="reference internal" href="#css-styling-of-attachment-lists" id="id11">CSS Styling of Attachment Lists</a></li>
-<li><a class="reference internal" href="#file-type-icons" id="id12">File Type Icons</a></li>
-<li><a class="reference internal" href="#administrative-utility-commands" id="id13">Administrative Utility Commands</a></li>
-<li><a class="reference internal" href="#warnings" id="id14">Warnings</a></li>
-<li><a class="reference internal" href="#upgrading" id="id15">Upgrading</a></li>
-<li><a class="reference internal" href="#uninstalling" id="id16">Uninstalling</a></li>
-<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-6" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
-<li><a class="reference internal" href="#translations" id="id18">Translations</a></li>
-<li><a class="reference internal" href="#acknowledgments" id="id19">Acknowledgments</a></li>
-<li><a class="reference internal" href="#contact" id="id20">Contact</a></li>
+<li><a class="reference internal" href="#introduction" id="id1">Введение</a></li>
+<li><a class="reference internal" href="#new-features-in-version-3-0" id="id2">Новые возможности версии 3.0</a></li>
+<li><a class="reference internal" href="#major-features-of-the-attachments-extension" id="id3">Основные функции расширения ВЛОЖЕНИЯ (Attachments)</a></li>
+<li><a class="reference internal" href="#uploading-restrictions" id="id4">Ограничения на загрузку</a></li>
+<li><a class="reference internal" href="#attachments-settings" id="id5">Настройки</a></li>
+<li><a class="reference internal" href="#attachments-permissions" id="id6">Разрешения на вложения</a></li>
+<li><a class="reference internal" href="#access-levels-visibility-control" id="id7">Управление уровнями доступа/видимости (ALC)</a></li>
+<li><a class="reference internal" href="#display-filename-or-url" id="id8">Отображение имен файлов или ссылок</a></li>
+<li><a class="reference internal" href="#attaching-urls" id="id9">Вложение ссылок</a></li>
+<li><a class="reference internal" href="#what-can-files-be-attached-to" id="id10">Как можно вложить файлы?</a></li>
+<li><a class="reference internal" href="#css-styling-of-attachment-lists" id="id11">CSS стили списка вложений</a></li>
+<li><a class="reference internal" href="#file-type-icons" id="id12">Иконки типов файлов</a></li>
+<li><a class="reference internal" href="#administrative-utility-commands" id="id13">Утилиты</a></li>
+<li><a class="reference internal" href="#warnings" id="id14">Предупреждения</a></li>
+<li><a class="reference internal" href="#upgrading" id="id15">Обновление</a></li>
+<li><a class="reference internal" href="#uninstalling" id="id16">Удаление</a></li>
+<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-6" id="id17">Обновление компонента ВЛОЖЕНИЯ Joomla 1.5 до Joomla 1.6+</a></li>
+<li><a class="reference internal" href="#translations" id="id18">Переводы</a></li>
+<li><a class="reference internal" href="#acknowledgments" id="id19">Благодарности</a></li>
+<li><a class="reference internal" href="#contact" id="id20">Контакты</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h1><a class="toc-backref" href="#id1">Introduction</a></h1>
-<p>The 'Attachments' extension for Joomla! allows files to be uploaded and
-attached to articles, categories, or other types of content. The 'Attachments'
-extension includes a plugin to display the attachments and a component for
-uploading and managing attachments, as well as other plugins. There are
-options to control who can see the attachments and who can upload them, along
-with several many options to increase its flexibility and usefulness. Note:
-all options are controlled through the component manager.</p>
+<h1><a class="toc-backref" href="#id1">Введение</a></h1>
+<p>Расширение ВЛОЖЕНИЯ (Attachments) для CMS Joomla! позволяет загружать файлы на сайт и присоединять (attach) 
+их к статье или другому родителю. ВЛОЖЕНИЯ включает в себя 
+плагин для отображения вложений, компонент для загрузки и управления
+вложениями и другие плагины. Наряду с различными опциями, увеличивающими гибкость и удобство использования,
+в расширении присутствуют опции контроля того, кто может видеть вложения и
+кто может их загружать. 
+<br>
+Замечание: все опции доступны через админ-панель 'Компоненты > Вложения > Настройки'.
+</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This version of the <em>Attachments</em> extension only works for
-Joomla! 1.6, 1.7 or greater.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">Эта версия расширения <em>ВЛОЖЕНИЯ</em> работает только под управлением Joomla! 1.6, 1.7 и выше.</p>
 </div>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">In the rest of this document, the term <strong>content item</strong> is sometimes
-used.  Normally we think of attaching files to articles.  Attachments supports
-attaching files and URLs to articles or categories by default.  But it is
-possible to attach to other types of content types (this requires special
-'Attachments' plugins).  All of these are referred to as <strong>content items</strong>.</p>
+<p class="first admonition-title">Замечание</p>
+<p class="last">Далее в документе будет использоваться термин <strong>элемент контента</strong>. Обычно под этим подразумевается вложение файлов к статьям. Компонент ВЛОЖЕНИЯ по умолчанию поддерживает 
+вложение файлов и ссылок к статьям или категориям. Однако существует 
+возможность вложить файлы в другие типы контента (необходимы соответствующие плагины для ВЛОЖЕНИЯ).  Все типы контента, в которые выполняются вложения, будем называть <strong>элементы контента</strong>.</p>
 </div>
-<p>The 'Attachments' extension has been translated into many different
-languages.  Please see the <a class="reference internal" href="#translations">Translations</a> section for the list of
-available translations.  Most of these languages packs are in the process
-of being updated for 'Attachments' version 3.0.</p>
-<p>If you wish to subscribe to an email list for announcements about
-this extension, please subscribe using this web page:</p>
+<p>Расширение ВЛОЖЕНИЯ переведено на многие языки.
+См. раздел <a class="reference internal" href="#translations">Переводы</a> чтобы увидеть список
+доступных переводов.  Многие из языковых пакетов находятся в процессе обновления 
+до версии 3.0.</p>
+<p>Если вы хотите подписаться на рассылку обновлений этого расширения, 
+ пожалуйста воспользуйтесь страницей:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Attachments Email List ( http://jmcameron.net/attachments/email-list.html )</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Страница подписки на Email рассылку ( http://jmcameron.net/attachments/email-list.html )</a></li>
 </ul>
 </div>
 <div class="section" id="new-features-in-version-3-0">
-<h1><a class="toc-backref" href="#id2">New features in Version 3.0</a></h1>
+<h1><a class="toc-backref" href="#id2">Новые возможности версии 3.0</a></h1>
 <ul class="simple">
-<li>Full support for the new ACL/permissions system of Joomla 1.6/1.7+.  This
-gives you significant flexibility to control who can create, edit, or delete
-attachments.  See the <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section for more details.</li>
-<li>Full support for viewing access levels.  This means you can set some of your
-attachments to be visible by anyone, and some to be visible only to users
-in certain groups (as defined by the Access Levels).
-See the <a class="reference internal" href="#access-levels-visibility-control">Access Levels Visibility Control</a> section for more details.</li>
-<li>Simplified and improved options for hiding attachments in various contexts.</li>
+<li>Полная поддержка системы управления уровнями доступа/видимости (ACL) в Joomla 1.6/1.7+. Данная система
+дает вам полный контроль на тем, кто может создавать, редактировать или удалять
+вложения.  Более детально см. в разделе <a class="reference internal" href="#attachments-permissions">Разрешения на вложения</a>.</li>
+<li>Управление уровнями видимости вложения. Т.е. возможно установить, чтобы некоторые вложения
+были видны всем а некоторые видны только пользователям
+определенных групп (согласно настройкам уровней доступа).
+Более детально см. в разделе <a class="reference internal" href="#access-levels-visibility-control">Управление уровнями доступа/видимости (ALC)</a>.</li>
+<li>Расширены опции для скрытия вложений в различном контексте.</li>
 </ul>
 </div>
 <div class="section" id="major-features-of-the-attachments-extension">
-<h1><a class="toc-backref" href="#id3">Major features of the Attachments Extension</a></h1>
+<h1><a class="toc-backref" href="#id3">Основные функции расширения ВЛОЖЕНИЯ (Attachments)</a></h1>
 <ul>
-<li><p class="first">You can manage attachments from the article editor, including adding,
-editing, and deleting attachments.</p>
+<li><p class="first">Возможность управления вложениями в режиме редактирования статьи, включая добавление,
+редактирование и удаление вложений</p>
 </li>
-<li><p class="first">You can create attachments while an article is being created.</p>
+<li><p class="first">Возможность создания вложений в процессе создания статьи.</p>
 </li>
-<li><p class="first">All attachments lists on the front end are updated by Ajax and do not
-require full page reloads.</p>
+<li><p class="first">Все списки вложений на сайте обновляются при помощи AJAX, что не 
+требует полной перезагрузки страницы.</p>
 </li>
-<li><p class="first">You can &quot;attach&quot; URLs as well as files to content items.</p>
+<li><p class="first">Возможность &quot;присоединять&quot; ссылки, так же как и файлы, к элементам контента.</p>
 </li>
-<li><p class="first">You can show the attachments list anywhere in an article (or content item).</p>
+<li><p class="first">Возможность отображать список вложений в любом месте статьи (или элемента контента).</p>
 </li>
 <li><dl class="first docutils">
-<dt>In the administrative back end:</dt>
+<dt>В админ панели:</dt>
 <dd><ul class="first last simple">
-<li>There are options to filter the listed attachments to unpublished
-or trashed articles or content items.</li>
-<li>Filtering of the list of articles</li>
-<li>Sorting the list of attachments by any of the column headers.</li>
-<li>Useful administrative utility commands</li>
+<li>Опции для фильтрации вложений к статьям или элементам контента в состояниях "Не опубликовано", 
+"В корзине".</li>
+<li>Фильтрация списка статей</li>
+<li>Сортировка списка вложений по любой колонке при помощи заголовка.</li>
+<li>Дополнительные утилиты</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">The Attachments extension supports &quot;Attachments plugins&quot;.  These plugins allow
-attaching files to any content item that invokes the <tt class="docutils literal">onPrepareContent</tt>
-plugin.  For example, you can attach files to Category descriptions.
-With a bit of work, an extension developer can create a new 'Attachments'
-plugin to support adding attachments to things like CB personal info
-displays, Virtuemart product descriptions, etc.  See section
-<a class="reference internal" href="#what-can-files-be-attached-to">What Can Files Be Attached To?</a> for more details.</p>
+<li><p class="first">Расширение ВЛОЖЕНИЯ (Attachments) поддерживает &quot;Плагины для ВЛОЖЕНИЯ&quot;.  Дополнительные плагины позволяют 
+присоединять файлы к любым элементам контента, которые используют плагин <tt class="docutils literal">onPrepareContent</tt>.
+  Например, возможно вложить файлы в описания категорий.
+Затратив немного времени разработчик может создать новый плагин для ВЛОЖЕНИЯ,
+позволяющий добавлять вложения к контенту типа: персональная информация в Community Builder, 
+описания товаров в Virtuemart, и т.д.  Более детально см. в разделе
+<a class="reference internal" href="#what-can-files-be-attached-to">Как можно вложить файлы?</a>.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="uploading-restrictions">
-<h1><a class="toc-backref" href="#id4">Uploading Restrictions</a></h1>
-<p>Not all types of attachment files can be uploaded.  The 'Attachments'
-extension will not allow uploading of files that are not permitted by the
-Joomla! Media Manager.  To see (or change) what file types are allowed, go to
-the <strong>Media manager</strong> item under the <strong>Content</strong> menu.  Click on the
-<strong>Options</strong> button on the toolbar and select the <em>Component</em> tab.  There you
-will see the options for controlling what types of file extensions and mime
-types are permitted for uploads. The 'Attachments' extension respects these
-limitations.  However, the restriction on 'Legal Extensions (File
-Types)' is ignored.  Add extensions for any file type that you require in the
-&quot;Legal Extensions (File Types)&quot; field.  You may also add appropriate MIME
-types in the &quot;Legal MIME Types&quot; field.</p>
+<h1><a class="toc-backref" href="#id4">Ограничения на загрузку</a></h1>
+<p>Не все типы файлов могут быть загружены.  Расширение ВЛОЖЕНИЯ
+не разрешит загрузить файлы, которые запрещены в Joomla! Медиа Менеджере.
+Чтобы посмотреть (изменить) какие типы файлов разрешены - войдите на страницу
+ <strong>Материалы</strong> > <strong>Медиа-менеджер</strong>. Выберите кнопку
+<strong>Настройки</strong> на тулбаре и затем вкладку <em>Компонент</em>.  Здесь
+указано какие типы файлов и какие MIME типы разрешены для загрузки.
+ Расширение ВЛОЖЕНИЯ соблюдает эти ограничения.  Однако
+запрет на 'Разрешённые расширения изображений' игнорируется.
+ Добавьте необходимые расширения файлов в поле 
+&quot;Разрешённые расширения&quot;.  Вожможно также добавить необходимые MIME
+типы в поле &quot;Разрешённые типы файлов (MIME)&quot;.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">If you add items to the &quot;Legal Extensions&quot; or &quot;Legal MIME Types&quot;
-fields, do not add any spaces!</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">При добавлении значений в поля &quot;Разрешённые расширения&quot; или &quot;Разрешённые типы файлов (MIME)&quot;
+наличие пробелов недопустимо!</p>
 </div>
 </div>
 <div class="section" id="attachments-settings">
-<h1><a class="toc-backref" href="#id5">Attachments Settings</a></h1>
-<p>All of the settings for 'Attachments' are controlled via the
-component manager. To access these settings, go to the administrative
-back end and select &quot;Attachments&quot; under the &quot;Component&quot; menu.  Click
-on the &quot;Options&quot; button on the right end of the tool bar and you will see
-options grouped under several tabs.</p>
+<h1><a class="toc-backref" href="#id5">Настройки</a></h1>
+<p>Все настройки расширения ВЛОЖЕНИЯ управляются через менеджер компонент.
+ Чтобы изменить настройки откройте админ панель,
+выберите пункт меню &quot;Компоненты&quot; > &quot;Вложения&quot;.  Нажмите
+кнопку &quot;Настройки&quot; справа вверху на панели управления и увидите
+параметры расширения, сгруппированные по закладкам.</p>
 <div class="section" id="basic-options">
-<h2>Basic Options</h2>
+<h2>Основные</h2>
 <img alt="Basic Options" class="float-right" src="images/options-basic.png" />
 <ul>
-<li><p class="first"><strong>Attachments published by default:</strong> This 'auto publish' feature controls
-whether new attachments are published by default when they are added. If
-'Yes' is selected, when attachments are added, they will published
-immediately and will be visible to users. If 'No' is selected, new
-attachments will not be published by default.  An administrator or someone
-with appropriate permissions will need to publish them from the
-administrative back end before the attachments will be available.</p>
+<li><p class="first"><strong>Вложения опубликованы по умолчанию:</strong> 
+Данный режим автоматической публикации устанавливает  
+будут ли опубликованы по умолчанию вновь добавленные вложения.
+ При установке 'Да' при добавлении вложения
+оно будет опубликовано немедленно и будет видимо пользователям. При
+установке 'Нет' новые вложения не будут опубликованы автоматически.
+Для публикации вложения администратор или пользователь с необходимым доступом должен 
+опубликовать вложение через админ панель,  
+чтобы вложение стало доступно на сайте.</p>
 </li>
-<li><p class="first"><strong>Auto Publish Warning:</strong> If the auto-publish option is
-disabled (see previous option), you may wish to inform those adding
-attachments how they can get their attachment published. You can insert an
-appropriate message here.  If this field is empty, a general system message
-will be added suggesting that they contact their system administrator to
-any newly uploaded attachments published.</p>
+<li><p class="first"><strong>Предупреждение о публикации:</strong> 
+Если режим автоматической публикации (см. предыдущий пункт) выключен, возможно вы захотите проинформировать 
+пользователей, добавляющих вложения, как им опубликовать свои вложения. 
+Здесь вы можете вставить соответствующий текст.
+Если поле оставить пустым, будет отображаться стандартное системное сообщение 
+предлагающее пользователю связаться с администратором для того что бы его новое вложение было опубликовано.</p>
 </li>
-<li><p class="first"><strong>Default Access Level:</strong> The default access level for new attachments.
-Each attachment has an 'access level' which controls who can see or
-download that attachment.  When an attachment is created, its access level
-is set to this default value initially (if the attachment creator is in
-appropriate groups).  A site administrator or someone with appropriate
-permissions may change the attachment's access level to control who can
-see that specific attachments.</p>
+<li><p class="first"><strong>Уровень доступа по умолчанию:</strong> 
+Уровень доступа по умолчанию для новых вложений. 
+Каждое вложение имеет уровень доступа, который определяет кто может видеть или 
+скачивать вложение. При создании вложения ему устанавливается уровень доступа 
+по умолчанию (в случае, если автор принадлежит соотвествующим группам). 
+Администратор сайта или пользователь с соответстующим доступом могут изменять 
+установленные уровни доступа вложений для определения, кто может видеть 
+определенные вложения.</p>
 </li>
-<li><p class="first"><strong>Name for user-defined field 1-3:</strong> If you have some
-additional information about each attachment that you wish to add, the
-'Attachments' extension allows you to defined up to three optional user-defined
-fields.  To create a new field, insert the name for it in one of the three
-entries.  Clear the name to disable the display and editing of this field.
-The user-defined fields will be shown in the order listed here.  The maximum
-length of each user-defined field name is 40 characters.  The data in these
-fields may be up to 100 characters long.</p>
+<li><p class="first"><strong>Имя поле 1-3:</strong> 
+В случае необходимости добавить 
+дополнительную информацию о вложении компонент ВЛОЖЕНИЯ позволяет определить до 3-х 
+дополнительных 
+полей. Чтобы создать новое дополнительное поле введите его имя 
+в одну из трех областей ввода.
+Очистите область ввода имени чтобы отключить редактирование и отображение этого поля.
+Поля, определенные пользователем, будут отображаться в том же порядке, что и здесь.
+Максимальная длина имени каждого поля ограничена 40 символами.
+Длина данных в каждом пользовательском поле не должна превышать 100 символов.</p>
+
+
+Максимальная длина каждого имени поля 40 символов.  Длина данных в этих полях до 255 символов. 
+
+
 <div class="hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you add an asterisk to the end of a user-defined field name, it
-will not be displayed on the front end.  It will be visible when an
-attachment is edited on the front end and always visible in the back
-end.  This hidden user-defined field can be used to order attachments in
-an arbitrary order by putting integer values in the field.</p>
+<p class="first admonition-title">Совет</p>
+<p class="last">Добавление знака '*' в конце имени поля приводит к скрытию поля на сайте.
+Имя будет отображаться только в режиме редактирования вложения на сайте и всегда 
+в админ панели. Данная возможность позволяет сортировать вложения в необходимом порядке 
+путем помещения в это поле целых чисел.</p>
 </div>
 </li>
-<li><p class="first"><strong>Maximum filename or URL length:</strong>
-The maximum filename or URL length for attachments list.  Filenames or URLs
-longer than this will be truncated and put into the display name (for
-display purposes only, the actual filename or URL will not be changed).  A
-value of 0 means the filename length is unlimited by this option (the
-display_name field in the attachments database table is limited to 80
-characters).  Note: If display filenames or URLs are truncated by this option,
-the truncated name will be inserted into the &quot;Display Filename / URL&quot; field.
-This option only affects attachments added after this option is set.</p>
+<li><p class="first"><strong>Максимальная длина имени файла или ссылки:</strong>
+Максимальная длина имени файла или ссылки в списке вложения.  Имена файла или ссылки длиннее
+установленного ограничения будут усечены и помещены в колонку &quot;Display Filename / URL&quot; 
+(только для отображения, реальное имя файла или ссылка останутся без изменения).  
+Значение 0 означает отсутствие ограничений на длину за исключением ограничения бызы данных, 
+которое состовляет 80 символов.  Примечание: эта опция воздействует 
+только на имена вложений, добавленных после установки этой опции.</p>
 </li>
-<li><p class="first"><strong>Where should attachments be placed?</strong> This option controls
-the location in the article (or content item) the list of attachments will be placed.
-This option applies to all attachments lists:</p>
+<li><p class="first"><strong>Куда поместить вложения:</strong> 
+Данная опция управляет
+расположением вложения в определенном месте элемента контента.
+Имеются следующие режимы:</p>
 <blockquote>
 <ul>
-<li><p class="first">'<em>At the beginning</em>'</p>
+<li><p class="first">'<em>В начале</em>'</p>
 </li>
-<li><p class="first">'<em>At the end</em>'</p>
+<li><p class="first">'<em>В конце</em>'</p>
 </li>
-<li><p class="first">'<em>Custom placement</em>' - With this option, the attachments list will
-appear in the article (or content item) where ever the special tag:
-{attachments} occurs.</p>
+<li><p class="first">'<em>Пользовательское расположение</em>' - в данном режиме список вложений будет
+расположен в месте элемента контента, где будет помещен тег: {attachments}.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">In custom placement mode, any article (or content item)
-that does not include this tag will display its the attachments list
-at its end.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">В пользовательском режиме для любого элемента контента, в котором нет необходимого тега,
+список вложений будет размещен в его конце.</p>
 </div>
-<p>In this mode, when editing an article in the back
-end, an extra button will be displayed: [Insert {attachments} token].
-Position the cursor where you want the custom placement token and use
-this button to insert the token.  This button will add surrounding HTML
-tags to hide the token when it is not replaced (eg, when the
-attachments list is not supposed to be visible).  In HTML, the token
-looks like this with the surrounding tags to hide it:</p>
+<p>При редактировании в админ панели будет отображаться дополнительная кнопка: 
+[Признак вложения {attachments}].
+       Выберите позицию, где вы хотите разместить признак вложения и используйте эту кнопку
+       для вставки признака. Данная функция добавляет дополнительный HTML
+       код для скрытия самого признака вложения в случае, когда он не замещен вложением (например случай,
+       когда вложение не должно отображаться пользователю). HTML код, добавляемый вокруг признака,
+       имеет следующий вид:</p>
 <pre class="literal-block">
 &lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
 </pre>
-<p>In the back end editors, you will see the {attachments} tag but not the
-HTML 'span' tags unless you switch to HTML mode.  In the front end, you
-will never see the {attachments} tag unless the insert_attachments_tag
-plugin is disabled.  If you wish to remove the {attachments} token, you
-may want to use the &quot;HTML&quot; view mode in the editor to make sure that
-you also delete the surrounding span tags.</p>
+<p>При редактировании в админ панели в тексте будет отображаться тег {attachments} а не 
+       HTML код 'span' за исключением отображения HTML кода. На сайте вы
+       никогда не увидите тег {attachments} за исключением случая, когда плагин insert_attachments_tag
+       выключен. Для удаления признака вложения {attachments} необходимо использовать
+       режим отображения &quot;HTML&quot; кода чтобы вместе с признаком вложения удалить и окружающий его HTML код.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The custom placement mode does not work for attachments on
-Category descriptions.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">Режим 'Пользовательское расположение' не работает для вложений в описания категорий.</p>
 </div>
 </li>
-<li><p class="first">'<em>Disabled (filter)</em>' - This option will disable the display of
-attachments lists and suppress the display of any {attachments}
-tags in articles or content items.</p>
+<li><p class="first">'<em>Неактивный (фильтр)</em>' - данный режим запрещает отображение
+списка вложений и подавляет отображение любого тега {attachments},
+расположенного в элементе контента.</p>
 </li>
-<li><p class="first">'<em>Disabled (no filter)</em>' - This option will disable the display of
-attachments lists and will not suppress the display of any
-{attachments} tags in articles (or content items).</p>
+<li><p class="first">'<em>Неактивный (без фильтра)</em>' - данный режим запрещает отображение
+списка вложений и НЕ подавляет отображение любого тега {attachments},
+расположенного в элементе контента.</p>
 </li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Allow frontend editing of the access level:</strong>
-Allow setting the access level for an attachment from the front end when
-editing an attachment or creating a new attachment.  The 'access level'
-controls which groups may view (or access) the attachment. Note that the no
-one editing an attachment will ever be able to set the access level for it
-to a level for which they are not authorized.</p>
+<li><p class="first"><strong>Доступно редактирование с фронта для уровня доступа:</strong>
+Позволяет установить уровень доступа с фронта ко вложению при 
+его создании или редактировании. 'Уровень доступа' 
+устанавливает какие группы могут видеть (редактировать) вложение. 
+ВАЖНО: вложение невозможно редактировать пока для него не будет установлен соответстующий уровень доступа.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="formatting-options">
-<h2>Formatting Options</h2>
+<h2>Форматирование</h2>
 <img alt="Formatting Options" class="float-right" src="images/options-formatting.png" />
 <ul>
-<li><p class="first"><strong>Show titles:</strong> If set to 'Yes', a row of titles will be
-added above the list of attachments describing what is in each column.</p>
+<li><p class="first"><strong>Показать заголовки:</strong> 
+Установка 'Да' добавляет строку над списком файлов вложения, описывающую содержания колонок.</p>
 </li>
-<li><p class="first"><strong>Show attachment description:</strong> This setting controls
-whether the attachment description is shown in the list of attachments.</p>
+<li><p class="first"><strong>Показать описание вложения:</strong> 
+Определяется будет ли показано описание для каждого вложения в списке.</p>
 </li>
-<li><p class="first"><strong>Show attachment creator:</strong> Show the username of the
-one who created (uploaded) the attachment.</p>
+<li><p class="first"><strong>Показать автора вложения:</strong> 
+Показать логин пользователя, создавшего (загрузившего) вложение.</p>
 </li>
-<li><p class="first"><strong>Show file size:</strong> This setting controls
-whether the attachment file size is shown in the list of attachments.</p>
+<li><p class="first"><strong>Показать размер файла вложения:</strong> 
+Определяется будет ли показан размер каждого файла вложения в списке.</p>
 </li>
-<li><p class="first"><strong>Show number of downloads:</strong> This setting controls
-whether the number of downloads is shown in the list of attachments.</p>
+<li><p class="first"><strong>Показать количество скачиваний:</strong> 
+Показать количество скачиваний в списке вложений.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This option only works for file attachments in secure mode!
-In non-secure mode, files are maintained as static files and accessed
-directly, without going through Joomla! code.  Therefore it is impossible
-to update the number of downloads for a file when it is accessed this way.
-So the display of the number of file downloads will only work in secure mode
-when this option is set to 'Yes'.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">  ВНИМАНИЕ: Эта опция работает только при ограниченном доступе!
+В обычном режиме файлы вложений обрабатываются как статические файлы и доступ к ним
+ осуществляется напрямую без прохождения через код Joomla!
+ Поэтому невозможно подсчитать количество скачиваний файла.
+Таким образом эта опция будет работать только если уставлено значение 'Да'
+здесь и включен режим 'Ограниченный доступ скачивания'.</p>
 </div>
 </li>
-<li><p class="first"><strong>Show file modification date:</strong> If this setting
-is 'Yes', the modification date for the file will be added to the
-attachment list for articles that have attachments. If 'No' is
-selected, no date will be added to the attachment list.</p>
+<li><p class="first"><strong>Показать дату изменения файла:</strong> 
+Если опция установлена 'Да', тогда в списке вложений появится дата модификации каждого файла. 
+Если 'Нет', дата модификации не будет отображена.</p>
 </li>
-<li><p class="first"><strong>Format string for modification date:</strong> You may
-select the format for the modification date by using the format
-used by the PHP strftime() function.  Search the web with
-'PHP strftime' for examples.  The default format (%x %H:%M)
-gives dates with 24-hour time like 4/28/2008 14:21.  To
-remove the time of day part, leave out the &quot;%H:%M&quot; part.  Note
-that MS Windows and Linux PHP implementations may differ in
-some of the codes that they support.</p>
+<li><p class="first"><strong>Формат представления даты:</strong> 
+Вы можете указать формат отображения времени модификации используя тот же формат,
+что и в функции PHP strftime(). Примеры можно найти в интернете по запросу
+'PHP strftime'.  По умолчанию формат установлен (%x %H:%M), что дает
+24 часовой формат вида: 4/28/2008 14:21.  Для удаления времени удалите 
+символы "%H:%M". Учтите что реализации PHP под Windows и Linux системами могут отличаться.</p>
 </li>
-<li><p class="first"><strong>Attachments list order:</strong> This option allows you to specify the order in
-which attachments will be listed in the attachments lists.  Most of the
-options are self-explanatory:</p>
+<li><p class="first"><strong>Порядок файлов вложения:</strong> 
+Опция позволять выбрать порядок расположения файлов в списке вложения.
+  Большинство опций очевидны:</p>
 <ol class="arabic simple">
-<li>'<em>Filename</em>' - If this option is selected, the attachments will be
-sorted alphabetically by the filename.</li>
-<li>'<em>File size(smallest first)</em>'</li>
-<li>'<em>File size(largest first)</em>'</li>
-<li>'<em>Description</em>'</li>
-<li>'<em>Display filename or URL</em>' - All attachments that have blank
-display filenames will appear before the ones with display filenames and
-will be sorted by their filenames.</li>
-<li>'<em>Uploader</em>' - Sort by the name of the user who uploaded the attachment.</li>
-<li>'<em>Creation date (oldest first)</em>'</li>
-<li>'<em>Creation date (newest first)</em>'</li>
-<li>'<em>Modification date (oldest first)</em>'</li>
-<li>'<em>Modification date (newest first)</em>'</li>
-<li>'<em>Attachment ID</em>' - If this option is selected, the
-attachments will be sorted by the attachment ID.  This has the effect of
-ordering the attachments in the order they were created.</li>
-<li>'<em>User-defined field 1</em>'</li>
-<li>'<em>User-defined field 2</em>'</li>
-<li>'<em>User-defined field 3</em>'</li>
+<li>'<em>Имя файла</em>' - в данном режиме файлы вложения расположены в алфавитном порядке имен файлов.</li>
+<li>'<em>Размер файла (наименьший первый)</em>'</li>
+<li>'<em>Размер файла (наибольший первый)</em>'</li>
+<li>'<em>Описание</em>'</li>
+<li>'<em>Показать имя файла или ссылку</em>' - Все вложения, у которых имена файлов отображаются пустыми,
+будут расположены выше файлов, у которых имена файлов отображаются и расположены в алфавитном порядке имен файлов.</li>
+<li>'<em>Автор</em>' - сортировка по имени пользователя, загрузившего вложение.</li>
+<li>'<em>Дата создания (старейший первый)</em>'</li>
+<li>'<em>Дата создания (новейший первый)</em>'</li>
+<li>'<em>Дата изменения (старейший первый)</em>'</li>
+<li>'<em>Дата изменения (новейший первый)</em>'</li>
+<li>'<em>ID вложения</em>' - в данном режиме
+файлы вложения расположены в порядке увеличения ID файла вложения.  Данная сортировка
+аналогична сортировке 'Дата создания (старейший первый)'.</li>
+<li>'<em>Поле 1</em>'</li>
+<li>'<em>Поле 2</em>'</li>
+<li>'<em>Поле 3</em>'</li>
 </ol>
 </li>
 </ul>
 </div>
 <div class="section" id="visibility-options">
-<h2>Visibility Options</h2>
-<p>These options control when attachments will be visible on the front page,
-assuming the user is in the appropriate groups to see the attachments.</p>
+<h2>Видимость</h2>
+<p>Опции управляют отображением вложений на сайте,
+при условии что пользователь принадлежит группе, для которой вложения видимы.</p>
 <img alt="Visibility Options" class="float-right" src="images/options-visibility.png" />
 <ul class="simple">
-<li><strong>Hide attachments on the front page:</strong> Select this option to prevent any
-attachments from being shown on the front page of your website.</li>
-<li><strong>Hide attachments before 'Read More' breaks:</strong> Select this option to
-prevent attachments from being displayed on the the front end if they are
-before 'Read More' breaks in articles.  If you click on the link to read the
-full article, the attachments will be shown.</li>
-<li><strong>Hide attachments on blog pages:</strong> Select this option to prevent
-attachments from being shown on any page with 'blog' layouts.</li>
-<li><strong>Hide attachments except on article views:</strong> Select this option to prevent
-attachments from being shown on any page on the front page except for
-views for single specific articles.</li>
-<li><strong>Always show attachments on category views:</strong> Select this option to always
-show attachments on category views -- regardless of other options.</li>
-<li><strong>Hide attachments for categories:</strong> Hide attachments on any category views
-for the selected categories.  Note that attachments will be displayed for
-children categories unless they are explicitly selected.</li>
+<li><strong>Скрыть вложения на главной странице:</strong> Скрываются все 
+вложения на главной странице.</li>
+<li><strong>Скрыть вложения перед ссылкой-разделителем 'Читать далее':</strong> 
+Скрываются вложения статей, имеющих ссылку-разделитель 'Читать далее'. В случае полного отображения (после нажатия на 'Читать далее') вложения будут отображены.</li>
+<li><strong>Скрыть вложения на блог-страницах:</strong> 
+Скрываются вложения для страниц (пунктов меню) с шаблоном блог.</li>
+<li><strong>Скрыть вложения кроме статей:</strong> 
+Скрываются вложения для всех страниц кроме отдельных статей.</li>
+<li><strong>Всегда показывать вложения при отображении категорий:</strong> 
+Вложения отображаются всегда при отображении категорий -- не зависит от других опций.</li>
+<li><strong>Скрыть вложения для категорий:</strong> 
+Скрыть вложения для всех категорий кроме некоторых. 
+Отметим, что вложения будут отражены для дочерних категорий, хотя они будут выделены вместе с их родителем.</li>
 </ul>
 <div class="small-figure figure">
 <img alt="Hide Categories Selection" src="images/options-hide-categories.png" />
-<p class="caption">To select or deselect categories without affecting other categories, hold
-the Control-key when mouse-clicking on the category.  In the figure, only
-one category is selected.</p>
+<p class="caption">Для выделения/отмены отдельных категорий удерживайте клавишу Control при выделении категории мышью. 
+На рисунке выделена только одна категория.</p>
 </div>
 <ul class="simple">
-<li><strong>Hide 'Add Attachments' link:</strong> Always hide the 'Add Attachments' link on
-the front page.  This requires attachments to be added to articles, etc,
-by editing them in the front page (where an 'Add Attachments' button will
-be available under the editing area).</li>
+<li><strong>Скрыть ссылку 'Добавить вложения':</strong> 
+Ссылка 'Добавить вложения' всегда скрыта на сайте. 
+В этом возникает необходимость в случае добавления вложения к статье или другому родителю, 
+в случае их редактирования с фронта (тогда кнопка 'Добавить вложения' доступна под полем редактирования).</li>
 </ul>
 </div>
 <div class="section" id="advanced-options">
-<h2>Advanced Options</h2>
+<h2>Дополнительно</h2>
 <img alt="Advanced Options" class="float-right" src="images/options-advanced.png" />
 <ul>
-<li><p class="first"><strong>Characters forbidden in uploaded filenames:</strong> Filenames containing these
-characters will not be allowed to be uploaded.  These characters are
-problematic in the URL presented to the user for file attachments in
-'non-secure' mode so they are forbidden.  These characters are generally not
-an issue when using 'secure' mode since the filename is not used as part of
-the URL presented to the user.</p>
+<li><p class="first"><strong>Символы, запрещенные к загрузке:</strong> 
+Имена файлов, содержащие указанные символы, запрещены к загрузке. 
+Т.к. эти символы имеют проблемы при отображении имен файлов вложений в обычном режиме, 
+то они запрещены к использованию. Обычно  с этими символами не 
+возникает проблем в режиме ограниченного доступа до тех пор, пока имя файла 
+не используется как часть ссылки.</p>
 </li>
-<li><p class="first"><strong>CSS style for attachments tables:</strong> To override the CSS
-styling of attachments lists, specify your own style name here.  The default
-style name is 'attachmentsList'.  See  the section <a class="reference internal" href="#css-styling-of-attachment-lists">CSS Styling of Attachment Lists</a>.</p>
+<li><p class="first"><strong>CSS стиль для таблицы вложений:</strong> 
+Для замены CSS стиля таблицы вложений введите имя стиля. 
+Стиль по умолчанию 'attachmentsList'.  См. файл attachments.css file. Более детально см. в разделе 
+<a class="reference internal" href="#css-styling-of-attachment-lists">CSS стили списка вложений</a>.</p>
 </li>
-<li><p class="first"><strong>File link open mode:</strong>
-This mode how the links to attachment files will be opened.  'In same window'
-means the file will be opened in the same browser window.  'In new window'
-means the file will be opened in a new window.  In some browsers, using the
-'In new window' option will actually open the attachment in a new tab.</p>
+<li><p class="first"><strong>Режим открытия ссылки:</strong>
+Определяется как открывается ссылка на файл.  'В том же окне' 
+означает что ссылка будет открыта в том же окне браузера.  'В новом окне' 
+- ссылка будет открыта в новом окне (закладке).</p>
 </li>
-<li><p class="first"><strong>Custom titles for attachments lists:</strong> By default, the 'Attachments'
-extension inserts the title &quot;Attachments:&quot; above the list of attachments for
-each article or content item (if it has attachments). In some cases, you may
-prefer using some other term for specific articles or content items.  You may
-specify the exact term you would like to use on an item-by-item basis. For
-example, if you would like article 211 to use the custom title &quot;Downloads:&quot;,
-then add this to this setting: '211 Downloads' (without the quotes). Use one
-entry per line.  For other types of content items, use the form:
-'category:23 This is the title for category 23' where 'category' can be
-replaced by the name of the content item entity.  The example for articles
-above could have been done with 'article:211 Downloads'.  Note that an entry
-without a numeric ID at the beginning will be applied to all content items.
-So it is good practice to put such global overrides first in the list and
-then override the item-by-item custom titles afterward.</p>
-<p>Note: If you wish to change the titles used for attachments lists globally,
-you may edit the translations file entry 'ATTACHMENTS TITLE' in the translation
-files:</p>
+<li><p class="first"><strong>Заголовок пользователя для списка вложений:</strong> 
+По умолчанию расширение ВЛОЖЕНИЯ (Attachments) вставляет заголовок 'Вложения' 
+над списком вложений для каждой статьи или элемента контента (который имеет вложение). Иногда 
+необходимо использовать другой заголовок для определенных статей или элементов контента. Для 
+переименования заголовока для определенной статьи необходимо использовать следующий формат. 
+Например, если для статьи 211 (ID) необходим новый заголовок &quot;Новый заголовок:&quot;,
+необходимо в поле добавить строку '211 Новый заголовок' (без кавычек). 
+Одна строка -- один заголовок. Для других типов контента используется формат: 
+'category:23 Заголовок для категории 23'. Например для статьи, упомянутой выше, 
+должна быть строка вида 'article:211 Новый заголовок'. Возможен 
+пропуск ID для изменения заголовка по умолчанию для всех вложений всех статей. 
+Хорошей практикой является вначале глобальное изменение общего заголовка в первой линии и 
+затем изменение необходимых заголовков.</p>
+<p>Примечание: для изменения глобального заголовка возможно отредактировать 
+файл перевода. Вхождение 'ATTACHMENTS TITLE' находится в файле перевода:</p>
 <pre class="literal-block">
 administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
 </pre>
-<p>where qq-QQ refers to the language designator code such as en-GB for English.
-(If you are not familiar with Joomla! translation files, find the line that
-has 'ATTACHMENTS TITLE' on left side of the '=' sign.  Edit anything to the
-right of the '=' sign.  Do not change anything to the left of the '=' sign.)</p>
+<p>где qq-QQ является инфобозначением кода языка, например en-GB для английского или ru-RU для русского языка.
+(Если вы не знакомы с файлами перевода Joomla!, то просто найдите строку, содержащую
+'ATTACHMENTS TITLE' в левой части перед знаком '=', напишите то что вы считаете нужным для отображения 
+в правой части после знака '=' и ничего не меняйте в левой).</p>
 </li>
-<li><p class="first"><strong>Timeout for checking links:</strong>
-Timeout for checking links (seconds).  Whenever a link is added as an
-attachment, the link is checked directly (you can disable this check in the
-form).  If the link can be accessed before the timeout, the file size and
-other information about the link is retrieved.  If not, generic information
-is used.  To disable the check, enter 0.</p>
+<li><p class="first"><strong>Время ожидания ответа:</strong>
+Время ожидания ответа при проверке ссылки (секунд).  В случае добавления ссылки как 
+вложения она проверяется (возможно отключение проверки в форме). 
+Если доступ по ссылке получен ранее установленного времени ожидания, 
+определяются размер файла и другая информация о ссылке, если нет, 
+используется общая информация.  Установить 0 для отключения функции.</p>
 </li>
-<li><p class="first"><strong>Superimpose URL link icons:</strong>
-Superimpose URL link icons over the file attachment icon for each
-attachment to indicate it is a URL.  Valid URLs are shown with arrows and
-invalid URLs are shown with a red line across the file type icon (bottom
-left to top right).</p>
+<li><p class="first"><strong>Совмещение иконок ссылки и файла:</strong>
+Совмещение иконки ссылки и иконки файла вложения чтобы отобразить ссылку. 
+Корректные ссылки отображаются со стрелкой, некорректные - перечеркнуты красной линией (от низ-слева до верх-справа).</p>
 </li>
-<li><p class="first"><strong>Suppress obsolete attachments (in back end):</strong>
-Set the default for suppressing <em>obsolete</em> attachments in the administrative
-back end.  In this context, <em>obsolete</em> attachments are ones attached to
-unpublished or trashed parents. You can override this using the 'Show
-attachments for' drop-down menu on the right just above the list of
-attachments (on the same line as the filter).  When you use the drop-down
-menu to control which attachments are visible, the system remembers that
-setting until you log out as administrator.  So changing this parameter may
-not seem to have an effect.  This parameter setting will come into effect
-the next time you log in as administrator.</p>
+<li><p class="first"><strong>Удаление устаревших вложений (админ панель):</strong>
+Установка по умолчанию для удаления <em>устаревших</em> вложений из админ панели. 
+В данном случае <em>устаревшими</em> считаются вложения к элементам контента в состояниях "Не опубликовано", 
+"В корзине". Возможно переопределить эту установку выбрав 'Показать вложения для' из выпадающего меню справа над списком вложений 
+(в одной строке с фильтром). Выбранная опция отображения вложений будет сохранена до тех пор, пока администратор 
+не выйдет из админ панели. Поэтому изменение этого параметра может не подействовать сразу. 
+Данная установка вступит в силу при последующем входе как администратор.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="security-options">
-<h2>Security Options</h2>
+<h2>Безопасность</h2>
 <img alt="Security Options" class="float-right" src="images/options-security.png" />
 <ul>
-<li><p class="first"><strong>Secure attachment downloads:</strong>
-By default, the 'Attachments' extension saves attachment files in a publicly
-accessible sub-directory.  If you choose the <em>secure</em> option, the directory
-in which the attachments are saved will be made publicly inaccessible.  The
-download links for the attachments in the front end will download the
-attachment files but will not be direct links.  This will prevent access
-unless users have appropriate permissions.  If <em>secure</em> downloads are not
-selected, the links to the attachments will be shown as the options above
-indicate, but the files will still be accessible to anyone if they know the
-full URL, since the sub-directory is public.  The <em>secure</em> option prevents
-access to users without appropriate permissions even if they know the full
-URL, since this option prevents public access to the attachments
-sub-directory.  In <em>secure</em> mode, the option &quot;Who can see&quot; can set to
-'Anyone' and anyone will be able to see and download the attachments.</p>
+<li><p class="first"><strong>Ограниченный доступ:</strong>
+По умолчанию расширение ВЛОЖЕНИЯ (Attachments) сохраняет файлы вложений в 
+общедоступном каталоге. При <em>ограниченном доступе</em> каталог, 
+в котором будут сохраняться вложения, не является общедоступным. 
+Ссылки на скачивание вложений с сайта позволяют скачивать 
+вложения, однако это не прямые ссылки. Это предотвращает доступ 
+пользователей, не имеющих достаточных прав. Если <em>ограниченный доступ</em> не 
+выбран, ссылки к вложениям отображаются так, как они введены. Как результат, 
+вложения доступны любому посетителю сайта, который знает полную ссылку на вложение, 
+т.к. вложения находятся в общедоступном каталоге. <em>Ограниченный доступ</em> предотвращает 
+доступ пользователям, не имеющим достаточных прав, даже если известна полная 
+ссылка, т.к. нет доступа в каталог вложений. В режиме <em>ограниченного доступа</em> 
+опция &quot;Who can see&quot; возможно установить в значение 'Все', 
+что позволит всем пользователям видеть и скачивать вложения.</p>
 <div class="hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">If you have problems with filenames with Unicode characters, you should
-enable the <strong>Secure attachment downloads</strong> option (especially on Windows
-servers).</p>
+<p class="first admonition-title">Совет</p>
+<p class="last">Если существуют проблемы с именами файлов в Unicode кодировке, возможно 
+выбрать опцию 'Да' для <strong>Ограниченный доступ</strong> (особенно на Windows серверах).</p>
 </div>
 </li>
-<li><p class="first"><strong>Download mode for secure downloads:</strong>
-This option controls whether files should be downloaded as separate files or
-displayed in the browser (if the browser can handle that type of file).
-There are two options:</p>
+<li><p class="first"><strong>Режим ограниченного доступа:</strong>
+Позволяет скачивать вложения как отдельные файлы или отображать их 
+в браузере (если браузер поддерживает такой тип файла). 
+Существуют следующие опции:</p>
 <blockquote>
 <ul>
 <li><dl class="first docutils">
-<dt><em>'inline'</em> - In this mode, files that can be displayed by the browser</dt>
-<dd><p class="first last">will be displayed in the browser (such as text files and images).</p>
-</dd>
+<dt><em>'inline'</em> - в данном режиме все файлы, которые возможно, будут отображены в браузере (как текстовые или файлы изображений).</dt>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><em>'attachment'</em> - With the 'attachment' mode, files will always be</dt>
-<dd><p class="first last">downloaded as separate files.</p>
-</dd>
+<dt><em>'Вложение'</em> - в данном режиме (по умолчанию) файлы можно скачивать как отдельные файлы.</dt>
 </dl>
 </li>
 </ul>
 </blockquote>
-<p>In either case, files that can't be displayed in the browser will be
-downloaded as external files.</p>
+<p>В любом случае файлы, не отображаемые в браузере, могут быть скачаны как внешние файлы.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="permissions-options">
-<h2>Permissions Options</h2>
-<p>The permissions options are explained in the following <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section.</p>
+<h2>Права</h2>
+<p>Опции по разделению прав будут рассмотрены в следующем разделе <a class="reference internal" href="#attachments-permissions">Разрешения на вложения</a>.</p>
 </div>
 </div>
 <div class="section" id="attachments-permissions">
-<h1><a class="toc-backref" href="#id6">Attachments Permissions</a></h1>
-<p>The attachments extension takes full advantage of the new Joomla!
-ACL/permissions system introduced in Joomla! 1.6.  This gives websites that
-use Attachments much more flexibility to control who can create, edit, delete
-and manage attachments.</p>
-<p>Before describing the ACL permissions related to Attachments, it is important
-to understand a key underlying principle:</p>
+<h1><a class="toc-backref" href="#id6">Разрешения на вложения</a></h1>
+<p>Расширение ВЛОЖЕНИЯ (Attachments) использует все преимущества новой системы 
+разрешений (ACL), которая внедрена в Joomla! 1.6. Это позволяет настраивать использование 
+вложений на сайте более точно. Возможна отдельная настройка, кто может создавать, 
+редактировать и удалять вложения, а также управление вложениями.</p>
+<p>Перед описанием системы разрешений (ACL), используемой во ВЛОЖЕНИИ, важно 
+понимать несколько принципов:</p>
 <div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">All attachments are attached to a parent article, category, or other
-content item.  Creating, editing, deleting, or changing the state of an
-attachment is considered to be a form of editing the parent content
-item. So the user must first have permission to edit the parent content item
-before any Attachments-specific permissions are checked.</p>
+<p class="first admonition-title">ВАЖНО</p>
+<p class="last">Все вложения, присоединяются к родительской статье, категории или другому 
+элементу контента. Создание, редактирование, удаление или изменение состояния 
+вложения выполняется через форму редактирования родительского элемента контента. 
+Следовательно, пользователь должен иметь права на редактирование родительского элемента контента 
+для возможности настройки соответствующего вложения.</p>
 </div>
-<p>To change the permissions for various user groups, go to the administrative
-back end and select &quot;Attachments&quot; under the &quot;Component&quot; menu.  Click
-on the &quot;Options&quot; button on the right end of the tool bar and then select the
-permissions tab. You will see this:</p>
+<p>Для изменения прав доступа различных групп пользователей необходимо войти в админ панель 
+и выбрать пункт &quot;Вложения&quot; в меню &quot;Компоненты&quot;. Нажать 
+кнопку &quot;Настройки&quot; на тулбаре (правый верхний угол) и выбрать 
+закладку 'Права'. Представлены следующие пункты:</p>
 <div class="figure">
 <img alt="Permission Options" src="images/options-permissions.png" />
-<p class="caption">The attachments permissions options.  The permissions for the Public group
-are shown.</p>
+<p class="caption">Опции прав доступа к вложениям. Показаны права доступа для общей (Public) группы пользователей.</p>
 </div>
-<p>Here is a brief description of permissions related to Attachments that are available:</p>
+<p>Краткое описание прав доступа, связанных с доступом ко вложениям:</p>
 <table border="1" class="permissions docutils">
 <colgroup>
 <col width="26%" />
@@ -529,92 +508,89 @@ are shown.</p>
 <col width="17%" />
 </colgroup>
 <thead valign="bottom">
-<tr><th class="head">Permission</th>
-<th class="head">Description / Notes</th>
-<th class="head">ACL Action</th>
+<tr><th class="head">Разрешение</th>
+<th class="head">Описание / Замечания</th>
+<th class="head">ACL действие</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr><td>Configure Attachments</td>
-<td>Allows users to edit the Attachments options.</td>
+<tr><td>Настройка ВЛОЖЕНИЯ</td>
+<td>Возможно изменять общие настройки ВЛОЖЕНИЯ.</td>
 <td>core.admin</td>
 </tr>
-<tr><td>Access Attachments</td>
-<td>Allows users to access the Attachments extension in the administrative back end</td>
+<tr><td>Доступ к ВЛОЖЕНИЯ</td>
+<td>Возможен доступ к расширению ВЛОЖЕНИЯ в админ панели</td>
 <td>core.manage</td>
 </tr>
-<tr><td>Create Attachments</td>
-<td>Allows users to create attachments (if they may edit the parent).</td>
+<tr><td>Создавать вложения</td>
+<td>Можно создавать вложения (если возможно редактировать родитель).</td>
 <td>core.create</td>
 </tr>
-<tr><td>Delete Attachments</td>
-<td>Allows users to delete attachments (if they may edit the parent).</td>
+<tr><td>Удалять вложения</td>
+<td>Можно удалять любые вложения (если возможно редактировать родитель).</td>
 <td>core.delete</td>
 </tr>
-<tr><td>Edit Attachments</td>
-<td>Allows users to edit attachments (if they may edit the parent).</td>
+<tr><td>Редактировать вложения</td>
+<td>Можно редактировать любые вложения (если возможно редактировать родитель).</td>
 <td>core.edit</td>
 </tr>
-<tr><td>Edit Attachment State</td>
-<td>Allows users to change the state of any attachment (if they may edit the parent).</td>
+<tr><td>Редактировать состояние вложения</td>
+<td>Можно изменять состояние любого вложения (если возможно редактировать родитель).</td>
 <td>core.edit.state</td>
 </tr>
-<tr><td>Edit Own Attachments</td>
-<td>Allows users to edit attachments they created (if they may edit the parent).</td>
+<tr><td>Редактировать вложения автора</td>
+<td>Можно изменять только собственные вложения (если возможно редактировать родитель).</td>
 <td>core.edit.own</td>
 </tr>
-<tr><td>Edit State Of Own Attachments</td>
-<td>Allows users to change the state of any attachment they created (if they may edit the parent).</td>
+<tr><td>Редактировать состояние вложения автора</td>
+<td>Можно изменять состояние только собственных вложений (если возможно редактировать родитель).</td>
 <td>attachments.edit.state.own</td>
 </tr>
-<tr><td>Delete Own Attachments</td>
-<td>Allows users to delete their own attachments (if they may edit the parent).</td>
+<tr><td>Удалять вложения автора</td>
+<td>Можно удалять только собственные вложения (если возможно редактировать родитель).</td>
 <td>attachments.delete.own</td>
 </tr>
-<tr><td>Edit Attachments For Owned Article/Parent</td>
-<td>Allows users to edit any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Редактировать вложения к статьям/родителям автора</td>
+<td>Можно редактировать любое вложение к собственным статьям/родителям (если возможно редактировать родитель).</td>
 <td>attachments.edit.ownparent</td>
 </tr>
-<tr><td>Edit State Of Attachments For Owned Article/Parent</td>
-<td>Allows users to edit the state of any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Редактировать состояние вложения к статьям/родителям автора</td>
+<td>Можно редактировать состояние любого вложения к собственным статьям/родителям (если возможно редактировать родитель).</td>
 <td>attachments.edit.state.ownparent</td>
 </tr>
-<tr><td>Delete Attachments For Owned Article/Parent</td>
-<td>Allows users to delete any attachment for articles/parents they they own (and may edit the parent).</td>
+<tr><td>Удалять вложения к статьям/родителям автора</td>
+<td>Можно удалять любое вложение к собственным статьям/родителям (если возможно редактировать родитель).</td>
 <td>attachments.delete.ownparent</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="default-permissions">
-<h2>Default Permissions</h2>
-<p>When the attachments extension is installed, it installs these basic permissions:</p>
+<h2>Права по умолчанию</h2>
+<p>Сразу после установки расширения ВЛОЖЕНИЯ установлены следующие права:</p>
 <div class="hide-title important">
 <p class="first admonition-title">Important</p>
-<p><strong>Basic Behavior Of Default Permissions</strong></p>
+<p><strong>Начальные настройки прав доступа</strong></p>
 <ul class="last simple">
-<li>Authors (and Managers) or above can add attachments to any article/parent they can edit</li>
-<li>Authors (and Managers) or above can edit or delete any attachments on any
-article/parent they can edit</li>
-<li>Editors (and Managers) or above can publish/unpublish attachments from the
-front end.</li>
-<li>Authors cannot publish their own attachments.</li>
+<li>Authors (и Managers) или выше могут создавать вложения к любой статье/родителю, который они могут редактировать</li>
+<li>Authors (и Managers) или выше могут редактировать или удалять любые вложения к любой статье/родителю, который они могут редактировать</li>
+<li>Editors (и Managers) или выше могут публиковать/снимать с публикации вложения с фронта сайта.</li>
+<li>Authors не могут публиковать собственные вложения.</li>
 </ul>
 </div>
-<p>If you want different defaults, you will need to edit the permissions using
-the &quot;Permissions&quot; tab on the Attachments options.</p>
+<p>Если необходимы другие умолчания, необходимо изменить соответствующие права доступа при помощи 
+закладки &quot;Права&quot; кнопка &quot;Настройки&quot;.</p>
 </div>
 <div class="section" id="permissions-settings-for-common-scenarios">
-<h2>Permissions Settings for Common Scenarios</h2>
-<p>Here are some suggestions about how to set the permissions to achieve the
-desired behaviors:</p>
+<h2>Настройки прав доступа для обычных сценариев</h2>
+<p>Далее приведено несколько предложений по установке прав доступа для достижения необходимого результата:</p>
 <blockquote>
 <ul>
-<li><p class="first"><strong>Scenario 1 - Authors can publish their own Attachments</strong></p>
+<li><p class="first"><strong>Сценарий 1 - Авторы могут публиковать собственные вложения</strong></p>
 <blockquote>
 <ul>
-<li><p class="first">In the permissions options, click on the 'Author' entry.  Locate the
-'Edit State of Own Attachments' line and set it to 'Allowed' and click on
-'Save' to verify the changes.</p>
+<li><p class="first">На закладке ПРАВА выбрать вхождение 'Author'. Выбрать пункт 
+'Редактировать состояние собственного вложения', установить 'Разрешено' и нажать 
+'Сохранить' для проверки изменений.</p>
 <div class="figure">
 <img alt="Permissions setting for scenario1" src="images/permissions-scenario1.png" />
 </div>
@@ -622,512 +598,492 @@ desired behaviors:</p>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Scenario 2 - Authors can edit/delete their own attachments but no one elses</strong></p>
+<li><p class="first"><strong>Сценарий 2 - Авторы могут редактировать/удалять только собственные вложения</strong></p>
 <blockquote>
 <ul>
-<li><p class="first">In the permissions options, click on the 'Author' entry.  Locate the
-'Edit State Of Attachments For Owned Article/Parent' and
-'Delete Attachments For Owned Article/Parent' and set them both to 'Denied'.
-Click on 'Save' to verify the changes</p>
+<li><p class="first">На закладке ПРАВА выбрать вхождение 'Author'. Выбрать пункты 
+'Редактировать состояние вложений собственных статей/родителей' и 
+'Удалить вложения собственных статей/родителей' и установить 'Запрещено' для обоих.
+Нажать 'Сохранить' для проверки изменений</p>
 <div class="figure">
 <img alt="Permissions setting for scenario2" src="images/permissions-scenario2.png" />
 </div>
-<p>Since Author still has permissions to edit/delete their own attachments
-this effectively prevents them from editing/deleting attachments that
-they did not create, even if they can edit the article.</p>
-<p>Note that all user groups derived from Author (eg, Editor, Publisher,
-etc) will also be denied from editing or deleting attachments for
-articles/parents that they did not create (from this permission).
-Fortunately, they generally have the higher level permissions 'Edit
-Attachments' and 'Delete Attachments' which means they can edit or
-delete any attachments on any article that they can edit (assuming
-their permissions have not been changed).</p>
+<p>После изменения прав доступа Author все еще имеет права доступа на редактирование/удаление 
+собственных вложений но уже не может редактировать/удалять вложения 
+других авторов, даже если есть права на редактирование статьи.</p>
+<p>Отметим, что все пользователи групп, находящихся выше Author (т.е., Editor, Publisher,
+и т.д.) также не смогут редактировать или удалять вложения к 
+статьям/родителям, авторами которых они не являются (на основании установленного права доступа). 
+Однако, т.к. они имеют более высокие уровни доступа 'Редактировать вложение' и 
+'Удалить вложение', то они могут редактировать или 
+удалять любые вложения к любым статьям, которые они могут редактировать 
+(в предположении что остальные их правa доступа остались без изменения).</p>
 </li>
 </ul>
 </blockquote>
 </li>
 </ul>
 </blockquote>
-<p>If you have other common scenarios that you feel should be documented, please
-feel free to contact me so I can update this documentation (see the end of
-this page for contact information).</p>
+<p>Если вы используете какие-либо другие сценарии и вы можете их описать, пожалуйста 
+свяжитесь с разработчиком и они будут включены в эту документацию (контакты см. в конце документа).</p>
 </div>
 <div class="section" id="other-notes-on-permissions">
-<h2>Other Notes on Permissions</h2>
+<h2>Дополнительные замечания о правах доступа</h2>
 <blockquote>
 <ul class="simple">
-<li>If a user has permissions to edit the state of their attachments, they
-will see the 'Publish: Yes/No' options on forms to add or edit
-attachments.  If they select 'No' and save the attachment, the attachment
-will still be visible to them in the front end (while they are logged in).
-No one else will see the unpublished attachments on the front end.  If the
-user wants to change the Published state, they can edit the attachment
-(even though it is grayed out) and change the states.</li>
+<li>Если пользователь имеет права на редактирование состояния своих вложений, то 
+их можно увидеть даже при установе опции 'Опубликовано: Yes/No' на форме добавления/редактировани 
+вложений в положение 'No'. После сохранении вложения, вложения 
+все еще будут видимы пользователю на сайте (пока он не покинул сайт (log out)).
+Никто больше не может видеть неопубликованные вложения на сайте.  Если 
+пользователь изменил состояние 'Опубликовано: Yes/No' на 'No', то все еше существует возможность 
+редактировать вложение (даже если оно серым цветом) и изменять его состояния.</li>
 </ul>
 </blockquote>
 </div>
 </div>
 <div class="section" id="access-levels-visibility-control">
-<h1><a class="toc-backref" href="#id7">Access Levels Visibility Control</a></h1>
-<p>The Attachments extension now supports the Joomla 'Access Levels'.  Each
-attachment can be assigned to specific access levels such as 'Public',
-'Registered', and 'Special', as well as any other access levels created on
-your site.   The two basic levels are:</p>
+<h1><a class="toc-backref" href="#id7">Управление уровнями доступа/видимости (ALC)</a></h1>
+<p>Расширение ВЛОЖЕНИЯ (Attachments) теперь поддерживает 'Уровни доступа' Joomla. Каждому 
+вложению может быть назначен определенный уровень доступа, такой как 'Public',
+'Registered', и 'Special', а таже любые другие уровни доступа, созданные на сайте.
+  Существует два базовых уровня:</p>
 <blockquote>
 <ul class="simple">
-<li><strong>'Public'</strong> - Anyone visiting the website will be able to see and download
-attachments with 'access level' set to 'Public' if the article/parent is
-visibile and no other Attachments visbility settings prevent the
-attachments from being shown.</li>
-<li><strong>'Registered'</strong> - Anyone that is logged into the website will be able to
-see and download attachments with 'access level' set to 'Registered' if the
-article/parent is visibile and no other Attachments visbility settings
-prevent the attachments from being shown.</li>
+<li><strong>'Public'</strong> - Любой посетитель сайта может видеть и скачивать 
+вложения с установленным уровнем доступа в 'Public' если статья/родитель отображается 
+и нет других настроек ВЛОЖЕНИЯ, ограничивающих отображение вложения.</li>
+<li><strong>'Registered'</strong> - Любой пользователь, залогинившийся на сайте, 
+может видеть и скачивать вложения с установленным уровнем доступа 'Registered' если 
+статья/родитель отображается и нет других настроек ВЛОЖЕНИЯ, ограничивающих отображение 
+вложения.</li>
 </ul>
 </blockquote>
-<p>The effect of other access levels depends on the groups associated with the
-access level.</p>
-<p>The ability to set the 'Access Level' for individual attachments gives
-extensive control on who is able to see and download attachments.</p>
+<p>Возможности, предоставляемые другими уровнями доступа, зависят от групп пользователей, асоциированных 
+с этими уровнями.</p>
+<p>Возможность установки уровня доступа для отдельных вложений дает 
+полный контроль над тем, кто может видеть и скачивать вложения.</p>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">Suppose you create a new access level on your site.  Users that are not
-explicitly members of the groups associated with the new access level will
-not be able to set their attachments for that access level.  If you edit an
-attachment as the Super User, you might be surprised that the new access
-level does not show up in the access level options.  There are two
-potential issues.  (1) If you have just created the new access level, you
-may need to log out of the back end and log in again for the changes to be
-completely visible.  (2) The other reason is that the user (Super User, for
-instance) is not in the access level.  The fix is simple, make sure the
-user is in one of the groups associated with the new access level.</p>
+<p class="first admonition-title">Замечание</p>
+<p class="last">Предположим на сайте был создан новый уровень доступа. Пользователи не являются 
+членами групп, которые связаны с новым уровнем доступа, и следовательно, 
+не могут установить соответствующий уровень доступа для своих вложений.  Если вы отредактируете 
+вложение как Super User, вы можете столкнуться с тем, что новый уровень доступа 
+не отображается среди предлагаемых уровней доступа.  Существует два 
+возможных пути решения.  (1) Если вы только сейчас создали новый уровень доступа, вам 
+необходимо покинуть админ панель (log out) и опять войти чтобы изменения вошли в силу . 
+ (2) Другая причина это то, что пользователь (Super User например) 
+ не имеет необходимого уровня доступа.  Решение простое, проверить чтобы пользователь 
+принадлежал одной из групп, связанных с новым уровнем доступа.</p>
 </div>
 </div>
 <div class="section" id="display-filename-or-url">
-<h1><a class="toc-backref" href="#id8">Display Filename or URL</a></h1>
-<p>Normally, when files are uploaded (or URLs are installed) and listed in a list
-of attachments, the full filename (or URL) is shown as a link to download the
-attachment.  In some cases, the filename (or URL) may be too long for this to
-work nicely.  In the upload form, there is another field called &quot;Display
-Filename or URL&quot; in which the person uploading the file can insert an
-alternative filename (or URL) or label to display instead of the full filename
-(or URL).  For instance, some abbreviation of the filename could be added in
-this field.  The field may be edited in the administrative back end when
-attachments are edited.  Note: There is an option called &quot;Maximum Filename or
-URL Length&quot; in the 'Attachments' extension options.  It can be set to automatically
-truncate uploaded displayed filenames; the resulting truncated filename will
-be inserted into the &quot;Display Filename or URL&quot; field.</p>
+<h1><a class="toc-backref" href="#id8">Отображение имен файлов или ссылок</a></h1>
+<p>Обычно, когда файлы загружены (или ссылки добавлены) и отображаются в списке
+вложений, полное имя файла (или ссылка) используется как ссылка для
+скачивания вложения.  В некоторых случаях имена файлов (или ссылок) могут быть слишком
+длинными.  В форме загрузки файла есть специальное поле &quot;Показать
+имя файла/ссылку&quot; в котором возможно указать имя файла (ссылки) или метку,
+которые будут отображаться вместо полного имени файла (или ссылки).
+ Например здесь может быть указана аббревиатура имени файла.
+ Это поле может быть изменено через админ панель при редактировании вложения.
+ Замечание: Среди опций разширения опция &quot;Максимальная длина имени файла или ссылки&quot;. 
+ Она может автоматически обрезать имя файла и записывать его в поле
+&quot;Показать имя файла/ссылку:&quot;.</p>
 </div>
 <div class="section" id="attaching-urls">
-<h1><a class="toc-backref" href="#id9">Attaching URLs</a></h1>
-<p>Besides files, 'Attachments' version 3.0 has is the ability to &quot;attach&quot; URLs
-to content items.  When you bring up one of the &quot;Add attachment&quot; dialog boxes,
-you will see a button labeled as &quot;Enter URL instead&quot;.  If you click on it you
-will get an entry field for the URL and see two options:</p>
+<h1><a class="toc-backref" href="#id9">Вложение ссылок</a></h1>
+<p>Кроме файлов ВЛОЖЕНИЯ (Attachments) 3.0 имеет возможность &quot;присоединять&quot; ссылки 
+к элементам контента. При открытии формы &quot;Добавить вложение&quot; можно 
+увидеть кнопку &quot;Введите ссылку вместо&quot;.  Нажатие на нее позволит 
+вам перейти в режим ввода ссылки с двумя опциями:</p>
 <ul>
 <li><dl class="first docutils">
-<dt><strong>Verify URL existence?</strong> - In order to determine the file type of the</dt>
-<dd><p class="first last">URL (to pick a suitable icon), the code queries the server for basic
-information about the file including the file type and size.  In some
-cases, the server will not respond to these requests even though the
-URL is valid.  By default, Attachment will not accept URLs that have
-not been validated by the server.  But if you know the URL is valid,
-you can uncheck this option and force the 'Attachments' extension to
-take the URL--but there are no guarantees the file type or file size
-will be correct.  Note that the server will be queried whether or not
-this option is selected.</p>
+<dt><strong>Проверить существование ссылки?</strong> - при выборе опции происходит определение типа файла</dt>
+<dd><p class="first last">(определение соответствующей иконки), запрашивается информация о файле с сервера
+- тип файла и его размер.  Иногда сервер не отвечает на запросы даже при указании правильной ссылки.
+По умолчанию расширение ВЛОЖЕНИЯ считает ссылку неправильной пока обратное не будет
+подтверждено сервером.  В случае если вы уверены, что ссылка правильная,
+необходимо снять отметку с данной опции. Тогда данная ссылка будет считаться правильной
+но это не гарантирует того, что тип файла или его размер
+будут совпадать с реальными.  Заметим, что запрос с сервера будет выполняться независимо от того,
+выбрана данная опция или нет.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><strong>Relative URL?</strong> - Normally you will enter URLs prefixed with 'http...' to</dt>
-<dd><p class="first last">indicate an full website URL.  If you wish to point to files/commands
-relative to your Joomla installation, use the 'relative' option.</p>
+<dt><strong>Относительная ссылка?</strong> - Обычно ссылка вводится в виде 'http...' для</dt>
+<dd><p class="first last">указания полного пути к файлу.  Если есть необходимость указывать относительный
+путь к файлам/командам сайта используйте данную опцию.</p>
 </dd>
 </dl>
 </li>
 </ul>
-<p>The URLs are shown with the file-type icon and overlaid with an arrow
-(indicating that it is a good link) or an red diagonal slash (indicating that
-it could not be validated).  When you edit a URL, you can change whether the
-link is valid or not to get the overlay you wish.  Also note that URL overlays
-can be disabled entirely using the main <strong>Superimpose URL link icons</strong>
-parameter.  There are several useful commands relating to URLs (and files) in
-the &quot;Utilities&quot; command in the back end.</p>
+<p>Ссылки на файлы показаны соответствующими иконками со стрелкой
+(что указывает на корректную ссылку) или перечеркнуты красной диагональной линией (что указывает
+на некорректную ссылку).  При редактировании ссылки ее правильность возможно определить
+по возникающим отметкам (стрелки или красная линия).  Отметим что эти отметки могут
+не отображаться при установке режима 'Нет' опции настроек <strong>Совмещение иконок ссылки и файла</strong>.
+ В расширение встроено несколько утилит, связанных с обработкой ссылок (и файлов)
+и доступных в админ панели через кнопку &quot;Утилиты&quot; панели управления расширения.</p>
 </div>
 <div class="section" id="what-can-files-be-attached-to">
-<h1><a class="toc-backref" href="#id10">What Can Files Be Attached To?</a></h1>
-<p>Besides attaching files or URLs to articles, it is possible to
-attach files or URLs to other types of content items such as
-Categories (see below).  If appropriate 'Attachments' plugins are
-installed, it may be possible to attach files or URLs to a wide variety
-of content items such as user profiles, shopping cart product
-descriptions, etc.  Basically any content item that is displayed on the
-front end and uses the content event <tt class="docutils literal">'onPrepareContent'</tt> can host
-attachments (if a suitable 'Attachments' plugin is installed).  Content
-items that invoke content events are typically items that have content
-to be displayed (such as articles) or have descriptions that will be
-displayed.</p>
+<h1><a class="toc-backref" href="#id10">Как можно вложить файлы?</a></h1>
+<p>Кроме возможности присоединять файлы или ссылки к статьям, сущестует возможность
+присоединять файлы или ссылки к другим элементам контента, таким как Категории
+(см. ниже).  Если установлены и активны соответствующие плагины расширения ВЛОЖЕНИЯ,
+ тогда возможно присоединять файлы или ссылки к таким элементам контента как
+информация о пользователе, описание товара в интернет-магазине и т.д.
+ В сущности, любой контент, который отображается на сайте
+и в котором возможно происхождение события <tt class="docutils literal">'onPrepareContent'</tt>, может быть
+родителем вложения (при установке соответствующего плагина к расширению ВЛОЖЕНИЯ).  Контент
+сайта, вызывающий события, обычно содержит информацию для отображения
+(статьи) или имеет описание, которое также должно быть отображено на сайте.</p>
 <div class="section" id="attaching-files-or-urls-to-category-descriptions">
-<h2>Attaching Files or URLs to Category Descriptions</h2>
-<p>With this version of attachments, users can attach files to Category
-descriptions.  These descriptions are generally only visible on Category Blog
-pages.  Attachments may be added to Category descriptions in the Category
-editor.</p>
+<h2>Вложение файлов или ссылок к описаниям категорий</h2>
+<p>В этой версии пользователи могут присоединять файлы или ссылки к описанию категории. 
+ Обычно эти описания отображаются на страницах категорий в режиме блога. 
+Вложения можно добавлять к описанию категории в редакторе категорий.</p>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Attachments for categories will only show the category basic
-parameter 'description' is set to <em>Show</em> (via the Menu Editor) AND the
-category description is not empty.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">Вложения к категориям можно добавить только в случае, когда параметр 
+'Описание' установлен в режим <em>Показать</em> (см. меню 'Меню') и описание категории не пустое.</p>
 </div>
-<p>If you wish to learn more about how to develop a new Attachment plugin, there
-is a manual that is available as part of this 'Attachments' installation:</p>
+<p>Если вы хотите узнать больше о разработке плагинов для расширения ВЛОЖЕНИЯ, документация 
+доступна по данной ссылке как часть инсталляционного пакета расширения ВЛОЖЕНИЯ:</p>
 <ul class="simple">
-<li><a class="reference external" href="plugin_manual/html/index.html">Attachments Plugin Creation Manual</a></li>
+<li><a class="reference external" href="plugin_manual/html/index.html">Документация по разработке плагинов для расширения ВЛОЖЕНИЯ</a></li>
 </ul>
 <div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The Attachment Plugin Creation Manual has not been updated for Attachments
-3.0 yet.  There have been some architectural changes that means that
-Attachments plugins in Joomla 1.6/1.7+ will have some significant
-differences from those for Joomla 1.5.</p>
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">Документация по разработке плагинов для расширения ВЛОЖЕНИЯ еще не обноблена до версии 3.0. 
+ Существует несколько изменений в архитектуре что означает, 
+что плагины для ВЛОЖЕНИЯ в Joomla 1.6/1.7+ имеют значительные отличия 
+от таких же плагинов для Joomla 1.5.</p>
 </div>
 </div>
 </div>
 <div class="section" id="css-styling-of-attachment-lists">
-<h1><a class="toc-backref" href="#id11">CSS Styling of Attachment Lists</a></h1>
-<p>The lists of attachments on the front end are done using a special
-'div' that contains a table for the attachments. The table has
-several different CSS classes associated with it to allow the website
-developer the flexibility to customize the appearance of the table. Look in
-the attachments plugin file CSS file (in plugins/content/attachments.css) for
-examples. If you wish to change the style, consider copying the original
-styles into the end of the same file and renaming 'attachmentsList' in the
-copied section to something of your choice.  Edit the 'Attachments' parameter
-(in the  component manager) and change the parameter <em>attachments table style</em>
-to the new class name. Then modify the class definitions in your copied section
-appropriately. This approach will allow you to quickly revert to the original
-style by changing the plugin parameter <em>attachments table style</em> back to
-its default, 'attachmentsList'. This also has the advantage that the
-section of modified styles can be copied to a file and easily brought back in
-when the version of 'Attachments' is upgraded. This could also be done via a
-CSS &#64;import command.</p>
+<h1><a class="toc-backref" href="#id11">CSS стили списка вложений</a></h1>
+<p>Список вложений на сайте строится при помощи специального тега 'div', который
+содержит таблицы для вложений. Таблица имеет несколько разных CSS классов, связанных с ней, чтобы
+дать разработчику сайта возможность изменять внешний вид таблицы. 
+Посмотрите CSS файл в плагине вложения (plugins/content/attachments.css) для примера.
+Если вы хотите сменить стиль, скопируйте оригинальные стили в конец файла и переименуйте 
+скопированную секцию 'attachmentsList' дав ей новое название. Откройте настройки компонента ВЛОЖЕНИЯ (Компоненты > Вложения)
+и измените <em>CSS стиль для таблицы вложений</em> на новое название класса. 
+Далeе соответствующим образом измените определения класса в новой секции файла стилей. 
+Такой подход позволит легко вернуться к первоначальному стилю, просто изменив параметр 
+<em>CSS стиль для таблицы вложений</em> на значение по умолчанию 'attachmentsList'.
+Кроме того секция с изменненым стилем может быть легко скопирована в отдельный файл 
+и затем легко добавлена заново, когда вы перейдете на новую версию расширения. 
+Это можно сделать командой CSS @import.</p>
 </div>
 <div class="section" id="file-type-icons">
-<h1><a class="toc-backref" href="#id12">File Type Icons</a></h1>
-<p>The 'Attachments' extension adds an icon in front of each attachment in the
-list of attachments. If you wish to add a new icon type, follow these steps:</p>
+<h1><a class="toc-backref" href="#id12">Иконки типов файлов</a></h1>
+<p>Расширение ВЛОЖЕНИЯ отображает иконку
+перед каждым вложением в списке вложений. Если необходимо добавить новый тип иконки
+следуйте указанным шагам:</p>
 <ol class="arabic simple">
-<li>Add an appropriate icon in the directory 'media/attachments/icons', if an
-appropriate icon is not already there;</li>
-<li>Edit the file 'components/com_attachments/file_types.php' and add an
-appropriate line to the static array $attachments_icon_from_file_extension
-which maps a file extension to an icon name (all in the
-media/attachments/icons directory). If this does not work, you may need to
-add an appropriate line to the array $attachments_icon_from_mime_type.</li>
-<li>Don't forget to make copies of the icon file and the updated file_types.php
-to some directory outside of the website directories before upgrading the
-version of 'Attachments' in the future.</li>
+<li>Добавьте соответствующую иконку в каталог 'media/attachments/icons' если ее там нет;</li>
+<li>Отредактируйте файл 'components/com_attachments/file_types.php'
+добавив соответствующую строку в статический массив $attachments_icon_from_file_extension,
+который связывает расширение файла с именем файла иконки (в каталоге media/attachments/icons).
+Если это не сработало - значит еще необходимо добавить соответствующую строку в массив 
+$attachments_icon_from_mime_type;</li>
+<li>Не забудьте сохранить ваши файлы иконок и измененный
+файл file_types.php, перед тем как обновлять версию расширения.</li>
 </ol>
 </div>
 <div class="section" id="administrative-utility-commands">
-<h1><a class="toc-backref" href="#id13">Administrative Utility Commands</a></h1>
-<p>There are several utility commands in the back end that are available for
-Administrators.   These include:</p>
+<h1><a class="toc-backref" href="#id13">Утилиты</a></h1>
+<p>Компонент имеет несколько утилит для выполнения их в админ панели, и которые доступны  
+администратору:</p>
 <ul>
-<li><p class="first"><strong>Disable uninstallation of MySQL Attachments Table:</strong> Normally, when the
-Attachments extension is uninstalled, the database table is deleted that
-contains information about the attachments.   If you wish to retain this
-data when uninstalling Attachments, execute this command.  After you
-uninstall Attachments the attachments table will remain.</p>
+<li><p class="first"><strong>Запретить удаление таблицы вложений MySQL:</strong> 
+Для обновления компонента ВЛОЖЕНИЯ (Attachments) без потери существующих вложений нажмите для запрета удаления таблицы вложений MySQL. Кроме того, необходимо сохранить существующий каталог для загрузки файлов (обычно 'attachments')
+
+Обычно когда удаляется расширение ВЛОЖЕНИЯ 
+(Attachments), таблица базы данных, хранящая информацю о вложениях, также 
+удаляется. Если необходимо сохранить эти данные при удалени 
+расширения ВЛОЖЕНИЯ, выполните данную утилиту. После удаления 
+расширения ВЛОЖЕНИЯ (Attachments) таблица с данными о вложениях сохранится.</p>
 </li>
-<li><p class="first"><strong>Reinstall Default Asset Rules or Attachments Permissions:</strong> When the
-Attachments extension is installed, the installer adds several default asset
-rules so that the custom permissions added in the Attachments extension
-behave logically and similarly to the standard permissions.  If you
-reinstall or update Joomla, these asset rules may be lost.  You can restore
-them by executing this command.</p>
+<li><p class="first"><strong>Переустановить уровни доступа по умолчанию или уровни доступа вложений:</strong> При 
+установке расширения ВЛОЖЕНИЯ (Attachments) инсталлятор добавляет несколько уровней доступа, 
+которые расширяют стандартные уровни доступа и позволяют осуществлять доступ к вложениям 
+и управлять ими. При переинсталляции или 
+обновлении Joomla эти уровни доступа могут быть потеряны. Для восстановления уровней доступа 
+расширения ВЛОЖЕНИЯ выполните данную утилиту.</p>
 </li>
-<li><p class="first"><strong>Regenerate attachment system filenames:</strong> This command is very useful when
-you move (migrate) your attachments from one computer to another.  The full
-path each file attachment is kept in the database and called the &quot;system
-filename&quot;.  If you move attachments from one system to another, it is very
-likely this path information will be incorrect.  You may execute this
-command to regenerate all of the system filenames for all file attachments.</p>
-<p>The Utility command to &quot;Regenerate system filenames&quot; works for migration
-from windows to Linux servers.  It also works for migration from Linux to
-Windows servers with a couple of potential problems:</p>
+<li><p class="first"><strong>Восстановление имен файлов вложения:</strong> Данная утилита необходима 
+при переносе (миграции) ваших вложений с одного сервера на другой.  Полный 
+путь к каждому файлу вложения сохраняется в базе данных и называется &quot;system
+filename&quot;. При перемещении вложений из одной ОС на другую информация о 
+пути к вложениям обычно становится ошибочной. При выполнении данной утилиты 
+проверяются и обновляются все пути ко всем файлам вложений.</p>
+<p>Данная утилита хорошо работает при переносе вложений 
+с windows сервера на Linux сервер. Она также работает при переносе с Linux на 
+Windows сервер но с учетом двух потенциальных проблем:</p>
 <blockquote>
 <ul class="simple">
-<li>When you copy your files to your Windows server, you need to verify
-that the attachments directory (usually 'attachments') and all files
-within it are writable by the Joomla web server.</li>
-<li>You may have problems porting files that have Unicode characters in
-their filenames because the archiving/unarchiving software has problems
-with the Unicode filenames (on the Windows side).  You may need to save
-those files, delete the corresponding attachments, and then re-attach
-them.</li>
+<li>При копировании файлов на Windows сервер необходимо проверить 
+каталог вложений (обычно 'attachments') и все файлы в нем 
+должны быть доступны для перезаписи Joomla сервером.</li>
+<li>Возможны проблемы при переносе файлов, имеющих Unicode символы в 
+их именах файлов т.к. программы архивирования/разархивирования не работают 
+корректно с именами файлов, содержащих Unicode символы (на Windows сервере). Возможно придется 
+сохранить эти файлы отдельно, удалить соответствующие вложения и затем их создать вновь.</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first"><strong>Remove spaces from filenames:</strong> You may execute this command to replace
-all spaces with underscores in the filename for all file attachments.  This
-may be necessary on some systems.  In 'Secure' mode, this should not be
-necessary.</p>
+<li><p class="first"><strong>Удаление пробелов из имен файлов:</strong> Данная утилита используется для замены 
+всех пробелов на подчеркивания в именах файлов всех вложений.  Это 
+может понадобиться на некоторых системах. В режиме ограниченного доступа в этом нет необходимости.</p>
 </li>
-<li><p class="first"><strong>Update attachment file sizes:</strong> This command will recompute the file
-sizes for all file attachments.</p>
+<li><p class="first"><strong>Обновить размер файлов вложения:</strong> Данная утилита пересчитывает размер 
+всех файлов всех вложений.</p>
 </li>
-<li><p class="first"><strong>Check existence of attachment files:</strong> This command may be used to verify
-that the file exists for all file attachments.  Missing files will be
-listed.</p>
+<li><p class="first"><strong>Проверить существование присоединенных файлов:</strong> Данная утилита может использоваться для 
+проверки существования файлов всех вложений. Отсутствующие файлы будут выведены.</p>
 </li>
-<li><p class="first"><strong>Validate URLs:</strong> The URL attachments retain information about the validity
-of the URL given.  This command will check each URL attachment and check the
-validity of the URL and update the validity information for the attachment.</p>
+<li><p class="first"><strong>Проверка ссылок:</strong> Расширение ВЛОЖЕНИЯ (attachments) сохраняет информацию о корректности 
+введенных ссылок. Данная утилита позволяет проверить ссылку каждого вложения, ее корректность 
+и обновить информацию о корректности для вложений.</p>
 </li>
 </ul>
 <div class="note">
-<p class="first admonition-title">Note</p>
-<p class="last">In the back end, sometimes when you execute one of the Utility commands, you
-may get a warning that the browser needs to resend the request.  This is
-harmless, so click [Ok] and the command will execute.</p>
+<p class="first admonition-title">Примечание</p>
+<p class="last">В админ панели иногда при выполнении некоторых утилит можно 
+получить предупреждающее сообщение о повторном запросе к серверу. Это 
+безвредное сообщение, просто нажмите [OK] и утилита будет выполнена.</p>
 </div>
 </div>
 <div class="section" id="warnings">
-<h1><a class="toc-backref" href="#id14">Warnings</a></h1>
+<h1><a class="toc-backref" href="#id14">Предупреждения</a></h1>
 <ul>
-<li><p class="first"><strong>If you have attachment files that are sensitive or private, use the
-*Secure attachment downloads* option!</strong> If you do not use the secure option,
-the attachment files are saved in a public sub-directory and are accessible
-to anyone that knows the full URL.  The <em>secure</em> option prevents access by
-anyone that does not have appropriate permissions (as determined by the
-options above).  See the discussion of the <em>Secure attachment downloads</em>
-option above for more detail.</p>
+<li><p class="first"><strong>Если у вас ценные и важные файлы вложений необходимо 
+использовать режим ограниченного доступа!</strong> Если используется обычный режим доступа, 
+файлы вложений сохраняются в общедоступном каталоге и они доступы 
+любому, кто знает полный путь к файлу.  Режим <em>ограниченный доступ</em> предотвращает доступ 
+любого пользователя, который не имеет достаточных прав (которые устанавливаются при помощи опций, 
+описанных выше). См. более подробно в описании опции <em>Скачивание при ограниченном доступе</em>.</p>
 </li>
-<li><p class="first">Every time a file is uploaded, the existence of the upload sub-directory is
-checked and it will be created if if it does not exist.  By default the
-sub-directory for uploaded files is 'attachments' in the root directory of
-your web site files.  The name of the sub-directory can be changed using the
-'Sub-directory for uploads' option. If the 'Attachments' extension is unable
-to create the sub-directory for uploads, you must create it yourself (and you
-may have problems uploading files).  Make sure to give the sub-directory
-suitable permissions for uploading files.  In the Unix/Linux world, that is
-probably something like 775.  Note the process of creating the upload
-sub-directory may fail if the top level directory of your website has
-permissions that prevent the web server (and PHP) from creating
-sub-directories.  You may need to loosen the permissions temporarily to allow
-the sub-directory to be created by uploading attachments.</p>
+<li><p class="first">Каждый раз при загрузке файла выполняется проверка существования каталога для загрузки 
+и он создается в случае отсутствия. По умолчанию каталог 
+для загрузки файлов называется 'attachments' и находится в корневом каталоге 
+вашего сайта. Имя для каталога загрузки может быть изменено 
+при помощи опции 'Каталог для загрузки'. Если расширение ВЛОЖЕНИЯ (Attachments) не может 
+создать каталог для загрузки, необходимо создать его вручную (иначе будут 
+проблемы при загрузке файлов). Проверьте установлены ли необходимые 
+разрешения для загрузки файлов в данный каталог.  В Unix/Linux системах это 
+значение равно 775.  Внимание, процесс создания каталога для загрузки может не удасться, если настройки вашего сервера (или PHP)
+запрещают создавать подкаталоги.  Возможно вам прийдется времено убрать эти ограничения.</p>
 </li>
-<li><p class="first">If this extension does not permit you to upload specific types of files
-(such as zip files), be aware that the extension respects the restrictions
-placed by the Media Manager on types of files permitted to be uploaded. This
-is to prevent uploading of potentially harmful types of files such as html
-or php files. The administrator can update the Media Manager settings to add
-specific file types by going to the &quot;Global Settings&quot; item under the &quot;Site&quot;
-menu, selecting the &quot;System&quot; tab, and added the appropriate file extension
-in lower and upper case and Mime type to the lists under the &quot;Media Manager&quot;
-section.</p>
+<li><p class="first">Если вам не удается загружать файлы определенного типа 
+(например zip архивы), помните что раширение ВЛОЖЕНИЯ использует 
+ограничения, накладываемые медиа менеджером. Это сделано, чтобы не загрузать 
+потенциально опасные файлы такие как *.php или *.html.
+Администратор может изменить настройки медиа менеджера, чтобы добавить требуемый тип файлов.
+(Путь: &quot;Сайт&quot; > &quot;Настройки&quot; > закладка &quot;Система&quot; > раздел &quot;Мультимедиа&quot;).</p>
 </li>
-<li><p class="first">If you cannot see the attachments in the front end, there are several
-possible reasons:</p>
+<li><p class="first">Если вы не видите вложений, этому может быть несколько причин:</p>
 <blockquote>
 <ul class="simple">
-<li>The attachment is not published.  You can change this in Attachments
-manager page in the back end.</li>
-<li>The parent article or content item is not published.</li>
-<li>The option 'Who can see attachments' is set to 'logged-in' and you are
-not logged in on the front end.</li>
-<li>Or the option 'Who can see attachments' is set to 'no one'. This can be
-changed via the Parameter editor in the component manager.</li>
-<li>The 'Content - Attachments' plugin is not enabled.  Use the plugin manager
-to enable it.</li>
-<li>In the 'Content - Attachments' (via the plugin manager), the access
-level is not set to 'Public'.</li>
-<li>If your site uses caching, try clearing the caches and refreshing the
-page.</li>
+<li>Вложение не опубликовано.  Необходимо опубликовать вложение через админ панель расширения.</li>
+<li>Родитель вложения не опубликован.</li>
+<li>Опция 'Кто может видеть вложения?' установлена в режим 'любой пользователь' 
+а вы не залогинились.</li>
+<li>Выбран режим 'Никто' опции 'Кто может видеть вложения?'. Необходимо изменить соответствующие настройки расширения.</li>
+<li>Плагин 'Content - Attachments' не включен.  Воспользуйтесь менеджером плагинов, чтобы его включить.</li>
+<li>Опция плагина 'Content - Attachments' 'Уровень доступа' установлена в режим не 'Общий'.</li>
+<li>Если ваш сайт использует кеширование попробуйте очистить кеш и обновить страницу.</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">If you encounter limits on the sizes of files that you attempt to upload,
-try adding the following lines to the .htaccess file in the root of
-your Joomla! website:</p>
+<li><p class="first">Если вы столкнулись с ограничением на размер загружаемого файла попробуйте 
+добавить следующие строчки в файл .htaccess в корне вашего сайта:</p>
 <pre class="literal-block">
 php_value upload_max_filesize 32M
 php_value post_max_size 32M
 </pre>
-<p>where you may change the 32M (megabytes) value to whatever you wish as the maximum
-upload file size.</p>
+<p>где значение 32M (мегабайта) заменить 
+на необходимое значение в качестве ограничения максимального размера загружаемых файлов.</p>
 </li>
-<li><p class="first">'Attachments' now supports &quot;attaching&quot; URLs to content items.  If your server
-is Windows Vista and you encounter problems attaching URLs that involve
-<tt class="docutils literal">localhost</tt>, this is a known problem related to IPv4 and IPv6 conflicts.
-To fix it, edit the file:</p>
+<li><p class="first">Расширение ВЛОЖЕНИЯ поддерживает &quot;вложение&quot; ссылок.  Если сайт расположен
+на компьютере с ОС Windows Vista и возникли проблемы при присоединении ссылки, связанные с
+<tt class="docutils literal">localhost</tt>, то известная проблема связанная с конфликтом IPv4 и IPv6.
+Для решения этой проблемы необходимо отредактировать файл:</p>
 <pre class="literal-block">
 C:\Windows\System32\drivers\etc\hosts
 </pre>
-<p>Comment out the line that has <tt class="docutils literal">::1</tt> on it.  Note that <tt class="docutils literal">hosts</tt> is a
-hidden system file and you may need to modify your folder options to show
-hidden files to see and edit it.</p>
+<p>Закомментировать строку, содержащую <tt class="docutils literal">::1</tt>  Отметим, что файл <tt class="docutils literal">hosts</tt> это
+скрытый файл. Для его редактирования необходимо изменить настройки отображения каталога чтобы отобразить скрытые файлы.</p>
 </li>
-<li><p class="first">If you have difficulties attaching files that have Unicode characters (such
-as Russian/Cyrillic characters), set the <em>Secure Attachments Downloads</em>
-option to 'Yes'.  Filenames with Unicode characters should work properly on
-Linux servers in secure or non-secure modes, but do not always work
-correctly on Windows servers in non-secure mode.</p>
+<li><p class="first">В случае возникновения проблем при вложении файлов, имеющих Unicode символы в названии файлов 
+(например названия файлов на русском языке), установите опцию 
+<em>Режим ограниченного доступа</em> в ДА. 
+Обработка файлов с Unicode символами обрабатывается корректно на 
+Linux серверах в ограниченном и обычном режимах, но не всегда корректно работает 
+на Windows серверах в обычном режиме.</p>
 </li>
-<li><p class="first">'Attachments' now supports attaching files to articles while they are being
-created in the Article editor.  There is one limitation to this.  New
-attachments are in a state of &quot;limbo&quot; after the file is uploaded and before
-the article is actually saved for the first time.  During this (hopefully
-brief) limbo period, the new attachments are identified by user id only.  So
-if more than one person is using the same user account and they create
-articles at the same time and add attachments at the same time, there is no
-guarantee that the attached files will end up with the correct article.</p>
+<li><p class="first">Расширение ВЛОЖЕНИЯ поддерживает вложение файлов к статьям при их
+создании в редакторе статей.  При этом существует ограничение:  новые
+вложения после их загрузки и до сохранения статьи первый раз находятся в состоянии 'limbo'.
+ Во время этого состояния (которое желательно делать максимально коротким)
+новые вложения идентифициются только по ID пользователя.  Следовательно,
+если более чем один пользователь использует одну и ту же пользовательскую запись и они создают
+статьи в одно и то же время и добавляют вложения, то нет никакой гарантии
+что файлы вложений будут присоединены к тем статьям, к которым планировались вложения.</p>
 </li>
-<li><p class="first">There is a help forum and a 'Frequently Asked Questions' forum for the
-'Attachments' extension that is hosted on the joomlacode.org website.  If
-you encounter a problem that is not covered in this help page, please
-consult the forums:</p>
+<li><p class="first">Существует форум помощи и форум Часто Задаваемых Вопросов о расширении ВЛОЖЕНИЯ на сайте Joomlacode, 
+(joomlacode.org). Если вы обнаружили проблему, не описанную в данном файле помощи, пожалуйста проконсультируйтесь на форумах. 
+ (Просьба задавать вопросы на форуме помощи. Часто встречающиеся вопросы будут помещены 
+в раздел FAQ'):</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments/forum/">Attachments Forums at
-http://joomlacode.org/gf/project/attachments/forum/</a></li>
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments3/forum/">Форум ВЛОЖЕНИЯ на
+http://joomlacode.org/gf/project/attachments3/forum/</a></li>
 </ul>
 </blockquote>
 </li>
 </ul>
 </div>
 <div class="section" id="upgrading">
-<h1><a class="toc-backref" href="#id15">Upgrading</a></h1>
-<p>Upgrading is very easy.  You have two choices:</p>
+<h1><a class="toc-backref" href="#id15">Обновление</a></h1>
+<p>Обновление расширения выполняется очень просто. Существует два пути:</p>
 <ol class="arabic simple">
-<li>Simply install the new version of 'Attachments'. There is no need to
-uninstall the previous version.  You do not need to do anything to retain
-your old attachments.  Simply install the new version and it will update
-everything appropriately.</li>
-<li>PREFRERRED: One of the excellent new features in Joomla 1.6 and later is
-the extension updater.  Go to the Extension Manager in the back end and
-click on the 'Update' tab.  Click 'Purge Cache' and then 'Find Updates' on
-the toolbar.  If there is a new release of Attachments, it will be shown.
-You can select the release and then click on the 'Update' button on the
-toolbar to install the new release.  This makes keeping the Attachments
-extension updated very simple!</li>
+<li>Просто проинсталлируйте новую версию ВЛОЖЕНИЯ. Нет необходимости в 
+удалении предыдущей версии. Вам нет необходимости сохранять ваши 
+старые вложения. Достаточно проинсталлировать новую версию. При этом необходимые обновления произойдут
+автоматически.</li>
+<li>НОВИНКА: В Joomla 1.6+ добавлена возможность автоматического обновления 
+расширений.  Перейдите 'Расширения' > 'Менеджер расширений' > Закладка 'Обновление'. 
+Нажмите кнопку 'Очистить кэш' и затем 'Найти обновления' наn 
+тулбар.  Если существует новая версия ВЛОЖЕНИЯ, она появится в списке. 
+Выберите необходимую версию и нажмите кнопку 'Обновить' 
+на тулбар для установки.  Этот способ позволяет обновлять расширение ВЛОЖЕНИЯ 
+еще проще!</li>
 </ol>
 </div>
 <div class="section" id="uninstalling">
-<h1><a class="toc-backref" href="#id16">Uninstalling</a></h1>
+<h1><a class="toc-backref" href="#id16">Удаление</a></h1>
 <ul>
-<li><p class="first">To uninstall the Attachments extension, go to the 'Manage' tab on the
-Extension Manager page (under the 'Extensions' menu).  <strong>Select ONLY the item</strong>:</p>
+<li><p class="first">Для удаления расширения ВЛОЖЕНИЯ (Attachments) перейдите 
+'Расширения' > 'Менеджер расширений' > Закладка 'Управление'. <strong>Выбрать ТОЛЬКО это</strong>:</p>
 <pre class="literal-block">
 Package: Attachments for Joomla 1.6+
 </pre>
-<p>and click on the 'Uninstall' button on the toolbar.</p>
+<p>и нажмите кнопку 'Деинсталлировать' на тулбар.  Расширение ВЛОЖЕНИЯ 
+и все его плагины будут удалены.</p>
 </li>
-<li><p class="first">If you wish to retain your attachments, make a copy of the 'attachments'
-directory at the top of the Joomla installation and copy the '_attachments'
-table in the database.  If you intend to reinstall soon, see the <strong>Disable
-uninstallation of MySQL Attachments Table</strong> command in the <a class="reference internal" href="#administrative-utility-commands">Administrative
-Utility Commands</a> to prevent the attachments database table from being
-deleted on uninstallation of the Attachments extension.</p>
+<li><p class="first">Если необходимо сохранить ваши вложения, сделайте копию каталога 'attachments', 
+который находится в корневом каталоге сайта на Joomla и скопируйте таблицу '_attachments' 
+из базы MySQL сайта.  Если вы намереваетесь переинсталлировать расширение, см. описание утилиты 
+<strong>Запретить удаление таблицы вложений MySQL</strong>  в разделе <a class="reference internal" href="#administrative-utility-commands">Утилиты</a> для предотвращения удаления таблицы базы MySQL в которой хранятся данные о вложениях 
+при удалении расширения ВЛОЖЕНИЯ.</p>
 </li>
-<li><p class="first">If you do not wish to keep existing attachments, delete them all first (in
-the administrative back end).  Once you have uninstalled the Attachments
-extension, delete the 'attachments' directory at the top of your Joomla
-installation.</p>
+<li><p class="first">Если нет необходимости в сохранении существующих вложений, удалите их вначале 
+через админ панель. Следовательно при удалении расширения ВЛОЖЕНИЯ возможно 
+удалить каталог 'attachments' в корне сайта на Joomla.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-6">
-<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></h1>
-<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.6 (or later)
-site, follow the procedure outlined here:</p>
+<h1><a class="toc-backref" href="#id17">Обновление компонента ВЛОЖЕНИЯ Joomla 1.5 до Joomla 1.6+</a></h1>
+<p>Для переноса ваших вложений с сайта на Joomla 1.5 на Joomla 1.6 сайт (или позднее) 
+следуйте инстукции, приведенной далее:</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Переход расширения ВЛОЖЕНИЯ (Attachments) с Joomla 1.5 на Joomla 1.6+</a></li>
 </ul>
 </blockquote>
 </div>
 <div class="section" id="translations">
-<h1><a class="toc-backref" href="#id18">Translations</a></h1>
-<p>This extension provides translation capabilities and supports the
-following languages (besides English).  Note that some of these languages
-packs are in the process of being updated for 'Attachments' version 3.0 and
-not available yet for Attachments 3.0.</p>
-<p>Thanks to these translators (available versions shown in parentheses):</p>
+<h1><a class="toc-backref" href="#id18">Переводы</a></h1>
+<p>Это расширение позволяет подключать различные языковые пакети 
+и поддерживает следующие языки (помимо английского).
+Многие из языковых пакетов находятся в процессе обновления 
+до версии 3.0.</p>
+<p>Огромная благодарность следующим переводчикам (доступные версии указаны в скобках):</p>
 <ul class="simple">
-<li><strong>Bulgarian:</strong> by Stefan Ilivanov (1.3.4)</li>
-<li><strong>Catalan:</strong> by Jaume Jorba (2.2)</li>
-<li><strong>Chinese:</strong> Traditional and simplified Chinese translations by baijianpeng (白建鹏) (1.3.4)</li>
-<li><strong>Croatian:</strong> Tanja Dragisic (1.3.4)</li>
-<li><strong>Czech:</strong> by Tomas Udrzal (1.3.4)</li>
-<li><strong>Dutch:</strong> by Parvus (2.2)</li>
-<li><strong>Finnish:</strong> by Tapani Lehtonen (2.2)</li>
-<li><strong>French:</strong> by Marc-André Ladouceur (2.2) and Pascal Adalian (1.3.4)</li>
-<li><strong>German:</strong> by Bernhard Alois Gassner (2.2) Michael Scherer (1.3.4)</li>
-<li><strong>Greek:</strong> by Harry Nakos (1.3.4)</li>
-<li><strong>Hungarian:</strong> Formal and informal translations by Szabolcs Gáspár (1.3.4)</li>
-<li><strong>Italian:</strong> by Piero Mattirolo (2.2) and Lemminkainen and Alessandro Bianchi (1.3.4)</li>
-<li><strong>Norwegian:</strong> by Roar Jystad (2.2) and Espen Gjelsvik (1.3.4)</li>
-<li><strong>Persian:</strong> by Hossein Moradgholi and Mahmood Amintoosi (2.2)</li>
-<li><strong>Polish:</strong> by Sebastian Konieczny (2.2) and Piotr Wójcik (1.3.4)</li>
-<li><strong>Portuguese (Brazilian):</strong> by Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
-<li><strong>Portuguese (Portugal):</strong> by José Paulo Tavares (2.2) and Bruno Moreira (1.3.4)</li>
-<li><strong>Romanian:</strong> by Alex Cojocaru (2.2)</li>
-<li><strong>Russian:</strong> by Sergey Litvintsev (2.2) and евгений панчев (Yarik Sharoiko) (1.3.4)</li>
-<li><strong>Serbian:</strong> by Vlada Jerkovic (1.3.4)</li>
-<li><strong>Slovak:</strong> by Miroslav Bystriansky (1.3.4)</li>
-<li><strong>Slovenian:</strong> by Matej Badalič (2.2)</li>
-<li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2) and Carlos Alfaro (1.3.4)</li>
-<li><strong>Swedish:</strong> by Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
-<li><strong>Turkish:</strong> by Kaya Zeren (2.0)</li>
+<li><strong>Болгарский (Bulgarian):</strong> перевод Stefan Ilivanov (1.3.4)</li>
+<li><strong>Венгерский (Hungarian):</strong> Формальный и неформальный переводы Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Греческий (Greek):</strong> перевод Harry Nakos (1.3.4)</li>
+<li><strong>Индонезийский (Indonesian):</strong> перевод Moh. Arif (3.0)</li>
+<li><strong>Испанский (Spanish):</strong> перевод Manuel María Pérez Ayala (2.2) и Carlos Alfaro (1.3.4)</li>
+<li><strong>Итальянский (Italian):</strong> перевод Piero Mattirolo (2.2, 3.0) и Lemminkainen и Alessandro Bianchi (1.3.4)</li>
+<li><strong>Каталанский (Catalan):</strong> перевод Jaume Jorba (2.2, 3.0)</li>
+<li><strong>Китайский (Chinese):</strong> Традиционный и упрощенный китайские переводы baijianpeng (白建鹏) (1.3.4)</li>
+<li><strong>Немецкий (German):</strong> перевод Pierre Corell (3.0), Bernhard Alois Gassner (2.2), и Michael Scherer (1.3.4)</li>
+<li><strong>Нидерландский (Dutch):</strong> перевод Parvus (2.2)</li>
+<li><strong>Норвежский (Norwegian):</strong> перевод Roar Jystad (2.2, 3.0) и Espen Gjelsvik (1.3.4)</li>
+<li><strong>Персидский (Persian):</strong> перевод Hossein Moradgholi и Mahmood Amintoosi (2.2)</li>
+<li><strong>Польский (Polish):</strong> перевод Sebastian Konieczny (2.2, 3.0), Stefan Wajda (3.0), и Piotr Wójcik (1.3.4)</li>
+<li><strong>Португальский/Бразильский (Portuguese/Brazilian):</strong> перевод Arnaldo Giacomitti и Cauan Cabral (1.3.4)</li>
+<li><strong>Португальский/Португальский (Portuguese/Portugal):</strong> перевод José Paulo Tavares (2.2, 3.0) и Bruno Moreira (1.3.4)</li>
+<li><strong>Румынский (Romanian):</strong> перевод Alex Cojocaru (2.2)</li>
+<li><strong>Русский (Russian):</strong> перевод Sergey Litvintsev (2.2, 3.0) и Евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Сербский (Serbian):</strong> перевод Vlada Jerkovic (1.3.4)</li>
+<li><strong>Словацкий (Slovak):</strong> перевод Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Словенский (Slovenian):</strong> перевод Matej Badalič (2.2, 3.0)</li>
+<li><strong>Турецкий (Turkish):</strong> перевод Kaya Zeren (2.0)</li>
+<li><strong>Украинский (Ukrainian):</strong> перевод Sergey Litvintsev (3.0)</li>
+<li><strong>Финский (Finnish):</strong> перевод Tapani Lehtonen (2.2)</li>
+<li><strong>Французский (French):</strong> перевод Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0), и Pascal Adalian (1.3.4)</li>
+<li><strong>Хорватский (Croatian):</strong> перевод Tanja Dragisic (1.3.4)</li>
+<li><strong>Чешский (Czech):</strong> перевод Tomas Udrzal (1.3.4)</li>
+<li><strong>Шведский (Swedish):</strong> перевод Linda Maltanski (2.0) и Mats Elfström (1.3.4)</li>
 </ul>
-<p>Many thanks to these translators!  If you would like to help translate
-the extension to any other language, please contact the author (see the
-<a class="reference internal" href="#contact">Contact</a> section at the end).</p>
+<p>Большое спасибо всем переводчикам!  Если вы хотите помочь с переводом расширения на другие языки, 
+пожалуйста свяжитесь с автором (см. раздел
+<a class="reference internal" href="#contact">Контакты</a> в конце).</p>
 </div>
 <div class="section" id="acknowledgments">
-<h1><a class="toc-backref" href="#id19">Acknowledgments</a></h1>
-<p>Many thanks for the following contributors or resources:</p>
+<h1><a class="toc-backref" href="#id19">Благодарности</a></h1>
+<p>Большое спасибо людям и ресурсам внесшим большой вклад в проект:</p>
 <ul>
-<li><p class="first">The book <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
-Components, and Plugins with PHP</em> by Joseph L. LeBlanc was very helpful
-in creating the 'Attachments' extension.</p>
+<li><p class="first">Книга Джозефа Л. ЛеБланк <em>Изучение разработки расширений Joomla! 1.5: Создание Модулей,
+    Компонент, и Плагинов на PHP</em> была очень полезна при написании расширения ВЛОЖЕНИЯ (Attachments).</p>
 </li>
 <li><dl class="first docutils">
-<dt>The icons for the file types were derived from several sources, including:</dt>
+<dt>Иконки для типов файлов были получены из нескольких источников, включая:</dt>
 <dd><ul class="first last simple">
-<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons by Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
-<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 by John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
-<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 by Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
-<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons by Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
-<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack by Joseph North (http://sweetie.sublink.ca)</a></li>
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">Шелковые иконки Марка Джаймса [Mark James] (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">Иконки типов файлов 1.2 Джона Зайцева [John Zaitseff] (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype иконки 2 Тимоти Грувс [Timothy Groves] (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">Иконки OpenDocument Кена Барона [Ken Baron] (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Пакет Сладостей от Джозефа Норта [Joseph North] (http://sweetie.sublink.ca)</a></li>
 </ul>
 </dd>
 </dl>
-<p>Note that many of the 'Attachments' icons were modified from the original
-icon images from these websites.  If you would like the original versions,
-please download them from the websites listed above.</p>
+<p>Замечание: большинство иконок ВЛОЖЕНИЯ (Attachments) 
+отличаются от аналогичных на этих сайтах. Если вы хотите получить оригинальные версии, 
+пожалуйста загрузите их с этих веб сайтов.</p>
 </li>
-<li><p class="first">Many thanks to Paul McDermott for generously donating the search plugin!</p>
+<li><p class="first">Большое спасибо Paul McDermott за огромную помощь в плагине поиска!</p>
 </li>
-<li><p class="first">Thanks to Mohammad Samini for donating some PHP code and CSS files to
-improve 'Attachments' displays in right-to-left languages.</p>
+<li><p class="first">Большое спасибо Mohammad Samini за предоставленный код PHP и CSS файлы
+для улучшения расширения ВЛОЖЕНИЯ при отображении использовании языков, использующих написание справа-налево.</p>
 </li>
-<li><p class="first">Thanks to Ewout Weirda for many helpful discussions and suggestions in
-the development of the 'Attachments' extension.</p>
+<li><p class="first">Большое спасибо Ewout Weirda за полезную и дисскуссию и советы
+при разработке расширения ВЛОЖЕНИЯ.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="contact">
-<h1><a class="toc-backref" href="#id20">Contact</a></h1>
-<p>Please report bugs and suggestions to <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+<h1><a class="toc-backref" href="#id20">Контакты</a></h1>
+<p>Пожалуйста сообщайте об замеченных ошибках и предложениях по адресу <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+<!-- LocalWords:  html plugin plugins ACL onPrepareContent filename Filenames qq -->
+<!-- LocalWords:  filenames frontend username PHP strftime CSS attachmentsList -->
+<!-- LocalWords:  QQ inline unpublish else's uncheck http php uninstallation IPv -->
+<!-- LocalWords:  MySQL uninstalled uninstalling uninstall unarchiving htaccess -->
+<!-- LocalWords:  filesize localhost joomlacode PREFRERRED -->
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-Generated on: August 19, 2011 at 02:52 UTC.
+Перевед закончен 6 Января 2012 в 20:35 UTC.
 
 </div>
 </body>

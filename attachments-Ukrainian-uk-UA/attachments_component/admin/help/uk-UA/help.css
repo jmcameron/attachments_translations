@@ -158,11 +158,11 @@ div#contents {
     width: 60%;
 }
 
-div#contents ul {
+div#contents ul, div#con-inut ul {
     margin: 6px 0 0 0;
 }
 
-div#contents p.topic-title {
+div#contents p.topic-title, div#con-inut p.topic-title {
     margin: 0;
 }
 
