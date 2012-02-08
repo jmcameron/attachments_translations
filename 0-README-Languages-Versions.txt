@@ -17,6 +17,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-02-07:
+   * Updated: attachments-Russian-ru-RU-3.0.1.1.zip
+         - Minor fixes and new help file in Russian
+         - Status: Complete
+         - Thanks to Sergey Litvintsev for the update!
 
 2011-09-23:
    * Added: attachments-Greek-el-GR-language-pack-3.0.1.zip
@@ -42,6 +47,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Renamed: attachments-Portuguese-pt-PT-language-pack-3.0.1.zip
    * Renamed: attachments-Romanian-ro-RO-language-pack-3.0.1.zip
    * Renamed: attachments-Russian-ru-RU-language-pack-3.0.1.zip
+	 - 928 Downloads
    * Renamed: attachments-Slovenian-sl-SI-language-pack-3.0.1.zip
    * Renamed: attachments-Spanish-es-ES-language-pack-3.0.1.zip.zip
 
