@@ -17,6 +17,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+
+2011-02-13:
+   * Added: attachments-Ukrainian-uk-UA-language-pack-3.0.1.zip
+         - Status: Complete
+         - Thanks to Sergey Litvintsev for the translation!
+
 2012-02-07:
    * Updated: attachments-Russian-ru-RU-3.0.1.1.zip
          - Minor fixes and new help file in Russian
