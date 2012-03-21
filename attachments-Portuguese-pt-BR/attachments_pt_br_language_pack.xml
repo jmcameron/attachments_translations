@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.7" type="file" method="upgrade">
   <name>attachments_pt_br_language_pack</name>
-  <version>3.0.1</version>
-  <creationDate>2011-09-09</creationDate>
+  <version>3.0.1 Draf2</version>
+  <creationDate>2012-03-20</creationDate>
   <author>Nelson Teixeira based in pt-BR translation by Jonathan M. Cameron, José Paulo Tavares (3.0, 2.2), earlier translations by Cauan Cabral and Miguel Real</author>
   <authorEmail>nelson777@gmail.com</authorEmail>
   <authorUrl></authorUrl>
