@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.7" type="file" method="upgrade">
+<extension version="1.7|2.5" type="file" method="upgrade">
   <name>attachments_pt_br_language_pack</name>
-  <version>3.0.1 Draf2</version>
-  <creationDate>2012-03-20</creationDate>
+  <version>3.0.1</version>
+  <creationDate>2012-03-21</creationDate>
   <author>Nelson Teixeira based in pt-BR translation by Jonathan M. Cameron, José Paulo Tavares (3.0, 2.2), earlier translations by Cauan Cabral and Miguel Real</author>
   <authorEmail>nelson777@gmail.com</authorEmail>
   <authorUrl></authorUrl>
-  <copyright>Copyright (C) 2011 Jonathan M. Cameron. All rights reserved.</copyright>
+  <copyright>Copyright (C) 2012 Jonathan M. Cameron. All rights reserved.</copyright>
   <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
   <description>ATTACHMENTS_PT_BR_LANGUAGE_PACK</description>
   <fileset>
