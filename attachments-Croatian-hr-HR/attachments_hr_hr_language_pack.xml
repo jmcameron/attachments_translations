@@ -91,7 +91,7 @@
   </fileset>
 
   <updateservers>
-       <server type="extension" priority="1" name="Attachments Croatian (hrvatski) (hr-HR) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/Croatian (hrvatski)-hr-HR/updates.xml</server>
+       <server type="extension" priority="1" name="Attachments Croatian (hrvatski) (hr-HR) Language Pack Updates">http://jmcameron.net/attachments/updates/translations/Croatian-hr-HR/updates.xml</server>
   </updateservers>
 
 </extension>
