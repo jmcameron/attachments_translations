@@ -6,7 +6,7 @@ INSTALL these files using the regular Joomla installer (no need to unzip manuall
 COMPATIBLITY:
 
    * Language packs with versions 3.0.1 and 3.0.1.* are compatible with 
-     Attachments 3.0, 3.0.1, and 3.0.2 on Joomla 1.6, 1.7, and 1.7.1.
+     Attachments 3.0, 3.0.1, and 3.0.2 on Joomla 1.6, 1.7, and 2.5
 
 NOTES: 
 
@@ -16,6 +16,12 @@ NOTES:
      attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
+
+2012-08-05:
+   * Updated: attachments-Greek-el-GR-3.0.1.1.zip
+         - Minor fixes update for upcoming Attachments 3.0.3 release.
+         - Status: Complete (help file in English)
+         - Thanks to Harry Nakos for the update!
 
 2011-03-21
    * Added: attachments-Portuguese-pt-BR-3.0.1.zip
@@ -39,6 +45,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 2.0 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Antonis Mylonopoulos for the translation!
+	 - 445 Downloads
 
 2011-10-12:
 
