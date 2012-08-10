@@ -8,7 +8,7 @@
 
 **Version 3.0.1.2 - 20. september 2011**
 
-**Denne versjonen er for Joomla 1.6/1.7 +**
+**Denne versjonen er for Joomla 1.7/2.5 +**
 
 .. contents::
     :depth: 1
@@ -49,7 +49,7 @@ kan du abonnere ved hjelp av denne nettsiden:
 Nye funksjoner i versjon 3.0
 ============================
 
-* Full støtte for det nye ACL/rettighetssystem i Joomla 1.6/1.7+. Dette
+* Full støtte for det nye ACL/rettighetssystem i Joomla 1.7/2.5+. Dette
   gir deg betydelig fleksibilitet til å kontrollere hvem som kan opprette,
   redigere eller slette vedlegg. Se avsnittet om `Rettigheter`_ for mer informasjon.
 
@@ -697,7 +697,7 @@ Dersom du ønsker å lære mer om hvordan du kan utvikle et nytt programtillegg 
 
    Manualen har ennå ikke blitt oppdatert for versjon 3.0 av komponenten. 
    Det har vært noen arkitektoniske endringer som innebærer at programtillegg 
-   til Joomla 1.6/1.7+ vil ha noen betydelige forskjeller fra dem for Joomla 1.5.
+   til Joomla 1.7/2.5+ vil ha noen betydelige forskjeller fra dem for Joomla 1.5.
 
 CSS formatering av vedleggslister
 =================================
