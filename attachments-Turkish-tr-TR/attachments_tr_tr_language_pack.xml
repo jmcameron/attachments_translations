@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.7|2.5" type="file" method="upgrade">
   <name>attachments_tr_tr_language_pack</name>
-  <version>3.0.1.1</version>
+  <version>3.0.1</version>
   <creationDate>2012-08-10</creationDate>
   <author>Jonathan M. Cameron, Kaya Zeren</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
