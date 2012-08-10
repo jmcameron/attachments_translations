@@ -22,6 +22,10 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Minor fixes update for upcoming Attachments 3.0.3 release.
          - Status: Complete
          - Thanks to Roar Jystad for the update!
+   * Added: attachments-Croatian-hr-HR-3.0.1.zip
+         - Update from old 1.3 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Tanja Dragisic for the translation!
 
 2012-08-05:
    * Updated: attachments-Greek-el-GR-3.0.1.1.zip
