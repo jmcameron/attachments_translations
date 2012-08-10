@@ -17,6 +17,13 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-08-10:
+   * Added: attachments-Turkish-tr-TR-3.0.1.zip
+         - Update from 2.2 version to 3.0
+	 - Includes recent updates via transifex
+         - Status: Complete (help file in English)
+         - Thanks to Kaya Zeren for the translation!
+
 2012-08-09:
    * Updated: attachments-Norwegian-nb-NO-3.0.1.3.zip
          - Minor fixes update for upcoming Attachments 3.0.3 release.
