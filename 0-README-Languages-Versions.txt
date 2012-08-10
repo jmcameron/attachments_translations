@@ -17,6 +17,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-08-09:
+   * Updated: attachments-Norwegian-nb-NO-3.0.1.3.zip
+         - Minor fixes update for upcoming Attachments 3.0.3 release.
+         - Status: Complete
+         - Thanks to Roar Jystad for the update!
+
 2012-08-05:
    * Updated: attachments-Greek-el-GR-3.0.1.1.zip
          - Minor fixes update for upcoming Attachments 3.0.3 release.
@@ -61,6 +67,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Renamed: attachments-Indonesian-id-ID-language-pack-3.0.1.1.zip
    * Renamed: attachments-Italian-it-IT-language-pack-3.0.1.zip
    * Renamed: attachments-Norwegian-nb-NO-language-pack-3.0.1.2.zip
+	 - 280 Downloads
    * Renamed: attachments-Polish-pl-PL-language-pack-3.0.1.zip
    * Renamed: attachments-Portuguese-pt-PT-language-pack-3.0.1.zip
    * Renamed: attachments-Romanian-ro-RO-language-pack-3.0.1.zip
