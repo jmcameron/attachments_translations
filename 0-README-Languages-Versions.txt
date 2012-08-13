@@ -7,6 +7,8 @@ COMPATIBLITY:
 
    * Language packs with versions 3.0.1 and 3.0.1.* are compatible with 
      Attachments 3.0, 3.0.1, 3.0.2, and 3.0.3 on Joomla 1.6, 1.7, and 2.5
+   * Language packs with version 3.0.3 will work on Attachments 3.0.3 or 
+     earlier versions.
 
 NOTES: 
 
@@ -16,6 +18,12 @@ NOTES:
      attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
+
+2012-08-13:
+   * Updated: attachments-German-de-DE-3.0.3.zip
+         - Minor updates for Attachments 3.0.3 release.
+         - Status: Complete (help file in English)
+         - Thanks to Pierre Corell for the update!
 
 2012-08-10:
    * Added: attachments-Turkish-tr-TR-3.0.1.zip
@@ -75,6 +83,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Renamed: attachments-Dutch-nl-NL-language-pack-3.0.1.zip
    * Renamed: attachments-French-fr-FR-language-pack-3.0.1.zip
    * Renamed: attachments-German-de-DE-language-pack-3.0.1.zip
+	 - 2243 Downloads
    * Renamed: attachments-Indonesian-id-ID-language-pack-3.0.1.1.zip
    * Renamed: attachments-Italian-it-IT-language-pack-3.0.1.zip
    * Renamed: attachments-Norwegian-nb-NO-language-pack-3.0.1.2.zip
