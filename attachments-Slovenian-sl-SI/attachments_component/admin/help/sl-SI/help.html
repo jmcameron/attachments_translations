@@ -15,8 +15,8 @@
 <div class="document">
 
 
-<p class="version"><strong>Version 3.0.1 - September  9, 2011</strong></p>
-<p><strong>This version is for Joomla 1.6/1.7+</strong></p>
+<p class="version"><strong>Version 3.0.3 - August 11, 2012</strong></p>
+<p><strong>This version is for Joomla 1.7/2.5+</strong></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
@@ -36,7 +36,7 @@
 <li><a class="reference internal" href="#warnings" id="id14">Warnings</a></li>
 <li><a class="reference internal" href="#upgrading" id="id15">Upgrading</a></li>
 <li><a class="reference internal" href="#uninstalling" id="id16">Uninstalling</a></li>
-<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-6" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-7-2-5" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></li>
 <li><a class="reference internal" href="#translations" id="id18">Translations</a></li>
 <li><a class="reference internal" href="#acknowledgments" id="id19">Acknowledgments</a></li>
 <li><a class="reference internal" href="#contact" id="id20">Contact</a></li>
@@ -54,7 +54,7 @@ all options are controlled through the component manager.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This version of the <em>Attachments</em> extension only works for
-Joomla! 1.6, 1.7 or greater.</p>
+Joomla! 1.7, 2.5 or greater.</p>
 </div>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -77,7 +77,7 @@ this extension, please subscribe using this web page:</p>
 <div class="section" id="new-features-in-version-3-0">
 <h1><a class="toc-backref" href="#id2">New features in Version 3.0</a></h1>
 <ul class="simple">
-<li>Full support for the new ACL/permissions system of Joomla 1.6/1.7+.  This
+<li>Full support for the new ACL/permissions system of Joomla 1.7/2.5+.  This
 gives you significant flexibility to control who can create, edit, or delete
 attachments.  See the <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section for more details.</li>
 <li>Full support for viewing access levels.  This means you can set some of your
@@ -404,16 +404,29 @@ above could have been done with 'article:211 Downloads'.  Note that an entry
 without a numeric ID at the beginning will be applied to all content items.
 So it is good practice to put such global overrides first in the list and
 then override the item-by-item custom titles afterward.</p>
-<p>Note: If you wish to change the titles used for attachments lists globally,
-you may edit the translations file entry 'ATTACHMENTS TITLE' in the translation
-files:</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>If you wish to change the titles used for attachments lists globally, you
+may copy the translations entry 'ATTACH_ATTACHMENTS_TITLE' from the
+translation file:</p>
 <pre class="literal-block">
-administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+content/attachments/language/qq-QQ/qq-QQ.plg_content_attachments.ini
 </pre>
-<p>where qq-QQ refers to the language designator code such as en-GB for English.
-(If you are not familiar with Joomla! translation files, find the line that
-has 'ATTACHMENTS TITLE' on left side of the '=' sign.  Edit anything to the
-right of the '=' sign.  Do not change anything to the left of the '=' sign.)</p>
+<p>into the global override file:</p>
+<pre class="literal-block">
+language/overrides/en-GB.override.ini
+</pre>
+<p class="last">where qq-QQ refers to the language designator code such as en-GB for
+English.  (If you are not familiar with Joomla! translation files, find
+the line that has 'ATTACH_ATTACHMENTS_TITLE' on left side of the '=' sign
+and the translation on the right in double-quotes.  Edit anything to the
+right of the '=' sign.  Do not change anything to the left of the '='
+sign.).  The reason to put your translation modifications into the global
+override file is because the first translation file listed above is part
+of the Attachments extension and will be updated if the Attachments
+extensions is upgraded (meaning that any changes you do to it will be
+lost).</p>
+</div>
 </li>
 <li><p class="first"><strong>Timeout for checking links:</strong>
 Timeout for checking links (seconds).  Whenever a link is added as an
@@ -457,8 +470,8 @@ indicate, but the files will still be accessible to anyone if they know the
 full URL, since the sub-directory is public.  The <em>secure</em> option prevents
 access to users without appropriate permissions even if they know the full
 URL, since this option prevents public access to the attachments
-sub-directory.  In <em>secure</em> mode, the option &quot;Who can see&quot; can set to
-'Anyone' and anyone will be able to see and download the attachments.</p>
+sub-directory.  In <em>secure</em> mode, any attachment set to the 'Public' access
+level can be seen and downloaded by anyone.</p>
 <div class="hint">
 <p class="first admonition-title">Hint</p>
 <p class="last">If you have problems with filenames with Unicode characters, you should
@@ -789,7 +802,7 @@ is a manual that is available as part of this 'Attachments' installation:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">The Attachment Plugin Creation Manual has not been updated for Attachments
 3.0 yet.  There have been some architectural changes that means that
-Attachments plugins in Joomla 1.6/1.7+ will have some significant
+Attachments plugins in Joomla 1.7/2.5+ will have some significant
 differences from those for Joomla 1.5.</p>
 </div>
 </div>
@@ -936,16 +949,19 @@ possible reasons:</p>
 <li>The attachment is not published.  You can change this in Attachments
 manager page in the back end.</li>
 <li>The parent article or content item is not published.</li>
-<li>The option 'Who can see attachments' is set to 'logged-in' and you are
+<li>The attachment access level is set to 'Registered' and you are
 not logged in on the front end.</li>
-<li>Or the option 'Who can see attachments' is set to 'no one'. This can be
-changed via the Parameter editor in the component manager.</li>
 <li>The 'Content - Attachments' plugin is not enabled.  Use the plugin manager
 to enable it.</li>
 <li>In the 'Content - Attachments' (via the plugin manager), the access
 level is not set to 'Public'.</li>
 <li>If your site uses caching, try clearing the caches and refreshing the
 page.</li>
+<li>If you not seeing attachments for a category in a category blog view
+and you are using a custom template, it may be necessary to make a
+small modification to the template in order to see the category
+attachments.  Feel free to contact the author for help with this
+issue (see the contact info at the bottom of this page).</li>
 </ul>
 </blockquote>
 </li>
@@ -1007,7 +1023,7 @@ http://joomlacode.org/gf/project/attachments3/forum/</a></li>
 uninstall the previous version.  You do not need to do anything to retain
 your old attachments.  Simply install the new version and it will update
 everything appropriately.</li>
-<li>PREFRERRED: One of the excellent new features in Joomla 1.6 and later is
+<li>PREFERRED: One of the excellent new features in Joomla 1.6 and later is
 the extension updater.  Go to the Extension Manager in the back end and
 click on the 'Update' tab.  Click 'Purge Cache' and then 'Find Updates' on
 the toolbar.  If there is a new release of Attachments, it will be shown.
@@ -1022,9 +1038,9 @@ extension updated very simple!</li>
 <li><p class="first">To uninstall the Attachments extension, go to the 'Manage' tab on the
 Extension Manager page (under the 'Extensions' menu).  <strong>Select ONLY the item</strong>:</p>
 <pre class="literal-block">
-Package: Attachments for Joomla 1.6+
+Package: Attachments for Joomla 1.7/2.5+
 </pre>
-<p>and click on the 'Uninstall' button on the toolbar.  This will install the
+<p>and click on the 'Uninstall' button on the toolbar.  This will uninstall the
 attachments component and all the associated plugins.</p>
 </li>
 <li><p class="first">If you wish to retain your attachments, make a copy of the 'attachments'
@@ -1041,13 +1057,13 @@ installation.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-6">
-<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></h1>
-<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.6 (or later)
-site, follow the procedure outlined here:</p>
+<div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-7-2-5">
+<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></h1>
+<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.7/2.5 (or
+later) site, follow the procedure outlined here:</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></li>
 </ul>
 </blockquote>
 </div>
@@ -1062,29 +1078,31 @@ not available yet for Attachments 3.0.</p>
 <li><strong>Bulgarian:</strong> by Stefan Ilivanov (1.3.4)</li>
 <li><strong>Catalan:</strong> by Jaume Jorba (2.2, 3.0)</li>
 <li><strong>Chinese:</strong> Traditional and simplified Chinese translations by baijianpeng (白建鹏) (1.3.4)</li>
-<li><strong>Croatian:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Croatian:</strong> Tanja Dragisic (3.0, 1.3.4)</li>
 <li><strong>Czech:</strong> by Tomas Udrzal (1.3.4)</li>
-<li><strong>Dutch:</strong> by Parvus (2.2)</li>
+<li><strong>Danish:</strong> by Sune Folkmann (3.0), Villy Feltmann (2.2), Bo Urskov (1.3.4)</li>
+<li><strong>Dutch:</strong> by Parvus (2.2, 3.0)</li>
 <li><strong>Finnish:</strong> by Tapani Lehtonen (2.2)</li>
 <li><strong>French:</strong> by Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0), and Pascal Adalian (1.3.4)</li>
 <li><strong>German:</strong> by Pierre Corell (3.0), Bernhard Alois Gassner (2.2), and Michael Scherer (1.3.4)</li>
-<li><strong>Greek:</strong> by Harry Nakos (1.3.4)</li>
+<li><strong>Greek:</strong> by Antonis Mylonopoulos (3.0), Harry Nakos (1.3.4, 2.0)</li>
 <li><strong>Hungarian:</strong> Formal and informal translations by Szabolcs Gáspár (1.3.4)</li>
 <li><strong>Indonesian:</strong> by Moh. Arif (3.0)</li>
 <li><strong>Italian:</strong> by Piero Mattirolo (2.2, 3.0) and Lemminkainen and Alessandro Bianchi (1.3.4)</li>
 <li><strong>Norwegian:</strong> by Roar Jystad (2.2, 3.0) and Espen Gjelsvik (1.3.4)</li>
 <li><strong>Persian:</strong> by Hossein Moradgholi and Mahmood Amintoosi (2.2)</li>
 <li><strong>Polish:</strong> by Sebastian Konieczny (2.2, 3.0), Stefan Wajda (3.0), and Piotr Wójcik (1.3.4)</li>
-<li><strong>Portuguese (Brazilian):</strong> by Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
+<li><strong>Portuguese (Brazilian):</strong> by Nelson Teixeira (3.0), Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
 <li><strong>Portuguese (Portugal):</strong> by José Paulo Tavares (2.2, 3.0) and Bruno Moreira (1.3.4)</li>
-<li><strong>Romanian:</strong> by Alex Cojocaru (2.2)</li>
+<li><strong>Romanian:</strong> by Alex Cojocaru (2.2, 3.0)</li>
 <li><strong>Russian:</strong> by Sergey Litvintsev (2.2, 3.0) and евгений панчев (Yarik Sharoiko) (1.3.4)</li>
 <li><strong>Serbian:</strong> by Vlada Jerkovic (1.3.4)</li>
 <li><strong>Slovak:</strong> by Miroslav Bystriansky (1.3.4)</li>
 <li><strong>Slovenian:</strong> by Matej Badalič (2.2, 3.0)</li>
-<li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2) and Carlos Alfaro (1.3.4)</li>
+<li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2, 3.0) and Carlos Alfaro (1.3.4)</li>
 <li><strong>Swedish:</strong> by Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
-<li><strong>Turkish:</strong> by Kaya Zeren (2.0)</li>
+<li><strong>Turkish:</strong> by Kaya Zeren (3.0, 2.0)</li>
+<li><strong>Ukrainian:</strong> by Sergey Litvintsev (3.0)</li>
 </ul>
 <p>Many thanks to these translators!  If you would like to help translate
 the extension to any other language, please contact the author (see the
@@ -1130,12 +1148,21 @@ the development of the 'Attachments' extension.</p>
 <!-- LocalWords:  filenames frontend username PHP strftime CSS attachmentsList -->
 <!-- LocalWords:  QQ inline unpublish else's uncheck http php uninstallation IPv -->
 <!-- LocalWords:  MySQL uninstalled uninstalling uninstall unarchiving htaccess -->
-<!-- LocalWords:  filesize localhost joomlacode PREFRERRED -->
+<!-- LocalWords:  filesize localhost joomlacode Joomla Virtuemart Ilivanov Jaume -->
+<!-- LocalWords:  Jorba baijianpeng Tanja Dragisic Udrzal Parvus Tapani Lehtonen -->
+<!-- LocalWords:  André Ladouceur Yann Kerviel Adalian Corell Alois Gassner Moh -->
+<!-- LocalWords:  Scherer Nakos Szabolcs Gáspár Arif Piero Mattirolo Bianchi -->
+<!-- LocalWords:  Lemminkainen Jystad Espen Gjelsvik Hossein Moradgholi Mahmood -->
+<!-- LocalWords:  Amintoosi Konieczny Wajda Wójcik Giacomitti Cauan José Tavares -->
+<!-- LocalWords:  Moreira Cojocaru Sergey Litvintsev Yarik Sharoiko Vlada Matej -->
+<!-- LocalWords:  Jerkovic Miroslav Bystriansky Badalič María Pérez Alfaro Kaya -->
+<!-- LocalWords:  Maltanski Elfström Zeren LeBlanc Zaitseff Doctype OpenDocument -->
+<!-- LocalWords:  McDermott Samini Ewout Weirda -->
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-Generated on: September 09, 2011 at 19:46 UTC.
+Generated on: 14 August 2012 ob 02:49 UTC.
 
 </div>
 </body>
