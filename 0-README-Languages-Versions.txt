@@ -33,6 +33,19 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Status: Complete (help file in English)
          - Thanks to Manuel María Pérez Ayala for the update!
 
+   * Updated: attachments-Turkish-tr-TR-3.0.3.zip
+         - Renamed from 3.0.1 to 3.0.3 
+         - Status: Complete (help file in English)
+   * Updated: attachments-Croatian-hr-HR-3.0.3.zip
+         - Renamed from 3.0.1 to 3.0.3 
+         - Status: Complete (help file in English)
+   * Updated: attachments-Norwegian-nb-NO-3.0.3.zip
+         - Renamed from 3.0.1.3 to 3.0.3
+         - Status: Complete
+   * Updated: attachments-Greek-el-GR-3.0.3.zip
+         - Renamed from 3.0.1.1 to 3.0.3
+         - Status: Complete (help file in English)
+
 2012-08-10:
    * Added: attachments-Turkish-tr-TR-3.0.1.zip
          - Update from 2.2 version to 3.0
