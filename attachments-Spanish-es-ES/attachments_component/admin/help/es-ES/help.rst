@@ -6,9 +6,9 @@
 
 .. class:: version
 
-**Version 3.0.1 - 28 de agosto de 2011**
+**Version 3.0.3 - 13 de agosto de 2011**
 
-**Esta versión es sólo para Joomla 1.6/1.7+**
+**Esta versión es sólo para Joomla 1.7/2.5+**
 
 .. contents::
     :depth: 1
@@ -26,7 +26,7 @@ aumentar su flexibilidad y utilidad. Observación: todas las opciones se
 controlan mediante el gestor del componente.
 
 .. warning:: Esta versión de la extensión *Archivos adjuntos* sólo funciona con
-             Joomla! 1.6, 1.7 o posteriores. 
+             Joomla! 1.7, 2.5 o posteriores. 
 
 .. note:: En el resto de este documento se usa en ocasiones el término
    **elemento de contenido**. Habitualmente pensamos en adjuntar archivos a
@@ -49,7 +49,7 @@ hágalo mediante esta página web:
 Nuevas características de la versión 3.0
 ========================================
 
-* Soporte completo del nuevo sistema de ACL/permisos de Joomla 1.6/1.7+. Ésto
+* Soporte completo del nuevo sistema de ACL/permisos de Joomla 1.7/2.5+. Ésto
   añade una enorme flexibilidad para controlar quién puede crear, modificar o
   eliminar los archivos adjuntos. Para más información consulte la sección
   `Permisos de Archivos adjuntos`_.
@@ -759,7 +759,7 @@ adjuntos' dispone de un manual en esta instalación de 'Archivos adjuntos':
    El Manuel ade creación de complementos de Archivos adjuntos no se ha
    actualizado todavía para la versión 3.0. Se han producido algunos cambios
    estructurales lo que significa que los complementos de Archivos adjuntos para
-   Joomla! 1.6/1.7+ tendrán algunas diferencias significativas con los de la
+   Joomla! 1.7/2.5+ tendrán algunas diferencias significativas con los de la
    versión 1.5 de Joomla!
 
 
@@ -995,7 +995,7 @@ Desinstalación
   de la página del Gestor de extensiones (en el menú 'Extensiones').
   **Seleccione SÓLO el elemento**::
 
-     Package: Attachments for Joomla 1.6+
+     Package: Attachments for Joomla 1.7/2.5+
 
   y pulse el botón 'Desinstalar' de la barra de herramientas. Ésto desinstalará
   el componente de Archivos adjuntos y todos los complementos asociados.
@@ -1014,14 +1014,14 @@ Desinstalación
   Joomla!
 
 
-Migración de Archivos adjuntos de Joomla 1.5 a Joomla 1.6+
-==========================================================
+Migración de Archivos adjuntos de Joomla 1.5 a Joomla 1.7/2.5+
+==============================================================
 
-Para migrar sus adjuntos de un sitio Joomla 1.5 a otro versión 1.6 (o
+Para migrar sus adjuntos de un sitio Joomla 1.5 a otro versión 1.7 (o
 posterior), siga el procedimiento indicado aquí:
 
  
-  * `Migración de Archivos adjuntos desde Joomla 1.5 a Joomla 1.6+
+  * `Migración de Archivos adjuntos desde Joomla 1.5 a Joomla 1.7+
     <http://jmcameron.net/attachments/migration/>`_
 
 
@@ -1044,7 +1044,7 @@ Gracias a estos traductores (versiones disponibles mostradas entre paréntesis):
 * **Finés:** por Tapani Lehtonen (2.2)
 * **Francés:** por Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0) y Pascal Adalian (1.3.4)
 * **Alemán:** por Pierre Corell (3.0), Bernhard Alois Gassner (2.2) y Michael Scherer (1.3.4)
-* **Griego:** por Harry Nakos (1.3.4)
+* **Griego:** por Antonis Mylonopoulos (3.0) y Harry Nakos (1.3.4)
 * **Húngaro:** Traducciones formal e informal de Szabolcs Gáspár (1.3.4)
 * **Indonesio:** by Moh. Arif (3.0)
 * **Italiano:** por Piero Mattirolo (2.2, 3.0) y Lemminkainen and Alessandro Bianchi (1.3.4)
