@@ -24,6 +24,10 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Minor updates for Attachments 3.0.3 release.
          - Status: Complete (help file in English)
          - Thanks to Pierre Corell for the update!
+   * Updated: attachments-Spanish-es-ES-3.0.3.zip
+         - Minor updates for Attachments 3.0.3 release.
+         - Status: Complete (help file in English)
+         - Thanks to Manuel María Pérez Ayala for the update!
 
 2012-08-10:
    * Added: attachments-Turkish-tr-TR-3.0.1.zip
@@ -95,6 +99,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 	 - 928 Downloads
    * Renamed: attachments-Slovenian-sl-SI-language-pack-3.0.1.zip
    * Renamed: attachments-Spanish-es-ES-language-pack-3.0.1.zip.zip
+	 - 2517 Downloads
 
 2011-10-08:
    * Updated: attachments-Catalan-ca-ES-3.0.1.1.zip
