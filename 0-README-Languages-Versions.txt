@@ -32,18 +32,17 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Minor updates for Attachments 3.0.3 release.
          - Status: Complete (help file in English)
          - Thanks to Manuel María Pérez Ayala for the update!
-
-   * Updated: attachments-Turkish-tr-TR-3.0.3.zip
-         - Renamed from 3.0.1 to 3.0.3 
-         - Status: Complete (help file in English)
    * Updated: attachments-Croatian-hr-HR-3.0.3.zip
-         - Renamed from 3.0.1 to 3.0.3 
+         - Renamed from 3.0.1 to 3.0.3 to match Attachments release number
+         - Status: Complete (help file in English)
+   * Updated: attachments-Greek-el-GR-3.0.3.zip
+         - Renamed from 3.0.1.1 to 3.0.3 to match Attachments release number
          - Status: Complete (help file in English)
    * Updated: attachments-Norwegian-nb-NO-3.0.3.zip
-         - Renamed from 3.0.1.3 to 3.0.3
+         - Renamed from 3.0.1.3 to 3.0.3 to match Attachments release number
          - Status: Complete
-   * Updated: attachments-Greek-el-GR-3.0.3.zip
-         - Renamed from 3.0.1.1 to 3.0.3
+   * Updated: attachments-Turkish-tr-TR-3.0.3.zip
+         - Renamed from 3.0.1 to 3.0.3  to match Attachments release number
          - Status: Complete (help file in English)
 
 2012-08-10:
@@ -52,22 +51,26 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 	 - Includes recent updates via transifex
          - Status: Complete (help file in English)
          - Thanks to Kaya Zeren for the translation!
+         - 11 Downloads
 
 2012-08-09:
    * Updated: attachments-Norwegian-nb-NO-3.0.1.3.zip
          - Minor fixes update for upcoming Attachments 3.0.3 release.
          - Status: Complete
          - Thanks to Roar Jystad for the update!
+	 - 6 Downloads
    * Added: attachments-Croatian-hr-HR-3.0.1.zip
          - Update from old 1.3 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Tanja Dragisic for the translation!
+	 - 0 Downloads
 
 2012-08-05:
    * Updated: attachments-Greek-el-GR-3.0.1.1.zip
          - Minor fixes update for upcoming Attachments 3.0.3 release.
          - Status: Complete (help file in English)
          - Thanks to Harry Nakos for the update!
+	 - 29 Downloads
 
 2011-03-21
    * Added: attachments-Portuguese-pt-BR-3.0.1.zip
