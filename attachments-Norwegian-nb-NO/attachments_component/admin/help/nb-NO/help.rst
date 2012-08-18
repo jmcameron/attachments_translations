@@ -6,9 +6,9 @@
 
 .. class:: version
 
-**Version 3.0.1.2 - 20. september 2011**
+**Version 3.0.3 - 11. august 2012**
 
-**Denne versjonen er for Joomla 1.7/2.5 +**
+**Denne versjonen er for Joomla 1.7/2.5+**
 
 .. contents::
     :depth: 1
@@ -27,7 +27,7 @@ muligheter for å øke fleksibilitet og bruksområdet. Merk:
 alle innstillinger styres fra komponentmenyen. 
 
 .. warning:: Denne versjonen av Artikkelvedlegg fungerer kun med 
-              Joomla! 1.6, 1.7 eller nyere.
+              Joomla! 1.7, 2.5 eller nyere.
 
 .. note:: I dette dokumentet blir begrepet **innholdselementet** noen ganger
    brukt. Normalt vil vi tenke å legge inn vedlegg til artikler. Denne komponenten
@@ -100,7 +100,7 @@ Du kan også legge til passende MIME-typer i feltet "Tillatte MIME-typer".
               eller "Tillatte MIME-typer".
 
 Innstillinger
-====================
+=============
 
 Alle innstillinger for "Artikkelvedlegg" kan endres i kontrollpanelet til
 komponenten. For å endre på disse, gå til administrasjonssiden, 
@@ -110,7 +110,7 @@ gruppert på de forskjellige fanene.
 
 
 Standard
--------------
+--------
 
 .. image:: images/options-basic.png
    :class: float-right
@@ -195,14 +195,14 @@ Standard
        omkringliggende "span" taggene også.
 
        .. warning:: Tilpasset plassering fungerer ikke for vedlegg til 
-                        kategoribeskrivelser.
+                    kategoribeskrivelser.
 
      - '*Deaktivert (filter)*' - Dette alternativet vil deaktivere all 
-           visningen av vedleggslister, også når artikler eller innholdselementer 
-           inneholder koden {attachments}, de blir heller ikke vist.
+       visningen av vedleggslister, også når artikler eller innholdselementer 
+       inneholder koden {attachments}, de blir heller ikke vist.
      - '*Deaktivert (ingen filter)*' - Dette alternativet vil deaktivere 
-           visningen av vedleggslister, men vil ikke stoppe visningen når 
-           koden {attachments} brukes i en artikkel (eller innholdselement).
+       visningen av vedleggslister, men vil ikke stoppe visningen når 
+       koden {attachments} brukes i en artikkel (eller innholdselement).
 
 * **Tillater redigering fra brukersiden på adgangsnivået?:**
   Setter adgangsnivået for et vedlegg fra brukersiden når en redigerer 
@@ -278,8 +278,9 @@ Formatering
   14. '*gendefinert felt 3*'
 
 
+
 Visning
-------------------
+-------
 
 Disse valgene kontroll når vedlegg vil være synlig på forsiden,
 forutsatt at brukeren er i en gruppe som kan se vedlegg.
@@ -361,14 +362,26 @@ Avansert
   Så det er god praksis å sette en slik global overstyring først i listen, og 
   deretter liste de egendefinerte titlene.
 
-  Note: Merk: Dersom du ønsker å endre tittelen som brukes til vedleggslistene globalt, 
-  kan du redigere filen med oversettelsene. Endre teksten "Vedlegg:" til hva du måtte ønske::
+  .. note::
+     Dersom du ønsker å endre titlene som brukes for vedleggslisten globalt, kan
+     du kopiere oversettelsen 'ATTACH_ATTACHMENTS_TITLE' fra
+     oversettelsesfilen::
 
-      administrator/language/nb-NO/nb-NO.plg_content_attachments.ini
+	 content/attachments/language/qq-QQ/qq-QQ.plg_content_attachments.ini
 
-  (Dersom du ikke er kjent med oversettelsesfiler i Joomla!, fin linjen som starter 
-  med "ATTACH_ATTACHMENTS_TITLE" på venstre side av "=" tegnet. Rediger teksten til høyre 
-  for "=" tegnet. Ikke gjør endringer på teksten til venstre for "=" tegnet.)
+     inn i det globale overstyringsfilen::
+
+         language/overrides/en-GB.override.ini
+
+     hvor qq-QQ refererer til språkkoden som nb-NO for norsk. (Dersom du
+     ikke er kjent med oversettelsesfiler i Joomla! fin linjen som starter
+     med 'ATTACH_ATTACHMENTS_TITLE' på venstre side av '=' tegnet.
+     Rediger teksten til høyre for '=' tegnet. Ikke gjør endringer på teksten
+     til venstre for '=' tegnet.)
+     Ved å legge endringer av oversettelsen i den globale overstyringsfilen
+     da slipper du å endre i originalfilen som vil bli overskrevet ved en
+     eventuell oppdatering av utvidelsen (som betyr at eventuelle endringer du
+     har gjort ville ha gått tapt).
 
 * **Tidsavbrudd for å sjekke lenker:**
   Tidsavbrudd for å sjekke lenker (sekunder). Når en lenke blir lagt til som et vedlegg, 
@@ -396,7 +409,7 @@ Avansert
 
 
 Sikkerhet
-----------------
+---------
 
 .. image:: images/options-security.png
    :class: float-right
@@ -413,14 +426,13 @@ Sikkerhet
   alle dersom de vet den fullstendige nettadressen, siden mappen er offentlig. 
   Det *sikre* alternativet hindrer tilgangen for brukere uten egnede rettigheter 
   selv om de kjenner den fullstendige nettadressen, siden dette alternativet 
-  hindrer allmennhetens tilgang til mappen. I *sikker* modus, om med alternativet 
-  "Standard adgangsnivå "satt til "Offentlig" vil alle være i stand til å se og 
-  laste ned vedlegg.
+  hindrer allmennhetens tilgang til mappen. I *sikker* modus, vil alle vedlegg 
+  satt til 'Offentlige' være tilgjengelig for visning og nedlastning av hvem som helst.
 
   .. hint::
 
      Dersom du har problemer med filnavn med Unicode-tegn, bør du aktivere alternativet 
-         for **Sikker nedlasting** (spesielt på Windows servere)
+     for **Sikker nedlasting** (spesielt på Windows servere)
 
 * **Nedlastningsmodus for sikre nedlastninger:**
   Dette alternativet kontrollerer om filene skal lastes ned som separate filer eller 
@@ -438,7 +450,7 @@ Sikkerhet
 
 
 Rettigheter
--------------------
+-----------
 
 De forskjellige alternative `Rettigheter`_ blir forklart i avsnittet under.
 
@@ -514,13 +526,14 @@ Når utvidelsen installeres, installeres det med disse grunnleggende rettigheten
 
 .. important:: **Standard handlemåter for standard rettigheter**
 
-     * Skribent (og Innholdsadministrator) eller over kan legge til vedlegg i alle artikler/overordnet de kan redigere.
+     * Skribent (og Innholdsadministrator) eller over kan legge til vedlegg i
+       alle artikler/overordnet de kan redigere.
 
-     * Skribent (og Innholdsadministrator) eller over kan redigere eller slette vedlegg fra 
-           alle artikler/overordnet de kan redigere.
+     * Skribent (og Innholdsadministrator) eller over kan redigere eller
+       slette vedlegg fra alle artikler/overordnet de kan redigere.
 
-     * Skribent (og Innholdsadministrator) eller over kan endre status, publisert/ikke publisert 
-           fra brukersiden.  
+     * Skribent (og Innholdsadministrator) eller over kan endre status,
+       publisert/ikke publisert fra brukersiden.
 
      * Skribent kan ikke publisere vedlegg.
 
@@ -529,15 +542,15 @@ på Innstillingene på utvidelsen.
 
 
 Noen vanlige alternative rettigheter
------------------------------------------
+------------------------------------
 
 Her er noen forslag om hvordan du angir rettigheter for å oppnå ønsket utførelse:
 
   * **Alternativ 1 - Skribent kan publisere egne vedlegg**
 
      - På fanen Rettigheter, klikker du på oppføringen "Skribent". 
-           Endre status for "Endre egne vedlegg" til  "Tillatt" og klikk 
-           på "Lagre" for å bekrefte endringen.
+       Endre status for "Endre egne vedlegg" til  "Tillatt" og klikk 
+       på "Lagre" for å bekrefte endringen.
        
        .. figure:: images/permissions-scenario1.png
           :alt: Rettigheter alternativ 1
@@ -545,24 +558,24 @@ Her er noen forslag om hvordan du angir rettigheter for å oppnå ønsket utfør
   * **Alternativ 2 - Skribent kan redigere/slette sine egne vedlegg, men ingen andres**
 
      - På fanen Rettigheter, klikker du på oppføringen "Skribent". For linjene 
-           "Endre status på egne vedlegg i Artikkel/overordnet" og 
-           "Slette egne vedlegg for artikler/overordnet" endrer du status til "Avslått". 
-           Klikk på Lagre for å bekrefte endringen.
+       "Endre status på egne vedlegg i Artikkel/overordnet" og 
+       "Slette egne vedlegg for artikler/overordnet" endrer du status til "Avslått". 
+       Klikk på Lagre for å bekrefte endringen.
        
        .. figure:: images/permissions-scenario2.png
           :alt: Rettigheter alternativ 2
 
        I og med at skribenter fremdeles har rettigheter til å redigere/slette 
-           sine egne vedlegg, hindrer dette dem effektivt fra å redigere/slette 
-           vedlegg som de ikke selv har opprettet, selv om de kan redigere artikkelen.
+       sine egne vedlegg, hindrer dette dem effektivt fra å redigere/slette 
+       vedlegg som de ikke selv har opprettet, selv om de kan redigere artikkelen.
 
        Merk at alle brukergrupper som er avledet fra skribent (f.eks Redaktør, 
-           Utgiver, etc) vil også bli nektet fra å redigere eller slette vedlegg for 
-           artikler/overordnet de selv ikke har opprettet (fra denne rettigheten). 
-           Heldigvis har de generelt høyere Tilgangsnivå, "Rediger vedlegg" og 
-           "Slett vedlegg" som betyr at de kan redigere eller slette eventuelle 
-           vedlegg på alle artikler som de kan redigere (forutsatt at deres rettigheter 
-           ikke er endret).
+       Utgiver, etc) vil også bli nektet fra å redigere eller slette vedlegg for 
+       artikler/overordnet de selv ikke har opprettet (fra denne rettigheten). 
+       Heldigvis har de generelt høyere Tilgangsnivå, "Rediger vedlegg" og 
+       "Slett vedlegg" som betyr at de kan redigere eller slette eventuelle 
+       vedlegg på alle artikler som de kan redigere (forutsatt at deres rettigheter 
+       ikke er endret).
 
 Dersom du har andre vanlige alternativer som du mener bør dokumenteres, 
 kontakt meg slik at jeg kan oppdatere denne dokumentasjonen 
@@ -580,7 +593,7 @@ Andre merknader om rettigheter
     og endre status.
 
 Visningsrettigheter
-================================
+===================
 
 Artikkelvedlegg støtter nå Joomla’s "Tilgangsnivåer". Hvert vedlegg kan 
 tildeles spesielle tilgangsnivåer som "Gjester", "Registrert" og "Spesiell", 
@@ -638,20 +651,22 @@ til innholdselementer. I dialogboksen "Legg til vedlegg" vil du se en knapp
 merket "Skriv inn en nettadresse i stedet". Dersom du klikker på knappen vil du 
 få et felt for å skrive inn en nettadresse, og se to alternativer:
 
-* **Bekreft nettadresse?** - For å bestemme filtypen i nettadressen 
-    (for å velge et passende ikon), vil komponenten prøve å kommunisere med 
-        serveren for grunnleggende informasjon om filen, inkludert filtype og størrelse. 
-        I noen tilfeller vil ikke serveren svarer på disse forespørslene selv om 
-    nettadressen er gyldig. Som standard blir ikke vedlegg hvor nettadresser ikke er 
-        validert av serveren godkjent. Dersom du vet at nettadressen er gyldig, kan du fjerne 
-    merket for dette alternativet, og "tvinge" utvidelsen til å godkjenne nettadressen 
-        som et vedlegg - men det finnes ingen garantier for at filtype eller filstørrelsen vil 
-    være korrekt. Merk at denne forespørselen vil bli utførte uavhengig om dette alternativet 
-        er valgt eller ikke.
+* **Bekreft nettadresse?** - For å bestemme filtypen i nettadressen (for å
+    velge et passende ikon), vil komponenten prøve å kommunisere med serveren
+    for grunnleggende informasjon om filen, inkludert filtype og størrelse.  I
+    noen tilfeller vil ikke serveren svarer på disse forespørslene selv om
+    nettadressen er gyldig. Som standard blir ikke vedlegg hvor nettadresser
+    ikke er validert av serveren godkjent. Dersom du vet at nettadressen er
+    gyldig, kan du fjerne merket for dette alternativet, og "tvinge"
+    utvidelsen til å godkjenne nettadressen som et vedlegg - men det finnes
+    ingen garantier for at filtype eller filstørrelsen vil være korrekt. Merk
+    at denne forespørselen vil bli utførte uavhengig om dette alternativet er
+    valgt eller ikke.
 
-* **Relativ nettadresse?** - Normalt vil du skrive inn en nettadresse med prefiks "http ..." for å 
-    indikere en fullstendig nettadresse. Dersom du ønsker å lenke til filer i forhold til din 
-        Joomla installasjon, bruk alternativet "Relativ nettadresse".
+* **Relativ nettadresse?** - Normalt vil du skrive inn en nettadresse med
+    prefiks "http ..." for å indikere en fullstendig nettadresse. Dersom du
+    ønsker å lenke til filer i forhold til din Joomla installasjon, bruk
+    alternativet "Relativ nettadresse".
 
 Nettadresser vises med et ikon for filtype og med en pil over ikonet 
 (overlegg) (som viser at det er en gyldig lenke) eller en rød diagonal 
@@ -717,7 +732,7 @@ annen fil og lett kopierer tilbake når komponenten oppgraderes.
 Dette kan også gjøres via en CSS @import -kommandoen.
 
 Type filikoner
-===============
+==============
 
 Vedleggslisten som vises i artiklene legger et ikon foran hvert vedlegg i listen 
 over vedlegg. Dersom du ønsker å legge til en ny type ikon, gjør du følgende: 
@@ -774,7 +789,6 @@ Administratorer. Disse er:
        filene, slettes de tilhørende vedleggene, og deretter laste de opp
        som nye vedlegg. 
 
-
 * **Fjerne mellomrom fra filnavn:** Du kan utføre denne kommandoen for å 
   erstatte alle mellomrom med understreker i filnavnet for alle filvedlegg. 
   Dette kan være nødvendig på enkelte systemer. I "Sikker" modus, bør ikke 
@@ -828,14 +842,15 @@ Advarsler
 
      - Vedlegget er ikke publisert. Du kan endre dette på komponenten i Administrasjonen.
      - Den overordnede artikkelen eller innholdselementet er ikke publisert.
-     - Alternativet "Hvem kan se vedlegg" er satt til "Innloggede brukere" og du er ikke 
-           innlogget.
-     - Eller valget "Hvem kan se vedlegg" er satt til "Ingen". Dette kan endres via Parameter i 
-           administrasjonen på komponenten..
+     - Vedleggets tilgangsnivået er satt til 'Registrert', og du er ikke logget inn på brukersiden.
      - Programtillegget "Innhold - Artikkelvedlegg" er ikke aktivert. Gå til Programtillegg i 
            Administasjonen for å aktivere den.
      - I "Innhold - Artikkelvedlegg" (via Programtillegg), er ikke adgangsnivået satt til "Gjester".
      - Dersom nettstedet bruker mellomlagring, prøv å tømme mellomlagret og oppdatere siden.
+	 - Dersom du ikke ser vedlegg for en kategori i en kategori blogg visning og du bruker en 
+	   egendefinert mal, kan det være nødvendig å foreta en liten endring i malen for å se vedlegget
+	   til kategorien. Ta gjerne kontakt for å få hjelp med dette problemet 
+	   (se kontaktinfo nederst på denne siden)
 
 * Dersom du får problemer med begrensninger på filstørrelser som du prøver å laste opp, kan 
   du prøve å legge til følgende linjer til .htaccess filen i roten av din Joomla! nettside::
@@ -878,6 +893,7 @@ Advarsler
        <http://joomlacode.org/gf/project/attachments/forum/>`_
 
 
+
 Oppdatering
 ===========
 
@@ -898,6 +914,7 @@ Oppgradering er veldig enkelt. Du har to valg:
    Dette gjør oppdatering veldig enkelt!
 
 
+
 Avinstallere
 ============
 
@@ -915,18 +932,18 @@ Avinstallere
   kommandoen **Deaktiver avinstallasjon av MySQL tabellen for Artikkelvedlegg** for å 
   hindre at tabellen i databasen blir slettet ved avinstallering.
  
-*  Dersom du ikke ønsker å beholde eksisterende vedlegg, slett vedleggene fra administrasjonen 
-   av komponenten. Når du har avinstallert Artikkelvedleggsutvidelsene, sletter du 
-   mappen "attachments" i din Joomla installasjon.
+* Dersom du ikke ønsker å beholde eksisterende vedlegg, slett vedleggene fra administrasjonen 
+  av komponenten. Når du har avinstallert Artikkelvedleggsutvidelsene, sletter du 
+  mappen "attachments" i din Joomla installasjon.
 
 
-Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.6+
-===========================================================
+Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+
+===============================================================
 
-For å migrere dine vedlegg fra Joomla 1.5 til Joomla 1.6 (eller nyere), 
+For å migrere dine vedlegg fra Joomla 1.5 til Joomla 1.7/2.5 (eller nyere), 
 følg prosedyren beskrevet her:
  
-  * `Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.6+
+  * `Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+
     <http://jmcameron.net/attachments/migration/>`_
 
 
@@ -942,20 +959,21 @@ Takk til disse oversetterne (Tilgjengelig versjoner vist i parentes)
 * **Bulgarsk:** av Stefan Ilivanov (1.3.4)
 * **Katalansk:** av Jaume Jorba (2.2, 3.0)
 * **Kinesisk:** Tradisjonelle og forenklet Kinesisk oversettelser av baijianpeng (白建鹏) (1.3.4)
-* **Kroatisk:** Tanja Dragisic (1.3.4)
+* **Kroatisk:** Tanja Dragisic (3.0, 1.3.4)
 * **Tjekkisk:** av Tomas Udrzal (1.3.4)
 * **Nederlandsk:** av Parvus (2.2)
+* **Dansk:** av Sune Folkmann (3.0), Villy Feltmann (2.2), Bo Urskov (1.3.4)
 * **Finsk:** av Tapani Lehtonen (2.2)
 * **Fransk:** av Marc-André Ladouceur (2.2, 3.0) og Pascal Adalian (1.3.4)
 * **Tysk:** av Pierre Corell (3.0), Bernhard Alois Gassner (2.2), Michael Scherer (1.3.4)
-* **Gresk:** av Harry Nakos (1.3.4)
+* **Gresk:** by Antonis Mylonopoulos (3.0), Harry Nakos (1.3.4, 2.0)
 * **Ungarsk:** Formelle og uformelle oversettelser av Szabolcs Gáspár (1.3.4)
 * **Indonesisk:** av Moh. Arif (3.0)
 * **Italiensk:** av Piero Mattirolo (2.2, 3.0) og Lemminkainen og Alessandro Bianchi (1.3.4)
 * **Norsk:** av Roar Jystad (2.2, 3.0) og Espen Gjelsvik (1.3.4)
 * **Persisk:** av Hossein Moradgholi og Mahmood Amintoosi (2.2)
 * **Polsk:** av Sebastian Konieczny (2.2, 3.0) og Piotr Wójcik (1.3.4)
-* **Portugisisk (Brasiliansk):** av Arnaldo Giacomitti og Cauan Cabral (1.3.4)
+* **Portugisisk (Brasiliansk):** by Nelson Teixeira (3.0), Arnaldo Giacomitti and Cauan Cabral (1.3.4)
 * **Portugisisk (Portugal):** av José Paulo Tavares (2.2, 3.0) og Bruno Moreira (1.3.4)
 * **Rumensk:** av Alex Cojocaru (2.2, 3.0)
 * **Russisk:** av Sergey Litvintsev (2.2, 3.0) og евгений панчев (Yarik Sharoiko) (1.3.4)
@@ -964,7 +982,8 @@ Takk til disse oversetterne (Tilgjengelig versjoner vist i parentes)
 * **Slovakisk:** av Matej Badalič (2.2, 3.0)
 * **Spansk:** av Manuel María Pérez Ayala (2.2, 3.0) og Carlos Alfaro (1.3.4)
 * **Svensk:** av Linda Maltanski (2.0) og Mats Elfström (1.3.4)
-* **Tyrkisk:** av Kaya Zeren (2.0)
+* **Tyrkisk:** av Kaya Zeren (3.0, 2.0)
+* **Ukrainsk:** av Sergey Litvintsev (3.0)
 
 Mange takk til oversetterne! Har du lyst til å hjelpe til med å oversette til et språk som 
 enda ikke er støttet? Ta kontakt med utvikleren (se

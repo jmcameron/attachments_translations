@@ -15,8 +15,8 @@
 <div class="document">
 
 
-<p class="version"><strong>Version 3.0.1.2 - 20. september 2011</strong></p>
-<p><strong>Denne versjonen er for Joomla 1.7/2.5 +</strong></p>
+<p class="version"><strong>Version 3.0.3 - 11. august 2012</strong></p>
+<p><strong>Denne versjonen er for Joomla 1.7/2.5+</strong></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
@@ -36,7 +36,7 @@
 <li><a class="reference internal" href="#advarsler" id="id15">Advarsler</a></li>
 <li><a class="reference internal" href="#oppdatering" id="id16">Oppdatering</a></li>
 <li><a class="reference internal" href="#avinstallere" id="id17">Avinstallere</a></li>
-<li><a class="reference internal" href="#migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-6" id="id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.6+</a></li>
+<li><a class="reference internal" href="#migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-7-2-5" id="id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></li>
 <li><a class="reference internal" href="#oversettelser" id="id19">Oversettelser</a></li>
 <li><a class="reference internal" href="#takk-til" id="id20">Takk til</a></li>
 <li><a class="reference internal" href="#kontakt" id="id21">Kontakt</a></li>
@@ -55,7 +55,7 @@ alle innstillinger styres fra komponentmenyen.</p>
 <div class="warning">
 <p class="first admonition-title">Advarsel</p>
 <p class="last">Denne versjonen av Artikkelvedlegg fungerer kun med
-Joomla! 1.6, 1.7 eller nyere.</p>
+Joomla! 1.7, 2.5 eller nyere.</p>
 </div>
 <div class="note">
 <p class="first admonition-title">Merk</p>
@@ -244,19 +244,13 @@ omkringliggende &quot;span&quot; taggene også.</p>
 kategoribeskrivelser.</p>
 </div>
 </li>
-<li><dl class="first docutils">
-<dt>'<em>Deaktivert (filter)</em>' - Dette alternativet vil deaktivere all</dt>
-<dd><p class="first last">visningen av vedleggslister, også når artikler eller innholdselementer
+<li><p class="first">'<em>Deaktivert (filter)</em>' - Dette alternativet vil deaktivere all
+visningen av vedleggslister, også når artikler eller innholdselementer
 inneholder koden {attachments}, de blir heller ikke vist.</p>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>'<em>Deaktivert (ingen filter)</em>' - Dette alternativet vil deaktivere</dt>
-<dd><p class="first last">visningen av vedleggslister, men vil ikke stoppe visningen når
+<li><p class="first">'<em>Deaktivert (ingen filter)</em>' - Dette alternativet vil deaktivere
+visningen av vedleggslister, men vil ikke stoppe visningen når
 koden {attachments} brukes i en artikkel (eller innholdselement).</p>
-</dd>
-</dl>
 </li>
 </ul>
 </blockquote>
@@ -406,14 +400,28 @@ Merk at en oppføring uten en numerisk Id i begynnelsen vil bli brukt på alle
 innholdselementer.
 Så det er god praksis å sette en slik global overstyring først i listen, og
 deretter liste de egendefinerte titlene.</p>
-<p>Note: Merk: Dersom du ønsker å endre tittelen som brukes til vedleggslistene globalt,
-kan du redigere filen med oversettelsene. Endre teksten &quot;Vedlegg:&quot; til hva du måtte ønske:</p>
+<div class="note">
+<p class="first admonition-title">Merk</p>
+<p>Dersom du ønsker å endre titlene som brukes for vedleggslisten globalt, kan
+du kopiere oversettelsen 'ATTACH_ATTACHMENTS_TITLE' fra
+oversettelsesfilen:</p>
 <pre class="literal-block">
-administrator/language/nb-NO/nb-NO.plg_content_attachments.ini
+content/attachments/language/qq-QQ/qq-QQ.plg_content_attachments.ini
 </pre>
-<p>(Dersom du ikke er kjent med oversettelsesfiler i Joomla!, fin linjen som starter
-med &quot;ATTACH_ATTACHMENTS_TITLE&quot; på venstre side av &quot;=&quot; tegnet. Rediger teksten til høyre
-for &quot;=&quot; tegnet. Ikke gjør endringer på teksten til venstre for &quot;=&quot; tegnet.)</p>
+<p>inn i det globale overstyringsfilen:</p>
+<pre class="literal-block">
+language/overrides/en-GB.override.ini
+</pre>
+<p class="last">hvor qq-QQ refererer til språkkoden som nb-NO for norsk. (Dersom du
+ikke er kjent med oversettelsesfiler i Joomla! fin linjen som starter
+med 'ATTACH_ATTACHMENTS_TITLE' på venstre side av '=' tegnet.
+Rediger teksten til høyre for '=' tegnet. Ikke gjør endringer på teksten
+til venstre for '=' tegnet.)
+Ved å legge endringer av oversettelsen i den globale overstyringsfilen
+da slipper du å endre i originalfilen som vil bli overskrevet ved en
+eventuell oppdatering av utvidelsen (som betyr at eventuelle endringer du
+har gjort ville ha gått tapt).</p>
+</div>
 </li>
 <li><p class="first"><strong>Tidsavbrudd for å sjekke lenker:</strong>
 Tidsavbrudd for å sjekke lenker (sekunder). Når en lenke blir lagt til som et vedlegg,
@@ -456,16 +464,12 @@ alternativene ovenfor indikerer, men filene vil fortsatt være tilgjengelig for
 alle dersom de vet den fullstendige nettadressen, siden mappen er offentlig.
 Det <em>sikre</em> alternativet hindrer tilgangen for brukere uten egnede rettigheter
 selv om de kjenner den fullstendige nettadressen, siden dette alternativet
-hindrer allmennhetens tilgang til mappen. I <em>sikker</em> modus, om med alternativet
-&quot;Standard adgangsnivå &quot;satt til &quot;Offentlig&quot; vil alle være i stand til å se og
-laste ned vedlegg.</p>
+hindrer allmennhetens tilgang til mappen. I <em>sikker</em> modus, vil alle vedlegg
+satt til 'Offentlige' være tilgjengelig for visning og nedlastning av hvem som helst.</p>
 <div class="hint">
 <p class="first admonition-title">Tips</p>
-<dl class="last docutils">
-<dt>Dersom du har problemer med filnavn med Unicode-tegn, bør du aktivere alternativet</dt>
-<dd><p class="first last">for <strong>Sikker nedlasting</strong> (spesielt på Windows servere)</p>
-</dd>
-</dl>
+<p class="last">Dersom du har problemer med filnavn med Unicode-tegn, bør du aktivere alternativet
+for <strong>Sikker nedlasting</strong> (spesielt på Windows servere)</p>
 </div>
 </li>
 <li><p class="first"><strong>Nedlastningsmodus for sikre nedlastninger:</strong>
@@ -593,23 +597,14 @@ Du vil se dette:</p>
 <div class="hide-title important">
 <p class="first admonition-title">Viktig</p>
 <p><strong>Standard handlemåter for standard rettigheter</strong></p>
-<ul class="last">
-<li><p class="first">Skribent (og Innholdsadministrator) eller over kan legge til vedlegg i alle artikler/overordnet de kan redigere.</p>
-</li>
-<li><dl class="first docutils">
-<dt>Skribent (og Innholdsadministrator) eller over kan redigere eller slette vedlegg fra</dt>
-<dd><p class="first last">alle artikler/overordnet de kan redigere.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Skribent (og Innholdsadministrator) eller over kan endre status, publisert/ikke publisert</dt>
-<dd><p class="first last">fra brukersiden.</p>
-</dd>
-</dl>
-</li>
-<li><p class="first">Skribent kan ikke publisere vedlegg.</p>
-</li>
+<ul class="last simple">
+<li>Skribent (og Innholdsadministrator) eller over kan legge til vedlegg i
+alle artikler/overordnet de kan redigere.</li>
+<li>Skribent (og Innholdsadministrator) eller over kan redigere eller
+slette vedlegg fra alle artikler/overordnet de kan redigere.</li>
+<li>Skribent (og Innholdsadministrator) eller over kan endre status,
+publisert/ikke publisert fra brukersiden.</li>
+<li>Skribent kan ikke publisere vedlegg.</li>
 </ul>
 </div>
 <p>Dersom du ønsker å endre standardverdiene, må du redigere rettighetene på fanen Rettigheter
@@ -623,12 +618,9 @@ på Innstillingene på utvidelsen.</p>
 <li><p class="first"><strong>Alternativ 1 - Skribent kan publisere egne vedlegg</strong></p>
 <blockquote>
 <ul>
-<li><dl class="first docutils">
-<dt>På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;.</dt>
-<dd><p class="first last">Endre status for &quot;Endre egne vedlegg&quot; til  &quot;Tillatt&quot; og klikk
+<li><p class="first">På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;.
+Endre status for &quot;Endre egne vedlegg&quot; til  &quot;Tillatt&quot; og klikk
 på &quot;Lagre&quot; for å bekrefte endringen.</p>
-</dd>
-</dl>
 <div class="figure">
 <img alt="Rettigheter alternativ 1" src="images/permissions-scenario1.png" />
 </div>
@@ -639,30 +631,23 @@ på &quot;Lagre&quot; for å bekrefte endringen.</p>
 <li><p class="first"><strong>Alternativ 2 - Skribent kan redigere/slette sine egne vedlegg, men ingen andres</strong></p>
 <blockquote>
 <ul>
-<li><dl class="first docutils">
-<dt>På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;. For linjene</dt>
-<dd><p class="first last">&quot;Endre status på egne vedlegg i Artikkel/overordnet&quot; og
+<li><p class="first">På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;. For linjene
+&quot;Endre status på egne vedlegg i Artikkel/overordnet&quot; og
 &quot;Slette egne vedlegg for artikler/overordnet&quot; endrer du status til &quot;Avslått&quot;.
 Klikk på Lagre for å bekrefte endringen.</p>
-</dd>
-</dl>
 <div class="figure">
 <img alt="Rettigheter alternativ 2" src="images/permissions-scenario2.png" />
 </div>
-<dl class="docutils">
-<dt>I og med at skribenter fremdeles har rettigheter til å redigere/slette</dt>
-<dd><p class="first last">sine egne vedlegg, hindrer dette dem effektivt fra å redigere/slette
+<p>I og med at skribenter fremdeles har rettigheter til å redigere/slette
+sine egne vedlegg, hindrer dette dem effektivt fra å redigere/slette
 vedlegg som de ikke selv har opprettet, selv om de kan redigere artikkelen.</p>
-</dd>
-<dt>Merk at alle brukergrupper som er avledet fra skribent (f.eks Redaktør,</dt>
-<dd><p class="first last">Utgiver, etc) vil også bli nektet fra å redigere eller slette vedlegg for
+<p>Merk at alle brukergrupper som er avledet fra skribent (f.eks Redaktør,
+Utgiver, etc) vil også bli nektet fra å redigere eller slette vedlegg for
 artikler/overordnet de selv ikke har opprettet (fra denne rettigheten).
 Heldigvis har de generelt høyere Tilgangsnivå, &quot;Rediger vedlegg&quot; og
 &quot;Slett vedlegg&quot; som betyr at de kan redigere eller slette eventuelle
 vedlegg på alle artikler som de kan redigere (forutsatt at deres rettigheter
 ikke er endret).</p>
-</dd>
-</dl>
 </li>
 </ul>
 </blockquote>
@@ -744,32 +729,25 @@ merket &quot;Skriv inn en nettadresse i stedet&quot;. Dersom du klikker på knap
 få et felt for å skrive inn en nettadresse, og se to alternativer:</p>
 <ul>
 <li><dl class="first docutils">
-<dt><strong>Bekreft nettadresse?</strong> - For å bestemme filtypen i nettadressen</dt>
-<dd><dl class="first last docutils">
-<dt>(for å velge et passende ikon), vil komponenten prøve å kommunisere med</dt>
-<dd><p class="first last">serveren for grunnleggende informasjon om filen, inkludert filtype og størrelse.
-I noen tilfeller vil ikke serveren svarer på disse forespørslene selv om</p>
-</dd>
-<dt>nettadressen er gyldig. Som standard blir ikke vedlegg hvor nettadresser ikke er</dt>
-<dd><p class="first last">validert av serveren godkjent. Dersom du vet at nettadressen er gyldig, kan du fjerne</p>
-</dd>
-<dt>merket for dette alternativet, og &quot;tvinge&quot; utvidelsen til å godkjenne nettadressen</dt>
-<dd><p class="first last">som et vedlegg - men det finnes ingen garantier for at filtype eller filstørrelsen vil</p>
-</dd>
-<dt>være korrekt. Merk at denne forespørselen vil bli utførte uavhengig om dette alternativet</dt>
-<dd><p class="first last">er valgt eller ikke.</p>
-</dd>
-</dl>
+<dt><strong>Bekreft nettadresse?</strong> - For å bestemme filtypen i nettadressen (for å</dt>
+<dd><p class="first last">velge et passende ikon), vil komponenten prøve å kommunisere med serveren
+for grunnleggende informasjon om filen, inkludert filtype og størrelse.  I
+noen tilfeller vil ikke serveren svarer på disse forespørslene selv om
+nettadressen er gyldig. Som standard blir ikke vedlegg hvor nettadresser
+ikke er validert av serveren godkjent. Dersom du vet at nettadressen er
+gyldig, kan du fjerne merket for dette alternativet, og &quot;tvinge&quot;
+utvidelsen til å godkjenne nettadressen som et vedlegg - men det finnes
+ingen garantier for at filtype eller filstørrelsen vil være korrekt. Merk
+at denne forespørselen vil bli utførte uavhengig om dette alternativet er
+valgt eller ikke.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><strong>Relativ nettadresse?</strong> - Normalt vil du skrive inn en nettadresse med prefiks &quot;http ...&quot; for å</dt>
-<dd><dl class="first last docutils">
-<dt>indikere en fullstendig nettadresse. Dersom du ønsker å lenke til filer i forhold til din</dt>
-<dd><p class="first last">Joomla installasjon, bruk alternativet &quot;Relativ nettadresse&quot;.</p>
-</dd>
-</dl>
+<dt><strong>Relativ nettadresse?</strong> - Normalt vil du skrive inn en nettadresse med</dt>
+<dd><p class="first last">prefiks &quot;http ...&quot; for å indikere en fullstendig nettadresse. Dersom du
+ønsker å lenke til filer i forhold til din Joomla installasjon, bruk
+alternativet &quot;Relativ nettadresse&quot;.</p>
 </dd>
 </dl>
 </li>
@@ -956,17 +934,7 @@ MIME-type under Mediainnstillinger.</p>
 </li>
 <li><p class="first">Den overordnede artikkelen eller innholdselementet er ikke publisert.</p>
 </li>
-<li><dl class="first docutils">
-<dt>Alternativet &quot;Hvem kan se vedlegg&quot; er satt til &quot;Innloggede brukere&quot; og du er ikke</dt>
-<dd><p class="first last">innlogget.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Eller valget &quot;Hvem kan se vedlegg&quot; er satt til &quot;Ingen&quot;. Dette kan endres via Parameter i</dt>
-<dd><p class="first last">administrasjonen på komponenten..</p>
-</dd>
-</dl>
+<li><p class="first">Vedleggets tilgangsnivået er satt til 'Registrert', og du er ikke logget inn på brukersiden.</p>
 </li>
 <li><dl class="first docutils">
 <dt>Programtillegget &quot;Innhold - Artikkelvedlegg&quot; er ikke aktivert. Gå til Programtillegg i</dt>
@@ -976,7 +944,16 @@ MIME-type under Mediainnstillinger.</p>
 </li>
 <li><p class="first">I &quot;Innhold - Artikkelvedlegg&quot; (via Programtillegg), er ikke adgangsnivået satt til &quot;Gjester&quot;.</p>
 </li>
-<li><p class="first">Dersom nettstedet bruker mellomlagring, prøv å tømme mellomlagret og oppdatere siden.</p>
+<li><dl class="first docutils">
+<dt>Dersom nettstedet bruker mellomlagring, prøv å tømme mellomlagret og oppdatere siden.</dt>
+<dd><ul class="first last simple">
+<li>Dersom du ikke ser vedlegg for en kategori i en kategori blogg visning og du bruker en
+egendefinert mal, kan det være nødvendig å foreta en liten endring i malen for å se vedlegget
+til kategorien. Ta gjerne kontakt for å få hjelp med dette problemet
+(se kontaktinfo nederst på denne siden)</li>
+</ul>
+</dd>
+</dl>
 </li>
 </ul>
 </blockquote>
@@ -1066,13 +1043,13 @@ mappen &quot;attachments&quot; i din Joomla installasjon.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-6">
-<h1><a class="toc-backref" href="#id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.6+</a></h1>
-<p>For å migrere dine vedlegg fra Joomla 1.5 til Joomla 1.6 (eller nyere),
+<div class="section" id="migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-7-2-5">
+<h1><a class="toc-backref" href="#id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></h1>
+<p>For å migrere dine vedlegg fra Joomla 1.5 til Joomla 1.7/2.5 (eller nyere),
 følg prosedyren beskrevet her:</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.6+</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></li>
 </ul>
 </blockquote>
 </div>
@@ -1086,20 +1063,21 @@ oversettelsene er i ferd med å bli oppdatert til versjon 3.0 av komponenten.</p
 <li><strong>Bulgarsk:</strong> av Stefan Ilivanov (1.3.4)</li>
 <li><strong>Katalansk:</strong> av Jaume Jorba (2.2, 3.0)</li>
 <li><strong>Kinesisk:</strong> Tradisjonelle og forenklet Kinesisk oversettelser av baijianpeng (白建鹏) (1.3.4)</li>
-<li><strong>Kroatisk:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Kroatisk:</strong> Tanja Dragisic (3.0, 1.3.4)</li>
 <li><strong>Tjekkisk:</strong> av Tomas Udrzal (1.3.4)</li>
 <li><strong>Nederlandsk:</strong> av Parvus (2.2)</li>
+<li><strong>Dansk:</strong> av Sune Folkmann (3.0), Villy Feltmann (2.2), Bo Urskov (1.3.4)</li>
 <li><strong>Finsk:</strong> av Tapani Lehtonen (2.2)</li>
 <li><strong>Fransk:</strong> av Marc-André Ladouceur (2.2, 3.0) og Pascal Adalian (1.3.4)</li>
 <li><strong>Tysk:</strong> av Pierre Corell (3.0), Bernhard Alois Gassner (2.2), Michael Scherer (1.3.4)</li>
-<li><strong>Gresk:</strong> av Harry Nakos (1.3.4)</li>
+<li><strong>Gresk:</strong> by Antonis Mylonopoulos (3.0), Harry Nakos (1.3.4, 2.0)</li>
 <li><strong>Ungarsk:</strong> Formelle og uformelle oversettelser av Szabolcs Gáspár (1.3.4)</li>
 <li><strong>Indonesisk:</strong> av Moh. Arif (3.0)</li>
 <li><strong>Italiensk:</strong> av Piero Mattirolo (2.2, 3.0) og Lemminkainen og Alessandro Bianchi (1.3.4)</li>
 <li><strong>Norsk:</strong> av Roar Jystad (2.2, 3.0) og Espen Gjelsvik (1.3.4)</li>
 <li><strong>Persisk:</strong> av Hossein Moradgholi og Mahmood Amintoosi (2.2)</li>
 <li><strong>Polsk:</strong> av Sebastian Konieczny (2.2, 3.0) og Piotr Wójcik (1.3.4)</li>
-<li><strong>Portugisisk (Brasiliansk):</strong> av Arnaldo Giacomitti og Cauan Cabral (1.3.4)</li>
+<li><strong>Portugisisk (Brasiliansk):</strong> by Nelson Teixeira (3.0), Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
 <li><strong>Portugisisk (Portugal):</strong> av José Paulo Tavares (2.2, 3.0) og Bruno Moreira (1.3.4)</li>
 <li><strong>Rumensk:</strong> av Alex Cojocaru (2.2, 3.0)</li>
 <li><strong>Russisk:</strong> av Sergey Litvintsev (2.2, 3.0) og евгений панчев (Yarik Sharoiko) (1.3.4)</li>
@@ -1108,7 +1086,8 @@ oversettelsene er i ferd med å bli oppdatert til versjon 3.0 av komponenten.</p
 <li><strong>Slovakisk:</strong> av Matej Badalič (2.2, 3.0)</li>
 <li><strong>Spansk:</strong> av Manuel María Pérez Ayala (2.2, 3.0) og Carlos Alfaro (1.3.4)</li>
 <li><strong>Svensk:</strong> av Linda Maltanski (2.0) og Mats Elfström (1.3.4)</li>
-<li><strong>Tyrkisk:</strong> av Kaya Zeren (2.0)</li>
+<li><strong>Tyrkisk:</strong> av Kaya Zeren (3.0, 2.0)</li>
+<li><strong>Ukrainsk:</strong> av Sergey Litvintsev (3.0)</li>
 </ul>
 <p>Mange takk til oversetterne! Har du lyst til å hjelpe til med å oversette til et språk som
 enda ikke er støttet? Ta kontakt med utvikleren (se
@@ -1166,7 +1145,7 @@ denne utvidelsen.</p>
 </div>
 <div class="footer">
 <hr class="footer" />
-Generated on: August 10, 2012 at 03:37 UTC.
+Generated on: August 18, 2012 at 19:15 UTC.
 
 </div>
 </body>
