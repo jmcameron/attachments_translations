@@ -19,6 +19,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-08-18:
+   * Updated: attachments-Norwegian-nb-NO-3.0.3.1.zip
+         - Updated the translated Norwegian help file.
+         - Status: Complete
+         - Thanks to Roar Jystad
+
 2012-08-13:
    * Updated: attachments-German-de-DE-3.0.3.zip
          - Minor updates for Attachments 3.0.3 release.
@@ -41,6 +47,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Norwegian-nb-NO-3.0.3.zip
          - Renamed from 3.0.1.3 to 3.0.3 to match Attachments release number
          - Status: Complete
+         - 13 Downloads
    * Updated: attachments-Turkish-tr-TR-3.0.3.zip
          - Renamed from 3.0.1 to 3.0.3  to match Attachments release number
          - Status: Complete (help file in English)
