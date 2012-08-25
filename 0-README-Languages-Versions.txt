@@ -19,6 +19,13 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-08-20:
+   * Added: attachments-Danish-3.0.3.zip
+         - Update from earlier 2.2 version to 3.0
+	 - Includes recent updates via transifex
+         - Status: Complete (help file in English)
+         - Thanks to Kenneth Rasmussen and Sune Folkmann for the translation!
+
 2012-08-18:
    * Updated: attachments-Norwegian-nb-NO-3.0.3.1.zip
          - Updated the translated Norwegian help file.
