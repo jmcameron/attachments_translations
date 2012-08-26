@@ -19,6 +19,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-08-26:
+   * Updated: attachments-Catalan-ca-ES-3.0.3.zip
+         - Status: Complete (help file needs minor updates for 3.0.3)
+         - Thanks to Jaume Jorba for the updates
+
 2012-08-20:
    * Added: attachments-Danish-3.0.3.zip
          - Update from earlier 2.2 version to 3.0
@@ -118,6 +123,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          correctly).
 
    * Renamed: attachments-Catalan-ca-ES-language-pack-3.0.1.1.zip
+	 - 256 Downloads
    * Renamed: attachments-Dutch-nl-NL-language-pack-3.0.1.zip
    * Renamed: attachments-French-fr-FR-language-pack-3.0.1.zip
    * Renamed: attachments-German-de-DE-language-pack-3.0.1.zip
