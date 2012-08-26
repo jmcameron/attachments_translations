@@ -6,9 +6,9 @@
 
 .. class:: version
 
-**Versió 3.0 - 24 de setembre, 2011**
+**Versió 3.0.3 - 24 de august, 2012**
 
-**Només vàlid per la versió 1.6/1.7+ de Joomla**
+**Només vàlid per la versió 1.7/2.5+ de Joomla**
 
 .. contents:: 
     :depth: 1
@@ -24,7 +24,7 @@ gestionar-los. Hi ha opcions per gestionar qui pot veure els adjunts i qui pot
 carregar-los, junt amb altres opcions per augmentar la seva flexibilitat i 
 utilitat. Nota: Totes les opcions es gestionen des del Gestor de components.
 
-.. warning:: Aquesta extensió tan sols corre sobre Joomla! 1.6, 1.7 O 
+.. warning:: Aquesta extensió tan sols corre sobre Joomla! 1.7, 2.5 O 
              superiors.
 
 .. note:: A tot el document apareix la paraula **altre ítem** o **contingut**.
@@ -47,7 +47,7 @@ l'extensió, utilitza aquesta pàgina web:
 Noves característiques de la versió 3.0
 =======================================
 
-* Suport total per al nou sitema de permisos de joomla! 1.6/1.7+ que dona una
+* Suport total per al nou sitema de permisos de joomla! 1.7/2.5+ que dona una
   important flexibilitat per gestionar qui pot crear, editar, o esborrar adjunts.
   Veure la secció `Permisos pels adjunts`_ per obtenir-ne més detalls.
 
@@ -663,7 +663,7 @@ un manual disponible que forma part de la instal·lació del component:
 * `Attachments Plugin Creation Manual <../en-GB/plugin_manual/html/index.html>`_
 
 .. warning:: El manual per a la creació de `Plugins` El manual per a la creació de  El manual per a la creació de  pels Adjunts 3.0 encara no està actualitzat.
- Hi ha canvis en l'arquitectura prou significatius entre la versió 1.6/1.7+ i la 1.5.
+ Hi ha canvis en l'arquitectura prou significatius entre la versió 1.7/2.5+ i la 1.5.
 
 Estils CSS per a les llistes d'adjunts
 ======================================
@@ -856,14 +856,14 @@ Desinstal·lar
    component i tots els plugins associats.
 
 
-Migrant els adjunts de la versió 1.5 a Joomla 1.6+
-====================================================
+Migrant els adjunts de la versió 1.5 a Joomla 1.7/2.5+
+======================================================
 
-Per migar elsadjunts de la versió 1.5 a la o 1.6 o superior seguir el procediment
+Per migar elsadjunts de la versió 1.5 a la o 1.7/2.5+ o superior seguir el procediment
 indicat:
 
  
-  * `Migrar els adjunts de Joomla 1.5 a Joomla 1.6+
+  * `Migrar els adjunts de Joomla 1.5 a Joomla 1.7/2.5+
     <http://jmcameron.net/attachments/migration/>`_
 
 
