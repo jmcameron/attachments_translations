@@ -23,6 +23,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Russian-ru-RU-3.0.3.zip
          - Status: Complete
          - Thanks to Sergey Litvintsev for the updates
+   * Updated: attachments-Ukrainian-uk-UA-3.0.3.zip
+         - Status: Complete
+         - Thanks to Sergey Litvintsev for the updates
 
 2012-08-26:
    * Updated: attachments-Catalan-ca-ES-3.0.3.zip
@@ -106,6 +109,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Added: attachments-Ukrainian-uk-UA-language-pack-3.0.1.zip
          - Status: Complete
          - Thanks to Sergey Litvintsev for the translation!
+	 - 207 Downloads
 
 2012-02-07:
    * Updated: attachments-Russian-ru-RU-3.0.1.1.zip
