@@ -26,6 +26,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Ukrainian-uk-UA-3.0.3.zip
          - Status: Complete
          - Thanks to Sergey Litvintsev for the updates
+   * Updated: attachments-Portuguese-pt-BR-3.0.3.zip
+         - Status: Complete (help file in English)
+         - Thanks to Halison Casimiro for the updates
 
 2012-08-26:
    * Updated: attachments-Catalan-ca-ES-3.0.3.zip
@@ -104,6 +107,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from old 1.3 version to 3.0
          - Status: Complete (help file in English)
          - Thanks to Nelson Teixeira for the update!
+	 - 471 Downloads
 
 2011-02-13:
    * Added: attachments-Ukrainian-uk-UA-language-pack-3.0.1.zip
