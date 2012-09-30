@@ -19,6 +19,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-09-29:
+   * Updated: attachments-Russian-ru-RU-3.0.3.zip
+         - Status: Complete
+         - Thanks to Sergey Litvintsev for the updates
+
 2012-08-26:
    * Updated: attachments-Catalan-ca-ES-3.0.3.zip
          - Status: Complete (help file needs minor updates for 3.0.3)
@@ -107,6 +112,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Minor fixes and new help file in Russian
          - Status: Complete
          - Thanks to Sergey Litvintsev for the update!
+	 - 1841 Downloads
 
 2011-09-23:
    * Added: attachments-Greek-el-GR-language-pack-3.0.1.zip
