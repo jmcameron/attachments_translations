@@ -19,6 +19,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2012-10-11:
+   * Updated: attachments-Italian-it-IT-3.0.3.zip
+         - Status: Complete (help file in English)
+         - Thanks to transifex contributors
+
 2012-09-29:
    * Updated: attachments-Russian-ru-RU-3.0.3.zip
          - Status: Complete
@@ -144,6 +149,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 	 - 2243 Downloads
    * Renamed: attachments-Indonesian-id-ID-language-pack-3.0.1.1.zip
    * Renamed: attachments-Italian-it-IT-language-pack-3.0.1.zip
+	 - 4558 Downloads
    * Renamed: attachments-Norwegian-nb-NO-language-pack-3.0.1.2.zip
 	 - 280 Downloads
    * Renamed: attachments-Polish-pl-PL-language-pack-3.0.1.zip
