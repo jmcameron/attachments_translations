@@ -20,6 +20,9 @@ NOTES:
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 2012-10-11:
+   * Updated: attachments-Romanian-ro-RO-3.0.3.zip
+         - Status: Complete (help file in English)
+         - Thanks to Alex Cojocaru
    * Updated: attachments-Italian-it-IT-3.0.3.zip
          - Status: Complete (help file in English)
          - Thanks to transifex contributors
@@ -155,6 +158,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Renamed: attachments-Polish-pl-PL-language-pack-3.0.1.zip
    * Renamed: attachments-Portuguese-pt-PT-language-pack-3.0.1.zip
    * Renamed: attachments-Romanian-ro-RO-language-pack-3.0.1.zip
+	 - 195 Downloads
    * Renamed: attachments-Russian-ru-RU-language-pack-3.0.1.zip
 	 - 928 Downloads
    * Renamed: attachments-Slovenian-sl-SI-language-pack-3.0.1.zip
