@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.7" type="file" method="upgrade">
+<extension version="2.5" type="file" method="upgrade">
   <name>attachments_es_es_language_pack</name>
   <version>3.0.3</version>
   <creationDate>2012-08-13</creationDate>
@@ -9,6 +9,9 @@
   <copyright>Copyright (C) 2011-2012 Jonathan M. Cameron. All rights reserved.</copyright>
   <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
   <description>ATTACHMENTS_ES_ES_LANGUAGE_PACK</description>
+
+  <scriptfile>install.php</scriptfile>
+
   <fileset>
 
     <!-- Admin component language folder -->
