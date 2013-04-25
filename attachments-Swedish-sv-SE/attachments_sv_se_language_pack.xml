@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_sv_se_language_pack</name>
-  <version>3.0-Beta1</version>
+  <version>3.0.3-Beta1</version>
   <creationDate>2013-04-24</creationDate>
   <author>Jonathan M. Cameron, Jonas Hedberg (3.0), Linda Maltanski (2.2)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
