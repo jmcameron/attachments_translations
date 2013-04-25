@@ -6,7 +6,8 @@ INSTALL these files using the regular Joomla installer (no need to unzip manuall
 COMPATIBLITY:
 
    * Language packs with versions 3.0.1 and 3.0.1.* are compatible with 
-     Attachments 3.0, 3.0.1, 3.0.2, and 3.0.3 on Joomla 1.6, 1.7, and 2.5
+     Attachments 3.0, 3.0.1, 3.0.2, and 3.0.3 on Joomla 1.6, 1.7, and 2.5 
+     (but not Joomla 3.x)
    * Language packs with version 3.0.3 will work on Attachments 3.0.3 or 
      earlier versions.
 
@@ -18,6 +19,12 @@ NOTES:
      attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
+
+2013-04-25:
+   * Added: attachments-Danish-3.0.3.zip
+         - Update from earlier 2.2 version to 3.0
+         - Status: Complete (help file in English)
+         - Thanks to Jonas Hedberg for completing the translation!
 
 2012-10-11:
    * Updated: attachments-Romanian-ro-RO-3.0.3.zip
