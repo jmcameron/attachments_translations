@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
 <title>Attachments Documentation</title>
 <link rel="stylesheet" href="help.css" type="text/css" />
 </head>
@@ -15,8 +15,8 @@
 <div class="document">
 
 
-<p class="version"><strong>Version 3.0.2 - September 17, 2011</strong></p>
-<p><strong>This version is for Joomla 1.6/1.7+</strong></p>
+<p class="version"><strong>Version 3.1-Beta8 - April 19, 2013</strong></p>
+<p><strong>This version is for Joomla 1.7/2.5+</strong></p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
@@ -36,7 +36,7 @@
 <li><a class="reference internal" href="#warnings" id="id14">Warnings</a></li>
 <li><a class="reference internal" href="#upgrading" id="id15">Upgrading</a></li>
 <li><a class="reference internal" href="#uninstalling" id="id16">Uninstalling</a></li>
-<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-6" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference internal" href="#migration-attachments-from-joomla-1-5-to-joomla-1-7-2-5" id="id17">Migration Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></li>
 <li><a class="reference internal" href="#translations" id="id18">Translations</a></li>
 <li><a class="reference internal" href="#acknowledgments" id="id19">Acknowledgments</a></li>
 <li><a class="reference internal" href="#contact" id="id20">Contact</a></li>
@@ -54,7 +54,7 @@ all options are controlled through the component manager.</p>
 <div class="warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This version of the <em>Attachments</em> extension only works for
-Joomla! 1.6, 1.7 or greater.</p>
+Joomla! 1.7, 2.5 or greater.</p>
 </div>
 <div class="note">
 <p class="first admonition-title">Note</p>
@@ -77,7 +77,7 @@ this extension, please subscribe using this web page:</p>
 <div class="section" id="new-features-in-version-3-0">
 <h1><a class="toc-backref" href="#id2">New features in Version 3.0</a></h1>
 <ul class="simple">
-<li>Full support for the new ACL/permissions system of Joomla 1.6/1.7+.  This
+<li>Full support for the new ACL/permissions system of Joomla 1.7/2.5+.  This
 gives you significant flexibility to control who can create, edit, or delete
 attachments.  See the <a class="reference internal" href="#attachments-permissions">Attachments Permissions</a> section for more details.</li>
 <li>Full support for viewing access levels.  This means you can set some of your
@@ -297,14 +297,14 @@ is 'Yes', the modification date for the file will be added to the
 attachment list for articles that have attachments. If 'No' is
 selected, no date will be added to the attachment list.</p>
 </li>
-<li><p class="first"><strong>Format string for modification date:</strong> You may
-select the format for the modification date by using the format
-used by the PHP strftime() function.  Search the web with
-'PHP strftime' for examples.  The default format (%x %H:%M)
-gives dates with 24-hour time like 4/28/2008 14:21.  To
-remove the time of day part, leave out the &quot;%H:%M&quot; part.  Note
-that MS Windows and Linux PHP implementations may differ in
-some of the codes that they support.</p>
+<li><p class="first"><strong>Format string for modification date:</strong>
+You may select the format for the displayed creation and modification dates
+by giving a format string like ones used by the Joomla <cite>JDate::format()</cite>
+function (which is based on the PHP dateformat function).  Search the web
+with 'PHP date' for examples.  Note that JDate handles translation of
+month/day names as necessary.  The default format string (Y-m-d H:M) gives
+dates with 24-hour time like 2013-01-05 16:21.  To remove the time-of-day
+part, leave out the 'H:M' part.</p>
 </li>
 <li><p class="first"><strong>Attachments list order:</strong> This option allows you to specify the order in
 which attachments will be listed in the attachments lists.  Most of the
@@ -467,11 +467,16 @@ attachment files but will not be direct links.  This will prevent access
 unless users have appropriate permissions.  If <em>secure</em> downloads are not
 selected, the links to the attachments will be shown as the options above
 indicate, but the files will still be accessible to anyone if they know the
-full URL, since the sub-directory is public.  The <em>secure</em> option prevents
-access to users without appropriate permissions even if they know the full
-URL, since this option prevents public access to the attachments
-sub-directory.  In <em>secure</em> mode, any attachment set to the 'Public' access
-level can be seen and downloaded by anyone.</p>
+full URL, since the sub-directory is public.</p>
+<p>The <em>secure</em> option prevents access to uploaded files to users without
+appropriate permissions even if they know the full URL, since this option
+prevents public access to the attachments sub-directory.  For URL
+'attachments', the 'display name' for the URL is shown but not the full URL.
+When a user with appropriate permissions tries to access a URL attachment,
+they will be redirected to the desired URL.  So for URL 'attachments', the
+display name must be set if the actual URL is not to be exposed.</p>
+<p>In <em>secure</em> mode, any attachment set to the 'Public' access level can be
+seen and downloaded by anyone.</p>
 <div class="hint">
 <p class="first admonition-title">Hint</p>
 <p class="last">If you have problems with filenames with Unicode characters, you should
@@ -802,7 +807,7 @@ is a manual that is available as part of this 'Attachments' installation:</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">The Attachment Plugin Creation Manual has not been updated for Attachments
 3.0 yet.  There have been some architectural changes that means that
-Attachments plugins in Joomla 1.6/1.7+ will have some significant
+Attachments plugins in Joomla 1.7/2.5+ will have some significant
 differences from those for Joomla 1.5.</p>
 </div>
 </div>
@@ -957,6 +962,11 @@ to enable it.</li>
 level is not set to 'Public'.</li>
 <li>If your site uses caching, try clearing the caches and refreshing the
 page.</li>
+<li>If you not seeing attachments for a category in a category blog view
+and you are using a custom template, it may be necessary to make a
+small modification to the template in order to see the category
+attachments.  Feel free to contact the author for help with this
+issue (see the contact info at the bottom of this page).</li>
 </ul>
 </blockquote>
 </li>
@@ -1033,7 +1043,7 @@ extension updated very simple!</li>
 <li><p class="first">To uninstall the Attachments extension, go to the 'Manage' tab on the
 Extension Manager page (under the 'Extensions' menu).  <strong>Select ONLY the item</strong>:</p>
 <pre class="literal-block">
-Package: Attachments for Joomla 1.6+
+Package: Attachments for Joomla 1.7/2.5+
 </pre>
 <p>and click on the 'Uninstall' button on the toolbar.  This will uninstall the
 attachments component and all the associated plugins.</p>
@@ -1052,13 +1062,13 @@ installation.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-6">
-<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.6+</a></h1>
-<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.6 (or later)
-site, follow the procedure outlined here:</p>
+<div class="section" id="migration-attachments-from-joomla-1-5-to-joomla-1-7-2-5">
+<h1><a class="toc-backref" href="#id17">Migration Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></h1>
+<p>To migrate your attachments from a Joomla 1.5 site to a Joomla 1.7/2.5 (or
+later) site, follow the procedure outlined here:</p>
 <blockquote>
 <ul class="simple">
-<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.6+</a></li>
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrating Attachments from Joomla 1.5 to Joomla 1.7/2.5+</a></li>
 </ul>
 </blockquote>
 </div>
@@ -1073,8 +1083,9 @@ not available yet for Attachments 3.0.</p>
 <li><strong>Bulgarian:</strong> by Stefan Ilivanov (1.3.4)</li>
 <li><strong>Catalan:</strong> by Jaume Jorba (2.2, 3.0)</li>
 <li><strong>Chinese:</strong> Traditional and simplified Chinese translations by baijianpeng (白建鹏) (1.3.4)</li>
-<li><strong>Croatian:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Croatian:</strong> Tanja Dragisic (3.0, 1.3.4)</li>
 <li><strong>Czech:</strong> by Tomas Udrzal (1.3.4)</li>
+<li><strong>Danish:</strong> by Sune Folkmann (3.0), Villy Feltmann (2.2), Bo Urskov (1.3.4)</li>
 <li><strong>Dutch:</strong> by Parvus (2.2, 3.0)</li>
 <li><strong>Finnish:</strong> by Tapani Lehtonen (2.2)</li>
 <li><strong>French:</strong> by Marc-André Ladouceur (2.2, 3.0), Yann Kerviel (3.0), and Pascal Adalian (1.3.4)</li>
@@ -1086,7 +1097,7 @@ not available yet for Attachments 3.0.</p>
 <li><strong>Norwegian:</strong> by Roar Jystad (2.2, 3.0) and Espen Gjelsvik (1.3.4)</li>
 <li><strong>Persian:</strong> by Hossein Moradgholi and Mahmood Amintoosi (2.2)</li>
 <li><strong>Polish:</strong> by Sebastian Konieczny (2.2, 3.0), Stefan Wajda (3.0), and Piotr Wójcik (1.3.4)</li>
-<li><strong>Portuguese (Brazilian):</strong> by Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
+<li><strong>Portuguese (Brazilian):</strong> by Nelson Teixeira (3.0), Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
 <li><strong>Portuguese (Portugal):</strong> by José Paulo Tavares (2.2, 3.0) and Bruno Moreira (1.3.4)</li>
 <li><strong>Romanian:</strong> by Alex Cojocaru (2.2, 3.0)</li>
 <li><strong>Russian:</strong> by Sergey Litvintsev (2.2, 3.0) and евгений панчев (Yarik Sharoiko) (1.3.4)</li>
@@ -1094,8 +1105,9 @@ not available yet for Attachments 3.0.</p>
 <li><strong>Slovak:</strong> by Miroslav Bystriansky (1.3.4)</li>
 <li><strong>Slovenian:</strong> by Matej Badalič (2.2, 3.0)</li>
 <li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2, 3.0) and Carlos Alfaro (1.3.4)</li>
-<li><strong>Swedish:</strong> by Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
-<li><strong>Turkish:</strong> by Kaya Zeren (2.0)</li>
+<li><strong>Swedish:</strong> by Jonas Hedberg (3.0), Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
+<li><strong>Turkish:</strong> by Kaya Zeren (3.0, 2.0)</li>
+<li><strong>Ukrainian:</strong> by Sergey Litvintsev (3.0)</li>
 </ul>
 <p>Many thanks to these translators!  If you would like to help translate
 the extension to any other language, please contact the author (see the
@@ -1155,7 +1167,7 @@ the development of the 'Attachments' extension.</p>
 </div>
 <div class="footer">
 <hr class="footer" />
-Generated on: October 14, 2011 at 14:42 UTC.
+Generated on: April 25, 2013 at 03:02 UTC.
 
 </div>
 </body>
