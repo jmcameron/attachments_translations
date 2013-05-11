@@ -9,6 +9,7 @@
   <copyright>Copyright (C) 2011-2012 Jonathan M. Cameron. All rights reserved.</copyright>
   <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
   <description>ATTACHMENTS_SL_SI_LANGUAGE_PACK</description>
+  <scriptfile>install.php</scriptfile>
   <fileset>
 
     <!-- Admin component language folder -->
