@@ -22,7 +22,7 @@ jimport('joomla.application.component.helper');
  *
  * @package Attachments
  */
-class attachments_de_de_language_packInstallerScript 
+class attachments_en_gb_language_packInstallerScript 
 {
 	/**
 	 * Attachments component preflight function
