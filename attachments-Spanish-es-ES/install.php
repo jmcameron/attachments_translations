@@ -34,20 +34,29 @@ class attachments_es_es_language_packInstallerScript
 	{
 		$app = JFactory::getApplication();
 
+		// Load the installation language file
+		$lang = JFactory::getLanguage();
+		$lang->load('files_attachments_language_pack.install', dirname(__FILE__));
+
 		// Verify that the Joomla version is adequate
 		$this->minimum_joomla_release = $parent->get( 'manifest' )->attributes()->version;		  
 		if ( version_compare(JVERSION, $this->minimum_joomla_release, 'lt') ) {
-			$msg = JText::sprintf('ATTACHMENTS_ES_ES_LANGUAGE_PACK_ERROR_INADEQUATE_JOOMLA_VERSION_S',
+			$msg = JText::sprintf('ATTACHMENTS_LANGUAGE_PACK_ERROR_INADEQUATE_JOOMLA_VERSION_S',
 								  $this->minimum_joomla_release);
+			$app->enqueueMessage('<br/>', 'error');
 			$app->enqueueMessage($msg, 'error');
+			$app->enqueueMessage('<br/>', 'error');
 			return false;
 			}
 
-		// Make sure the component is alread installed
-		if(!JComponentHelper::isEnabled('com_attachments', true))
+		// Make sure the component is already installed
+		$result = JComponentHelper::getComponent('com_attachments', true);
+		if (! $result->enabled)
 		{
-			$msg = JText::_('ATTACHMENTS_ES_ES_LANGUAGE_PACK_ERROR_INSTALL_COMPONENT_FIRST');
+			$msg = JText::_('ATTACHMENTS_LANGUAGE_PACK_ERROR_INSTALL_COMPONENT_FIRST');
+			$app->enqueueMessage('<br/>', 'error');
 			$app->enqueueMessage($msg, 'error');
+			$app->enqueueMessage('<br/>', 'error');
 			return false;
 		}
 	}
