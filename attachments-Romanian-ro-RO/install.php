@@ -59,6 +59,18 @@ class attachments_ro_ro_language_packInstallerScript
 			$app->enqueueMessage('<br/>', 'error');
 			return false;
 		}
-	}
 
+		// Verify that the attachments version is adequate
+		// (Do not update language pack for old versions of Attachments)
+		require_once(JPATH_SITE.'/components/com_attachments/defines.php');
+		$min_version = '3.0.9';
+		if (version_compare(AttachmentsDefines::$ATTACHMENTS_VERSION, '3.0.9', 'lt'))
+		{
+			$msg = JText::sprintf('ATTACHMENTS_LANGUAGE_PACK_ERROR_ATTACHMENTS_TOO_OLD_S', '3.1');
+			$app->enqueueMessage('<br/>', 'error');
+			$app->enqueueMessage($msg, 'error');
+			$app->enqueueMessage('<br/>', 'error');
+			return false;
+		}
+	}
 }
