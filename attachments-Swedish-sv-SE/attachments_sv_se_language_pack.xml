@@ -20,11 +20,6 @@
       <filename>sv-SE.com_attachments.help.ini</filename>
     </files>
 
-    <!-- Admin component sv-SE language help images folder -->
-    <files folder="attachments_component/media/images/help" target="media/com_attachments/images/help">
-      <folder>sv-SE</folder>
-    </files>
-
     <!-- Site component language folder -->
     <files folder="attachments_component/site" target="components/com_attachments/language/sv-SE">
       <filename>index.html</filename>
