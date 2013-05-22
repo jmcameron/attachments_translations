@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_sv_se_language_pack</name>
-  <version>3.1-Beta2</version>
+  <version>3.1-Beta3</version>
   <creationDate>2013-05-18</creationDate>
   <author>Jonathan M. Cameron, Jonas Hedberg (3.0), Marcus Ludvigson (3.0), Linda Maltanski (2.2)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
@@ -17,13 +17,12 @@
       <filename>index.html</filename>
       <filename>sv-SE.com_attachments.ini</filename>
       <filename>sv-SE.com_attachments.sys.ini</filename>
+      <filename>sv-SE.com_attachments.help.ini</filename>
     </files>
 
-    <!-- Admin component sv-SE language help folder -->
-    <files folder="attachments_component/admin/help/sv-SE" target="administrator/components/com_attachments/help/sv-SE">
-      <filename>help.css</filename>
-      <filename>help.html</filename>
-      <filename>index.html</filename>
+    <!-- Admin component sv-SE language help images folder -->
+    <files folder="attachments_component/media/images/help" target="media/com_attachments/images/help">
+      <folder>sv-SE</folder>
     </files>
 
     <!-- Site component language folder -->
