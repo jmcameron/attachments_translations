@@ -20,13 +20,6 @@
       <filename>es-ES.com_attachments.help.ini</filename>
     </files>
 
-    <!-- Admin component es-ES language help folder -->
-    <files folder="attachments_component/admin/help/es-ES" target="administrator/components/com_attachments/help/es-ES">
-      <filename>help.css</filename>
-      <filename>help.html</filename>
-      <filename>index.html</filename>
-    </files>
-
     <!-- Site component language folder -->
     <files folder="attachments_component/site" target="components/com_attachments/language/es-ES">
       <filename>index.html</filename>
