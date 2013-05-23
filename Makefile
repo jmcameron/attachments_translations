@@ -10,6 +10,7 @@ else
 	VNAME = ${VERSION}
 endif
 
+ZIPIGNORES = -x "*.svn/*" -x ".svnignore" -x ".directory" -x "*.xcf" -x "*admin/help*"
 
 all: $(ZIPS)
 
@@ -17,7 +18,7 @@ all: $(ZIPS)
 	@echo "-------------------------------------------------------"
 	@echo attachments-$*
 	@rm -f attachments-$@
-	@(cd attachments-$*; zip -r ../attachments-$*-language-pack${VNAME}.zip * -x "*.svn/*")
+	@(cd attachments-$*; zip -r ../attachments-$*-language-pack${VNAME}.zip * $(ZIPIGNORES))
 
 
 purge:
