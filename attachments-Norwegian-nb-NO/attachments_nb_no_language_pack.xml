@@ -16,8 +16,8 @@
     <files folder="attachments_component/admin" target="administrator/components/com_attachments/language/nb-NO">
       <filename>index.html</filename>
       <filename>nb-NO.com_attachments.ini</filename>
-      <filename>nb-NO.com_attachments.help.ini</filename>
       <filename>nb-NO.com_attachments.sys.ini</filename>
+      <filename>nb-NO.com_attachments.help.ini</filename>
     </files>
 
     <!-- Site component language folder -->
