@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_ca_es_language_pack</name>
-  <version>3.1-Beta1</version>
-  <creationDate>2013-05-16</creationDate>
+  <version>3.1-Beta2</version>
+  <creationDate>2013-05-28</creationDate>
   <author>Jonathan M. Cameron, Jaume Jorba, jjorba@ersilia.org</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
@@ -17,14 +17,6 @@
       <filename>index.html</filename>
       <filename>ca-ES.com_attachments.ini</filename>
       <filename>ca-ES.com_attachments.sys.ini</filename>
-    </files>
-
-    <!-- Admin component ca-ES language help folder -->
-    <files folder="attachments_component/admin/help/ca-ES" target="administrator/components/com_attachments/help/ca-ES">
-      <filename>help.css</filename>
-      <filename>help.html</filename>
-      <filename>index.html</filename>
-      <folder>images</folder>
     </files>
 
     <!-- Site component language folder -->
@@ -66,6 +58,13 @@
       <filename>index.html</filename>
       <filename>ca-ES.plg_system_show_attachments.ini</filename>
       <filename>ca-ES.plg_system_show_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments quickicon plugin language files -->
+    <files folder="attachments_quickicon_plugin" target="plugins/quickicon/attachments/language/ca-ES">
+      <filename>index.html</filename>
+      <filename>ca-ES.plg_quickicon_attachments.ini</filename>
+      <filename>ca-ES.plg_quickicon_attachments.sys.ini</filename>
     </files>
 
     <!-- Attachments attachments for content plugin language files -->
