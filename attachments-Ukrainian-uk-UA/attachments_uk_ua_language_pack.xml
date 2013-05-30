@@ -19,14 +19,6 @@
       <filename>uk-UA.com_attachments.sys.ini</filename>
     </files>
 
-    <!-- Admin component uk-UA language help folder -->
-    <files folder="attachments_component/admin/help/uk-UA" target="administrator/components/com_attachments/help/uk-UA">
-      <filename>help.css</filename>
-      <filename>help.html</filename>
-      <filename>index.html</filename>
-      <folder>images</folder>
-    </files>
-
     <!-- Site component language folder -->
     <files folder="attachments_component/site" target="components/com_attachments/language/uk-UA">
       <filename>index.html</filename>
@@ -66,6 +58,13 @@
       <filename>index.html</filename>
       <filename>uk-UA.plg_system_show_attachments.ini</filename>
       <filename>uk-UA.plg_system_show_attachments.sys.ini</filename>
+    </files>
+
+    <!-- Attachments quickicon plugin language files -->
+    <files folder="attachments_quickicon_plugin" target="plugins/quickicon/attachments/language/uk-UA">
+      <filename>index.html</filename>
+      <filename>uk-UA.plg_quickicon_attachments.ini</filename>
+      <filename>uk-UA.plg_quickicon_attachments.sys.ini</filename>
     </files>
 
     <!-- Attachments attachments for content plugin language files -->
