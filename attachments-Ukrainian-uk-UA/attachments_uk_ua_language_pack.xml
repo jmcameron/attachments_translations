@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_uk_ua_language_pack</name>
-  <version>3.1-Beta2</version>
-  <creationDate>2013-05-18</creationDate>
+  <version>3.1-Beta3</version>
+  <creationDate>2013-05-29</creationDate>
   <author>Jonathan M. Cameron, Sergey Litvintsev (serge_li@ukr.net, 3.0-3.1)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
@@ -17,6 +17,7 @@
       <filename>index.html</filename>
       <filename>uk-UA.com_attachments.ini</filename>
       <filename>uk-UA.com_attachments.sys.ini</filename>
+      <filename>uk-UA.com_attachments.help.ini</filename>
     </files>
 
     <!-- Site component language folder -->
