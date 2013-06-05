@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_sv_se_language_pack</name>
-  <version>3.1-RC1</version>
-  <creationDate>2013-06-01</creationDate>
+  <version>3.1-RC2</version>
+  <creationDate>2013-06-05</creationDate>
   <author>Jonathan M. Cameron, Jonas Hedberg (3.0), Marcus Ludvigson (3.0), Linda Maltanski (2.2)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
@@ -18,6 +18,11 @@
       <filename>sv-SE.com_attachments.ini</filename>
       <filename>sv-SE.com_attachments.sys.ini</filename>
       <filename>sv-SE.com_attachments.help.ini</filename>
+    </files>
+
+    <!-- Admin component language help images folder -->
+    <files folder="attachments_component/media/images/help" target="media/com_attachments/images/help">
+      <folder>sv-SE</folder>
     </files>
 
     <!-- Site component language folder -->
