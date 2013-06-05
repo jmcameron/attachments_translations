@@ -20,7 +20,7 @@
       <filename>nb-NO.com_attachments.help.ini</filename>
     </files>
 
-    <!-- Admin component nb-NO language help images folder -->
+    <!-- Admin component language help images folder -->
     <files folder="attachments_component/media/images/help" target="media/com_attachments/images/help">
       <folder>nb-NO</folder>
     </files>
