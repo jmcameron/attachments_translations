@@ -21,6 +21,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2013-06-09:
+   * Added: attachments-Italian-it-IT-language-pack-3.1.zip
+         - Update from to 3.1
+         - Status: Complete (help file in English)
+	 - Thanks to Piero Mattirolo
+
 2013-06-08:
    * Added: attachments-Catalan-ca-ES-language-pack-3.1.zip
          - Update from to 3.1
