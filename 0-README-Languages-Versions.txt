@@ -22,6 +22,13 @@ NOTES:
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 2013-06-09:
+   * Updated: attachments-Italian-it-IT-language-pack-3.1.1.zip
+         - Fixed typo
+         - Status: Complete (help file in English)
+	 - Thanks to Piero Mattirolo
+	 - 160 Downloads
+
+2013-06-09:
    * Added: attachments-Italian-it-IT-language-pack-3.1.zip
          - Update from to 3.1
          - Status: Complete (help file in English)
