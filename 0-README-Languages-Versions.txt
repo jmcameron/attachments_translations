@@ -21,6 +21,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2013-07-23:
+   * Added: attachments-Slovak-sk-SK-language-pack-3.1.zip
+         - Status: Complete (help file in English)
+	 - Thanks to Luboslav Moza
+
 2013-06-09:
    * Added: attachments-Croatian-hr-HR-language-pack-3.1.zip
          - Update from to 3.1
