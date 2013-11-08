@@ -3,7 +3,7 @@
   <name>attachments_fr_fr_language_pack</name>
   <version>3.1-Beta</version>
   <creationDate>2013-10-21</creationDate>
-  <author>Jonathan M. Cameron, Maël BOUREUX (3.1), Marc-André Ladouceur (2.0, 3.0), Yann Kerviel (3.0), and Pascal Adalian (1.3.4)</author>
+  <author>Jonathan M. Cameron, Didier Lan (3.1 and 3.1 help page), Maël BOUREUX (3.1), Marc-André Ladouceur (2.0, 3.0), Yann Kerviel (3.0), and Pascal Adalian (1.3.4)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
   <copyright>Copyright (C) 2013 Jonathan M. Cameron. All rights reserved.</copyright>
@@ -17,6 +17,12 @@
       <filename>index.html</filename>
       <filename>fr-FR.com_attachments.ini</filename>
       <filename>fr-FR.com_attachments.sys.ini</filename>
+      <filename>fr-FR.com_attachments.help.ini</filename>
+    </files>
+
+    <!-- Admin component language help images folder -->
+    <files folder="attachments_component/media/images/help" target="media/com_attachments/images/help">
+      <folder>fr-FR</folder>
     </files>
 
     <!-- Site component language folder -->
