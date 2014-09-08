@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5" type="file" method="upgrade">
   <name>attachments_bg_bg_language_pack</name>
-  <version>3.1.1-Beta</version>
+  <version>3.1.1-Beta2</version>
   <creationDate>2014-09-05</creationDate>
   <author>Jonathan M. Cameron, Martin Hristov, Milen Cholashki (cholashki@gmail.com, 3.0.3), Miroslav Mitev (2.2, 3.0) and Stefan Ilivanov (1.3.4)</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
@@ -97,6 +97,3 @@
   </updateservers>
 
 </extension>
-
-
-
