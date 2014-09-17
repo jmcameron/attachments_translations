@@ -16,10 +16,15 @@ NOTES:
      will  be missing some translation items, especially in the backend):
      http://joomlacode.org/gf/project/attachments3/frs/?action=FrsReleaseView&release_id=15606
 
-   * If you need a language file for Attachments 2.2, please visit the other
+   * If you need a language file for Attachments 2.2, please visit the other, obsolete,
      attachments project on joomlacode: http://joomlacode.org/gf/project/attachments/
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
+
+2014-02-17:
+   * Added: attachments-Bulgarian-bg-BG-3.1.zip
+         - Status: Complete (help file in English)
+	 - Thanks to Marting Hristov!
 
 2014-02-17:
    * Updated: attachments-French-fr-FR-language-pack-3.1.1.zip
@@ -42,7 +47,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 2013-07-23:
    * Added: attachments-Slovak-sk-SK-language-pack-3.1.zip
          - Status: Complete (help file in English)
-	 - Thanks to Luboslav Moza
+	 - Thanks to Luboslav Moza!
 
 2013-06-09:
    * Added: attachments-Croatian-hr-HR-language-pack-3.1.zip
