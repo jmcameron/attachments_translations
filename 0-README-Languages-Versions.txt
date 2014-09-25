@@ -24,7 +24,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 2014-02-17:
    * Added: attachments-Bulgarian-bg-BG-3.1.zip
          - Status: Complete (help file in English)
-	 - Thanks to Marting Hristov!
+	 - Thanks to Martin Hristov!
 
 2014-02-17:
    * Updated: attachments-French-fr-FR-language-pack-3.1.1.zip
