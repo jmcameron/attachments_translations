@@ -21,6 +21,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2014-10-17:
+   * Added: attachments-Dutch-nl-NL-3.1.zip
+         - Status: Complete (help file in English)
+	 - Thanks to Parvus and Reinder Herder!
+
 2014-02-17:
    * Added: attachments-Bulgarian-bg-BG-3.1.zip
          - Status: Complete (help file in English)
