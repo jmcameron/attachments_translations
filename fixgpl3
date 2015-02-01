@@ -1,0 +1,5 @@
+#!/usr/bin/perl -i
+
+while (<>) {
+    s|License http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL|License GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html|g;
+    print;}

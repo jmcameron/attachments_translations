@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb_no" lang="nb_no">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>Artikkelvedlegg 3 - dokumentasjon</title>
+<link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<h1 class="title">Dokumentasjon Artikkelvedlegg</h1>
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<p class="version"><strong>Version 3.0.3 - 11. august 2012</strong></p>
+<p><strong>Denne versjonen er for Joomla 1.7/2.5+</strong></p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduksjon" id="id2">Introduksjon</a></li>
+<li><a class="reference internal" href="#nye-funksjoner-i-versjon-3-0" id="id3">Nye funksjoner i versjon 3.0</a></li>
+<li><a class="reference internal" href="#viktige-funksjoner" id="id4">Viktige funksjoner</a></li>
+<li><a class="reference internal" href="#opplastingsrestriksjoner" id="id5">Opplastingsrestriksjoner</a></li>
+<li><a class="reference internal" href="#innstillinger" id="id6">Innstillinger</a></li>
+<li><a class="reference internal" href="#rettigheter-i-artikkelvedlegg" id="id7">Rettigheter i Artikkelvedlegg</a></li>
+<li><a class="reference internal" href="#visningsrettigheter" id="id8">Visningsrettigheter</a></li>
+<li><a class="reference internal" href="#vise-filnavn-eller-nettadresse" id="id9">Vise filnavn eller nettadresse</a></li>
+<li><a class="reference internal" href="#legg-til-nettadresse" id="id10">Legg til nettadresse</a></li>
+<li><a class="reference internal" href="#hvor-kan-filer-vises-som-vedlegg" id="id11">Hvor kan filer vises som vedlegg?</a></li>
+<li><a class="reference internal" href="#css-formatering-av-vedleggslister" id="id12">CSS formatering av vedleggslister</a></li>
+<li><a class="reference internal" href="#type-filikoner" id="id13">Type filikoner</a></li>
+<li><a class="reference internal" href="#administrative-verktoykommandoer" id="id14">Administrative verktøykommandoer</a></li>
+<li><a class="reference internal" href="#advarsler" id="id15">Advarsler</a></li>
+<li><a class="reference internal" href="#oppdatering" id="id16">Oppdatering</a></li>
+<li><a class="reference internal" href="#avinstallere" id="id17">Avinstallere</a></li>
+<li><a class="reference internal" href="#migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-7-2-5" id="id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></li>
+<li><a class="reference internal" href="#oversettelser" id="id19">Oversettelser</a></li>
+<li><a class="reference internal" href="#takk-til" id="id20">Takk til</a></li>
+<li><a class="reference internal" href="#kontakt" id="id21">Kontakt</a></li>
+</ul>
+</div>
+<div class="section" id="introduksjon">
+<h1><a class="toc-backref" href="#id2">Introduksjon</a></h1>
+<p>Programutvidelsen &quot;Attachments&quot; (Artikkelvedlegg) til Joomla! gjør det mulig å
+legge ved filer til artikler eller til annen type innhold. Inkludert er et
+programtillegg for å vise vedleggene og en komponent for opplasting og
+administrasjon av vedleggene, pluss andre programtillegg.
+Det er mulighet for å kontrollere hvem som skal ha tilgang til å se vedlegg,
+og hvem som skal ha tilgang til å laste dem opp, i tilegg er det flere andre
+muligheter for å øke fleksibilitet og bruksområdet. Merk:
+alle innstillinger styres fra komponentmenyen.</p>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Denne versjonen av Artikkelvedlegg fungerer kun med
+Joomla! 1.7, 2.5 eller nyere.</p>
+</div>
+<div class="note">
+<p class="first admonition-title">Merk</p>
+<p class="last">I dette dokumentet blir begrepet <strong>innholdselementet</strong> noen ganger
+brukt. Normalt vil vi tenke å legge inn vedlegg til artikler. Denne komponenten
+støtter også vedlegg av filer og nettadresser til artikler eller kategorier som
+standard. Men det er fullt mulig å koble til andre typer innholdstyper
+(dette krever spesiell programtillegg). Alle disse er referert til
+som <strong>innholdelementer</strong>.</p>
+</div>
+<p>Programutvidelsen &quot;Artikkelvedlegg&quot; har blitt oversatt til mange forskjellige språk.
+Se <a class="reference internal" href="#oversettelser">oversettelser</a> for listen over tilgjengelige oversettelser.
+De fleste av disse språkene er i ferd med å bli oppdatert til versjon 3.0.</p>
+<p>Ønsker du å abonnere på kunngjøringer om denne komponenten,
+kan du abonnere ved hjelp av denne nettsiden:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jmcameron.net/attachments/email-list.html">Nyheter om komponenten ( http://jmcameron.net/attachments/email-list.html )</a></li>
+</ul>
+</div>
+<div class="section" id="nye-funksjoner-i-versjon-3-0">
+<h1><a class="toc-backref" href="#id3">Nye funksjoner i versjon 3.0</a></h1>
+<ul class="simple">
+<li>Full støtte for det nye ACL/rettighetssystem i Joomla 1.7/2.5+. Dette
+gir deg betydelig fleksibilitet til å kontrollere hvem som kan opprette,
+redigere eller slette vedlegg. Se avsnittet om <a class="reference internal" href="#rettigheter">Rettigheter</a> for mer informasjon.</li>
+<li>Full støtte for visningsrettigheter. Dette betyr at du kan angi noen av
+vedleggene å være synlig for noen, og andre bare skal være synlige for brukere
+i visse grupper (som definert i Tilgangsnivåer). Se avsnittet om <a class="reference internal" href="#visningsrettigheter">Visningsrettigheter</a>
+for mer informasjon.</li>
+<li>Enklere og bedre alternativer for å skjule vedlegg i ulike sammenhenger.</li>
+</ul>
+</div>
+<div class="section" id="viktige-funksjoner">
+<h1><a class="toc-backref" href="#id4">Viktige funksjoner</a></h1>
+<ul>
+<li><p class="first">Du kan administrere vedlegg fra artikkelen, inkludert å legge til,
+redigere og slette vedlegg.</p>
+</li>
+<li><p class="first">Du kan opprette vedlegg før en artikkel blir lagret.</p>
+</li>
+<li><p class="first">Alle vedleggslister blir nå oppdatert av Ajax uten at det kreves at
+siden lastes på nytt.</p>
+</li>
+<li><p class="first">Du kan nå &quot;legge til&quot; nettadresser samt filer til innholdselementene.</p>
+</li>
+<li><p class="first">Du kan nå vise vedleggene hvor som helst i en artikkel (eller innholdselement).</p>
+</li>
+<li><dl class="first docutils">
+<dt>I Administrasjonen:</dt>
+<dd><ul class="first last simple">
+<li>Det er et alternativ for å skjule vedleggslisten til upubliserte eller
+slettede artikler eller innholdselementer.</li>
+<li>Filtrering av listen over artikler</li>
+<li>Sortere listen over vedlegg på alle kolonneoverskriftene.</li>
+<li>Nyttige administrative verktøykommandoer</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Vedleggskomponentene støtter programtillegg. Disse programtilleggene tillater
+vedlegg i innholdselement som bruker programtillegget <tt class="docutils literal">onPrepareContent</tt>.
+For eksempel kan du nå legge ved filer til kategoribeskrivelser. Med litt
+arbeid, er det nå mulig å lage nye programtillegg for å støtte vedlegg i
+utvidelser som CB for og f.eks å vise personlig info, Virtuemart
+produktbeskrivelser, etc. Se punkt <a class="reference internal" href="#hvor-kan-filer-vises-som-vedlegg">Hvor kan filer vises som vedlegg?</a> for mer
+informasjon.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="opplastingsrestriksjoner">
+<h1><a class="toc-backref" href="#id5">Opplastingsrestriksjoner</a></h1>
+<p>Ikke alle filtyper kan lastes opp. &quot;Artikkelvedlegg&quot; vil kun tillate filtyper som er
+definert i Joomla!`s Mediabehandler. For å se (og endre) tillatte filtyper gå
+til <strong>Media</strong> på menyen <strong>Innhold</strong>, klikk på knappen <strong>Innstillinger</strong> og velg fanen
+<em>Komponent</em>. Der kan du kontrollere hvilke filendelser og mime-typer som er tillatt for
+opplasting. &quot;Artikkelvedlegg&quot; tar hensyn til disse begrensningene, med unntak av
+&quot;Tillatte filendelser (filtyper)&quot; da disse blir ignorert.
+Legg til filtyper som du trenger i feltet &quot;Tillatte filendelser (filtyper)&quot;.
+Du kan også legge til passende MIME-typer i feltet &quot;Tillatte MIME-typer&quot;.</p>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Det skal IKKE være mellomrom mellom filendelser i &quot;Tillatte filendelser&quot;
+eller &quot;Tillatte MIME-typer&quot;.</p>
+</div>
+</div>
+<div class="section" id="innstillinger">
+<h1><a class="toc-backref" href="#id6">Innstillinger</a></h1>
+<p>Alle innstillinger for &quot;Artikkelvedlegg&quot; kan endres i kontrollpanelet til
+komponenten. For å endre på disse, gå til administrasjonssiden,
+velg &quot;Artikkelvedlegg&quot; under menyen &quot;Komponenter&quot;. Klikk på knappen
+&quot;Innstillinger&quot; på verktøylinjen så kommer du til alle parametrene som er
+gruppert på de forskjellige fanene.</p>
+<div class="section" id="standard">
+<h2>Standard</h2>
+<img alt="Standard alternativer" class="float-right" src="images/options-basic.png" />
+<ul>
+<li><p class="first"><strong>Skal vedlegg publiseres automatisk?:</strong> Med denne &quot;automatiske&quot; funksjonen
+bestemmes det om vedlegg skal som standard publiseres automatisk når nye
+vedlegg blir lagt til. Dersom du velger &quot;Ja&quot; vil vedleggene være synlige for
+brukere umiddelbart etter opplasting. Velger du &quot;Nei&quot; vil de ikke bli
+publisert. En administrator må publisere de fra Administrasjonen før
+vedleggene vil være tilgjengelig.</p>
+</li>
+<li><p class="first"><strong>Automatisk advarsel ved opplasting:</strong> Dersom du velger å deaktivere
+automatisk publisering (se over), har du her muligheten til å legge til
+en melding som forklarer fremgangsmåten for manuell publisering. Dersom
+du lar dette feltet stå tomt vil brukerne få en generell feilmelding som
+foreslår at de skal kontakte en administrator for å få hjelp til publiseringen.</p>
+</li>
+<li><p class="first"><strong>Standard adgangsnivå:</strong> Standard adgangsnivå for nye vedlegg.
+Hvert vedlegg har et &quot;adgangsnivå&quot; som styrer hvem som kan se eller
+laste ned vedlegg. Når et vedlegg opprettes, settes adgangsnivået
+til denne standardverdien (dersom den som oppretter vedlegget er i en
+passende grupper). En administrator eller noen med riktige rettigheter
+kan endre vedlegget adgangsnivå for å kontrollere hvem som kan se hvert
+spesifikke vedlegg.</p>
+</li>
+<li><p class="first"><strong>Navn på egendefinert felt 1-3:</strong> Dersom du har annen informasjon om hvert
+vedlegg som du ønsker å legge til kan du definert opptil tre valgfrie
+brukerdefinerte felt. Dersom du vil opprette et nytt felt, skriver du inn
+navnet i et av de tre feltene. Ett felt uten tekst deaktiverer visning
+og redigering av dette feltet. De brukerdefinerte feltene vil bli vist i
+den rekkefølgen som er oppført her. Maksimal navnelengde på hver
+brukerdefinert felte er 40 tegn. Selve innholdet i feltet kan være opp
+til 100 tegn.</p>
+<div class="hint">
+<p class="first admonition-title">Tips</p>
+<p class="last">Dersom du legger til en asterisk(*) i enden av feltnavnet, vil
+ikke feltet vises på brukersiden. Det vil være synlig når et vedlegg
+redigeres fra brukersiden og er alltid synlig i Administrasjonen.
+Dette skjulte brukerdefinerte feltet kan f.eks brukes til å sortere
+vedleggene i en vilkårlig rekkefølge ved å sette heltall i feltet.</p>
+</div>
+</li>
+<li><p class="first"><strong>Maksimumslengde for filnavn eller nettadresse:</strong>
+Maksimumslengde for filnavn eller nettadresse for vedleggslisten. Filnavn eller
+nettadresse lenger enn dette vil bli beskåret og vist i feltet &quot;Vis filnavn/Nettadresse&quot;.
+(kun av kosmetiske årsaker, det faktiske filnavnet eller nettadressen vil ikke
+endres). Verdien 0 betyr at lengden er ubegrenset.
+(Feltet for filnavn i databasetabellen er begrenset til 80 tegn). Merk: Dersom
+visning av filnavnet blir avkortet av dette alternativet,
+vil det avkortede filnavnet bli satt inn i feltet &quot;Vis filnavn/nettadresse&quot;.
+Vær oppmerksom på at dette alternativet bare påvirker vedlegg som er lagt til
+etter at dette alternativet er satt.</p>
+</li>
+<li><p class="first"><strong>Hvor skal vedleggene vises?</strong> Dette alternativet styrer plasseringen i
+artikkelen (eller innholdselement) hvor listen med vedlegg vil bli plassert.
+Dette alternativet gjelder for alle vedleggslister:</p>
+<blockquote>
+<ul>
+<li><p class="first">'<em>På starten</em>'</p>
+</li>
+<li><p class="first">'<em>På slutten</em>'</p>
+</li>
+<li><dl class="first docutils">
+<dt>'<em>Tilpasset plassering</em>' - Med dette alternativet, vil vedleggslisten</dt>
+<dd><p class="first last">vises i artikkelen (eller innholdselement) hvor koden: {attachments}
+settes inn.</p>
+</dd>
+</dl>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">For de artiklene (eller innholdselement) som ikke
+inkluderer denne koden, vil vedleggene vises på slutten av
+artikkelen (eller innholdselement).</p>
+</div>
+<p>I denne modusen, når du redigerer en artikkel,
+i administrasjonen, vil en ekstra knapp vises: [Sett inn koden
+{attachments}].  Plasser markøren der du vil at vedleggene skal vises
+og klikk på denne knappen for å sette inn koden. Denne knappen vil
+legge til HTML tagger for å skjule koden når f. eks vedleggslisten
+ikke er ment å være synlig):</p>
+<pre class="literal-block">
+&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+</pre>
+<p>I tekstbehandleren i administrasjonen vil du se taggen {attachments},
+men ikke HTML taggen &quot;span&quot; med mindre du bytte til HTML-visning. Fra
+forsiden ser du aldri taggen {attachments} med mindre
+programtillegget insert_attachments_tag er deaktivert. Dersom du
+ønsker å fjerne taggen {attachments} bør du bruke &quot;HTML&quot;
+visningsmodus i tekstbehandleren for å sikre at du sletter de
+omkringliggende &quot;span&quot; taggene også.</p>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Tilpasset plassering fungerer ikke for vedlegg til
+kategoribeskrivelser.</p>
+</div>
+</li>
+<li><p class="first">'<em>Deaktivert (filter)</em>' - Dette alternativet vil deaktivere all
+visningen av vedleggslister, også når artikler eller innholdselementer
+inneholder koden {attachments}, de blir heller ikke vist.</p>
+</li>
+<li><p class="first">'<em>Deaktivert (ingen filter)</em>' - Dette alternativet vil deaktivere
+visningen av vedleggslister, men vil ikke stoppe visningen når
+koden {attachments} brukes i en artikkel (eller innholdselement).</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>Tillater redigering fra brukersiden på adgangsnivået?:</strong>
+Setter adgangsnivået for et vedlegg fra brukersiden når en redigerer
+et vedlegg eller opprette et nytt vedlegg. &quot;Adgangsnivået&quot; styrer
+hvilke grupper som kan se (eller ha adgang) til vedlegget.
+Merk at ingen som kan redigere et vedlegg vil noensinne kunne velge
+ett nivå de ikke er autorisert for.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="formatering">
+<h2>Formatering</h2>
+<img alt="Formateringsalternativer" class="float-right" src="images/options-formatting.png" />
+<ul>
+<li><p class="first"><strong>Vis overskrifter:</strong> Dersom denne settes til &quot;Ja&quot; vil en rad med
+titler legges til i toppen av vedleggslisten, som beskriver hva
+hver kolonne inneholder.</p>
+</li>
+<li><p class="first"><strong>Vis beskrivelse:</strong> Denne innstillingen bestemmer om vedleggets
+beskrivelse skal vises i listen over vedlegg.</p>
+</li>
+<li><p class="first"><strong>Vis brukernavn:</strong> Viser brukernavnet til den som lastet opp vedlegget.</p>
+</li>
+<li><p class="first"><strong>Vis filstørrelse:</strong> Denne innstillingen bestemmer om vedlegget
+filstørrelsen skal vises i listen over vedlegg.</p>
+</li>
+<li><p class="first"><strong>Vis antall nedlastninger:</strong> Denne innstillingen bestemmer om
+antallet nedlastinger skal vises i listen over vedlegg.</p>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Dette alternativet fungerer bare i sikker modus!
+I ikke-sikker-modus, blir filer opprettholdes som statiske filer og åpnes
+direkte, uten å gå via Joomla!. Derfor er det umulig å oppdatere
+antall nedlastinger for en fil når den åpnes på denne måten.
+Så visning av antall nedlastinger vil bare fungere i sikker modus når
+dette alternativet er satt til &quot;Ja&quot;.</p>
+</div>
+</li>
+<li><p class="first"><strong>Vis endringsdato:</strong> Dersom denne innstillingen er
+satt til &quot;Ja&quot;, vil dato for siste endring av filen vises i listen over
+vedlegg for de artiklene med vedlegg. Dersom &quot;Nei&quot; er valgt, vil
+ingen dato bli vist i listen over vedlegg.</p>
+</li>
+<li><p class="first"><strong>Formatstrengen for endringsdato:</strong> Du kan selv velge
+format for visning av endringsdatoen.
+Dette gjøres ved bruk av &quot;date&quot; funksjonen i PHP. Søk på nettet
+etter &quot;PHP strftime&quot;.
+Som standard er følgende format valgt &quot;%x %H:%M&quot;. Dette vil gi følgende
+resultat i 24 timers tid: &quot;05-05-2010 18:53&quot;.
+Ved å ta bort delen &quot;%H:%M&quot; vil kun dato vises og ikke klokkeslett.
+Merk at MS Windows og Linux PHP implementeringer kan variere i noe av kodene som de støtter.</p>
+</li>
+<li><p class="first"><strong>Rekkefølgen på vedleggslisten:</strong> Dette valget lar deg spesifisere rekkefølgen som
+vedlegg vil bli oppført i vedleggslistene.
+De fleste av valgene er selvforklarende:</p>
+<ol class="arabic simple">
+<li>'<em>Filnavn</em>' - Dersom dette alternativet er valgt, vil vedlegg sorteres alfabetisk etter filnavn.</li>
+<li>'<em>Filstørrelse (minste først)</em>'</li>
+<li>'<em>Filstørrelse (største først)</em>'</li>
+<li>'<em>Beskrivelse</em>'</li>
+<li>'<em>Filnavn eller nettadresse</em>' - Alle vedlegg som ikke har tekst i feltet
+for alternativt filnavn blir vist før de med tekst og de blir sortert
+etter navnet på selve filen.</li>
+<li>'<em>Bruker</em>' - Sorterer etter navnet på brukeren som lastet opp vedlegget.</li>
+<li>'<em>Opprettet dato (eldste først)</em>'</li>
+<li>'<em>Opprettet dato (nyeste først)</em>'</li>
+<li>'<em>Endringsdato (eldste først)</em>'</li>
+<li>'<em>Endringsdato (nyeste først)</em>'</li>
+<li>'<em>Vedleggs ID</em>' - Dersom dette alternativet er valgt, blir vedleggene sortert
+etter vedleggs Id. Vedleggene sorteres i den rekkefølgen de ble opprettet.</li>
+<li>'<em>gendefinert felt 1</em>'</li>
+<li>'<em>gendefinert felt 2</em>'</li>
+<li>'<em>gendefinert felt 3</em>'</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="visning">
+<h2>Visning</h2>
+<p>Disse valgene kontroll når vedlegg vil være synlig på forsiden,
+forutsatt at brukeren er i en gruppe som kan se vedlegg.</p>
+<img alt="Visningsalternativer" class="float-right" src="images/options-visibility.png" />
+<ul class="simple">
+<li><strong>Skjul vedlegg på forsiden:</strong> Velg dette alternativet for å hindre eventuelle
+vedlegg fra å bli vist på forsiden av nettstedet ditt.</li>
+<li><strong>Skjul vedlegg før &quot;Les mer&quot; lenken:</strong> Velg dette alternativet for å
+hindre vedlegg fra å bli vist på brukersiden dersom de er før &quot;Les mer&quot; i
+artikler. Dersom du klikker på lenken for å lese hele artikkelen, vil vedlegg bli vist.</li>
+<li><strong>Skjul vedlegg på bloggsider:</strong> Velg dette alternativet for å hindre vedlegg fra å
+bli vist på sider med &quot;blogg&quot; oppsett.</li>
+<li><strong>Skjul vedlegg unntatt på artikkelvisninger:</strong> Velg dette alternativet for å
+hindre vedlegg fra å bli vist på forsiden med unntak for visninger av enkeltartikler.</li>
+<li><strong>Vis alltid vedlegg i kategorivisninger:</strong> Velg dette alternativet for å alltid
+vis vedlegg på kategorivisninger - uavhengig av andre alternativer.</li>
+<li><strong>Skjul vedlegg for kategoriene:</strong> Skjul vedlegg på noen kategorivisninger for
+de valgte kategoriene. Merk at vedlegg vil vises for underkategorier med mindre
+de er eksplisitt valgt.</li>
+</ul>
+<div class="small-figure figure">
+<img alt="Skjul kategorier" src="images/options-hide-categories.png" />
+<p class="caption">For å velge eller velge bort kategorier uten å påvirke andre kategorier,
+hold Ctrl-tasten nede når du klikker på kategorien.</p>
+</div>
+<ul class="simple">
+<li><strong>Skjul lenken &quot;Legg til vedlegg&quot;:</strong> Alltid skjul lenken &quot;Legg til vedlegg&quot;
+fra brukersiden. Dette krever at når vedlegg skal legges til artikler, etc, fra
+brukersiden, da må knappen &quot;Legg til vedlegg&quot; under tekstbehandlerfeltet
+brukes for å legge til vedlegg.</li>
+</ul>
+</div>
+<div class="section" id="avansert">
+<h2>Avansert</h2>
+<img alt="Avanserte alternativer" class="float-right" src="images/options-advanced.png" />
+<ul>
+<li><p class="first"><strong>Forbudte tegn i filnavn:</strong> Filnavn som inneholder disse tegnene vil ikke bli
+lastet opp. Disse tegnene er problematisk i nettadresser til vedlegg i &quot;usikret&quot;
+modus,  slik at de er forbudt. Disse tegnene er vanligvis ikke et problem når
+man bruker &quot;sikker&quot; modus da filnavnet ikke vises om en del av nettadressen.</p>
+</li>
+<li><p class="first"><strong>CSS stil for vedleggslisten:</strong> For å overstyre CSS`n til vedleggslisten kan en
+egen stil spesifiseres. Standard navn på stilen er &quot;attachmentsList&quot;.
+Se avsnittet <a class="reference internal" href="#css-formatering-av-vedleggslister">CSS formatering av vedleggslister</a>.</p>
+</li>
+<li><p class="first"><strong>Hvordan åpne filen:</strong>
+Bestemmer hvordan kobling til vedlagte filer vil bli åpnet. &quot;I samme vindu&quot;
+betyr at filen vil bli åpnet i samme nettleservindu. &quot;I nytt vindu&quot; betyr at
+filen åpnes i nytt vindu (eller fane).</p>
+</li>
+<li><p class="first"><strong>Egen tittel for vedleggsliste:</strong> Som standard settes tittelen &quot;Vedlegg&quot;
+inn over listen over vedlegg for hver artikkel eller innholdselementet
+(dersom den har vedlegg).
+I noen tilfeller foretrekker du kanskje å bruke en annen betegnelse for bestemte
+artikler eller innholdselementer. Du har her muligheten til å spesifisere
+overskriften pr artikkel. For eksempel, dersom du ønsker at vedleggslisten i
+artikkel med Id 211 skal ha overskriften &quot;Nedlastning:&quot;, så skriver du inn dette
+i feltet: &quot;211 Nedlastning:&quot; (uten anførselstegn). Hver artikkel som skal ha en
+egendefinert overskrift må ha egen linje i innstillingen. For andre typer
+innholdselementer, må denne formen brukes: &quot;category:23 Nedlastning:&quot;.
+Nedlastning: blir da tittelen på vedleggslisten på kategori med Id 23. Skal
+egendefinert tittel brukes på andre innholdselement erstattes &quot;category&quot; med
+navnet på innholdselement som skal ha vedlegget. Eksempelet med artikkel Id 211
+ovenfor kunne vært gjort med &quot;article:211:Nedlastning:&quot;.
+Merk at en oppføring uten en numerisk Id i begynnelsen vil bli brukt på alle
+innholdselementer.
+Så det er god praksis å sette en slik global overstyring først i listen, og
+deretter liste de egendefinerte titlene.</p>
+<div class="note">
+<p class="first admonition-title">Merk</p>
+<p>Dersom du ønsker å endre titlene som brukes for vedleggslisten globalt, kan
+du kopiere oversettelsen 'ATTACH_ATTACHMENTS_TITLE' fra
+oversettelsesfilen:</p>
+<pre class="literal-block">
+content/attachments/language/qq-QQ/qq-QQ.plg_content_attachments.ini
+</pre>
+<p>inn i det globale overstyringsfilen:</p>
+<pre class="literal-block">
+language/overrides/en-GB.override.ini
+</pre>
+<p class="last">hvor qq-QQ refererer til språkkoden som nb-NO for norsk. (Dersom du
+ikke er kjent med oversettelsesfiler i Joomla! fin linjen som starter
+med 'ATTACH_ATTACHMENTS_TITLE' på venstre side av '=' tegnet.
+Rediger teksten til høyre for '=' tegnet. Ikke gjør endringer på teksten
+til venstre for '=' tegnet.)
+Ved å legge endringer av oversettelsen i den globale overstyringsfilen
+da slipper du å endre i originalfilen som vil bli overskrevet ved en
+eventuell oppdatering av utvidelsen (som betyr at eventuelle endringer du
+har gjort ville ha gått tapt).</p>
+</div>
+</li>
+<li><p class="first"><strong>Tidsavbrudd for å sjekke lenker:</strong>
+Tidsavbrudd for å sjekke lenker (sekunder). Når en lenke blir lagt til som et vedlegg,
+blir lenken kontrollert direkte (du kan deaktivere denne kontrollen i skjemaet).
+Dersom lenken blir funnet før tidsavbrudd, blir filstørrelsen og annen informasjon om lenken
+samlet. Dersom ikke, blir generisk informasjon brukt. Dersom du vil deaktivere sjekken,
+skriver inn 0.</p>
+</li>
+<li><p class="first"><strong>Legge ovenpå nettlenkeikoner:</strong>
+Legg nettlenkeikonet over filikon for hvert vedlegg for å indikere at det er
+en nettadresse. Gyldig nettadresser er vist med piler og ugyldige nettadresser
+er vist med en rød linje på tvers av filikonet
+(fra nederst til venstre til øverst til høyre).</p>
+</li>
+<li><p class="first"><strong>Utelate foreldet vedlegg (i Administrasjonen):</strong>
+Setter standard utelat <em>foreldede</em> vedlegg i Administrasjonen. I denne
+sammenheng er et vedlegget <em>foreldede</em> når f.eks artikkelen vedlegget er
+koblet til er upublisert eller lagt i papirkurven. Du kan overstyre
+dette ved hjelp av nedtrekkslisten &quot;Vis vedlegg for:&quot; på menyen til høyre rett
+ovenfor listen over vedlegg (på samme linje som filter). Når du bruker
+nedtrekkslisten til å kontrollere hvilke vedlegg som er synlige, husker systemet
+innstillingen til du logger ut som administrator. Så å endre denne innstillingen
+ser kanskje ikke ut til å ha effekt. Denne innstillingen vil tre i kraft neste
+gang du logger deg på som administrator.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="sikkerhet">
+<h2>Sikkerhet</h2>
+<img alt="Sikkerhetsalternativer" class="float-right" src="images/options-security.png" />
+<ul>
+<li><p class="first"><strong>Sikker nedlasting:</strong>
+Som standard lagres filene som lastes opp i en offentlig tilgjengelig mappe.
+Velger du alternativet <em>Sikker nedlastning</em>, vil vedlegg som lagres bli gjort
+offentlig utilgjengelige. Lenken for nedlastning av vedleggene på brukersiden
+vil laste ned filen, men det vil ikke være en direkte lenke.
+Dette vil hindre tilgang, med mindre brukerne har de nødvendige rettigheter.
+Dersom <em>sikker</em> nedlastinger ikke er valgt, vil lenker til vedleggene vises som
+alternativene ovenfor indikerer, men filene vil fortsatt være tilgjengelig for
+alle dersom de vet den fullstendige nettadressen, siden mappen er offentlig.
+Det <em>sikre</em> alternativet hindrer tilgangen for brukere uten egnede rettigheter
+selv om de kjenner den fullstendige nettadressen, siden dette alternativet
+hindrer allmennhetens tilgang til mappen. I <em>sikker</em> modus, vil alle vedlegg
+satt til 'Offentlige' være tilgjengelig for visning og nedlastning av hvem som helst.</p>
+<div class="hint">
+<p class="first admonition-title">Tips</p>
+<p class="last">Dersom du har problemer med filnavn med Unicode-tegn, bør du aktivere alternativet
+for <strong>Sikker nedlasting</strong> (spesielt på Windows servere)</p>
+</div>
+</li>
+<li><p class="first"><strong>Nedlastningsmodus for sikre nedlastninger:</strong>
+Dette alternativet kontrollerer om filene skal lastes ned som separate filer eller
+vises i nettleseren (dersom nettleseren kan håndtere denne type fil).
+Det er to alternativer:</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt><em>'Integrert'</em> - I denne modusen, vil filer som kan vises av nettleseren bli viset</dt>
+<dd><p class="first last">i nettleseren (for eksempel tekstfiler og bilder)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><em>'Vedlegg'</em> - Når &quot;Vedlegg&quot; er valgt vil filer alltid bli lastes ned som separate</dt>
+<dd><p class="first last">filer.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>I begge tilfeller vil filer som ikke kan vises i nettleseren lastes ned som
+eksterne filer.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="rettigheter">
+<h2>Rettigheter</h2>
+<p>De forskjellige alternative <a class="reference internal" href="#rettigheter">Rettigheter</a> blir forklart i avsnittet under.</p>
+</div>
+</div>
+<div class="section" id="rettigheter-i-artikkelvedlegg">
+<h1><a class="toc-backref" href="#id7">Rettigheter i Artikkelvedlegg</a></h1>
+<p>Komponenten er fullt ut integrert i det nye Joomla! ACL/rettighetssystemet som
+ble innført i Joomla! 1.6. Dette gir nettsteder som bruk Artikkelvedlegg en mye
+større fleksibilitet til å kontrollere hvem som kan opprette, redigere, slette
+og administrere vedlegg.</p>
+<p>Før vi beskriver ACL rettigheter relatert til Artikkelvedlegg er det viktig å
+forstå et sentralt underliggende prinsipp:</p>
+<div class="important">
+<p class="first admonition-title">Viktig</p>
+<p class="last">Alle vedlegg er koblet til en artikkel, kategori eller andre
+innholdselementet, og er å anse som at dette er vedleggets overordnet element.
+Å opprette, redigere, slette eller endre status for et vedlegg anses å være en
+form for å redigere den overordnede innholdstypeelementet. Slik at brukeren må
+først ha rettigheter til å redigere det overordnede innholdselementet før
+eventuelle vedleggsspesifikke rettigheter blir kontrollert.</p>
+</div>
+<p>Dersom du vil endre rettigheter for de ulike brukergrupper, gå til Administrasjonen
+og velg &quot;Artikkelvedlegg&quot; på menyen &quot;Komponenter&quot;. Klikk på knappen &quot;Innstillinger&quot;
+på høyre side av verktøylinjen og velg deretter fanen &quot;Rettigheter&quot;.
+Du vil se dette:</p>
+<div class="figure">
+<img alt="Rettighetsinnstillinger" src="images/options-permissions.png" />
+<p class="caption">Konfigurasjonen for rettigheter. Rettighetene for gruppen Offentlige vises.</p>
+</div>
+<p>Her er en kort beskrivelse av rettigheter relatert til Artikkelvedlegg som er tilgjengelige:</p>
+<table border="1" class="permissions docutils">
+<colgroup>
+<col width="25%" />
+<col width="58%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Handling</th>
+<th class="head">Beskrivelse / Merknad</th>
+<th class="head">ACL handling</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Konfigurer vedleggsalternativer</td>
+<td>Lar brukerne i gruppen redigere vedleggsalternativene.</td>
+<td>core.admin</td>
+</tr>
+<tr><td>Adgang til vedleggskomponenten</td>
+<td>Lar brukerne i gruppen få adgang til denne utvidelsen i administrasjonen.</td>
+<td>core.manage</td>
+</tr>
+<tr><td>Opprette vedlegg</td>
+<td>Lar brukerne i gruppe opprette vedlegg (dersom de kan redigere overordnet).</td>
+<td>core.create</td>
+</tr>
+<tr><td>Slette vedlegg</td>
+<td>Lar brukerne i gruppen slette vedlegg (dersom de kan redigere overordnet).</td>
+<td>core.delete</td>
+</tr>
+<tr><td>Endre vedlegg</td>
+<td>Lar brukerne i gruppen redigere vedlegg (dersom de kan redigere overordnet).</td>
+<td>core.edit</td>
+</tr>
+<tr><td>Endre vedleggsstatus</td>
+<td>Lar brukerne i gruppen endre status for alle vedlegg.</td>
+<td>core.edit.state</td>
+</tr>
+<tr><td>Endre egne vedlegg</td>
+<td>Lar brukerne i gruppen redigere vedlegg de selv har opprettet (dersom de kan redigere overordnet).</td>
+<td>core.edit.own</td>
+</tr>
+<tr><td>Endre status på egne vedlegg</td>
+<td>Lar brukerne i gruppen endre status på egne vedlegg (dersom de kan redigere overordnet).</td>
+<td>attachments.edit.state.own</td>
+</tr>
+<tr><td>Slette egne vedlegg</td>
+<td>Lar brukerne i denne gruppen slette sine egne vedlegg (dersom de kan redigere overordnet).</td>
+<td>attachments.delete.own</td>
+</tr>
+<tr><td>Endre egne vedlegg i artikler/ overordnet</td>
+<td>Lar brukerne i denne gruppen redigere egne vedlegg i artikler/overordnet (dersom de kan redigere overordnet).</td>
+<td>attachments.edit.ownparent</td>
+</tr>
+<tr><td>Endre status på egne vedlegg i Artikkel/overordnet</td>
+<td>Lar brukerne i gruppen endre status på egne vedlegg i artikler/overordnet (dersom de kan redigere overordnet).</td>
+<td>attachments.edit.state.ownparent</td>
+</tr>
+<tr><td>Slette egne vedlegg for artikler/overordnet</td>
+<td>Lar brukerne i gruppen slette vedlegg de selv har opprettet på artikler/overordnet (dersom de kan redigere overordnet)</td>
+<td>attachments.delete.ownparent</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="standard-rettigheter">
+<h2>Standard rettigheter</h2>
+<p>Når utvidelsen installeres, installeres det med disse grunnleggende rettighetene:</p>
+<div class="hide-title important">
+<p class="first admonition-title">Viktig</p>
+<p><strong>Standard handlemåter for standard rettigheter</strong></p>
+<ul class="last simple">
+<li>Skribent (og Innholdsadministrator) eller over kan legge til vedlegg i
+alle artikler/overordnet de kan redigere.</li>
+<li>Skribent (og Innholdsadministrator) eller over kan redigere eller
+slette vedlegg fra alle artikler/overordnet de kan redigere.</li>
+<li>Skribent (og Innholdsadministrator) eller over kan endre status,
+publisert/ikke publisert fra brukersiden.</li>
+<li>Skribent kan ikke publisere vedlegg.</li>
+</ul>
+</div>
+<p>Dersom du ønsker å endre standardverdiene, må du redigere rettighetene på fanen Rettigheter
+på Innstillingene på utvidelsen.</p>
+</div>
+<div class="section" id="noen-vanlige-alternative-rettigheter">
+<h2>Noen vanlige alternative rettigheter</h2>
+<p>Her er noen forslag om hvordan du angir rettigheter for å oppnå ønsket utførelse:</p>
+<blockquote>
+<ul>
+<li><p class="first"><strong>Alternativ 1 - Skribent kan publisere egne vedlegg</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;.
+Endre status for &quot;Endre egne vedlegg&quot; til  &quot;Tillatt&quot; og klikk
+på &quot;Lagre&quot; for å bekrefte endringen.</p>
+<div class="figure">
+<img alt="Rettigheter alternativ 1" src="images/permissions-scenario1.png" />
+</div>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>Alternativ 2 - Skribent kan redigere/slette sine egne vedlegg, men ingen andres</strong></p>
+<blockquote>
+<ul>
+<li><p class="first">På fanen Rettigheter, klikker du på oppføringen &quot;Skribent&quot;. For linjene
+&quot;Endre status på egne vedlegg i Artikkel/overordnet&quot; og
+&quot;Slette egne vedlegg for artikler/overordnet&quot; endrer du status til &quot;Avslått&quot;.
+Klikk på Lagre for å bekrefte endringen.</p>
+<div class="figure">
+<img alt="Rettigheter alternativ 2" src="images/permissions-scenario2.png" />
+</div>
+<p>I og med at skribenter fremdeles har rettigheter til å redigere/slette
+sine egne vedlegg, hindrer dette dem effektivt fra å redigere/slette
+vedlegg som de ikke selv har opprettet, selv om de kan redigere artikkelen.</p>
+<p>Merk at alle brukergrupper som er avledet fra skribent (f.eks Redaktør,
+Utgiver, etc) vil også bli nektet fra å redigere eller slette vedlegg for
+artikler/overordnet de selv ikke har opprettet (fra denne rettigheten).
+Heldigvis har de generelt høyere Tilgangsnivå, &quot;Rediger vedlegg&quot; og
+&quot;Slett vedlegg&quot; som betyr at de kan redigere eller slette eventuelle
+vedlegg på alle artikler som de kan redigere (forutsatt at deres rettigheter
+ikke er endret).</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p>Dersom du har andre vanlige alternativer som du mener bør dokumenteres,
+kontakt meg slik at jeg kan oppdatere denne dokumentasjonen
+(se nederst på denne siden for kontaktinformasjon).</p>
+</div>
+<div class="section" id="andre-merknader-om-rettigheter">
+<h2>Andre merknader om rettigheter</h2>
+<blockquote>
+<ul class="simple">
+<li>Dersom en bruker har rettigheter til å redigere status på sine vedlegg,
+vil de se alternativer &quot;Publisert: Ja/Nei&quot; i skjemaet for å legge til eller
+redigere vedlegg. Dersom de velger &quot;Nei&quot; og lagre vedlegget, vil vedlegget
+fortsatt være synlig for dem på brukersiden (mens de er innlogget).
+Ingen andre vil se upubliserte vedlegg på brukersiden. Dersom brukeren ønsker
+å endre publiseringsstatus, kan de redigere vedlegget (selv om det er nedtonet)
+og endre status.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="visningsrettigheter">
+<h1><a class="toc-backref" href="#id8">Visningsrettigheter</a></h1>
+<p>Artikkelvedlegg støtter nå Joomla’s &quot;Tilgangsnivåer&quot;. Hvert vedlegg kan
+tildeles spesielle tilgangsnivåer som &quot;Gjester&quot;, &quot;Registrert&quot; og &quot;Spesiell&quot;,
+samt eventuelle andre tilgangsnivåer som er opprettet på ditt nettsted.
+De to grunnleggende nivåer er:</p>
+<blockquote>
+<ul class="simple">
+<li><strong>'Gjester'</strong> - Alle som besøker nettsiden vil kunne se og laste ned vedlegg
+med &quot;Tilgangsnivået&quot; satt til &quot;Gjester&quot; dersom artikkelen/overordnet er synlig
+og ingen andre rettighetsinnstillinger hindre vedlegg fra å bli vist.</li>
+<li><strong>'Registrert'</strong> - Alle som er logget inn på nettstedet vil være i stand til
+å se og laste ned vedlegg med &quot;Tilgangsnivået&quot; satt til &quot;Registrert&quot;
+artikkelen/overordnet er synlig og ingen andre rettighetsinnstillinger hindre
+vedlegg fra å bli vist.</li>
+</ul>
+</blockquote>
+<p>Effekten av andre tilgangsnivåer avhengig av gruppene knyttet til tilgangsnivået.</p>
+<p>Muligheten til å sette &quot;Tilgangsnivå&quot; for individuelle vedlegg gir omfattende
+kontroll på hvem som er i stand til å se og laste ned vedlegg.</p>
+<div class="note">
+<p class="first admonition-title">Merk</p>
+<p class="last">Anta at du oppretter et nytt tilgangsnivå på nettstedet ditt. Brukere som ikke
+eksplisitt er medlem av gruppene knyttet til det nye tilgangsnivået vil ikke
+kunne sette sine vedlegg for dette tilgangsnivået. Dersom du redigerer et vedlegg
+som Superbruker, vil du kanskje bli overrasket over at den nye tilgangsnivået
+ikke vises som alternativt tilgangsnivå. Det er to potensielle problemer.
+(1) Dersom du nettopp har opprettet det nye tilgangsnivået, kan det være
+nødvendig å logge ut av administrasjonen og logge inn på nytt for at
+endringene skal være helt synlig.
+(2) Den andre grunnen er at brukeren (f.eks Superbruker) ikke er i tilgangsnivået.
+Å ordne på dette er ganske enkelt, sørge for at brukeren er i en av gruppene
+knyttet til det nye tilgangsnivået.</p>
+</div>
+</div>
+<div class="section" id="vise-filnavn-eller-nettadresse">
+<h1><a class="toc-backref" href="#id9">Vise filnavn eller nettadresse</a></h1>
+<p>Normalt når filer er lastet opp (eller nettadresser er angitt) og vises i en
+vedleggsliste så vil hele filnavnet vises som en nedlastningslenke.
+I noen tilfeller vil filnavnet (eller nettadressen) være for langt for at dette skal
+vises på en ryddig måte.
+I opplastingsskjemaet er det et annet felt kalt &quot;Vis filnavn&quot;, her kan man velge et
+alternativt filnavn (eller nettadresse) som skal vises i stedet for selve navnet
+på filen (eller nettadressen). Merk: Det er en innstilling som heter
+&quot;Maksimumslengde for filnavn eller nettadresse&quot; her settes begrensningen på filnavnet,
+er filnavnet lenger enn denne begrensningen så vil resten av filnavnet vises i
+feltet &quot;Vis filnavn eller nettadresse&quot;.</p>
+</div>
+<div class="section" id="legg-til-nettadresse">
+<h1><a class="toc-backref" href="#id10">Legg til nettadresse</a></h1>
+<p>Foruten filer, er det i versjon 3.0 mulig å legge til nettadresser som vedlegg
+til innholdselementer. I dialogboksen &quot;Legg til vedlegg&quot; vil du se en knapp
+merket &quot;Skriv inn en nettadresse i stedet&quot;. Dersom du klikker på knappen vil du
+få et felt for å skrive inn en nettadresse, og se to alternativer:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Bekreft nettadresse?</strong> - For å bestemme filtypen i nettadressen (for å</dt>
+<dd><p class="first last">velge et passende ikon), vil komponenten prøve å kommunisere med serveren
+for grunnleggende informasjon om filen, inkludert filtype og størrelse.  I
+noen tilfeller vil ikke serveren svarer på disse forespørslene selv om
+nettadressen er gyldig. Som standard blir ikke vedlegg hvor nettadresser
+ikke er validert av serveren godkjent. Dersom du vet at nettadressen er
+gyldig, kan du fjerne merket for dette alternativet, og &quot;tvinge&quot;
+utvidelsen til å godkjenne nettadressen som et vedlegg - men det finnes
+ingen garantier for at filtype eller filstørrelsen vil være korrekt. Merk
+at denne forespørselen vil bli utførte uavhengig om dette alternativet er
+valgt eller ikke.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Relativ nettadresse?</strong> - Normalt vil du skrive inn en nettadresse med</dt>
+<dd><p class="first last">prefiks &quot;http ...&quot; for å indikere en fullstendig nettadresse. Dersom du
+ønsker å lenke til filer i forhold til din Joomla installasjon, bruk
+alternativet &quot;Relativ nettadresse&quot;.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Nettadresser vises med et ikon for filtype og med en pil over ikonet
+(overlegg) (som viser at det er en gyldig lenke) eller en rød diagonal
+strek (som viser at nettadressen ikke kunne valideres). Når du redigerer en nettadresse,
+kan du endre om lenken er gyldig eller ikke for å få det overlegget du ønsker. Merk også at
+overlegg av nettadressen kan deaktiveres helt på fanen Avansert og innstillingen
+<strong>Legge ovenpå nettlenkeikoner</strong>. Det er flere nyttige kommandoer om nettadresser (og filer)
+på &quot;Verktøy&quot; i Administrasjonen på komponenten.</p>
+</div>
+<div class="section" id="hvor-kan-filer-vises-som-vedlegg">
+<h1><a class="toc-backref" href="#id11">Hvor kan filer vises som vedlegg?</a></h1>
+<p>I tillegg til å legge ved filer eller nettadresser til artikler, er det nå
+mulig å legge ved filer eller nettadresser til andre typer innholdselementer som
+kategorier (se nedenfor). Dersom det er installert andre programtillegg, kan det
+være mulig å legge ved filer eller nettadresser til en rekke innholdselementer
+som brukerprofiler, handlekurv, produktbeskrivelser, osv. I utgangspunktet
+kan alle innholdselementer som vises på brukersiden og bruker
+hendelsen <tt class="docutils literal">'onPrepareContent'</tt> vise liste over vedlegg
+(dersom et passende programtillegg er installert). Innholdselementer som kaller
+på <tt class="docutils literal">'onPrepareContent'</tt> er vanligvis elementer som har innhold som skal
+vises (for eksempel artikler) eller har beskrivelser som skal vises.</p>
+<div class="section" id="vise-filer-eller-nettadresser-i-kategoribeskrivelser">
+<h2>Vise filer eller nettadresser i kategoribeskrivelser</h2>
+<p>Med denne versjonen kan brukerne legge ved filer til kategoribeskrivelser.
+Beskrivelsene er vanligvis kun synlige på sider med blogg utforming.
+Vedlegg kan legges til kategoribeskrivelsen der kategorier redigeres.</p>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Vedlegg til kategoriene vil bare vises dersom innstillingen
+for visning av &quot;Kategoribeskrivelse&quot; er satt til <em>Vis</em> (via Rediger menypunkt)
+OG at kategoribeskrivelsen ikke er tom.</p>
+</div>
+<p>Dersom du ønsker å lære mer om hvordan du kan utvikle et nytt programtillegg for
+å legge til vedlegg, det er en manual som er tilgjengelig som en del av denne installasjon:</p>
+<ul class="simple">
+<li><a class="reference external" href="plugin_manual/html/index.html">Hvordan lage programtillegg for vedlegg</a></li>
+</ul>
+<div class="warning">
+<p class="first admonition-title">Advarsel</p>
+<p class="last">Manualen har ennå ikke blitt oppdatert for versjon 3.0 av komponenten.
+Det har vært noen arkitektoniske endringer som innebærer at programtillegg
+til Joomla 1.7/2.5+ vil ha noen betydelige forskjeller fra dem for Joomla 1.5.</p>
+</div>
+</div>
+</div>
+<div class="section" id="css-formatering-av-vedleggslister">
+<h1><a class="toc-backref" href="#id12">CSS formatering av vedleggslister</a></h1>
+<p>Vedleggslisten som vises i artiklene bruker en spesiell &quot;div&quot; som inneholder en
+tabell for vedleggene. Tabellen har flere forskjellige CSS klasser tilknyttet, dette
+forenkler jobben til nettansvarlig og forbedrer fleksibiliteten til å tilpasse
+utseendet på tabellen. Se i CSS filen for programutvidelsen for eksempler
+(plugins/content/attachments.css). Ønsker du å endre stilen, så kan du kopiere
+den originale stilen inn i slutten av den samme filen og gi nytt navn
+til &quot;attachmensList&quot; til noe du selv velger. På komponenten i administrasjonen endrer
+du så parameteren for <em>CSS stil for vedleggslisten</em> til å inneholde den nye stilen du har
+definert i bunn av CSS filen. På denne måten kan du enkelt skifte mellom utseendet,
+vil du ha tilbake det originale utseendet så sett parametre til &quot;attachmentList&quot;.
+Dette har også den fordelen at den delen av filen som er endret kan kopieres til en
+annen fil og lett kopierer tilbake når komponenten oppgraderes.
+Dette kan også gjøres via en CSS &#64;import -kommandoen.</p>
+</div>
+<div class="section" id="type-filikoner">
+<h1><a class="toc-backref" href="#id13">Type filikoner</a></h1>
+<p>Vedleggslisten som vises i artiklene legger et ikon foran hvert vedlegg i listen
+over vedlegg. Dersom du ønsker å legge til en ny type ikon, gjør du følgende:</p>
+<ol class="arabic simple">
+<li>Legg til ett ikon i mappen &quot;media/attachments/icons&quot;, dersom et passende
+ikon ikke allerede er der.</li>
+<li>Rediger filen &quot;components/com_attachments/file_types.php&quot; og legg til en
+passende linje i den statiske matrisen $attachments_icon_from_file_extension
+som kobler en filtype til et ikonnavn (alle i mappen media/attachments/icons).
+Dersom dette ikke fungerer, kan det hende du må legge en passende linje i
+matrisen $attachments_icon_from_mime_type.</li>
+<li>Husk å kopiere ikonfilen og den oppdaterte file_types.php filen til en mappen
+utenfor mappestrukturen til komponenten før du oppgraderer i fremtiden.</li>
+</ol>
+</div>
+<div class="section" id="administrative-verktoykommandoer">
+<h1><a class="toc-backref" href="#id14">Administrative verktøykommandoer</a></h1>
+<p>Det er flere verktøykommandoer i Administrasjonen som er tilgjengelige for
+Administratorer. Disse er:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Deaktiver avinstallasjon av MySQL tabellen for Artikkelvedlegg:</strong></dt>
+<dd><p class="first last">Normalt, når denne utvidelsen blir avinstallert, blir også databasetabellen
+som inneholder informasjon om vedleggene slette. Dersom du ønsker å beholde dataene
+i tabellen når du avinstallerer, utfør denne kommandoen for å beholde tabellen i
+databasen før du avinstallerer.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Installer på nytt standard rettighetsregler eller rettigheter for vedlegg:</strong></dt>
+<dd><p class="first last">Når denne utvidelsen blir installert, setter installasjonsprogrammet opp flere standard
+rettighetsregler slik at egendefinerte tillatelser lagt til i utvielsen oppfører seg
+logisk på samme måte som standard rettighetene i Joomla. Dersom du oppdaterer eller
+installere Joomla på nytt, kan disse reglene gå tapt.
+Du kan gjenopprette dem ved å kjøre denne kommandoen.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Regenerere vedleggets filnavn:</strong> Denne kommandoen er veldig nyttig når du</dt>
+<dd><p class="first last">flytte (migrere) vedleggene dine fra en datamaskin (server) til en annen.
+Stien til hvert vedlegg er lagret i databasen, og kalles &quot;systemfilnavn&quot;.
+Dersom du flytter vedlegg fra ett system til et annet, er det svært sannsynlig at denne
+informasjonen vil være feil. Du kan utføre denne kommandoen til å regenerere alle
+systemfilnavn for alle filvedlegg.</p>
+</dd>
+</dl>
+<p>Utførelse av &quot;Regenerere vedleggets filnavn&quot; virker for migrering fra Windows
+til Linux-servere. Det fungerer også for migrering fra Linux til Windows servere
+med et par potensielle problemer:</p>
+<blockquote>
+<ul class="simple">
+<li>Når du kopierer filer til Windows serveren, må du sjekke
+at mappen for vedleggene (vanligvis &quot;attachments&quot;) og alle filer
+er skrivbare for Joomla nettserver.</li>
+<li>Du kan få problemer med å flytte filer med unicode tegn i
+filnavnet fordi arkiveringsprogrammet har problemer
+med unicode filnavn (på Windows siden). Du må kanskje lagre
+filene, slettes de tilhørende vedleggene, og deretter laste de opp
+som nye vedlegg.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><strong>Fjerne mellomrom fra filnavn:</strong> Du kan utføre denne kommandoen for å
+erstatte alle mellomrom med understreker i filnavnet for alle filvedlegg.
+Dette kan være nødvendig på enkelte systemer. I &quot;Sikker&quot; modus, bør ikke
+dette være nødvendig.</p>
+</li>
+<li><p class="first"><strong>Oppdater filstørrelser på vedleggene:</strong> Denne kommandoen vil beregne
+filstørrelsen for alle filvedlegg.</p>
+</li>
+<li><p class="first"><strong>Sjekk om vedleggsfilene finnes:</strong> Denne kommandoen kan brukes til å
+verifisere at filen finnes for alle filvedlegg. Manglende filer vil bli oppført.</p>
+</li>
+<li><p class="first"><strong>Valider nettadresser:</strong> Vedlegg som nettadresser henter informasjon om gyldigheten
+av den oppgitte nettadressen. Denne kommandoen vil sjekke hver nettadresse og sjekk
+gyldigheten av nettadressen og oppdatere informasjonen for vedlegget.</p>
+</li>
+</ul>
+<div class="note">
+<p class="first admonition-title">Merk</p>
+<p class="last">Noen ganger når du i administrasjonen utfører en av verktøykommandoene, kan du
+få en advarsel om at nettleseren må sende forespørselen på nytt. Dette er ufarlig,
+klikk [OK] og kommandoen kjøres.</p>
+</div>
+</div>
+<div class="section" id="advarsler">
+<h1><a class="toc-backref" href="#id15">Advarsler</a></h1>
+<ul>
+<li><p class="first"><strong>Dersom du har sensitive eller private vedlegg bruk alternativet
+*Sikker nedlasting* til å forhindre tilgang til vedleggene!</strong> Bruker du ikke denne
+funksjonen, så vil vedleggene bli lagret i en fritt tilgjengelig mappe som alle kan åpne
+forutsatt at de kjenner til nettadressen. Det <em>sikre</em> alternativet forhindrer tilgang for
+alle som ikke har rettigheter (som bestemmes av alternativene ovenfor). Se beskrivelsen om
+alternativet for <em>Sikker nedlasting</em> ovenfor for mer detaljer.</p>
+</li>
+<li><p class="first">Hver gang en fil blir lastet opp så sjekkes det om opplastingsmappen finnes, gjør den
+ikke det vil den opprettes automatisk. Som standard lastes filene opp i mappen &quot;attachments&quot;
+i rot på nettområdet ditt. Navnet på mappe for opplasting kan endres ved å endre navnet i
+feltet for dette på Parametre for komponenten. Dersom mappen ikke blir opprette, må du opprette
+den selv (og du kan få problemer med å laste opp filer). Husk å sette riktige rettigheter på
+mappen som tillater opplastning til den. I Unix/Linux verdenen kan du sette chmod 755.
+Prosessen med å opprette mappe for opplasting kan mislykkes dersom toppmappen på nettområdet
+ditt har tilganger som hindrer nettserver (og PHP) fra å opprette mapper. Du må kanskje
+midlertidig endre på rettighetene slik at mappen som skal opprettes kan bli opprettet.</p>
+</li>
+<li><p class="first">Skulle du få problemer med å laste opp visse filtyper (for eksempel ZIP filer), så husk at
+denne programutvidelsen henter listen over tillatte filtyper fra Mediabehandleren. Dette for
+å hindre opplasting av potensielt skadelige filtyper som html eller php filer. En
+Administratoren kan oppdatere tillatte filtyper i Mediabehandleren ved å gå
+til &quot;Global konfigurasjon&quot; og fanen &quot;System&quot; og legge til den aktuelle filtypen og
+MIME-type under Mediainnstillinger.</p>
+</li>
+<li><p class="first">Dersom du ikke kan se vedlegg på brukersiden, er det flere mulige årsaker:</p>
+<blockquote>
+<ul>
+<li><p class="first">Vedlegget er ikke publisert. Du kan endre dette på komponenten i Administrasjonen.</p>
+</li>
+<li><p class="first">Den overordnede artikkelen eller innholdselementet er ikke publisert.</p>
+</li>
+<li><p class="first">Vedleggets tilgangsnivået er satt til 'Registrert', og du er ikke logget inn på brukersiden.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Programtillegget &quot;Innhold - Artikkelvedlegg&quot; er ikke aktivert. Gå til Programtillegg i</dt>
+<dd><p class="first last">Administasjonen for å aktivere den.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">I &quot;Innhold - Artikkelvedlegg&quot; (via Programtillegg), er ikke adgangsnivået satt til &quot;Gjester&quot;.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Dersom nettstedet bruker mellomlagring, prøv å tømme mellomlagret og oppdatere siden.</dt>
+<dd><ul class="first last simple">
+<li>Dersom du ikke ser vedlegg for en kategori i en kategori blogg visning og du bruker en
+egendefinert mal, kan det være nødvendig å foreta en liten endring i malen for å se vedlegget
+til kategorien. Ta gjerne kontakt for å få hjelp med dette problemet
+(se kontaktinfo nederst på denne siden)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Dersom du får problemer med begrensninger på filstørrelser som du prøver å laste opp, kan
+du prøve å legge til følgende linjer til .htaccess filen i roten av din Joomla! nettside:</p>
+<pre class="literal-block">
+php_value upload_max_filesize 32M
+php_value post_max_size 32M
+</pre>
+<p>hvor du kan endre verdien 32M (megabyte) til det du ønsker som maksimal filstørrelse for opplasting..</p>
+</li>
+<li><p class="first">&quot;Artikkelvedlegg&quot; støtter nå å &quot;legge&quot; nettadresser til innholdselementer. Dersom serveren er
+Windows Vista og du får problemer med å &quot;legge&quot; til en nettadresser som involverer
+<tt class="docutils literal">localhost</tt>, er dette et kjent problem knyttet til IPv4 og IPv6 konflikter.
+For å rette på det, redigere filene:</p>
+<pre class="literal-block">
+C:\Windows\System32\drivers\etc\hosts
+</pre>
+<p>Kommenter ut linjen som har <tt class="docutils literal">::1</tt>. Vær oppmerksom på at filen <tt class="docutils literal">hosts</tt> er en skjult
+systemfil, og du må kanskje endre mappealternativene for å vise skjulte filer for å se og
+redigere den.</p>
+</li>
+<li><p class="first">Dersom du har problemer med å legge til filer med Unicode tegn (for eksempel som
+russisk/kyrilliske tegn), sett alternativet <em>Sikker nedlasting</em> til &quot;Ja&quot;.
+Filnavn med Unicode-tegn bør fungere riktig på Linux-servere i både sikker og
+ikke sikker modus, men fungerer ikke alltid riktig på Windows-servere i ikke-sikker modus.</p>
+</li>
+<li><p class="first">Det er nå støtter for å legge til vedlegg i artiklene, før artikkelen blir lagret.
+Det er ingen begrensning til dette. Nye vedlegg er i et &quot;tomrom&quot; etter at
+filen er lastet opp og før artikkelen faktisk er lagret for første gang. I løpet av
+denne (forhåpentligvis korte) periode, er de nye vedleggene bare identifisert av
+brukerens Id. Så dersom mer enn én person bruker samme brukerkonto, og de oppretter artikler
+samtidig og legge til vedlegg på samme tid, er det ingen garanti for at de vedlagte filene
+vil ende opp med den riktige artikkelen.</p>
+</li>
+<li><p class="first">Det er et forum for hjelp og et forum for &quot;Ofte stilte spørsmål&quot; på joomlacode.org
+Dersom du oppdager et problem som ikke er dekket i denne hjelpsiden, kan du se i
+forumet:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://joomlacode.org/gf/project/attachments/forum/">Forum på
+http://joomlacode.org/gf/project/attachments/forum/</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="oppdatering">
+<h1><a class="toc-backref" href="#id16">Oppdatering</a></h1>
+<p>Oppgradering er veldig enkelt. Du har to valg:</p>
+<ol class="arabic simple">
+<li>Installere den nye versjonen av &quot;Artikkelvedlegg&quot;. Det er ikke nødvendig
+å avinstallere den tidligere versjonen. Du trenger ikke å gjøre noe for
+å beholde dine gamle vedlegg. Bare installer den nye versjonen og den vil
+oppdatere alt som er nødvendig.</li>
+<li>ANBEFALT: En av de gode nye funksjonene i Joomla 1.6 og nyere er oppdatering
+av utvidelsene. I Administrasjonen velg &quot;Installer/Administrer&quot; på menyen
+&quot;Utvidelser&quot; og klikk på fanen &quot;Oppdater&quot;. På verktøylinjen, klikk først på
+knappen &quot;Tøm hurtiglager&quot; og deretter &quot;Finn oppdateringer&quot;. Dersom det er en ny
+versjon av Artikkelvedlegg (Attachments), vil det bli vist.
+Du kan da velge oppdateringen og klikk deretter på knappen &quot;Oppdater&quot; på
+verktøylinjen for å installere den nye versjonen.
+Dette gjør oppdatering veldig enkelt!</li>
+</ol>
+</div>
+<div class="section" id="avinstallere">
+<h1><a class="toc-backref" href="#id17">Avinstallere</a></h1>
+<ul>
+<li><p class="first">For å avinstallere, i Administrasjonen velg &quot;Installer/Administrer&quot; på menyen &quot;Utvidelser&quot; og klikk
+på fanen &quot;Utvidelser&quot; og <strong>KUN</strong> velg:</p>
+<pre class="literal-block">
+Komponent: Artikkelvedlegg
+</pre>
+<p>og klikk på knappen &quot;Avinstaller&quot; på verktøylinjen. Dette vil avinstallere
+komponent og alle de tilhørende programtilleggene.</p>
+</li>
+<li><p class="first">Dersom du ønsker å beholde dine vedlegg, kopier mappen ”attachments” i din Joomla
+installasjon og kopier tabellen &quot;_attachments&quot; i databasen.
+Dersom du har tenkt å installere op nytt, se <a class="reference internal" href="#administrative-verktoykommandoer">Administrative verktøykommandoer</a> og
+kommandoen <strong>Deaktiver avinstallasjon av MySQL tabellen for Artikkelvedlegg</strong> for å
+hindre at tabellen i databasen blir slettet ved avinstallering.</p>
+</li>
+<li><p class="first">Dersom du ikke ønsker å beholde eksisterende vedlegg, slett vedleggene fra administrasjonen
+av komponenten. Når du har avinstallert Artikkelvedleggsutvidelsene, sletter du
+mappen &quot;attachments&quot; i din Joomla installasjon.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="migrering-av-artikkelvedlegg-fra-joomla-1-5-til-joomla-1-7-2-5">
+<h1><a class="toc-backref" href="#id18">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></h1>
+<p>For å migrere dine vedlegg fra Joomla 1.5 til Joomla 1.7/2.5 (eller nyere),
+følg prosedyren beskrevet her:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://jmcameron.net/attachments/migration/">Migrering av Artikkelvedlegg fra Joomla 1.5 til Joomla 1.7/2.5+</a></li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="oversettelser">
+<h1><a class="toc-backref" href="#id19">Oversettelser</a></h1>
+<p>Denne utvidelsen har støtte for oversettelser og er oversatt til
+følgende språk (foruten engelsk). Merk at de fleste av disse
+oversettelsene er i ferd med å bli oppdatert til versjon 3.0 av komponenten.</p>
+<p>Takk til disse oversetterne (Tilgjengelig versjoner vist i parentes)</p>
+<ul class="simple">
+<li><strong>Bulgarsk:</strong> av Stefan Ilivanov (1.3.4)</li>
+<li><strong>Katalansk:</strong> av Jaume Jorba (2.2, 3.0)</li>
+<li><strong>Kinesisk:</strong> Tradisjonelle og forenklet Kinesisk oversettelser av baijianpeng (白建鹏) (1.3.4)</li>
+<li><strong>Kroatisk:</strong> Tanja Dragisic (3.0, 1.3.4)</li>
+<li><strong>Tjekkisk:</strong> av Tomas Udrzal (1.3.4)</li>
+<li><strong>Nederlandsk:</strong> av Parvus (2.2)</li>
+<li><strong>Dansk:</strong> av Sune Folkmann (3.0), Villy Feltmann (2.2), Bo Urskov (1.3.4)</li>
+<li><strong>Finsk:</strong> av Tapani Lehtonen (2.2)</li>
+<li><strong>Fransk:</strong> av Marc-André Ladouceur (2.2, 3.0) og Pascal Adalian (1.3.4)</li>
+<li><strong>Tysk:</strong> av Pierre Corell (3.0), Bernhard Alois Gassner (2.2), Michael Scherer (1.3.4)</li>
+<li><strong>Gresk:</strong> by Antonis Mylonopoulos (3.0), Harry Nakos (1.3.4, 2.0)</li>
+<li><strong>Ungarsk:</strong> Formelle og uformelle oversettelser av Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Indonesisk:</strong> av Moh. Arif (3.0)</li>
+<li><strong>Italiensk:</strong> av Piero Mattirolo (2.2, 3.0) og Lemminkainen og Alessandro Bianchi (1.3.4)</li>
+<li><strong>Norsk:</strong> av Roar Jystad (2.2, 3.0) og Espen Gjelsvik (1.3.4)</li>
+<li><strong>Persisk:</strong> av Hossein Moradgholi og Mahmood Amintoosi (2.2)</li>
+<li><strong>Polsk:</strong> av Sebastian Konieczny (2.2, 3.0) og Piotr Wójcik (1.3.4)</li>
+<li><strong>Portugisisk (Brasiliansk):</strong> by Nelson Teixeira (3.0), Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
+<li><strong>Portugisisk (Portugal):</strong> av José Paulo Tavares (2.2, 3.0) og Bruno Moreira (1.3.4)</li>
+<li><strong>Rumensk:</strong> av Alex Cojocaru (2.2, 3.0)</li>
+<li><strong>Russisk:</strong> av Sergey Litvintsev (2.2, 3.0) og евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Serbisk:</strong> av Vlada Jerkovic (1.3.4)</li>
+<li><strong>Slovak:</strong> av Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Slovakisk:</strong> av Matej Badalič (2.2, 3.0)</li>
+<li><strong>Spansk:</strong> av Manuel María Pérez Ayala (2.2, 3.0) og Carlos Alfaro (1.3.4)</li>
+<li><strong>Svensk:</strong> av Linda Maltanski (2.0) og Mats Elfström (1.3.4)</li>
+<li><strong>Tyrkisk:</strong> av Kaya Zeren (3.0, 2.0)</li>
+<li><strong>Ukrainsk:</strong> av Sergey Litvintsev (3.0)</li>
+</ul>
+<p>Mange takk til oversetterne! Har du lyst til å hjelpe til med å oversette til et språk som
+enda ikke er støttet? Ta kontakt med utvikleren (se
+<a class="reference internal" href="#kontakt">Kontakt</a> nedenfor).</p>
+</div>
+<div class="section" id="takk-til">
+<h1><a class="toc-backref" href="#id20">Takk til</a></h1>
+<p>Mange takk til de følgende bidragsytere og resurser:</p>
+<ul>
+<li><p class="first">Boken <em>Learning Joomla! 1.5 Extension Development: Creating Modules,
+Components, and Plugins with PHP</em> av Joseph L. LeBlanc var veldig nyttig under arbeidet med &quot;Artikkelvedlegg&quot;.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Ikoner for filtyper kommer fra flere kilder, deriblandt:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons av Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a class="reference external" href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 av John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a class="reference external" href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 av Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a class="reference external" href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons av Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a class="reference external" href="http://sweetie.sublink.ca">Sweeties Base Pack av Joseph North (http://sweetie.sublink.ca)</a></li>
+</ul>
+</dd>
+</dl>
+<p>Merk at mange av ikonene er modifisert og redigert for å passe inn. Dersom du ønsker den
+opprinnelige versjonene, kan du laste dem ned fra nettstedene nevnt ovenfor.</p>
+</li>
+<li><p class="first">Mange takk til Paul McDermott for sjenerøst å donere programtillegge for å søke!</p>
+</li>
+<li><p class="first">Takk til Mohammad Samini for PHP-koder og CSS-filer for å forbedre visning av tekst fra
+høyre mot venstre.</p>
+</li>
+<li><p class="first">Takk til Ewout Weirda for mange nyttige diskusjoner og forslag i utviklingen av
+denne utvidelsen.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="kontakt">
+<h1><a class="toc-backref" href="#id21">Kontakt</a></h1>
+<p>Rapporter eventuelle feil og forslag på forbedringer til <a class="reference external" href="mailto:jmcameron&#64;jmcameron.net">jmcameron&#64;jmcameron.net</a></p>
+<!-- LocalWords:  html plugin plugins ACL onPrepareContent filename Filenames qq -->
+<!-- LocalWords:  filenames frontend username PHP strftime CSS attachmentsList -->
+<!-- LocalWords:  QQ inline unpublish else's uncheck http php uninstallation IPv -->
+<!-- LocalWords:  MySQL uninstalled uninstalling uninstall unarchiving htaccess -->
+<!-- LocalWords:  filesize localhost joomlacode Joomla Virtuemart Ilivanov Jaume -->
+<!-- LocalWords:  Jorba baijianpeng Tanja Dragisic Udrzal Parvus Tapani Lehtonen -->
+<!-- LocalWords:  André Ladouceur Yann Kerviel Adalian Corell Alois Gassner Moh -->
+<!-- LocalWords:  Scherer Nakos Szabolcs Gáspár Arif Piero Mattirolo Bianchi -->
+<!-- LocalWords:  Lemminkainen Jystad Espen Gjelsvik Hossein Moradgholi Mahmood -->
+<!-- LocalWords:  Amintoosi Konieczny Wajda Wójcik Giacomitti Cauan José Tavares -->
+<!-- LocalWords:  Moreira Cojocaru Sergey Litvintsev Yarik Sharoiko Vlada Matej -->
+<!-- LocalWords:  Jerkovic Miroslav Bystriansky Badalič María Pérez Alfaro Kaya -->
+<!-- LocalWords:  Maltanski Elfström Zeren LeBlanc Zaitseff Doctype OpenDocument -->
+<!-- LocalWords:  McDermott Samini Ewout Weirda -->
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: August 18, 2012 at 19:15 UTC.
+
+</div>
+</body>
+</html>

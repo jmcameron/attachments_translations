@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>Ekstensi Attachments Dokumentasi</title>
+<link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<h1 class="title">Ekstensi Attachments Dokumentasi</h1>
+<hr class="header"/>
+</div>
+<div class="document">
+
+<p><strong>Versi 3.0 - Agustus 20, 2011</strong></p>
+<p><strong>Versi ini adalah untuk Joomla 1.6/1.7+</strong></p>
+<h1 id="introduction">Pengenalan</h1>
+<p>Ekstensi 'Attachments' untuk Joomla! memperbolehkan berkas-berkas untuk diunggah dan dilampirkan pada artikel, kategori, atau tipe konten yang lainnya. Ekstensi 'Attachments' menyertakan pengaya untuk menampilkan lampiran-lampiran dan komponen untuk pengunggahan dan pengelolaan lampiran-lampiran, sama seperti plugin-plugin yang lainnya. Disana terdapat opsi untuk mengendalikan siapa yang bisa melihat lampiran-lampiran dan siapa yang bisa mengunggahnya, bersama dengan banyak opsi-opsi untuk meningkatkan fleksibilitas dan kegunaannya. Catatan: semua opsi dikendalikan melalui pengelola komponen.</p>
+<p>Ekstensi 'Attachments' telah diterjemahkan kedalam bahasa yang berbeda-beda. Silahkan melihat daftar terjemahan yang tersedia pada bagian_`Terjemahan`. Hampir semua paket bahasa ini masih dalam proses untuk di-update untuk 'Attachments' versi 3.0.</p>
+<p>Bila anda berminat untuk subscribe pada daftar email untuk pengumuman mengenai ekstensi ini, Silahkan subscribe dengan menggunakan halaman web ini:</p>
+<ul>
+<li><a href="http://jmcameron.net/attachments/email-list.html">Attachments Daftar Email ( http://jmcameron.net/attachments/email-list.html)</a></li>
+</ul>
+<h1 id="new-features-in-version-3.0">Vitur Baru Pada Versi 3.0</h1>
+<ul>
+<li><p>Mendukung penuh untuk ACL/perijinan yang baru pada sistem Joomla 1.6/1.7+. Hal ini memberi anda fleksibilitas yang sangat signifikan untuk mengendalikan siapa yang bisa membuat, merubah, atau menghapus lampiran-lampiran. Untuk lebih jelasnya silahkan melihat pada bagian_`Perijinan Attachments`.</p></li>
+<li><p>Mendukung penuh untuk tingkat akses melihat . Hal ini berarti anda bisa mengatur beberapa lampiran-lampiran anda agar terlihat oleh siapa saja, dan beberapa agar hanya bisa terlihat untuk pengguna dalam kelompok yang ada (seperti yang ditentukan oleh Tingkatan Akses). Untuk lebih jelasnya silahkan anda melihat pada bagian_`Tingkatan Akses Kendali Penglihatan`.</p></li>
+<li><p>Penyederhanaan dan improvisasi pada opsi-opsi untuk menyembunyikan lampiran-lampiran dalam konteks yang berbeda-beda.</p></li>
+</ul>
+<h1 id="major-features-of-the-attachments-extension">Fitur Utama Pada Ekstensi Attachments</h1>
+<ul>
+<li>Anda bisa mengelola lampiran-lampiran dari editor artikel, termasuk menambahkan,, mengubah, dan menghapus lampiran-lampiran.</li>
+<li>Anda bisa membuat lampiran-lampiran saat artikel sedang dibuat.</li>
+<li>Semua daftar lampiran pada halaman administrator di-update dengan menggunakan AJAX dan tidak perlu memuat ulang halaman.</li>
+<li>Anda bisa &quot;melampirkan&quot; URL sama seperti berkas-berkas untuk item-item konten.</li>
+<li>Anda bisa melihat daftar lampiran-lampiran dimana saja dalam artikel (atau item konten).</li>
+<li><dl>
+<dt>Didalam Halaman Administrator:</dt>
+<dd><ul>
+<li>Disana terdapat opsi-opsi untuk menyaring lampiran-lampiran yang terdaftar untuk tidak menerbitkan ataupun membuang artikel-artikel.</li>
+<li>Menyaring daftar artikel-artikel</li>
+<li>Mengurutkan daftar dari lampiran-lampiran berdasarkan pada kepala-kepala kolom.</li>
+<li>Perintah-perintah administratif yang sangat berguna</li>
+</ul>
+</dd>
+</dl></li>
+<li>Ekstensi Attachments didukung dengan &quot;Pengaya Attachments&quot;. Pengaya ini mengijinkan untuk melampirkan berkas-berkas kedalam item konten apapun dengan pengaya <code>onPrepareContent</code>. Sebagai contoh, anda bisa melampirkan berkas-berkas kedalam deskripsi dari Kategori. Dengan sedikit bekerja, pengembang ekstensi bisa membuat pengaya 'Attachments' baru untuk mendukung penambahan lampiran-lampiran ke berbagai komponen lainnya seperti tampilan info pribadi CB, Deskripsi produk Virtuemart, dsb. Untuk lebih jelasnya anda bisa melihat pada bagian `File Apa Saja Yang Bisa Dilampirkan?`_.</li>
+</ul>
+<h1 id="uploading-restrictions">Pelarangan Pengunggahan</h1>
+<p>Tidak semua tipe berkas bisa diunggah. Ekstensi 'Attachments' tidak akan mengijinkan mengunggah berkas-berkas yang tidak diijinkan oleh Pengelola Media Joomla!. Untuk melihat (atau merubah) tipe-tipe berkas apa saja yang diijinkan, pergi ke <strong>Pengeleola Media</strong> item dibawah menu <strong>Konten</strong>. Klik tombol <strong>Ops-opsi</strong> pada toolbar pilih tab <em>Komponen</em>. Disana anda bisa melihat opsi-opsi untuk mengendalikan ekstensi tipe berkas apa saja dan tipe mime apa saja yang diijinkan untuk diunggah. Ekstensi 'Attachments' menghormati pembatasan ini. Meskipun begitu, perijinan pada ekstensi berkas (tipe berkas) pada 'Ekstensi-ekstensi Legal (Tipe-tipe Berkas)' akan diabaikan. Tambah ekstensi-ekstensi untuk tipe berkas apa saja yang anda perlukan kedalam ruang/kolom &quot;Ekstensi-ekstensi Legal (Tipe-tipe Berkas)&quot;. Anda juga bisa menambahkan tipe-tipe MIME yang berkaitan kedalam ruang &quot;Tipe-tipe MIME Legal&quot;.</p>
+<h1 id="attachments-settings">Pengaturan Attachments</h1>
+<p>Semua pengaturan pada 'Attachments' dikendalikan via pengelolah komponen. Untuk mengakses pengaturan-pengaturan ini, pergi ke halaman administrator pilih &quot;Attachments&quot; dibawah menu &quot;Komponen&quot; . Klik pada tombol &quot;Opsi&quot; pada sisi kanan toolbar dan anda akan opsi-opsi yang terkumpul didalam beberapa tab.</p>
+<h2 id="basic-options">Opsi Dasar</h2>
+<img src="images/options-basic.png" alt="Opsi-opsi Dasar" class="float-right" />
+<ul>
+<li><p><strong>Lampiran-lampiran standar diterbitkan:</strong> fitur 'otomatis terbit' ini mengendalikan apakah sebagai standar lampiran-lampiran baru akan langsung diterbitkan ketika mereka ditambahkan. Bila 'Ya' yang dipilih, saat lampiran-lampiran ditambahkan, mereka akan langsung diterbitkan dan akan bisa dilihat oleh pengguna-pengguna. Bila 'Tidak' yang dipilih, lampiran-lampiran baru sebagai standar tidak akan diterbitkan. Administrator atau seseorang yang dengan perijinan terkait akan perlu untuk menerbitkannya dari halaman administratif sebelum lampiran-lampiran itu tersedia.</p></li>
+<li><p><strong>Peringatan Terbit Otomatis:</strong> Bila opsi atomatis terbit tak-aktif (lihat opsi sebelumnya), Bila anda ingin menginformasikan penambahan lampiran-lampiran itu, bagaimana cara mereka diterbitkan. Anda bisa menyisipkan pesan yang berkaitan disini. Bila ruang/kolom isisan ini kosong, sistem pesan umum akan ditambahkan yang menyarankan agar mereka menghubungi administrator sistem untuk lampiran-lampiran yang baru diterbitkan.</p></li>
+<li><p><strong>Standar Tingkat Akses:</strong> Standar tingkat akses untuk lampiran-lampiran baru. Tiap lampiran mempunyai 'tingkat akses' yang mengendalikan siapa yang bisa melihat atau mengunduh lampiran itu. Saat lalmpiran itu dibuat, tingkat aksesnya diatur dengan nilai standar (bila pembuat lampiran berada dalam kelompok-keloompok yang berkaitan). Administrator situs atau seseorang yang mempunyai perijinan yang sesuai bisa mengganti tingkat akses lampirannya untuk mengendalikan siapa yang bisa melihat lampiran-lampiran yang telah ditentukan.</p></li>
+<li><p><strong>Nama yang ditentukan pengguna isian 1-3:</strong> Bila anda mempunyai informasi tambahan disetiap lampiran yang ingin anda tambahkan, ekstensi 'Attachments' mengijinkan anda untuk menentukannya pada tiga isian yang ditentukan pengguna secara opsional. Untuk membuat isian baru, sisipkan nama untuknya di dalam tiga masukan itu. Bersihkan nama untuk menonaktifkan tampilan dan perubahan pada isian ini. Isian yang ditentukan pengguna akan ditampilkan dalam urutan yang terdaftar disini. Batas panjang maksimal tiap isian yang ditentukan pengguna adalah 40 karakter. Panjang data dalam isian-isian ini bisa mencapai 100 karakter.</p>
+</li>
+<li><p><strong>Panjang maksimal nama berkas atau URL:</strong> Panjang maksimal nama berkas atau URL pada daftar lampiran-lampiran. Nama berkas atau URL yang lebih panjang akan dipangkas dan diletakkan dalam nama ditampilkan (hanya untuk tampilan saja, nama berkas atau URL sebenarnya tidak akan digantikan). Nilai 0 berarti panjang nama berkas dibatasi oleh opsi ini (isian nama tampilan dalam tabel database Attachments dibatasi sampai 80 karakter). Catatan: Bila nama berkas-berkas atau URL-URL itu dipangkas oleh opsi ini, nama yang terpangkas akan disisipkan kedalam isian &quot;Tampilan Nama-berkas / URL&quot;. Opsi ini hanya mempengaruhi lalmpiran-lampiran yang ditambahkan setelah opsi ini diatur.</p></li>
+<li><p><strong>Dimanakah lampiran-lampiran harus diletakkan?</strong> Opsi mengendalikan lokasi di dalam artikel (atau item konten) daftar dimana lampiran-lampiran akan diletakkan. Opsi ini diterapkan pada semua daftar lampiran-lampiran:</p>
+<ul>
+<li>'<em>Di awalnya</em>'</li>
+<li>'<em>Di akhirnya</em>'</li>
+<li><p>'<em>Ditempat tersendiri</em>' - Dengan opsi ini, daftar lampiran-lampiran akan terlihat dalam artikel (atau item konten) dimana terdapat tag khusus: {attachments}.</p>
+
+<p>Dalam mode ini, ketika merubah artikel di halaman administrator, tombol tambahan akan diletakkan: [Sisipan token {attachments}]. Posisi kursor dimana anda ingin meletakkan sendiri token itu dan gunakan tombol ini untuk menyisipkan token.Tombol ini akan ditambahkan disekitar tag-tag HTML untuk menyembunyikan token saat tombol itu tidak diaktifkan (misal, saat daftar lampiran diharapkan untuk tidak terlihat). Dalam HTML, token seperti ini akan disembunyikan disekitar tag-tag untuk menyembunyikannya:</p>
+<pre><code>&lt;span class=&quot;hide&quot;&gt;{attachments}&lt;/span&gt;
+</code></pre>
+<p>Dalam editor halaman administrator, anda akan melihat tag {attachments} tapi bukan tag-tag HTML 'span' kecuali anda mengalihkannya dalam mode HTML. Dalam halaman situs, anda tidak akan pernah melihat tag {attachments} kecuali pengaya sisipkan_tag_attachments dinonaktifkan. Bila anda ingin menyingkirkan token {attachments}, anda bisa menggunakan mode tampilan &quot;HTML&quot; dalam editor untuk memastikan bahwa anda juga telah menghapus tag-tag span yang mengelilinginya.</p>
+</li>
+<li>'<em>Non-aktif-kan (penyaring)</em>' - Opsi ini akan menonaktifkan penampilan daftar-daftar lampiran dan ditandai oleh penampilan tag {attachments} dalam artikel atau item konten.</li>
+<li><p>'<em>Non-aktif-kan (tanpa penyaring)</em>' - Opsi ini akan menonaktifkan tampilan daftar-daftar lampiran dan tidak akan menampilkan tag-tag {attachments} dalam artikel (atau item-item konten).</p></li>
+</ul>
+</li>
+<li><p><strong>Mengijinkan merubah tingkat akses di halaman depan situs:</strong> Mengijinkan pengaturan tingkat akses suatu lampiran dari halaman depan situs ketika merubah lampiran atau membuat lampiran baru. 'tingkat akses' mengendalikan kelompok-kelompok yang mungkin bisa melihat (atau mengakses) lampiran. Harap diingat bahwa tidak seorangpun yang merubah lampiran akan bisa merubah tingkat aksesnya dengan tingkat akses yang bukan haknya.</p></li>
+</ul>
+<h2 id="formatting-options">Opsi Format</h2>
+<img src="images/options-formatting.png" alt="Opsi-opsi Format" class="float-right" />
+<ul>
+<li><p><strong>Tampilkan judul:</strong> Bila diatur dengan 'Ya', baris judul-judul akan ditambahkan ditambahkan diatas daftar lampiran-lampiran yang menjelaskan apa yang ada didalam setiap kolom.</p></li>
+<li><p><strong>Tampilkan deskripsi lampiran:</strong> Pengaturan ini mengendalikan apakah deskripsi lampiran akan ditampilkan dalam daftar lampiran.</p></li>
+<li><p><strong>Tampilkan pembuat lampiran:</strong> Menampilkan nama pengguna yang telah membuat (mengunggah) lampiran itu.</p></li>
+<li><p><strong>Tampilkan ukuran berkas:</strong> Pengaturan ini mengendalikan apakah berkas lampiran akan ditampilkan dalam daftar dari lampiran-lampiran.</p></li>
+<li><p><strong>Tampilkan nomor unduhan:</strong> Pengaturan ini mengendalikan apakah nomor unduhan akan ditampilkan dalam daftar lampiran-lampiran.</p>
+</li>
+<li><p><strong>Tampilkan tanggal modifikasi berkas:</strong> Bila pengaturan ini adalah 'Ya', tanggal modifikasi berkas akan ditambahkan kedalam daftar lampiran pada artikel-artikel yang mempunyai lampiran. Bila memilih 'Tidak', tanggal tidak akan ditambahkan pada daftar lampiran.</p></li>
+<li><p><strong>String format modifikasi tanggal:</strong> Anda bisa memilih format pada tanggal modifikasi dengan menggunakan format yang juga digunakan dalam fungsi PHP You may select the format for the modification date by using the format used by the PHP strftime(). Sebagai contohnya cari dalam web dengan 'PHP strftime' sebagai kata kuncinya. Format standar (%x %H:%M) memberi tanggal dengan format 24 jam seperti 4/28/2008 14:21. Untuk menyingkirkannya, biarkan bagian &quot;%H:%M&quot; tetap ada. Harap diingat bahwa PHP MS Windows dan Linux Note that MS Windows and Linux bisa menerapkan hal berbeda dalam beberapa kode yang mereka dukung.</p></li>
+<li><p><strong>Urutkan daftar lampiran:</strong> Opsi ini mengijinkan untuk secara khusus menentukan urutan lampiran yang akan didaftarkan dalam daftar-daftar lampiran. Sebagian besar opsi bisa menjelaskannya sendiri:</p>
+<ol style="list-style-type: decimal">
+<li>'<em>nama berkas</em>' - Bila opsi ini yang dipilih, lampiran-lampiran akan diurutkan sesuai dengan huruf didalam nama berkas.</li>
+<li>'<em>Ukuran berkas(kecil dulu)</em>'</li>
+<li>'<em>Ukuran berkas(besar dulu)</em>'</li>
+<li>'<em>Deskripsi</em>'</li>
+<li>'<em>Tampilkan nama berkas atau URL</em>' - Semua lampiran-lampiran yang mempunyai tampilan kosong akan muncul sebelum lampiran dengan tampilan nama berkas dan akan diurutkan sesuai dengan nama berkasnya.</li>
+<li>'<em>Pengunggah</em>' - Diurutkan sesuai dengan nama pengguna yang telah mengunggah lampiran.</li>
+<li>'<em>Tanggal dibuat (lama dulu)</em>'</li>
+<li>'<em>Tanggal dibuat (baru dulu)</em>'</li>
+<li>'<em>Tanggal modifikasi (lama dulu)</em>'</li>
+<li>'<em>Tanggal modifikasi (baru dulu)</em>'</li>
+<li>'<em>ID lampiran</em>' - Bila opsi ini dipilih, lampiran-lampiran akan diurutkan berdasarkan ID-nya. Hal ini berpengaruh pada urutan lampiran-lampiran dalam urutan kapan mereka dibuat.</li>
+<li>'<em>Ditentukan pengguna isian 1</em>'</li>
+<li>'<em>Ditentukan pengguna isian 2</em>'</li>
+<li>'<em>Ditentukan pengguna isian 3</em>'</li>
+</ol></li>
+</ul>
+<h2 id="visibility-options">Opsi Terlihat</h2>
+<p>Opsi ini mengendalikan kapan lampiran-lampiran akan terlihat pada halaman depan situs, menganggap pengguna berada dalam kelompok-kelompok yang sesuai untuk melihat lampiran-lampiran.</p>
+<img src="images/options-visibility.png" alt="Opsi-opsi Terlihat" class="float-right" />
+<ul>
+<li><p><strong>Sembunyikan lampiran-lampiran pada halaman depan situs:</strong> Pilih opsi ini untuk menghindari lampiran-lampiran terlihat pada halaman depan situs web anda.</p></li>
+<li><p><strong>Sembunyikan lampiran sebelum pemutus 'Baca Lebih':</strong> Pilih opsi ini untuk menghindari lampiran terlihat pada halaman depan situs bila mereka terletak sebelum pemutus 'Baca Lebih' dalam artikel. Bila anda melakukan klik pada tautan untuk melihat artikel secara penuh, lampiran-lampiran akan terlihat.</p></li>
+<li><p><strong>Sembunyikan lampiran-lampiran pada halaman blog:</strong> Pilih opsi ini untuk menghindari lampiran-lampiran terlihat pada halaman yang mempunyai tampilan 'blog'.</p></li>
+<li><p><strong>Sembunyikan lampiran-lampiran kecuali pada tampilan-tampilan artikel:</strong> Pilih opsi ini untuk menghindari lampiran-lampiran terlihat pada halaman-halaman depan situs kecuali untuk melihat pada artikel-artikel khusus tersendiri.</p></li>
+<li><p><strong>Selalu tampilkan lampiran-lampiran pada tampilan kategori:</strong> Pilih opsi ini agar selalu menampilkan lampiran-lampiran pada tampilan kategori -- bergantung pada opsi-opsi yang lainnya.</p></li>
+<li><p><strong>Sembunyikan lampiran-lampiran pada kategori-kategori:</strong> Menyembunyikan lampiran-lampiran pada tampilan-tampilan kategori untuk kategori-kategori yang dipilih. Harap diingat bahwa lampiran-lampiran akan ditampilkan untuk anak kategori-kategori kecuali mereka secara khusus dipilih.</p></li>
+</ul>
+<ul>
+<li><strong>Sembunyikan tautan 'Tambah lampiran-lampiran':</strong> Selalu menyembunyikan tautan 'Tambah Lampiran-lampiran' pada halaman depan situs. Hal ini diperlukan lampiran-lampiran agar ditambahkan pada artikel-artikel, dsb, dengan merubahnya dalam halaman depan situs (dimana tombol 'Tambah Lampiran-lampiran' akan tersedia dibawah area editor).</li>
+</ul>
+<h2 id="advanced-options">Opsi Khusus</h2>
+<img src="images/options-advanced.png" alt="Opsi-opsi Khusus" class="float-right" />
+<ul>
+<li><p><strong>Karakter terlarang dalam nama berkas yang diunggah:</strong> Nama-nama berkas yang mengandung karakter-karakter ini tidak akan diijinkan untuk diunggah. Karakter ini bermasalah dalam URL yang disediakan oleh pengguna untuk lampiran-lampiran berkas yang termasuk dalam mode 'tak-aman' sehingga mereka dilarang. Karakter-karakter ini umumnya tidak menjadi masalah bila menggunakan mode 'aman' semenjak nama-nama berkas tidak digunakan sebagai bagian dari URL yang disediakan oleh pengguna.</p></li>
+<li><p><strong>Gaya CSS pada tabel-tabel lampiran-lampiran:</strong> Untuk menimpa gaya CSS dari daftar-daftar lampiran-lampiran, tentukan nama gaya CSS anda disini. Nama gaya CSS standar adalah 'attachmentsList'. Lihat pada bagian `Gaya CSS Daftar-daftar Lampiran`_.</p></li>
+<li><p><strong>Tautan berkas mode terbuka:</strong> Dengan mode ini bagaimana tautan-tautan untuk melampirkan berkas-berkas akan dibuka. 'Dalam jendela yang sama' maksudnya adalah berkas akan dibuka di dalam jendela browser yang sama. 'Dalam jendela baru' maksudnya adalah berkas akan dibuka dalam jendela browser yang baru. Dalam beberapa browser, menggunakan opsi 'Dalam jendela baru' yang sebenarnya hanya membuka lampiran dalam tab yang baru.</p></li>
+<li><p><strong>Beri judul-judul sendiri untuk daftar-daftar lampiran-lampiran:</strong> Standarnya, ekstensi 'Attachments' menyisipkan judul &quot;Lampiran-lampiran:&quot; diatas daftar lampiran-lampiran disetiap artikel atau item konten (bila mempunyai lampiran-lampiran). Dalam beberapa kasus, anda mungkin lebih nyaman untuk menggunakan pengaturan yang lain pada artikel-artikel atau item-item artikel tertentu. Anda mungkin menentukan pengaturan tertentu yang ingin anda menggunakannya pada dasar item-per-item. Sebagai contohnya, bila anda ingin artikel 211 menggunakan judul sendiri &quot;Unduhan-unduhan:&quot;, kemudian tambahkan itu pada pengaturan ini: '211 Unduhan-unduhan' (tanpa tanda petik). Gunakan satu antrian per baris. Untuk tipe-tipe dari item-item konten, gunakan formulir: 'kategori:23 Ini adalah judul untuk kategori 23' dimana 'kategori' bisa diletakkan sesuai dengan nama dari entitas item konten. Contoh dari artikel-artikel diatas bisa terselesaikan dengan 'artikel:23 Unduhan-unduhan'. Harap diingat bahwa antrian tanpa nomor ID pada awalannya akan diterapkan pada semua item-item konten. Jadi hal ini praktek yang bagus untuk meletakkan penimpaan global dulu dalam daftar dan kemudian menimpanya dengan judul-judul sendiri item-per-item setelahnya.</p>
+<p>Catatan: Bila anda ingin mengganti judul-judul untuk daftar-daftar lampiran-lampiran secara global, anda bisa merubah antrian berkas 'ATTACHMENTS TITLE' di dalam berkas terjemahan:</p>
+<pre><code>administrator/language/qq-QQ/qq-QQ.plg_frontend_attachments.ini
+</code></pre>
+<p>dimana qq-QQ merujuk pada kode bahasa seperti en-GB untuk Bahasa Inggris. (Bila anda tidak begitu mengenal berkas-berkas terjemahan Joomla!, carilah baris yang mempunyai 'ATTACHMENTS TITLE' pada sisi kiri dari tanda '='. Ubah apapun yang disebelah kanan tanda '='. Jangan ubah apapun yang berada disebelah kiri tanda '='.)</p></li>
+<li><p><strong>Waktu-habis untuk memeriksa tautan-tautan:</strong> Waktu-habis untuk memeriksa tautan-tautan (detik). Kapanpun tautan ditambahkan pada lampiran, tautan diperiksa langsung (anda bisa menonaktifkan pemeriksaan ini dalam formulir). Bila tautan bisa diakses sebelum waktu-habis, ukuran berkas dan informasi yang lain mengenai tautan yang akan diterima. Bila tidak, informasi umum yang akan digunakan. Untuk menonaktifkan pemeriksaan, masukkan 0.</p></li>
+<li><p><strong>Superimpose ikon-ikon tautan URL:</strong> Superimpose ikon-ikon tautan URL diatas ikon berkas lampiran disetiap lampiran yang menandakan itu adalah URL. URL-URL yang valid ditampilkan dengan tanda panah dan URL-URL tak-valid ditampilkan garis silang merah pada ikon tipe berkas (kiri bawah ke atas kanan).</p></li>
+<li><p><strong>Suppress obsolete attachments (in back end):</strong> Set the default for suppressing <em>obsolete</em> attachments in the administrative back end. In this context, <em>obsolete</em> attachments are ones attached to unpublished or trashed parents. You can override this using the 'Show attachments for' drop-down menu on the right just above the list of attachments (on the same line as the filter). When you use the drop-down menu to control which attachments are visible, the system remembers that setting until you log out as administrator. So changing this parameter may not seem to have an effect. This parameter setting will come into effect the next time you log in as administrator.</p></li>
+</ul>
+<h2 id="security-options">Opsi Keamanan</h2>
+<img src="images/options-security.png" alt="Opsi-opsi Keamanan" class="float-right" />
+<ul>
+<li><p><strong>Amankan unduhan-unduhan lampiran:</strong> Sebagai Standar, ekstensi 'Attachments' menyimpan berkas-berkas lampiran dalam sub-direktori yang bisa diakses publik. Bila anda memilih opsi <em>aman</em>, direktori dimana didalamnya tersimpan terdapat lampiran-lampiran akan dibuat agar tidak bisa diakses oleh publik. Tautan-tautan unduhan pada lampiran-lampiran dalam halaman depan situs akan mengunduh berkas-berkas lampiran tapi tidak secara langsung terkait. Hal ini untuk mencegah akses pengguna-pengguna yang tidak mempunyai hak yang sesuai dengan haknya masing-masing. Bila unduhan <em>aman</em> tidak dipilih, tautan-tautan pada lampiran-lampiran akan terlihat seperti opsi-opsi yang diindikasikan diatas, tapi berkas-berkas masih akan tetap bisa diakses oleh siapa saja bila mereka tahu URL penuhnya, ketika sub-direktori bisa untuk publik. Opsi <em>aman</em> untuk mencegah akses pengguna yang tidak mempunyai ijin meskipun mereka mempunyai URL penuhnya, ketika opsi ini mencegah akses publik pada sub-direktori lampiran-lampiran. Dalam mode <em>aman</em>, opsi &quot;Siapa bisa lihat&quot; bisa diatur untuk 'Siapa saja' dan siapapun bisa melihat dan mengunduh lampiran-lampiran itu.</p>
+</li>
+<li><p><strong>Mode unduhan untuk unduhan-unduhan aman:</strong> Opsi ini untuk mengendalikan apakah berkas-berkas harus diunduh sebagai berkas-berkas yang terpisah atau ditampilkan dalam browser (bila browser bisa menangani tipe berkas itu). Disana terdapat dua opsi:</p>
+<ul>
+<li>- <em>'inline'</em> - Dalam mode ini, berkas-berkas yang bisa dilihat oleh browser akan ditampilkan pada browser (seperti teks atau gambar).</li>
+<li>- <em>'lampiran'</em> - Dengan mode 'lampiran', berkas-berkas akan selalu diunduh sebagai berkas-berkas yang terpisah.</li>
+</ul>
+<p>Dengan kata lain, berkas-berkas yang tidak bisa ditampilkan dalam browser akan diunduh sebagai berkas-berkas eksternal.</p></li>
+</ul>
+<h2 id="permissions-options">Opsi Perijinan</h2>
+<p>Opsi-opsi perijinan akan dijelaskan pada bagian `Perijinan Lampiran`_.</p>
+<h1 id="attachments-permissions">Perijinan Lampiran</h1>
+<p>Ekstensi Attachments mengambil keuntungan dari sistem ACL/perijinan Joomla! yang baru dalam Joomla! 1.6. Hal ini memberi situs-situs web yang menggunakan Attachments lebih fleksibel untuk mengendalikan siapa yang bisa membuat, merubah, menghapus dan mengelola lampiran-lampiran.</p>
+<p>Sebelum menjelaskan mengenai perijinan ACL yang berkaitan dengan Attachments, sangatlah penting untuk mengerti kunci dari prinsip yang mendasarinya:</p>
+<p>Untuk mengganti perijinan pada kelompok-kelompok pengguna yang bervariasi,
+  pergi ke halaman administrator dan pilih &quot;Attachments&quot; dibawah
+  menu &quot;Komponen&quot;. Klik pada tombol &quot;Opsi&quot; disisi kanan
+  toolbar dan kemudian pilih tab perijinan. Anda akan melihat:</p>
+<div class="figure">
+<img alt="Permission Options" src="images/options-permissions.png" />
+<p class="caption"></p>
+</div>
+
+<p>Ini adalah penjelasan singkat mengenai perijinan yang berkaitan dengan Attachments yang tersedia:</p>
+<table border="1" class="permissions docutils">
+<colgroup>
+<col width="26%" />
+<col width="57%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="header">
+<th align="left">Ijin</th>
+<th align="left">Deskripsi / Catatan</th>
+<th align="left">Aksi ACL</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="odd">
+<td align="left">Mengatur Attachments</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah opsi-opsi Attachments.</td>
+<td align="left">core.admin</td>
+</tr>
+<tr class="even">
+<td align="left">Akses Attachments</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk mengakses ekstensi Attachments extension dalam halaman administrator</td>
+<td align="left">core.manage</td>
+</tr>
+<tr class="odd">
+<td align="left">Buat Lampiran-lampiran</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk membuat lampiran-lampiran (memungkinkan untuk merubah induknya).</td>
+<td align="left">core.create</td>
+</tr>
+<tr class="even">
+<td align="left">Hapus Lampiran-lampiran</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk menghapus lampiran-lampiran (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">core.delete</td>
+</tr>
+<tr class="odd">
+<td align="left">Ubah Lampiran-lampiran</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah lampiran-lampiran (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">core.edit</td>
+</tr>
+<tr class="even">
+<td align="left">Ubah Status Lampiran-lampiran</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah status lampiran-lampiran (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">core.edit.state</td>
+</tr>
+<tr class="odd">
+<td align="left">Ubah Lampiran-lampiran sendiri</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah lampiran-lampiran yang mereka buat sendiri (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">core.edit.own</td>
+</tr>
+<tr class="even">
+<td align="left">Ubah Status Lampiran-lampiran Sendiri</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah status dari lampiran manapun yang mereka buat sendiri (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">attachments.edit.state.own</td>
+</tr>
+<tr class="odd">
+<td align="left">Hapus Lampiran-lampiran Sendiri</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk menghapus lampiran-lampiran yang mereka miliki sendiri (memungkinkan mereka untuk merubah induknya).</td>
+<td align="left">attachments.delete.own</td>
+</tr>
+<tr class="even">
+<td align="left">Ubah Lampiran-lampiran Pada Artikel/Induk Yang Dimiliki</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah lampiran manapun pada artikel-artikel/induk-induk yang mereka miliki sendiri (dan memungkinkan untuk merubah induknya).</td>
+<td align="left">attachments.edit.ownparent</td>
+</tr>
+<tr class="odd">
+<td align="left">Ubah Status lampiran-lampiran Pada Artikel/Induk Yang Dimiliki</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk merubah status dari lampiran manapun untuk artikel-artikel/induk-induk yang mereka miliki sendir (dan memungkinkan untuk merubah induknya).</td>
+<td align="left">attachments.edit.state.ownparent</td>
+</tr>
+<tr class="even">
+<td align="left">Hapus Lampiran-lampiran Pada Artikel/Induk Yang Dimiliki</td>
+<td align="left">Mengijinkan pengguna-pengguna untuk menghapus lampiran manapun pada artikel-artikel/induk-induk yang mereka miliki sendiri (dan memungkinkan untuk merubah induknya).</td>
+<td align="left">attachments.delete.ownparent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="default-permissions">Perijinan Standar</h2>
+<p>Ketika ekstensi Attachments dipasang, sekaligus juga memasang perijinan dasar ini:</p>
+<p>Bila anda menginginkan standar-standar yang berbeda, anda perlu untuk merubah perijinan menggunakan tab &quot;Perijinan&quot; pada Opsi Attachments.</p>
+<h2 id="permissions-settings-for-common-scenarios">Pengaturan Perijinan pada Beberapa Skenario</h2>
+<p>Disini adalah beberapa saran mengenai bagaimana mengatur perijinan untuk diterapkan pada kebiasaan yang diinginkan:</p>
+<ul>
+<li><p><strong>Skenario 1 - Penulis-penulis bisa menerbitkan Lampiran-lampiran milik mereka sendiri</strong></p>
+<ul>
+<li><p>Dalam opsi-opsi perijinan, klik pada antrian 'Penulis'. Temukan baris 'Ubah Status Lampiran-lampiran Sendiri' dan atur menjadi 'Diijinkan' dan klik pada 'Simpan' untuk memastikan perubahan.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Skenario 2 - Penulis-penulis bisa ubah/hapus lampiran-lampiran yang mereka miliki tapi tidak untuk orang lain</strong></p>
+<ul>
+<li><p>Dalam opsi-opsi perijinan, klik pada antrian 'penulis'. Temukan 'Ubah Status Lampiran-lampiran Untuk Artikel/Induk Yang Dimiliki' dan 'Hapus Lampiran-lampiran Untuk Artikel/Induk Yang Dimiliki' kemudian atur keduanya menjadi 'Dilarang'. Klik pada 'Simpan' untuk memastikan perubahan.</p>
+
+<p>Ketika Penulis masih memiliki ijin untuk ubah/hapus lampiran-lampiran yang mereka miliki hal ini secara efektif mencegah dari perubahab/penghapusan lampiran-lampiran yang tidak mereka buat, meskipun mereka bisa merubah artikel.</p>
+<p>Harap diingat bahwa semua kelompok-kelompok pengguna yang bukan dari Penulis (misal, Pengubah, Penerbit, dsb) juga akan dilarang untuk merubah atau menghapus lampiran-lampiran pada artikel-artikel/induk-induk yang tidak mereka buat (dari perijinan ini). Untungnya, mereka pada umumnya mempunyai tingkat perijinan yang lebih tinggi 'Ubah Lampiran-lampiran' dan 'Hapus Lampiran-lampiran' yang berarti bahwa mereka bisa merubah atau menghapus lampiran-lampiran manapun pada artikel yang bisa mereka ubah (diasumsikan perijinan mereka masih belum dirubah).</p></li>
+</ul>
+</li>
+</ul>
+<p>Bila anda mempunyai skenario-skenario yang anda rasa harus didokumentasikan, anda bisa dengan bebas menghubungi saya jadi saya bisa melakukan update pada dokumentasi ini (lihat pada bagian akhir dari halaman ini untuk informasi kontak).</p>
+<h2 id="other-notes-on-permissions">Hal Lain Yang Perlu Diingat Pada Perijinan</h2>
+<ul>
+<li>Bila pengguna mempunyai perijinan untuk merubah status dari lampiran-lampiran mereka, mereka akan melihat opsi 'Terbit: Ya/Tidak' pada formulir untuk menambahkan atau merubah lampiran-lampiran. Bila mereka memilih 'Tidak' dan menyimpan lampiran, lampiran masih akan tetap terlihat oleh mereka dalam depan situs (ketika mereka sudah log-in). Tidak ada orang lain yang akan bisa melihat lampiran-lampiran yang tak diterbitkan pada halaman depan situs. Bila pengguna menginginkan untuk merubah status Penerbitan, mereka bisa merubah lampiran (meskipun itu disamarkan) dan mengganti statusnya.</li>
+</ul>
+<h1 id="access-levels-visibility-control">Kendali Tingkat Akses Melihat</h1>
+<p>Ekstensi Attachments pada saat ini mendukung 'Tingkat Akses' Joomla. Setiap lampiran bisa diletakkan pada tingkat-tingkat akses tertentu seperti 'Publik', 'Terdaftar', dan 'Spesial', sama seperti tingkat-tingkat akses yang lainnya yang dibuat pada situs anda. Dua tingkat-tingkat dasar diantaranya adalah:</p>
+<ul>
+<li><p><strong>'Publik'</strong> - Siapapun yang mengunjungi situs web akan bisa melihat dan mengunduh lampiran-lampiran dengan 'tingkat akses' yang diatur dengan 'Publik' bila artikel/induk bisa dilihat dan bila tidak ada pengaturan penampilan Attachments yang lain yang mencegah agar terlihat.</p></li>
+<li><p><strong>'Terdaftar'</strong> - Siapapun yang sudah log-in pada situs web akan bisa melihat dan mengunduh lampiran-lampiran dengan 'tingkat akses' yang diatur dengan 'Terdaftar' bila artikel/induk bisa dilihat dan bila tidak ada pengaturan penampilan Attachments yang lain yang mencegah agar terlihat.</p></li>
+</ul>
+<p>Pengaruh dari tingkat-tingkat akses bergantung pada kelompok-kelompok yang terkait dengan tingkat aksesnya.</p>
+<p>Kemampuan untuk mengatur 'Tingkat Akses' pada tiap-tiap lampiran-lampiran memberikan kendali pada siapa saja yang bisa melihat  dan mengunduh lampiran-lampiran.</p>
+<h1 id="display-filename-or-url">Tampilkan Nama Berkas atau URL</h1>
+<p>Umumnya, ketika berkas-berkas diunggah (atau URL-URL dipasang) dan terdaftar dalam daftar lampiran-lampiran, Nama penuh sebuah berkas (atau URL) ditampilkan sebagai tautan untuk mengunduh lampiran itu. Dalam beberapa kasus, nama berkas (atau URL) mungkin terlalu panjang untuknya agar bekerja secara baik. Dalam formulir unggahan, Disana terdapat isian yang lain yang disebut &quot;Tampilkan Nama berkas atau URL&quot; dimana bila seseorang mengunggah berkas bisa menyisipkan nama berkas (atau URL) alternatif atau label/tanda untuk menampilkannya dari pada menampilkan nama berkas (atau URL) secara penuh. Untuk mengaitkannya, beberapa nama berkas yang bersangkutan harus di tambahkan pada kolom isian ini. Isian bisa diubah dalam halaman administrator ketika lampiran-lampiran diubah. Catatan: Disana terdapat opsi yang disebut &quot;Panjang Maksimal Nama Berkas atau URL&quot; di dalam opsi-opsi ekstensi 'Attachments'. Itu bisa diatur untuk secara otomatis memangkas tampilan nama-nama berkas yang diunggah; hasil dari nama berkas yang dipangkas akan disisipkan kedalam kolom isian &quot;Tampilkan Nama Berkas atau URL&quot;.</p>
+<h1 id="attaching-urls">Melampirkan URL-URL</h1>
+<p>Selain berkas-berkas, 'Attachments' versi 3.0 mempunyai kemampuan untuk &quot;melampirkan&quot; URL-URL pada item-item konten. Saat anda memberi satu pada kotak dialog &quot;Tambah Lampiran&quot;, anda akan melihat tombol yang berlabel &quot;Masukkan URL diantaranya&quot;. Bila anda menekannya anda akan mendapatkan antrian kolom isian untuk URL dan melihat dua opsi:</p>
+<ul>
+<li><dl>
+<dt><strong>Periksa keberadaan URL?</strong> - Untuk maksud lebih menekankan tipe berkas pada </dt>
+<dd><p>URL (untuk mengambil ikon yang lebih tepat), kode yang meminta server pada informasi dasar mengenai berkas termasuk tipe berkas dan ukurannya. Dalam beberapa kasus, server tidak akan merespon permintaan ini meskipun URL sudah valid. Standarnya, Attachments tidak akan menerima URL-URL yang belum divalidasi oleh server. Tapi bila anda mengetahui bahwa URL sebenarnya sudah valid, anda bisa tidak mencentang opsi ini dan memaksakan ekstensi 'Attachments' agar mengambil URL--tapi tidak ada garansi kalau tipe berkas atau ukuran berkas akan tepat. Harap diingat bahwa server akan diminta meskipun opsi ini dipilih atau tidak.</p>
+</dd>
+</dl></li>
+<li><dl>
+<dt><strong>URL relatif?</strong> - Umumnya anda akan memasukkan URL-URL yang diawali dengan 'http...' yang</dt>
+<dd><p>menandakan URL situs web secara penuh. Bila anda menginginkan untuk menitikkan pada berkas-berkas/perintah-perintah pada pemasangan Joomla, gunakan opsi 'relatif'.</p>
+</dd>
+</dl></li>
+</ul>
+<p>URL-URL ditampilkan dengan ikon tipe berkas yang disertai tanda panah (menandakan bahwa itu adalah link yang bagus) atau slash diagonal merah (menandakan bahwa itu tidak bisa divalidasi). Saat anda merubah URL, anda bisa merubah apakah tautan ini valid atau tidak sesuai dengan keinginan anda. Juga harap diingat bahwa URL yang membayangi bisa dinonaktifkan sepenuhnya menggunakan batasan utama <strong>Superimpose ikon-ikon tautan URL</strong>. Disana terdapat beberapa perintah-perintah yang sangat berguna yang berkaitan dengan URL-URL (dan berkas-berkas) dalam perintah &quot;Peralatan&quot; dihalaman administrator.</p>
+<h1 id="what-can-files-be-attached-to">Berkas-berkas Apa Saja Yang Bisa Dilampirkan?</h1>
+<p>Selain melampirkan berkas-berkas atau URL-URL pada artikel-artikel, dengan ekstensi Attachments memungkinkan untuk melampirkan berkas-berkas atau URL-URL kepada item-item konten yang lain seperti halnya pada kategori-kategori (lihat dibawah). Bila pengaya-pengaya yang terkait sudah dipasang, hal itu juga memungkinkan untuk melampirkan berkas-berkas atau URL-URL pada bermacam-macam item-item konten seperti pada profil pengguna, deskripsi produk cart belanja, dsb. Pada dasarnya item konten apapun yang ditampilkan di halaman depan situs dan yang menggunakan event konten <code>'onPrepareContent'</code> bisa menjadi host dari lampiran-lampiran (bila pengaya-pengaya yang sesuai sudah dipasang). Item-item konten yang dipengaruhi oleh event konten yang biasanya item-item yang mempunyai konten yang akan ditampilkan (seperti artikel) atau mempunyai deskripsi-deskripsi yang akan ditampilkan.</p>
+<h2 id="attaching-files-or-urls-to-category-descriptions">Melampirkan Berkas-berkas atau URL-URL pada Deskripsi Kategori</h2>
+<p>Dengan versi Attachments ini, pengguna-pengguna bisa melampirkan berkas-berkas pada deskripsi dari Kategori. Deskripsi ini umumnya hanya terlihat pada halaman Blog Kategori. Lampiran-lampiran bisa ditambahkan pada deskripsi Kategori dalam editor Kategori.</p>
+<p>Bila anda berkeinginan untuk mempelajari lebih jelas mengenai pengembangan pengaya Attachments baru, terdapat petunjuk yang disertakan dalam satu bagian dengan instalasi 'Attachments' ini:</p>
+<ul>
+<li><a href="plugin_manual/html/index.html">Petunjuk Pembuatan Pengaya Attachments</a></li>
+</ul>
+<h1 id="css-styling-of-attachment-lists">Gaya CSS Daftar-daftar Lampiran</h1>
+<p>Daftar-daftar dari lampiran-lampiran di halaman depan situs bisa diselesaikan menggunakan 'div' spesial yang mengandung tabel untuk lampiran-lampiran. Tabel mempunyai beberapa perbedaan dalam kaitannya dengan class pada CSS yang memberikan pengembang situs web fleksibilitas untuk kostumisasi tabel yang ada. Lihat pada berkas CSS pengaya Attachments (di plugins/content/attachments.css) sebagai contohnya. Bila anda ingin mengganti gaya CSS-nya, pertimbangkan untuk menyalin gaya CSS yang asli dan memberi nama 'attachmentsList' pada bagian yang disalin sesuai dengan keinginan anda. Ubah batasan (parameter) 'Attachments' (dalam pengelolah komponen) dan ganti parameter <em>gaya tabel attachments</em> dengan nama class yang baru. Kemudian modifikasi definisi class yang sesuai pada bagian yang disalin. Dengan begitu anda dengan sangat cepat menggunakan gaya CSS yang asli dengan cara mengganti parameter pengaya <em>gaya tabel attachments</em> kembali pada standarnya, 'attachmentsList'. Hal ini juga mempunyai keuntungan pada saat gaya CSS yang telah dimodifikasi bisa disalin pada berkas dan sangat mudah mengembalikannya bila versi 'Attachments' diupgrade. Hal ini juga bisa diselesaikan melalui perintah CSS @import.</p>
+<h1 id="file-type-icons">Ikon-ikon Tipe Berkas</h1>
+<p>Ekstensi 'Attachments' menambahkan ikon di halaman depan situs pada setiap lampiran dalam daftar lampiran-lampiran. Bila anda ingin menambah ikon tipe baru, ikuti langkah berikut:</p>
+<ol style="list-style-type: decimal">
+<li><p>Tambah ikon yang anda inginkan kedalam direktori 'media/attachments/icons', bila ikon tersebut belum ada didalamnya;</p></li>
+<li><p>Ubah berkas 'components/com_attachments/file_types.php' dan tambahkan sesuai dengan baris pada array statis $attachments_icon_from_file_extension yang akan memetakan ekstensi berkas dengan nama ikon (semua berada dalam direktori media/attachments/icons). Bila hal ini tidak bekerja, mungkin anda perlu untuk menambahkan pada baris terkait pada array $attachments_icon_from_mime_type.</p></li>
+<li><p>Jangan lupa untuk membuat salinan berkas ikon dan file_types.php yang elah diupdate ke direktori diluar direktori situs web sebelum mengupgrade versi 'Attachments' dimasa mendatang.</p></li>
+</ol>
+<h1 id="administrative-utility-commands">Perintah Sarana Administratif</h1>
+<p>Terdapat beberapa sarana perintah-perintah di halaman administrator yang disediakan untuk Administrator. Sebagai berikut:</p>
+<ul>
+<li><p><strong>Non-aktifkan Pencabutan pada Tabel Attachments MySQL:</strong> Umumnya, saat ekstensi dicabut, tabel database yang berisi informasi mengenai lampiran-lampiran juga dihapus. Bila anda ingin menyimpan data ini saat proses pencabutan Attachments, eksekusi perintah ini. Setelah anda mencabut tabel Attachments maka tabel lampiran-lampiran masih ada atau tidak terhapus.</p></li>
+<li><p><strong>Pasang Ulang Standar Aturan-aturan atau Perijinan Attachments:</strong> Saat ekstensi Attachments extension dipasang, pemasang menambahkan aset aturan standar jadi perijinan kostumisasi ditambahkan dalam ekstensi Attachments sesuai dengan kebiasaan secara logis dan sama dengan perijinan standar. Bila anda melakukan pemasangan ulang atau update Joomla, aset aturan ini mungkin akan hilang. Anda bisa mengembalikan seperti pada keadaan semula dengan mengeksekusi perintah ini.</p></li>
+<li><p><strong>Regenerasi sistem nama-nama berkas lampiran:</strong> Perintah ini sangat berguna ketika anda memindahkan (migrasi) lampiran-lampiran anda dari satu komputer ke komputer lain. path penuh setiap berkas lampiran masih tetap dalam database dan disebut &quot;sistem nama berkas&quot;. Bila anda memindahkan lampiran-lampiran dari satu sistem ke sistem lain, sepertinya informasi path akan menjadi tidak tepat. Anda bisa mengeksekusi perintah ini untuk meregenerasi semua sistem nama-nama berkas untuk semua berkas lampiran-lampiran.</p>
+<p>Sarana perintah pada &quot;Regenerasi sistem nama-nama berkas&quot; bekerja untuk migrasi dari server windows ke Linux. Juga bekerja untuk migrasi dari server Linux ke windows yang berpotensi bermasalah:</p>
+<ul>
+<li><p>Saat anda menyalin berkas-berkas pada server windows anda, anda perlu memastikan bahwa direktori lampiran-lampiran (biasanya 'attachments') dan semua berkas-berkas yang ada didalamnya writable oleh server web Joomla.</p></li>
+<li><p>Anda bisa mempunyai masalah dengan berkas-berkas yang mempunyai karakter-karakter Unicode dalam nama berkas karena software arsip mempunyai masalah dengan nama berkas Unicode (di sisi Windows). Anda mungkin perlu untuk menyimpan berkas-berkas tersebut, menghapus lampiran-lampiran terkait, dan melampirkan ulang mereka.</p></li>
+</ul>
+</li>
+<li><p><strong>Singkirkan spasi dari nama berkas:</strong> Anda mungkin mengeksekusi perintah ini untuk mengganti semua spasi dengan garis bawah dalam nama berkas untuk semua berkas lampiran-lampiran. Hal ini mungkin diperlukan pada beberapa sistem. Dalam mode 'Aman', Hal ini tidak diperlukan.</p></li>
+<li><p><strong>Update ukuran berkas lampiran:</strong> Perintah ini akan menghitung ulang ukuran-ukuran berkas pada semua berkas-berkas lampiran.</p></li>
+<li><p><strong>Periksa keberadaan berkas-berkas lampiran:</strong> Perintah ini digunakan untuk memastikan bahwa berkas memang benar-benar ada untuk semua berkas lampiran-lampiran. Berkas-berkas yang hilang akan didaftarkan.</p></li>
+<li><p><strong>Validasi URL:</strong> lampiran-lampiran URL mempunyai informasi mengenai validitas URL yang diberikan. Perintah ini akan memastikan setiap lampiran URL dan memastikan validitas URL dan mengupdate informasi validitas pada lampiran.</p></li>
+</ul>
+<h1 id="warnings">Peringatan</h1>
+<ul>
+<li><p><strong>Bila anda mempunyai berkas-berkas yang sensitif atau pribadi, gunakan opsi <em>Amankan unduhan lampiran</em>!</strong> Bila anda tidak menggunakan opsi aman, berkas-berkas lampiran yang disimpan dalam sub-direktori publik bisa diakses oleh siapa saja yang mengetahui URL penuhnya. Opsi <em>aman</em> mencegah akses oleh siapa saja yang tidak mempunyai perijinan (seperti yang telah dijelaskan diatas). Lihat diskusi pada opsi <em>Amankan unduhan lampiran</em> diatas untuk lebih jelasnya.</p></li>
+<li><p>Setiap kali berkas diunggah, keberadaan dari sub-direktori unggah diperiksa dan akan dibuat bila tidak ada. Oleh standar sub-directori untuk unggahan berkas-berkas adalah 'attachments' dalam directori root dari berkas-berkas situs web anda. nama dari sub-direktori bisa diganti menggunakan opsi 'Sub-directori untuk unggahan'. Bila ekstensi 'Attachments' tidak bisa membuat sub-directori untuk unggahan, anda harus membuatnya sendiri (dan anda mungkin akan mendapatkan masalah saat proses pengunggahan berkas). Pastikan untuk memberikan sub-direktori perijinan yang sesuai untuk pengunggahan berkas. Di dunia Unix/Linux, sesuatu seperti 775. Harap diingat proses pembuatan sub-direktori unggahan bisa gagal bila direktori tingkat atas dari situs web anda mempunyai perijinan yang mencegah server web (dan PHP) untuk membuat sub-directori. Anda mungkin perlu untuk menghilangkan prijinan sementara untuk mengijinkan pembuatan sub-direktori untuk pengunggahan lampiran-lampiran.</p></li>
+<li><p>Bila ekstensi ini tidak mengijinkan anda untuk menunggah tipe berkas yang ditentukan (seperti berkas zip), berhati-hatilan bahwa ekstensi menghormati pelarangan yang diletakkan oleh Pengelolah Media pada tipe-tipe berkas yang diijinkan untuk diunggah. Hal ini untuk mencegah mengunggah tipe-tipe berkas yang berpotensi merusak seperti berkas html atau php. Administrator bisa mengupdate pengaturan Pengelola Media untuk menambahkan tipe berkas tertentu pada item &quot;Pengaturan Global&quot; dibawah menu &quot;Situs&quot;, pilih tab &quot;Sistem&quot;, dan tambahkan ekstensi berkas tersebut dalam huruf besar dan huruf kecil dan tipe MIME pada daftar dibawah bagian &quot;Pengelolah Media&quot;.</p></li>
+<li><p>Bila anda tidak dapat melihat lampiran-lampiran di halaman depan situs, terdapat beberapa kemungkinan alasan:</p>
+<ul>
+<li>Lampiran tidak diterbitkan. Anda bisa menggantinya pada halaman Pengelolah Attachments di halaman administrator.</li>
+<li>Induk artikel atau item konten tidak diterbitkan.</li>
+<li>Opsi 'Siapa bisa melihat lampiran-lampiran' diatur pada 'log-in' anda tidak log-in di halaman depan situs</li>
+<li>Atau opsi 'Siapa bisa melihat lampiran-lampiran' diatur pada 'tak seorangpun'. Hal ini bisa diganti melalui Parameter editor dalam pengelolah komponen.</li>
+<li>Pengaya 'Konten - Attachments' tidak aktif. Gunakan pengelolah pengaya untuk mengaktifkannya.</li>
+<li>Dalam 'Konten - Attachments' (melalui pengelolah pengaya), tingkat akses tidak diatur pada 'Publik'.</li>
+<li>Bila situs anda menggunakan cache, coba bersihkan cache dan segarkan halaman.</li>
+</ul>
+</li>
+<li><p>Bila anda menemukan batasan pada ukuran berkas yang akan diunggah, coba tambahkan pada baris dalam berkas .htaccess pada root situs Joomla! anda:</p>
+<pre><code>php_value upload_max_filesize 32M
+php_value post_max_size 32M
+</code></pre>
+<p>dimana anda bisa mengganti nilainya 32M (megabytes) menjadi berapapun sesuaikan dengan keinginan anda untuk ukuran maksimal berkas yang akakn diunggah.</p></li>
+<li><p>'Attachments' sekarang mendukung &quot;melampirkan&quot; URL-URL pada item-item konten. Bila server anda adalah Windows Vista dan anda menemui masalah dalam melampirkan URL yang berkaitan dengan <code>localhost</code>, Hal ini adalah masalah yang sudah diketahui terkait konflik dengan IPv4 dan IPv6. Untuk memperbaikinya, ubah <a href="file:">file:</a>:</p>
+<blockquote>
+<p>C:WindowsSystem32driversetchosts</p>
+</blockquote>
+<p>Beri tanda komentar baris yang mempunyai <code>::1</code>. Harap diingat bahwa <code>hosts</code> adalah berkas sistem tersembunyi dan anda mungkin perlu untuk memodifikasi opsi folder untuk menampilkan berkas-berkas yang tersembunyi dan mengubahnya.</p></li>
+<li><p>Bila anda mendapatkan kesulitan melampirkan berkas-berkas yang mempunyai karakter-karakter Unicode (misalnya karakter-karakter Russian/Cyrillic), atur opsi <em>Amankan Unduhan Lampiran</em> pada 'Ya'. Nama-nama berkas dengan karakter Unicode seharusnya bekerja dengan baik pada server Linux dalam mode aman ataupun non-aman, tapi tidak selalu bekerja dengan baik pada server Windows dalam mode non-aman.</p></li>
+<li><p>'Attachments' sekarang mendukung pelampiran berkas-berkas pada artikel-artikel saat mereka sedang dibuat dalam Editor Artikel. Ada satu batasan untuk ini. lampiran-lampiran baru berada dalam status &quot;limbo&quot; setelah berkas diunggah dan sebelum artikel benar-benar disimpan untuk pertama kalinya. Bersamaan dengan (semoga hanya sebentar) masa-masa limbo ini, lampiran-lampiran baru hanya akan dikenali dengan id pengguna saja. Jadi bila lebih dari satu orang menggunakan akun pengguna yang sama dan mereka membuat artikel-artikel pada waktu yang sama dan menambahkan lampiran-lampiran pada waktu yang sama, maka tidak ada jaminan kalau berkas-berkas yang dilampirkan akan berakhir pada artikel yang benar.</p></li>
+<li><p>Disana terdapat forum bantuan dan 'Pertanyaan Sering Dilontarkan' forum untuk ekstensi 'Attachments' yang ditempatkan di situs web joomlacode.org. Bila anda menemui permasalahan yang tidak ada dalam halaman bantuan ini, silahkan konsultasikan pada forum:</p>
+<ul>
+<li><a href="http://joomlacode.org/gf/project/attachments3/forum/">Forum Attachments di (http://joomlacode.org/gf/project/attachments3/forum)</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="upgrading">Upgrade</h1>
+<p>Upgrade sangatlah mudah. Anda mempunyai dua pilihan:</p>
+<ol style="list-style-type: decimal">
+<li><p>Hanya pasang versi terbaru dari 'Attachments'. Hal ini tidak diperlukan untuk mencabut versi yang sebelumnya. Anda tidak perlu melakukan apa-apa untuk membiarkan lampiran-lampiran anda yang lama. Hanya memasang versi terbaru dan akan mengupdate semua yang berkaitan.</p></li>
+<li><p>PREFRERRED: Salah satu fitur baru yang sangatt bagus dalam Joomla 1.6 dan selanjutnya adalah ekstensi peng-update. Pergi ke Pengelolah Ekstensi di halaman administrator dan klik pada tab 'Update'. Klik 'Purge Cache' dan kemudian 'Cari Update' pada toolbar. Bila terdapat rilis Attachments terbaru, maka akan terlihat. Anda bisa memilih relisnya dan kemudian klik pada tombol 'Update' pada toolbar untuk memasang rilis baru. Hal ini akan tetap membuat ekstensi Attachments diupdate dengan sangat mudah!</p></li>
+</ol>
+<h1 id="uninstalling">Pencabutan</h1>
+<ul>
+<li><p>Untuk mencabut ekstensi Attachments, pergi ke tab 'Kelolah' pada halaman Pengelolah Ekstensi (dibawah menu 'Ekstensi'). <strong>Pilih HANYA item</strong>:</p>
+<pre><code>Paket: Attachments untuk Joomla 1.6+
+</code></pre>
+<p>dan klik pada tombol 'Cabut' pada toolbar. Hal ini akan mencabut komponen Attachments dan semua pengaya-pengaya yang berkaitan.</p></li>
+<li><p>Bila anda ingin menyimpan lampiran-lampiran, buat salinan direktori 'attachments' pada root instalasi Joomla dan salin tabel '_attachments' dalam database. Bila anda bermaksud untuk memasangnya lagi nanti, lihat perintah <strong>Non-aktifkan pencabutan Tabel Attachments MySQL</strong> dalam `Perintah-perintah Sarana Administratif`_ untuk mencegah tabel database lampiran-lampiran agar tidak terhapus pada saat pencabutan ekstensi Attachments.</p></li>
+<li><p>Bila anda tidak menginginkan adanya lampiran-lampiran, hapus mereka terlebih dahulu (dalam halaman administrator). Setelah anda mencabut (uninstall) ekstensi Attachments, hapus direktori 'attachments' pada root instalasi Joomla anda.</p></li>
+</ul>
+<h1 id="migration-attachments-from-joomla-1.5-to-joomla-1.6">Migrasi Attachments dari Joomla 1.5 ke Joomla 1.6+</h1>
+<p>Untuk migrasi Attachments anda dari situs Joomla 1.5 ke situs Joomla 1.6 (atau selanjutnya), ikuti sesuai dengan prosedur dibawah ini:</p>
+<ul>
+<li><a href="http://jmcameron.net/attachments/migration/">Migrasi Attachments dari Joomla 1.5 ke Joomla 1.6+</a></li>
+</ul>
+<h1 id="translations">Terjemahan</h1>
+<p>Ekstensi ini menyediakan kapabilitas terjemahan dan mendukung bahasa-bahasa di bawah ini (kecuali Bahasa Inggris). Harap di ingat bahwa beberapa paket bahasa-bahasa ini masih dalam tahap sedang di update untuk 'Attachments' versi 3.0 dan masih belum tersedia untuk Attachments 3.0.</p>
+<p>Terima kasih pada penterjemah-penterjemah ini (versi-versi yang tersedia ditunjukkan dalam tanda kurung):</p>
+<ul>
+<li><strong>Bulgarian:</strong> by Stefan Ilivanov (1.3.4)</li>
+<li><strong>Catalan:</strong> by Jaume Jorba (2.2)</li>
+<li><strong>Chinese:</strong> Traditional and simplified Chinese translations by baijianpeng (白建鹏) (1.3.4)</li>
+<li><strong>Croatian:</strong> Tanja Dragisic (1.3.4)</li>
+<li><strong>Czech:</strong> by Tomas Udrzal (1.3.4)</li>
+<li><strong>Dutch:</strong> by Parvus (2.2)</li>
+<li><strong>Finnish:</strong> by Tapani Lehtonen (2.2)</li>
+<li><strong>French:</strong> by Marc-André Ladouceur (2.2) and Pascal Adalian (1.3.4)</li>
+<li><strong>German:</strong> by Bernhard Alois Gassner (2.2) Michael Scherer (1.3.4)</li>
+<li><strong>Greek:</strong> by Harry Nakos (1.3.4)</li>
+<li><strong>Hungarian:</strong> Formal and informal translations by Szabolcs Gáspár (1.3.4)</li>
+<li><strong>Italian:</strong> by Piero Mattirolo (2.2) and Lemminkainen and Alessandro Bianchi (1.3.4)</li>
+<li><strong>Norwegian:</strong> by Roar Jystad (2.2) and Espen Gjelsvik (1.3.4)</li>
+<li><strong>Persian:</strong> by Hossein Moradgholi and Mahmood Amintoosi (2.2)</li>
+<li><strong>Polish:</strong> by Sebastian Konieczny (2.2) and Piotr Wójcik (1.3.4)</li>
+<li><strong>Portuguese (Brazilian):</strong> by Arnaldo Giacomitti and Cauan Cabral (1.3.4)</li>
+<li><strong>Portuguese (Portugal):</strong> by José Paulo Tavares (2.2) and Bruno Moreira (1.3.4)</li>
+<li><strong>Romanian:</strong> by Alex Cojocaru (2.2)</li>
+<li><strong>Russian:</strong> by Sergey Litvintsev (2.2) and евгений панчев (Yarik Sharoiko) (1.3.4)</li>
+<li><strong>Serbian:</strong> by Vlada Jerkovic (1.3.4)</li>
+<li><strong>Slovak:</strong> by Miroslav Bystriansky (1.3.4)</li>
+<li><strong>Slovenian:</strong> by Matej Badalič (2.2)</li>
+<li><strong>Spanish:</strong> by Manuel María Pérez Ayala (2.2) and Carlos Alfaro (1.3.4)</li>
+<li><strong>Swedish:</strong> by Linda Maltanski (2.0) and Mats Elfström (1.3.4)</li>
+<li><strong>Turkish:</strong> by Kaya Zeren (2.0)</li>
+</ul>
+<p>Terima kasih banyak kepada penterjemah-penterjemah ini! Bila anda berminat untuk membantu menterjemahkannya kedalam bahasa yang lain, silahkan menghubungi penulis (lihat `Contact`_ pada bagian akhir).</p>
+<h1 id="acknowledgments">Acknowledgments</h1>
+<p>Terima kasih banyak untuk kontributor atas sumber-sumbernya:</p>
+<ul>
+<li><p>Buku <em>Learning Joomla! 1.5 Extension Development: Creating Modules, Components, and Plugins with PHP</em> by Joseph L. LeBlanc yang sangat banyak membantu dalam pembuatan ekstensi 'Attachments'.</p></li>
+<li><dl>
+<dt>Ikon-ikon untuk tipe-tipe berkas diterima dari berbagai sumber, termasuk:</dt>
+<dd><ul>
+<li><a href="http://www.famfamfam.com/lab/icons/silk/">The Silk icons by Mark James (http://www.famfamfam.com/lab/icons/silk/)</a></li>
+<li><a href="http://www.zap.org.au/documents/icons/file-icons/sample.html">File-Type Icons 1.2 by John Zaitseff (http://www.zap.org.au/documents/icons/file-icons/sample.html)</a></li>
+<li><a href="http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html">Doctype Icons 2 by Timothy Groves (http://www.brandspankingnew.net/archive/2006/06/doctype_icons_2.html)</a></li>
+<li><a href="http://eis.bris.ac.uk/~cckhrb/webdev/">OpenDocument icons by Ken Baron (http://eis.bris.ac.uk/~cckhrb/webdev/)</a></li>
+<li><a href="http://sweetie.sublink.ca">Sweeties Base Pack by Joseph North (http://sweetie.sublink.ca</a></li>
+</ul>
+</dd>
+</dl>
+<p>Harap diingat bahwa banyak sekali ikon-ikon 'Attachments' yang dimodifikasi dari gambar-gambar ikon yang asli dari situs web ini. Bila anda menginginkan versi yang asli, silahkan mengunduhnya dari situs-situs web yang terdaftar di atas.</p></li>
+<li><p>Terima kasih banyak kepada Paul McDermott yang dengan baik hati mendonasikan pengaya pencarian!</p></li>
+<li><p>Terima kasih kepada Mohammad Samini yang telah mendonasikan beberapa kode PHP dan berkas-berkas CSS untuk improvisasi penampilan 'Attachments' kedalam alur bahasa kanan-ke-kiri (RTL).</p></li>
+<li><p>Terima kasih kepada Ewout Weirda untuk diskusi-diskusinya yang sangat banyak membantu dan saran-sarannya dalam pengembangan ekstensi 'Attachments'.</p></li>
+</ul>
+<h1 id="contact">Contact</h1>
+<p>Silahkan melaporkan kritik saran dan bug ke <a href="mailto:jmcameron@jmcameron.net">jmcameron@jmcameron.net</a></p>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: October 1, 2011.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Install these language packs with the regular Joomla installer.  
+
+Do not unzip the files manually to install them!
