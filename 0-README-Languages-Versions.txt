@@ -28,7 +28,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Norwegian-nb-NO-language-pack-3.2.0.zip
          - Status: Complete
 	 - Thanks to Roar Rystad
-   * Added: attachments-Portugese-pt-PT-language-pack-3.2.0.zip
+   * Added: attachments-Portuguese-pt-PT-language-pack-3.2.0.zip
          - Status: Complete (help file not translated)
 	 - Thanks to Paulo Pereira
 
