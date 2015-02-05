@@ -25,6 +25,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Updated: attachments-Croatian-hr-HR-language-pack-3.2.0.zip
          - Status: Complete (help file not translated)
 	 - Thanks to Tanja Dragisic
+   * Updated: attachments-Norwegian-nb-NO-language-pack-3.2.0.zip
+         - Status: Complete
+	 - Thanks to Roar Rystad
 
 2014-10-17:
    * Added: attachments-Dutch-nl-NL-3.1.zip
@@ -95,6 +98,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from to 3.1
          - Status: Complete (including help file)
 	 - Thanks to Roar Jystad
+	 - 621 Downloads
    * Added: attachments-Romanian-ro-RO-language-pack-3.1.zip
          - Update from to 3.1
          - Status: Complete (help file untranslated)
