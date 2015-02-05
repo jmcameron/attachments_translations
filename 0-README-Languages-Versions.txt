@@ -21,14 +21,19 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2015-02-04:
+   * Updated: attachments-Croatian-hr-HR-language-pack-3.2.0.zip
+         - Status: Complete (help file not translated)
+	 - Thanks to Tanja Dragisic
+
 2014-10-17:
    * Added: attachments-Dutch-nl-NL-3.1.zip
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Parvus and Reinder Herder!
 
 2014-02-17:
    * Added: attachments-Bulgarian-bg-BG-3.1.zip
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Martin Hristov!
 
 2014-02-17:
@@ -51,34 +56,35 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 2013-07-23:
    * Added: attachments-Slovak-sk-SK-language-pack-3.1.zip
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Luboslav Moza!
 
 2013-06-09:
    * Added: attachments-Croatian-hr-HR-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Tanja Dragisic
+	 - 360 Downloads
    * Updated: attachments-Italian-it-IT-language-pack-3.1.1.zip
          - Fixed typo
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Piero Mattirolo
 	 - 160 Downloads
 
 2013-06-09:
    * Added: attachments-Italian-it-IT-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Piero Mattirolo
 
 2013-06-08:
    * Added: attachments-Catalan-ca-ES-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Jaume Jorba
    * Added: attachments-Danish-da-DK-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
 	 - Thanks to Sune Folkmann and Villy Feltmann
    * Added: attachments-German-de-DE-language-pack-3.1.zip
          - Update from to 3.1
@@ -91,7 +97,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 	 - Thanks to Roar Jystad
    * Added: attachments-Romanian-ro-RO-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
          - Thanks to Alex Cojocaru
    * Added: attachments-Russian-ru-RU-language-pack-3.1.zip
          - Update from to 3.1
@@ -99,7 +105,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Thanks to Sergey Litvintsev
    * Added: attachments-Slovenian-sl-SI-language-pack-3.1.zip
          - Update from to 3.1
-         - Status: Complete (help file in English)
+         - Status: Complete (help file untranslated)
          - Thanks to Matej Badalič
    * Added: attachments-Spanish-es-ES-language-pack-3.1.zip
          - Update from to 3.1
