@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.7" type="file" method="upgrade">
+<extension version="2.5" type="file" method="upgrade">
   <name>attachments_pt_pt_language_pack</name>
-  <version>3.0.1</version>
-  <creationDate>2011-09-09</creationDate>
-  <author>Jonathan M. Cameron, José Paulo Tavares (3.0, 2.2), earlier translations by Cauan Cabral and Miguel Real</author>
+  <version>3.2.0</version>
+  <creationDate>2015-02-04</creationDate>
+  <author>Paulo Pereira (3.2), José Paulo Tavares (3.0, 2.2), earlier translations 
+          by Cauan Cabral and Miguel Real, Jonathan M. Cameron</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
-  <authorUrl></authorUrl>
-  <copyright>Copyright (C) 2011 Jonathan M. Cameron. All rights reserved.</copyright>
+  <authorUrl>http://jmcameron.net/attachments</authorUrl>
+  <copyright>Copyright (C) 2011-2015 Jonathan M. Cameron. All rights reserved.</copyright>
   <license>GNU GPL 3: http://www.gnu.org/licenses/gpl-3.0.html</license>
   <description>ATTACHMENTS_PT_PT_LANGUAGE_PACK</description>
+  <scriptfile>install.php</scriptfile>
   <fileset>
 
     <!-- Admin component language folder -->
@@ -16,14 +18,6 @@
       <filename>index.html</filename>
       <filename>pt-PT.com_attachments.ini</filename>
       <filename>pt-PT.com_attachments.sys.ini</filename>
-    </files>
-
-    <!-- Admin component pt-PT language help folder -->
-    <files folder="attachments_component/admin/help/pt-PT" target="administrator/components/com_attachments/help/pt-PT">
-      <filename>help.css</filename>
-      <filename>help.html</filename>
-      <filename>index.html</filename>
-      <folder>images</folder>
     </files>
 
     <!-- Site component language folder -->
@@ -67,6 +61,13 @@
       <filename>pt-PT.plg_system_show_attachments.sys.ini</filename>
     </files>
 
+    <!-- Attachments quickicon plugin language files -->
+    <files folder="attachments_quickicon_plugin" target="plugins/quickicon/attachments/language/pt-PT">
+      <filename>index.html</filename>
+      <filename>pt-PT.plg_quickicon_attachments.ini</filename>
+      <filename>pt-PT.plg_quickicon_attachments.sys.ini</filename>
+    </files>
+
     <!-- Attachments attachments for content plugin language files -->
     <files folder="attachments_for_content" target="plugins/attachments/attachments_for_content/language/pt-PT">
       <filename>index.html</filename>
@@ -96,4 +97,3 @@
   </updateservers>
 
 </extension>
-
