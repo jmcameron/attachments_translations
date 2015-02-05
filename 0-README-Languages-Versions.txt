@@ -31,6 +31,9 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Added: attachments-Portuguese-pt-PT-language-pack-3.2.0.zip
          - Status: Complete (help file not translated)
 	 - Thanks to Paulo Pereira
+   * Updated: attachments-Romanian-ro-RO-language-pack-3.2.0.zip
+         - Status: Complete (help file untranslated)
+         - Thanks to Alex Cojocaru
 
 2014-10-17:
    * Added: attachments-Dutch-nl-NL-3.1.zip
@@ -106,6 +109,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from to 3.1
          - Status: Complete (help file untranslated)
          - Thanks to Alex Cojocaru
+	 - 366 Downloads
    * Added: attachments-Russian-ru-RU-language-pack-3.1.zip
          - Update from to 3.1
          - Status: Complete (including help file)
