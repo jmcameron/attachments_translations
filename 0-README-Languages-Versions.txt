@@ -21,6 +21,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2015-02-08:
+   * Updated: attachments-German-de-DE-language-pack-3.2.0.zip
+         - Status: Complete
+	 - Thanks to Rolf Pohl
+
 2015-02-07:
    * Updated: attachments-Spanish-es-ES-language-pack-3.2.0.zip
          - Status: Complete
@@ -63,6 +68,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Completed translation of help file by Rolf Pohl
          - Status: Complete
 	 - Thanks to Rolf Pohl!
+	 - 6638 Downloads
 
 2013-11-09:
    * Added: attachments-French-fr-FR-language-pack-3.1.zip
