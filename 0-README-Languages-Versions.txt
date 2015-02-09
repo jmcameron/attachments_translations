@@ -21,6 +21,12 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+
+2015-02-09:
+   * Updated: attachments-Dutch-nl-NL-language-pack-3.2.0.zip
+         - Status: Complete (help file not translated)
+	 - Fixed issue with ??? in listings of attachment file sizes
+
 2015-02-08:
    * Updated: attachments-German-de-DE-language-pack-3.2.0.zip
          - Status: Complete
@@ -52,6 +58,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
    * Added: attachments-Dutch-nl-NL-3.1.zip
          - Status: Complete (help file untranslated)
 	 - Thanks to Parvus and Reinder Herder!
+	 - 744 Downloads
 
 2014-02-17:
    * Added: attachments-Bulgarian-bg-BG-3.1.zip
