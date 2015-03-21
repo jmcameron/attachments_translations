@@ -22,6 +22,11 @@ NOTES:
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 
+2015-03-20:
+   * Updated: attachments-Russian-ru-RU-language-pack-3.2.0.zip
+         - Status: Complete
+	 - Thanks to Sergey Litvintsev
+
 2015-02-09:
    * Updated: attachments-Dutch-nl-NL-language-pack-3.2.0.zip
          - Status: Complete (help file not translated)
@@ -135,6 +140,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from to 3.1
          - Status: Complete (including help file)
          - Thanks to Sergey Litvintsev
+	 - 7630 Downloads
    * Added: attachments-Slovenian-sl-SI-language-pack-3.1.zip
          - Update from to 3.1
          - Status: Complete (help file untranslated)
