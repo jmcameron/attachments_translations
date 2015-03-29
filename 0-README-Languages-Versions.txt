@@ -6,6 +6,7 @@ INSTALL these files using the regular Joomla installer (no need to unzip manuall
 COMPATIBLITY:
 
    * Language packs starting with version 3.1 are for Attachments 3.1 
+     and versions starting with 3.2 are for Attachments 3.2.x
      for Joomla 2.5 or 3.x.
 
 NOTES: 
@@ -21,6 +22,11 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+
+2015-03-29:
+   * Added: attachments-Turkish-tr-TR-language-pack-3.2.0.zip
+         - Status: Complete (help file completed)
+         - Thanks to kaya Zeren
 
 2015-03-20:
    * Updated: attachments-Russian-ru-RU-language-pack-3.2.0.zip
@@ -162,6 +168,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
          - Update from to 3.1
          - Status: Complete (partially translated help file)
          - Thanks to kaya Zeren
+	 - 845 Downloads
    * Added: attachments-Ukrainian-uk-UA-language-pack-3.1.zip
          - Update from to 3.1
          - Status: Complete (partially translated help file)
