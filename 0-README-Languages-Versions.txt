@@ -24,7 +24,7 @@ EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
 
 2015-03-29:
-   * Added: attachments-Turkish-tr-TR-language-pack-3.2.0.zip
+   * Updated: attachments-Turkish-tr-TR-language-pack-3.2.0.zip
          - Status: Complete (help file completed)
          - Thanks to kaya Zeren
 
