@@ -25,7 +25,7 @@ purge:
 	@find . -name '*.bak' -exec rm {} \;
 
 fixquotes:
-	@find ${LANGUAGE} -type f -name '*.ini' -exec sed -i 's/"_QQ_"/&quot;/g' {} \;
+	@find ${LANGUAGE} -type f -name '*.ini' -exec sed -i 's/"_QQ_"/\&quot;/g' {} \;
 
 
 updateweb:
