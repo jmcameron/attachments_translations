@@ -30,7 +30,7 @@ fixquotes:
 
 updateweb:
 	@echo "Updating updates/translations on jmcameron.net..."
-	@ssh jmcameron.net "cd webapps/jmcameron/attachments/updates/translations; svn update"
+	@ssh jmcameron.net "cd webapps/jmcameron/attachments/updates/translations; git pull"
 
 
 TOOLSDIR = /home/jmcameron/src/attachments/translation-tools
