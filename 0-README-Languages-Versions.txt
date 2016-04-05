@@ -22,6 +22,10 @@ NOTES:
 
 EXTENSION AUTHOR: Jonathan Cameron - jmcameron@jmcameron.net
 
+2016-04-04:
+   * Added: attachments-Polish-pl-PL-language-pack-3.2.0.zip
+         - Status: Complete (help file not translated)
+	 - Thanks to Piotr Gręźlikowski for completing the translation
 
 2015-03-29:
    * Updated: attachments-Turkish-tr-TR-language-pack-3.2.0.zip
