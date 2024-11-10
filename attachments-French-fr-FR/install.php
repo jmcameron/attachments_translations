@@ -23,7 +23,7 @@ use JMCameron\Component\Attachments\Site\Helper\AttachmentsDefines;
  *
  * @package Attachments
  */
-class attachments_fr_fr_language_packInstallerScript 
+class attachments_language_packInstallerScript 
 {
 	/**
 	 * Attachments component preflight function
