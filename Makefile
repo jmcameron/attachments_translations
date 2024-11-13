@@ -1,5 +1,5 @@
 
-NAMES = French-fr-FR 
+NAMES ?= French-fr-FR 
 
 ZIPS = $(NAMES:=.zip)
 

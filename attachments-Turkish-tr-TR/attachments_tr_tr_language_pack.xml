@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="2.5" type="file" method="upgrade">
+<extension type="file" version="4.0" method="upgrade">
   <name>attachments_tr_tr_language_pack</name>
-  <version>3.2.0</version>
+  <version>4.0.4</version>
   <creationDate>2015-03-29</creationDate>
-  <author>Kaya Zeren, Jonathan M. Cameron</author>
+  <author>Kaya Zeren, Jonathan M. Cameron, McKillo</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>
   <copyright>Copyright (C) 2013-2015 Jonathan M. Cameron. All rights reserved.</copyright>
@@ -76,16 +76,13 @@
     </files>
 
     <!-- Attachments attachments plugin framework language files -->
-    <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/tr-TR">
+    <files folder="attachments_plugin_framework" target="plugins/attachments/framework/language/tr-TR">
       <filename>index.html</filename>
-      <filename>tr-TR.plg_attachments_attachments_plugin_framework.ini</filename>
-      <filename>tr-TR.plg_attachments_attachments_plugin_framework.sys.ini</filename>
+      <filename>tr-TR.plg_attachments_framework.ini</filename>
+      <filename>tr-TR.plg_attachments_framework.sys.ini</filename>
     </files>
 
     <!-- Languages for this set of files -->
-    <files folder="language/en-GB" target="language/en-GB">
-      <filename>en-GB.files_attachments_tr_tr_language_pack.sys.ini</filename>
-    </files>
     <files folder="language/tr-TR" target="language/tr-TR">
       <filename>tr-TR.files_attachments_tr_tr_language_pack.sys.ini</filename>
     </files>
