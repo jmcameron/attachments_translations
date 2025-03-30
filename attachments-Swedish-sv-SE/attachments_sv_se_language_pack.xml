@@ -81,7 +81,7 @@
     </files>
 
     <!-- Attachments attachments plugin framework language files -->
-    <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/sv-SE">
+    <files folder="attachments_plugin_framework" target="plugins/attachments/framework/language/sv-SE">
       <filename>index.html</filename>
       <filename>sv-SE.plg_attachments_framework.ini</filename>
       <filename>sv-SE.plg_attachments_framework.sys.ini</filename>
