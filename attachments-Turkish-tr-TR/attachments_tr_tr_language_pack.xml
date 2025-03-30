@@ -83,6 +83,11 @@
     </files>
 
     <!-- Languages for this set of files -->
+    <files folder="language/en-GB" target="language/en-GB">
+      <filename>en-GB.files_attachments_tr_tr_language_pack.sys.ini</filename>
+    </files>
+
+
     <files folder="language/tr-TR" target="language/tr-TR">
       <filename>tr-TR.files_attachments_tr_tr_language_pack.sys.ini</filename>
     </files>
