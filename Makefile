@@ -2,24 +2,24 @@
 NAMES ?= French-fr-FR 
 
 ZIPS = $(NAMES:=.zip)
+ZIPFILE = attachments-${NAMES}-language-pack${VNAME}.zip
+FIXSHA = $(NAMES:=.fixsha)
+VERSION ?= 4.0.4
 
-VERSION ?=
-ifdef VERSION
-	VNAME = -${VERSION}
-else
-	VNAME = ${VERSION}
-endif
+ZIPIGNORES = -x "*.svn/*" -x ".svnignore" -x ".directory" -x "*.xcf" -x "*admin/help*" -x update_pkg.xml
 
-ZIPIGNORES = -x "*.svn/*" -x ".svnignore" -x ".directory" -x "*.xcf" -x "*admin/help*"
-
-all: $(ZIPS)
+all: $(ZIPS) $(FIXSHA)
 
 %.zip:
 	@echo "-------------------------------------------------------"
 	@echo attachments-$*
 	@rm -f attachments-$@
-	@(cd attachments-$*; zip -r ../attachments-$*-language-pack${VNAME}.zip * $(ZIPIGNORES))
+	@(cd attachments-$*; zip -r ../attachments-$*-language-pack-${VERSION}.zip * $(ZIPIGNORES))
 
+
+%.fixsha:
+	@echo "Updating update xml files with checksums"
+	@(cd attachments-$*;../fixsha.sh ../attachments-$*-language-pack-${VERSION}.zip 'update_pkg.xml')
 
 purge:
 	@find . -name '*.bak' -exec rm {} \;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Attachments</name>
+		<description>Attachments</description>
+		<element>pkg_attachments</element>
+		<type>package</type>
+		<client>site</client>
+		<version>4.1.1</version>
+		<infourl title="Attachments">https://github.com/jmcameron/attachments_translations/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/Swedish-4.1.1/attachments-Swedish-sv-SE-language-pack-4.1.1.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>Stable</tag>
+		</tags>
+		<maintainer>Jonathan M. Cameron</maintainer>
+		<maintainerurl>https://github.com/jmcameron/attachments_translations</maintainerurl>
+		<php_minimum>8.0</php_minimum>
+		<targetplatform name="joomla" version="(4\.[01234]|5\.[0123])"/>
+		<sha256>AAF02C1ADAA4A77157208262C6FDD0287307E5589FCD98C8F10DDFEFF1DD7308</sha256>
+		<sha384>05AB4051D82DA56AD09DAEA99A7CDE791B8656CA0E38CA4762680E2417D6F00A9B338F6CE081C2922B2364FC74E21FF7</sha384>
+		<sha512>AA46BE389688EAB7789529F43E17BD711D4DE5EFEC692ECF987223B175F311332F33776FE98217DB0945F28EFFF77B8C291148B52821D829BFEB932C177B94ED</sha512>
+	</update>
+</updates>
