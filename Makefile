@@ -2,9 +2,8 @@
 NAMES ?= French-fr-FR 
 
 ZIPS = $(NAMES:=.zip)
-ZIPFILE = attachments-${NAMES}-language-pack${VNAME}.zip
 FIXSHA = $(NAMES:=.fixsha)
-VERSION ?= 4.0.4
+VERSION ?= 4.1.2
 
 ZIPIGNORES = -x "*.svn/*" -x ".svnignore" -x ".directory" -x "*.xcf" -x "*admin/help*" -x update_pkg.xml
 
