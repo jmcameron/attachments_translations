@@ -9,7 +9,7 @@
 		<version>4.1.2</version>
 		<infourl title="Attachments">https://github.com/jmcameron/attachments_translations/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/Polish-4.1.2/attachments-Polish-pl-PL-language-pack-4.1.2.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/Portuguese-Brazil-4.1.2/attachments-Portuguese-pt-BR-language-pack-4.1.2.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>Stable</tag>
@@ -18,8 +18,8 @@
 		<maintainerurl>https://github.com/jmcameron/attachments_translations</maintainerurl>
 		<php_minimum>8.0</php_minimum>
 		<targetplatform name="joomla" version="(4\.[01234]|5\.[0123])"/>
-		<sha256>03CF0A9679BBC06ACF3C617F14B04D6B70AFD966572D7FBE4FA864077065B551</sha256>
-		<sha384>71E28C95A0FA616D38A0B452F8817ACE61AE00A2C0F7B847E483CD0F2A2C4482A05DEC2143059C7D190F7131E6DFFA06</sha384>
-		<sha512>D1CC9B55D5DD95E5896735424353D7624B6F98671FFD9F6AD174225B76427234EEA8463132205B41354E658DFC6530582532EC939A882E97382FE9B985DF70FF</sha512>
+		<sha256>E37127AD7F5B914A7CBA2BD6647F09D9B86F9B7CF04CF8E36B2340434B09A8ED</sha256>
+		<sha384>485712C272B55C8CB8F06930DD1275C7C38A5C02B3451D8129BA497B9CD8A9E49C66630543EBE5A4FF59099B5B28E1F7</sha384>
+		<sha512>949364C1F55DB46636323FBE4AB181973822B7A65BEE845CA5ECC6CD63214D85EAC528A2211D26AA5FF4A7CA472BF9850879DA7812E67F08F130C89A90722722</sha512>
 	</update>
 </updates>
