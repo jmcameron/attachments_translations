@@ -53,6 +53,12 @@
       <filename>pt-BR.plg_editors-xtd_insert_attachments_token.sys.ini</filename>
    </files>
 
+    <!-- Attachments insert attachment token editor button language files -->
+    <files folder="insert_attachments_id_token_btn_plugin" target="plugins/editors-xtd/insert_attachments_id_token/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>pt-BR.plg_editors-xtd_insert_attachments_id_token.ini</filename>
+      <filename>pt-BR.plg_editors-xtd_insert_attachments_id_token.sys.ini</filename>
+   </files>
     <!-- Attachments show attachment in editor plugin language files -->
     <files folder="show_attachments_in_editor_plugin" target="plugins/system/show_attachments/language/pt-BR">
       <filename>index.html</filename>
@@ -77,8 +83,8 @@
     <!-- Attachments attachments plugin framework language files -->
     <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/pt-BR">
       <filename>index.html</filename>
-      <filename>pt-BR.plg_attachments_attachments_plugin_framework.ini</filename>
-      <filename>pt-BR.plg_attachments_attachments_plugin_framework.sys.ini</filename>
+      <filename>pt-BR.plg_attachments_framework.ini</filename>
+      <filename>pt-BR.plg_attachments_framework.sys.ini</filename>
     </files>
 
     <!-- Languages for this set of files -->
