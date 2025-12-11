@@ -81,7 +81,7 @@
     </files>
 
     <!-- Attachments attachments plugin framework language files -->
-    <files folder="attachments_plugin_framework" target="plugins/attachments/attachments_plugin_framework/language/pt-BR">
+    <files folder="attachments_plugin_framework" target="plugins/attachments/framework/language/pt-BR">
       <filename>index.html</filename>
       <filename>pt-BR.plg_attachments_framework.ini</filename>
       <filename>pt-BR.plg_attachments_framework.sys.ini</filename>

@@ -59,6 +59,12 @@
       <filename>sv-SE.plg_editors-xtd_insert_attachments_token.sys.ini</filename>
    </files>
 
+    <!-- Attachments insert attachment token editor button language files -->
+    <files folder="insert_attachments_id_token_btn_plugin" target="plugins/editors-xtd/insert_attachments_id_token/language/pt-BR">
+      <filename>index.html</filename>
+      <filename>sv-SV.plg_editors-xtd_insert_attachments_id_token.ini</filename>
+      <filename>sv-SV.plg_editors-xtd_insert_attachments_id_token.sys.ini</filename>
+   </files>
     <!-- Attachments show attachment in editor plugin language files -->
     <files folder="show_attachments_in_editor_plugin" target="plugins/system/show_attachments/language/sv-SE">
       <filename>index.html</filename>

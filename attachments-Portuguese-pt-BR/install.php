@@ -65,7 +65,7 @@ class attachments_language_packInstallerScript
 		// (Do not update language pack for old versions of Attachments)
 		require_once(JPATH_SITE . '/components/com_attachments/src/Helper/AttachmentsDefines.php');
 		$min_version = '4.0.4';
-		if (version_compare(AttachmentsDefines::$ATTACHMENTS_VERSION, '3.0.9', 'lt'))
+		if (version_compare(AttachmentsDefines::$ATTACHMENTS_VERSION, $min_version, 'lt'))
 		{
 			$msg = JText::sprintf('ATTACHMENTS_LANGUAGE_PACK_ERROR_ATTACHMENTS_TOO_OLD_S', '3.1');
 			$app->enqueueMessage('<br/>', 'error');
