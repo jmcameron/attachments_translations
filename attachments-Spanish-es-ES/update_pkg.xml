@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Attachments</name>
+		<description>Attachments</description>
+		<element>pkg_attachments</element>
+		<type>package</type>
+		<client>site</client>
+		<version>4.1.2</version>
+		<infourl title="Attachments">https://github.com/jmcameron/attachments_translations/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/Portuguese-Brazil-4.1.2/attachments-Portuguese-pt-BR-language-pack-4.1.2.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>Stable</tag>
+		</tags>
+		<maintainer>Jonathan M. Cameron</maintainer>
+		<maintainerurl>https://github.com/jmcameron/attachments_translations</maintainerurl>
+		<php_minimum>8.0</php_minimum>
+		<targetplatform name="joomla" version="(4\.[01234]|5\.[0123])"/>
+		<sha256>4A7AFCB542F8C17C13BA5A6AC222C4F62F6995DF56F1D6E507C8F446FB005DBF</sha256>
+		<sha384>038D2D86590A19419405790213CB6588111A59EE1689A3DA37C017C223E89B31CDCB74F20B31E32E00CE3734DC67553E</sha384>
+		<sha512>BE3E558DF9EB28EC95C0E9951F69041F4B1F9404AD3A6A6DBB37667805A34226FB671E95FFC9249E4EB91317DEBFBCF565BBAA5D342AB37AF125FD79074FA9AF</sha512>
+	</update>
+</updates>
