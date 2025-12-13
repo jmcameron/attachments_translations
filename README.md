@@ -2,8 +2,8 @@
 
 ## Requirements
 Download <a href="https://github.com/jmcameron/attachments/releases/latest" target="_blank">latest version</a> of package \
-Joomla 4.0+ compatible also with Joomla 5.0+ \
-By default this languages are available in the attachments package \
+Joomla 4.x compatible also with Joomla 5.x and 6.x \
+By default this languages are available in the attachments package
 - English
 - French
 - Greek
