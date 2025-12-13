@@ -1,7 +1,7 @@
 # attachments translations for Joomla 4.x,5.x and 6.x
 
 ## Requirements
-Download <a href="https://github.com/jmcameron/attachments/releases/latest" target="_blank">latest version</a> of package \
+Download <a href="https://github.com/jmcameron/attachments/releases/latest" target="_blank">latest version</a> of package 
 Joomla 4.x.
 
 By default these languages are available in the attachments package:
