@@ -1,9 +1,9 @@
-# attachments translations 4.0.4
+# attachments translations 4.x,5.x and 6.x
 
 ## Requirements
 Download <a href="https://github.com/jmcameron/attachments/releases/latest" target="_blank">latest version</a> of package \
-Joomla 4.x compatible also with Joomla 5.x and 6.x \
-By default this languages are available in the attachments package
+Joomla 4.x compatible also with Joomla 5.x and 6.x. \
+By default these languages are available in the attachments package:
 - English
 - French
 - Greek
