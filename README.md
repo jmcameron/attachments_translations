@@ -1,8 +1,8 @@
-# attachments translations for Joomla 4.x,5.x and 6.x
+# Attachments translations for Joomla 4.x,5.x and 6.x
 
 ## Requirements
 Download <a href="https://github.com/jmcameron/attachments/releases/latest" target="_blank">latest version</a> of package 
-Joomla 4.x.
+Attachments 4.x.
 
 By default these languages are available in the attachments package:
 - English
@@ -11,12 +11,15 @@ By default these languages are available in the attachments package:
 
 ## Quick Start
 Then you can download and install the language package if needed \
-See Download <a href="https://github.com/jmcameron/attachments_translations/releases/" target="_blank">translations</a>
+See Releases available <a href="https://github.com/jmcameron/attachments_translations/releases/" target="_blank">translations</a>
 
-## Versions available
+## Versions available for Attachments 4.x
+- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Portuguese-pt_BR-4.1.2" target="_blank">Portugal (Brazil)</a>
+- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Polish-4.1.2" target="_blank">Polish</a>
 - <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Swedish-4.1.1"  target="_blank">Swedish</a>
-- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Turkish-4.0.4"  target="_blank">Turkish</a> \
-If you need an other updated language pack for version 4.x of attachment, please create an issue
+- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Turkish-4.0.4"  target="_blank">Turkish</a>
+
+If you need an other updated language pack for version 4.x of attachment, please create an <a href="https://github.com/jmcameron/attachments_translations/issues" target="_blank">issue</a>
 
 ## Instructions to generate one package
 example for last package \
