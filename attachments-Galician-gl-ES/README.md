@@ -1,19 +1,25 @@
 # Tradución galega de Attachments (`gl-ES`)
 
-Este directorio contén o traballo inicial para crear o paquete de idioma galego de Attachments.
+Paquete de idioma galego para Attachments 4.2.4, preparado para Joomla 4, 5 e 6.
 
 ## Estado
 
-- [x] Estrutura inicial `gl-ES`
+- [x] Compoñente de administración
+- [x] Compoñente do sitio
+- [x] Axuda integrada
+- [x] Plugin de contido
+- [x] Plugin de busca clásica
 - [x] Plugin Finder / Busca intelixente
-- [ ] Compoñente de administración
-- [ ] Compoñente do sitio
-- [ ] Plugin de contido
-- [ ] Plugin de busca clásica
-- [ ] Botóns do editor
-- [ ] Plugin de icona rápida
-- [ ] Framework e integración con contido
-- [ ] Manifesto instalable e servidor de actualizacións
-- [ ] Revisión terminolóxica final
+- [x] Botóns do editor
+- [x] Plugin de sistema para mostrar anexos no editor
+- [x] Plugin de icona rápida
+- [x] Framework e integración con contido
+- [x] Metadatos `gl-ES` e `en-GB`
+- [x] Script de instalación
+- [x] Manifesto instalable 4.2.4
 
-As claves, os marcadores (`%s`, `%d`), as etiquetas HTML e os nomes técnicos deben permanecer inalterados. Cada tradución debe contrastarse co texto inglés actual para non herdar erros da versión española.
+## Revisión
+
+As claves INI, os marcadores (`%s`, `%d`), as etiquetas (`{attachments}`, `{attachments id=xxx}`), os marcadores da axuda e o HTML conserváronse sen traducir. A tradución necesita unha revisión lingüística por unha persoa galegofalante antes de publicarse como versión estable.
+
+O servidor de actualizacións e os hashes do paquete engadiranse cando exista un ZIP de versión publicado.
