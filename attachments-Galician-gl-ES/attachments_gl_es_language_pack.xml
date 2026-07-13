@@ -14,6 +14,7 @@
     <files folder="attachments_component/admin" target="administrator/components/com_attachments/language/gl-ES">
       <filename>gl-ES.com_attachments.ini</filename>
       <filename>gl-ES.com_attachments.sys.ini</filename>
+      <filename>gl-ES.com_attachments.help.ini</filename>
     </files>
     <files folder="attachments_component/site" target="components/com_attachments/language/gl-ES">
       <filename>gl-ES.com_attachments.ini</filename>
