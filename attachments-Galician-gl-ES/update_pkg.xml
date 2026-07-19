@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Attachments</name>
+		<description>Attachments</description>
+		<element>pkg_attachments</element>
+		<type>package</type>
+		<client>site</client>
+		<version>4.2.4</version>
+		<infourl title="Attachments">https://github.com/jmcameron/attachments_translations/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/Galician-gl-4.2.4/attachments-Galician-gl-ES-language-pack-4.2.4.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>Stable</tag>
+		</tags>
+		<maintainer>Jonathan M. Cameron</maintainer>
+		<maintainerurl>https://github.com/jmcameron/attachments_translations</maintainerurl>
+		<php_minimum>8.0</php_minimum>
+		<targetplatform name="joomla" version="(4\.[01234]|5\.[0123]|6\.[01])"/>
+		<sha256>53F09371C87C2113875DA25AE47ADE31E0101E28F597863A87F49F7DBA99AFEA</sha256>
+		<sha384>78FC8663FE655ACB4A89FC12C30F9B6A816F76E7F3F421A08497DBCF1721E0628E88601E35B7183BA29D21B11459E256</sha384>
+		<sha512>F41FA5D1737490EB0A29D02AB6BBAD95D47900E8222511B993E26C50026B0804B6A5B48EC484857F70D250F4EA3A47E7020D0E266724E7095C4956A4253FB1AD</sha512>
+	</update>
+</updates>
