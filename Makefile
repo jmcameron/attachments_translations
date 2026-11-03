@@ -1,4 +1,4 @@
-NAMES ?= Spanish-es-eS
+NAMES ?= Spanish-es-ES
 
 ZIPS = $(NAMES:=.zip)
 FIXSHA = $(NAMES:=.fixsha)
