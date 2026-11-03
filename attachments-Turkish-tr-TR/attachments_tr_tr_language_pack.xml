@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="file" version="4.0" method="upgrade">
   <name>attachments_tr_tr_language_pack</name>
-  <version>4.2.2</version>
-  <creationDate>2026-04-19</creationDate>
+  <version>5.0.0</version>
+  <creationDate>2026-11-01</creationDate>
   <author>Kaya Zeren, Mehmet Taş, Jonathan M. Cameron, McKillo</author>
   <authorEmail>jmcameron@jmcameron.net</authorEmail>
   <authorUrl></authorUrl>

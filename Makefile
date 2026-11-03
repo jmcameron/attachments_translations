@@ -1,9 +1,8 @@
-
-NAMES ?= French-fr-FR 
+NAMES ?= Turkish-tr-TR
 
 ZIPS = $(NAMES:=.zip)
 FIXSHA = $(NAMES:=.fixsha)
-VERSION ?= 4.2.4
+VERSION ?= 5.0.0
 
 ZIPIGNORES = -x "*.svn/*" -x ".svnignore" -x ".directory" -x "*.xcf" -x "*admin/help*" -x update_pkg.xml
 
