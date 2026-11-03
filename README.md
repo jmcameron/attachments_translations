@@ -9,16 +9,20 @@ By default these languages are available in the attachments package:
 - French
 - Greek
 
-## Quick Start
-Then you can download and install the language package if needed \
-See Releases available <a href="https://github.com/jmcameron/attachments_translations/releases/" target="_blank">translations</a>
+## Language packs for Attachments 4.x
 
-## Versions available for Attachments 4.x
+The following language packs are available in this repository:
 
-- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Polish-4.1.2" target="_blank">Polish</a>
-- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Portuguese-pt_BR-4.1.2" target="_blank">Portugal (Brazil)</a>
-- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Spanish-4.2.0"  target="_blank">Spanish</a>
-- <a href="https://github.com/jmcameron/attachments_translations/releases/tag/Turkish-4.0.4"  target="_blank">Turkish</a>
+- Czech
+- Galician
+- Polish
+- Portuguese (Brazil)
+- Spanish
+- Swedish
+- Turkish
+  
+You can download and install the available packages from the
+[Releases page](https://github.com/jmcameron/attachments_translations/releases)
 
 If you need an other updated language pack for version 4.x of attachment, please create an <a href="https://github.com/jmcameron/attachments_translations/issues" target="_blank">issue</a>
 

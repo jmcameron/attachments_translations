@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Attachments</name>
+		<description>Attachments</description>
+		<element>pkg_attachments</element>
+		<type>package</type>
+		<client>site</client>
+		<version>4.2.2</version>
+		<infourl title="Attachments">https://github.com/jmcameron/attachments_translations/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/jmcameron/attachments_translations/releases/download/CZech-4.2.2/attachments-CZech-cz-CZ-language-pack-4.2.2.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>Stable</tag>
+		</tags>
+		<maintainer>Jonathan M. Cameron</maintainer>
+		<maintainerurl>https://github.com/jmcameron/attachments_translations</maintainerurl>
+		<php_minimum>8.0</php_minimum>
+		<targetplatform name="joomla" version="(4\.[01234]|5\.[0123]|6\.[01])"/>
+		<sha256>0E5BFE8D96FDBF902BADBA346A05C7203FF419F049E6A1C8A0A44B29AAB4AD1C</sha256>
+		<sha384>946DE174746BD5B9DA8563ACE7A68E200D7AFF110076BCA3D40FDD56E117FECF39CD97B7BFAD8E4D499BC43D0B065496</sha384>
+		<sha512>E24600207B190995638BB1BD9BACB3A6CD0895DA16C78C93CB440435BDD2D70DA58F6B4C28E33BDC8EBE08C18441AEC2B3B433F74917D2326899DD3F61181B44</sha512>
+	</update>
+</updates>
